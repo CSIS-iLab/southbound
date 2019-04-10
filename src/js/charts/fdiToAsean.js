@@ -1,7 +1,7 @@
 import Highcharts from 'Highcharts'
 
 const fdiToAsean = () => {
-  Highcharts.chart('taiwanfdi', {
+  Highcharts.chart('fditoasean', {
     // Load Data in from Google Sheets
     data: {
       googleSpreadsheetKey: '1uvXxceRgz3RZtn51krgVjCg_v2CDjInOsfCbSd6BlMM',
@@ -41,7 +41,7 @@ const fdiToAsean = () => {
     // Y Axis
     yAxis: {
       title: {
-        text: 'Y Axis Title'
+        text: 'Billions'
       }
       // labels: {
       //   format: "${value}"
