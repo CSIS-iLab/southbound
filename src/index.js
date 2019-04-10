@@ -5,6 +5,7 @@ import perCapitaGrowth from './js/charts/perCapitaGrowth'
 import unemployment from './js/charts/unemployment'
 import exportToNSP from './js/charts/exportToNSP'
 import outboundInvestment from './js/charts/outboundInvestment'
+import outboundChina from './js/charts/outboundChina'
 import theme from './js/theme'
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -18,4 +19,5 @@ window.addEventListener('DOMContentLoaded', () => {
   unemployment()
   exportToNSP()
   outboundInvestment()
+  outboundChina()
 })
