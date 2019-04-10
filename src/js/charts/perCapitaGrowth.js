@@ -40,9 +40,7 @@ const perCapitaGrowth = () => {
     // X Axis
     xAxis: {
       allowDecimals: false,
-      pane: {
-        center: ['100%', '100%']
-      }
+      offset: -140
     },
     // Y Axis
     yAxis: {
