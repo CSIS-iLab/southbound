@@ -1,4 +1,5 @@
 import chartVessels from './js/charts/chartVessels'
+import taiwanFdis from './js/charts/taiwanFdis'
 import theme from './js/theme'
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -6,4 +7,5 @@ window.addEventListener('DOMContentLoaded', () => {
   Highcharts.theme = theme
   Highcharts.setOptions(Highcharts.theme)
   chartVessels()
+  taiwanFdis()
 })
