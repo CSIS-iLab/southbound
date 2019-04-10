@@ -24,9 +24,9 @@ const fdiToAsean = () => {
     // Credits
     credits: {
       enabled: true,
-      href: false,
+      href: 'http://www.aseancenter.org.tw/upload/files/20130111.pdf.',
       text:
-        'Department of Investment Service, Ministry of Economic Affairs, ROC (Taiwan), http://www.aseancenter.org.tw/upload/files/20130111.pdf.'
+        'Source: Department of Investment Service, Ministry of Economic Affairs, ROC (Taiwan)'
     },
     // Chart Legend
     legend: {

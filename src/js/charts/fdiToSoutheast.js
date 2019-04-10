@@ -24,9 +24,9 @@ const fdiToSoutheast = () => {
     // Credits
     credits: {
       enabled: true,
-      href: false,
+      href: 'https://www.dois.moea.gov.tw/Home/relation3',
       text:
-        'Source: Department of Investment Service, Ministry of Economic Affairs, ROC (Taiwan), https://www.dois.moea.gov.tw/Home/relation3, The Ministry of Economic Affairs then established the Overseas Chinese and Foreign Investment Commission https://www.moeaic.gov.tw/business_category.view?lang=ch&seq=3'
+        'Source: Department of Investment Service, Ministry of Economic Affairs, ROC (Taiwan)'
     },
     // Chart Legend
     legend: {
