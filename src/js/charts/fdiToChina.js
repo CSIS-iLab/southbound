@@ -1,6 +1,6 @@
 import Highcharts from 'Highcharts'
 
-const taiwanFdis = () => {
+const fdiToAsean = () => {
   Highcharts.chart('taiwanfdi', {
     // Load Data in from Google Sheets
     data: {
@@ -70,4 +70,4 @@ const taiwanFdis = () => {
   })
 }
 
-export default taiwanFdis
+export default fdiToAsean

@@ -1,9 +1,9 @@
 import chartVessels from './js/charts/chartVessels'
-import taiwanFdis from './js/charts/taiwanFdis'
+import fdiToChina from './js/charts/fdiToChina'
 import theme from './js/theme'
 
 window.addEventListener('DOMContentLoaded', () => {
   Highcharts.setOptions(theme)
   chartVessels()
-  taiwanFdis()
+  fdiToChina()
 })
