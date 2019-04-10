@@ -2,6 +2,7 @@ import chartVessels from './js/charts/chartVessels'
 import fdiToAsean from './js/charts/fdiToAsean'
 import fdiToSoutheast from './js/charts/fdiToSoutheast'
 import perCapitaGrowth from './js/charts/perCapitaGrowth'
+import unemployment from './js/charts/unemployment'
 import theme from './js/theme'
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -10,4 +11,5 @@ window.addEventListener('DOMContentLoaded', () => {
   fdiToAsean()
   fdiToSoutheast()
   perCapitaGrowth()
+  unemployment()
 })
