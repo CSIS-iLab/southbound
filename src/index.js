@@ -1,6 +1,7 @@
 import chartVessels from './js/charts/chartVessels'
 import fdiToAsean from './js/charts/fdiToAsean'
 import fdiToSoutheast from './js/charts/fdiToSoutheast'
+import perCapitaGrowth from './js/charts/perCapitaGrowth'
 import theme from './js/theme'
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -8,4 +9,5 @@ window.addEventListener('DOMContentLoaded', () => {
   chartVessels()
   fdiToAsean()
   fdiToSoutheast()
+  perCapitaGrowth()
 })
