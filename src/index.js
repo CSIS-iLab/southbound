@@ -4,6 +4,7 @@ import fdiToSoutheast from './js/charts/fdiToSoutheast'
 import perCapitaGrowth from './js/charts/perCapitaGrowth'
 import unemployment from './js/charts/unemployment'
 import exportToNSP from './js/charts/exportToNSP'
+import outboundInvestment from './js/charts/outboundInvestment'
 import theme from './js/theme'
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -14,4 +15,5 @@ window.addEventListener('DOMContentLoaded', () => {
   perCapitaGrowth()
   unemployment()
   exportToNSP()
+  outboundInvestment()
 })
