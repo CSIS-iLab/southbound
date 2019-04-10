@@ -38,6 +38,10 @@ const fdiToSoutheast = () => {
       verticalAlign: 'bottom',
       layout: 'horizontal'
     },
+    // X Axis
+    xAxis: {
+      allowDecimals: false
+    },
     // Y Axis
     yAxis: {
       title: {
