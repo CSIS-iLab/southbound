@@ -23,7 +23,7 @@ const unemployment = () => {
     // Credits
     credits: {
       enabled: true,
-      href: 'http://statdb.dgbas.gov.tw/pxweb/Dialog/CityItemlist_n.asp.',
+      href: 'http://statdb.dgbas.gov.tw/pxweb/Dialog/CityItemlist_n.asp',
       text:
         'Source: "National Statistics," Directorate-General of Budget, Accounting and Statistics Executive Yuan, ROC (Taiwan).'
     },
