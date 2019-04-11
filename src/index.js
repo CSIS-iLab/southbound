@@ -6,6 +6,7 @@ import unemployment from './js/charts/unemployment'
 import exportToNSP from './js/charts/exportToNSP'
 import outboundInvestment from './js/charts/outboundInvestment'
 import outboundChina from './js/charts/outboundChina'
+import exportToChina from './js/charts/exportToChina'
 import theme from './js/theme'
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -18,4 +19,5 @@ window.addEventListener('DOMContentLoaded', () => {
   exportToNSP()
   outboundInvestment()
   outboundChina()
+  exportToChina()
 })
