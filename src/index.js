@@ -8,6 +8,7 @@ import outboundInvestment from './js/charts/outboundInvestment'
 import outboundChina from './js/charts/outboundChina'
 import exportToChina from './js/charts/exportToChina'
 import chinaAndTaiwanExport from './js/charts/chinaAndTaiwanExport'
+import chinaAndTaiwanOutbound from './js/charts/chinaAndTaiwanOutbound'
 import theme from './js/theme'
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -24,4 +25,5 @@ window.addEventListener('DOMContentLoaded', () => {
   outboundChina()
   exportToChina()
   chinaAndTaiwanExport()
+  chinaAndTaiwanOutbound()
 })
