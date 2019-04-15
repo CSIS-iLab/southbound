@@ -10,6 +10,7 @@ import exportToChina from './js/charts/exportToChina'
 import chinaAndTaiwanExport from './js/charts/chinaAndTaiwanExport'
 import chinaAndTaiwanOutbound from './js/charts/chinaAndTaiwanOutbound'
 import numberOfTourists from './js/charts/numberOfTourists'
+import sourceOfTourists from './js/charts/sourceOfTourists'
 import theme from './js/theme'
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -28,4 +29,5 @@ window.addEventListener('DOMContentLoaded', () => {
   chinaAndTaiwanExport()
   chinaAndTaiwanOutbound()
   numberOfTourists()
+  sourceOfTourists()
 })
