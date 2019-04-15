@@ -13,6 +13,7 @@ import numberOfTourists from './js/charts/numberOfTourists'
 import sourceOfTourists from './js/charts/sourceOfTourists'
 import touristsFromNSP from './js/charts/touristsFromNSP'
 import touristsToTaiwan from './js/charts/touristsToTaiwan'
+import studentEnrollees from './js/charts/studentEnrollees'
 import theme from './js/theme'
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -34,4 +35,5 @@ window.addEventListener('DOMContentLoaded', () => {
   sourceOfTourists()
   touristsFromNSP()
   touristsToTaiwan()
+  studentEnrollees()
 })
