@@ -15,16 +15,14 @@ const touristsToTaiwan = () => {
     // colors: Highcharts.getOptions().colors,
     // Chart Title and Subtitle
     title: {
-      text: 'Main sources of tourists to Taiwan, 2017 and 2018 (Millions)'
-    },
-    subtitle: {
-      text: 'Optional Subtitle'
+      text: 'Main Sources of Tourists to Taiwan, 2017 and 2018 (Millions)'
     },
     // Credits
     credits: {
       enabled: true,
-      href: false,
-      text: 'CSIS China Power Project | Source: NAME'
+      href: 'http://stat.taiwan.net.tw/system/country_months_arrival.html',
+      text:
+        'CSIS China Power Project | Source: "Tourism Statistic Database," Tourism Bureau, ROC (Taiwan)'
     },
     // Chart Legend
     legend: {
