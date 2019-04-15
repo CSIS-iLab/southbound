@@ -11,6 +11,7 @@ import chinaAndTaiwanExport from './js/charts/chinaAndTaiwanExport'
 import chinaAndTaiwanOutbound from './js/charts/chinaAndTaiwanOutbound'
 import numberOfTourists from './js/charts/numberOfTourists'
 import sourceOfTourists from './js/charts/sourceOfTourists'
+import touristsFromNSP from './js/charts/touristsFromNSP'
 import theme from './js/theme'
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -28,4 +29,5 @@ window.addEventListener('DOMContentLoaded', () => {
   chinaAndTaiwanOutbound()
   numberOfTourists()
   sourceOfTourists()
+  touristsFromNSP()
 })
