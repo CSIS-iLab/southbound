@@ -1,5 +1,4 @@
 import Highcharts from 'Highcharts'
-console.log(window)
 
 const perCapitaGrowth = () => {
   Highcharts.chart('percapitagrowth', {
