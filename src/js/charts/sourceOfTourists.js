@@ -43,7 +43,7 @@ const sourceOfTourists = () => {
     // Y Axis
     yAxis: {
       title: {
-        text: 'Billions'
+        text: 'Millions'
       },
       allowDecimals: false,
       tickInterval: 1000000
@@ -56,12 +56,12 @@ const sourceOfTourists = () => {
       headerFormat:
         '<span style="font-size: 13px;text-align:center;margin-bottom: 5px;font-weight: bold;font-family: \'Roboto\', arial, sans-serif;">{point.key}</span><br/>',
       pointFormatter: function() {
-        if (this.y.toString().split('').length >= 7) {
+        if (this.y.toString().split('').length === 7) {
           return `<span style="color:${this.color}">\u25CF </span>
-             $${this.y.toString().substring(0, 3)} Million`
+               $${this.y.toString().substring(0, 1)}.${this.y.toString().substring(2, 4)} Million`
         } else {
           return `<span style="color:${this.color}">\u25CF </span>
-            $${this.y.toString().substring(0, 3)} Thousand`
+              $0.${this.y.toString().substring(0, 2)} Million`
         }
       }
     },
