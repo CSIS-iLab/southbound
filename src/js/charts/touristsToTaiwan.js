@@ -48,10 +48,13 @@ const touristsToTaiwan = () => {
         '<span style="font-size: 13px;text-align:center;margin-bottom: 5px;font-weight: bold;font-family: \'Roboto\', arial, sans-serif;">{point.key}</span><br/>',
       pointFormatter: function() {
         if (this.y.toString().split('').length === 7) {
+          console.log(this)
           return `<span style="color:${this.color}">\u25CF </span>
+                ${this.series.name}<br>
                $${this.y.toString().substring(0, 1)}.${this.y.toString().substring(2, 4)} Million`
         } else {
           return `<span style="color:${this.color}">\u25CF </span>
+                 ${this.series.name}<br>
               $0.${this.y.toString().substring(0, 2)} Million`
         }
       }
