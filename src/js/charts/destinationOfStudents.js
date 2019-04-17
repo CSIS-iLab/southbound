@@ -62,6 +62,7 @@ const destinationOfStudents = () => {
         },
         startAngle: 0,
         endAngle: 360,
+        center: ['50%', '45%'],
         size: '90%'
       }
     },
