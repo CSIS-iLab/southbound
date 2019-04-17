@@ -23,10 +23,11 @@ html {
 }
 
 body {
+  max-width: 1440px;
+  margin: auto;
   /* Fallback for when there is no custom background color defined. */
   --breakpoint: 'xsmall';
   position: relative;
-  max-width: 100%;
   overflow-x: hidden;
   background: $color__background-body;
 
@@ -61,28 +62,6 @@ body {
 /* Create class to allow scrolling on certain elements, like modal windows */
 .allow-scroll {
   touch-action: auto !important;
-}
-
-.wrapper {
-  @include structure($size__container-max-width, 'max-width');
-  margin: 0 auto;
-  @include structure($size__container-padding, 'padding');
-
-  &--home {
-    @include structure($size__container-max-width, 'max-width');
-    margin: 0 auto;
-    @include structure(
-      $size__container-padding--home,
-      'padding',
-      ('small', 'large')
-    );
-  }
-
-  &--spotlight {
-    @include structure($size__container-max-width, 'max-width');
-    margin: 0 auto;
-    @include structure($size__container-padding, 'padding', ('small', 'large'));
-  }
 }
 
 .content-overlay {

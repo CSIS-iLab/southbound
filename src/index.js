@@ -19,6 +19,7 @@ import destinationNSP from './js/charts/destinationNSP'
 import sourceOfStudents from './js/charts/sourceOfStudents'
 import shareOfInbound from './js/charts/shareOfInbound'
 import theme from './js/theme'
+import './scss/main.scss'
 
 window.addEventListener('DOMContentLoaded', () => {
   Highcharts.setOptions(theme)
