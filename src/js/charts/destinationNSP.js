@@ -36,6 +36,7 @@ const destinationNSP = () => {
     xAxis: {},
     // Y Axis
     yAxis: {
+      title: '',
       ceiling: 100,
       tickInterval: 10,
       labels: {
