@@ -17,6 +17,7 @@ import studentEnrollees from './js/charts/studentEnrollees'
 import destinationOfStudents from './js/charts/destinationOfStudents'
 import destinationNSP from './js/charts/destinationNSP'
 import sourceOfStudents from './js/charts/sourceOfStudents'
+import shareOfInbound from './js/charts/shareOfInbound'
 import theme from './js/theme'
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -42,4 +43,5 @@ window.addEventListener('DOMContentLoaded', () => {
   destinationOfStudents()
   destinationNSP()
   sourceOfStudents()
+  shareOfInbound()
 })
