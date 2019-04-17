@@ -24,7 +24,6 @@ window.addEventListener('DOMContentLoaded', () => {
   console.log(theme)
   Highcharts.theme = theme
   Highcharts.setOptions(Highcharts.theme)
-  chartVessels()
   fdiToAsean()
   fdiToSoutheast()
   perCapitaGrowth()
