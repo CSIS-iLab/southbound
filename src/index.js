@@ -22,7 +22,6 @@ import theme from './js/theme'
 
 window.addEventListener('DOMContentLoaded', () => {
   Highcharts.setOptions(theme)
-  chartVessels()
   fdiToAsean()
   fdiToSoutheast()
   perCapitaGrowth()
