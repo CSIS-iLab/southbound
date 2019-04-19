@@ -7,7 +7,7 @@ const studentEnrollees = () => {
       googleSpreadsheetKey: '1zl-WEfAt1KBexvX_NsC-2-K0aSMHdVYUk1tgnYLTBtQ',
       googleSpreadsheetWorksheet: 1,
       complete: function (data) {
-        // Filter out every piece of data that isn't considered as part of Other
+        // Filter out every piece of data that isn't considered a part of Other
         const filteredData = data.series.filter(item => item.name !== 'Indonesia' && item.name !== 'Vietnam' && item.name !== 'Mainland China' && item.name !== 'Other')
 
         // Set these series to invisible on the chart so they don't appear
@@ -19,7 +19,6 @@ const studentEnrollees = () => {
         data.series.forEach(item => {
           if (item.name === 'Other') {
             item.subData = filteredData
-            console.log(item)
           }
         });
       }
@@ -66,10 +65,31 @@ const studentEnrollees = () => {
       headerFormat:
         '<span style="font-size: 13px;text-align:center;margin-bottom: 5px;font-weight: bold;font-family: \'Roboto\', arial, sans-serif;">{point.key}</span><br/>',
       pointFormatter: function() {
-        console.log(this)
+        const dataSet = this.series
+        let toolbarData = []
+
+        if ( dataSet.name === 'Other' ) {
+          dataSet.userOptions.subData.forEach(DataItem => {
+            for (let i = 0; i < DataItem.data.length; i++) {
+              if (DataItem.data[i][0] === this.category ) {
+                const dataForYear = {
+                  name: DataItem.name,
+                  data: DataItem.data[i][1]
+                }
+                toolbarData.push(dataForYear)
+              }
+            }
+          })
+          
+          const toolbarFormat = `${toolbarData.map(dataItem => {
+            return `<br><span style="color:${this.color}"> \u25CF </span>${dataItem.name}: $${dataItem.data}`
+          })}`
+          return toolbarFormat
+        } else {
         return `<span style="color:${this.color}">\u25CF </span>
                 ${this.series.name}<br>
-               $${this.y.toString().substring(0, 2)} Thousand`
+               $${this.y.toString()}`
+        }
       }
     },
     // Additional Plot Options
