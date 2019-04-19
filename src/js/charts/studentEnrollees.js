@@ -15,7 +15,7 @@ const studentEnrollees = () => {
           item.visible = false
         })
 
-        // pass these items into the 'Other' series of data as an object key that we can then access later in the toolbar using 'this'
+        // Pass these items into the 'Other' series of data as an object key that we can then access later in the toolbar using 'this'
         data.series.forEach(item => {
           if (item.name === 'Other') {
             item.subData = filteredData
@@ -68,6 +68,7 @@ const studentEnrollees = () => {
         const dataSet = this.series
         let toolbarData = []
 
+        // If Other series year matches subdata year, push that years data for each country into a new array
         if ( dataSet.name === 'Other' ) {
           dataSet.userOptions.subData.forEach(DataItem => {
             for (let i = 0; i < DataItem.data.length; i++) {
