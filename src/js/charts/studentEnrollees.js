@@ -5,7 +5,24 @@ const studentEnrollees = () => {
     // Load Data in from Google Sheets
     data: {
       googleSpreadsheetKey: '1zl-WEfAt1KBexvX_NsC-2-K0aSMHdVYUk1tgnYLTBtQ',
-      googleSpreadsheetWorksheet: 1
+      googleSpreadsheetWorksheet: 1,
+      complete: function (data) {
+        // Filter out every piece of data that isn't considered as part of Other
+        const filteredData = data.series.filter(item => item.name !== 'Indonesia' && item.name !== 'Vietnam' && item.name !== 'Mainland China' && item.name !== 'Other')
+
+        // Set these series to invisible on the chart so they don't appear
+        filteredData.forEach(item => {
+          item.visible = false
+        })
+
+        // pass these items into the 'Other' series of data as an object key that we can then access later in the toolbar using 'this'
+        data.series.forEach(item => {
+          if (item.name === 'Other') {
+            item.subData = filteredData
+            console.log(item)
+          }
+        });
+      }
     },
     // General Chart Options
     chart: {
@@ -49,6 +66,7 @@ const studentEnrollees = () => {
       headerFormat:
         '<span style="font-size: 13px;text-align:center;margin-bottom: 5px;font-weight: bold;font-family: \'Roboto\', arial, sans-serif;">{point.key}</span><br/>',
       pointFormatter: function() {
+        console.log(this)
         return `<span style="color:${this.color}">\u25CF </span>
                 ${this.series.name}<br>
                $${this.y.toString().substring(0, 2)} Thousand`
