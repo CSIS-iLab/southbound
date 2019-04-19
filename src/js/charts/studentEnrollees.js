@@ -12,6 +12,7 @@ const studentEnrollees = () => {
 
         // Set these series to invisible on the chart so they don't appear
         filteredData.forEach(item => {
+          item.showInLegend = false,
           item.visible = false
         })
 
