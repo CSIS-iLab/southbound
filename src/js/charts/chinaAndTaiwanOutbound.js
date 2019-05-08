@@ -1,18 +1,17 @@
 import Highcharts from 'Highcharts'
 
-const chinaAndTaiwanOutbound = () => {
+const chinaAndTaiwanOutbound = sheet => {
   Highcharts.chart('chinaandtaiwanoutbound', {
     // Load Data in from Google Sheets
     data: {
-      googleSpreadsheetKey: '1nRi43f7BpZdRXAMg-9q0BBr0UY4Tqxo7eUh0QtWCWxs',
+      googleSpreadsheetKey: sheet,
       googleSpreadsheetWorksheet: 1
     },
     // General Chart Options
     chart: {
       type: 'line'
     },
-    // Colors
-    // colors: Highcharts.getOptions().colors,
+
     // Chart Title and Subtitle
     title: {
       text:
@@ -23,31 +22,16 @@ const chinaAndTaiwanOutbound = () => {
     // },
     // Credits
     credits: {
-      enabled: true,
       href: 'http://www.moeaic.gov.tw/english/news_bsAn.jsp',
       text:
         'Source: "Statistics," Investment Commission, Ministry of Economic Affairs, ROC (Taiwan ); "China Statistical Bulletin of China’s Outward Foreign Direct Investment," Ministry of Commerce, P.R.C.'
     },
-    // Chart Legend
-    legend: {
-      //   title: {
-      //     text:
-      //       'Legend Title<br/><span style="font-size: 12px; color: #808080; font-weight: normal">(Click to hide)</span>'
-      //   },
-      align: 'center',
-      verticalAlign: 'bottom',
-      layout: 'horizontal'
-    },
-    // X Axis
-    xAxis: {
-      allowDecimals: false
-    },
+
     // Y Axis
     yAxis: {
       title: {
         text: 'Billions'
-      },
-      allowDecimals: false
+      }
       // labels: {
       //   format: "${value}"
       // }

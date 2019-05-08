@@ -49,6 +49,7 @@ export default {
       '<span style="font-size: 13px;text-align:center;margin-bottom: 5px;font-weight: bold;font-family: \'Roboto\', arial, sans-serif;">{point.key}</span><br/>'
   },
   xAxis: {
+    allowDecimals: false,
     labels: {
       style: {
         color: '#666',
@@ -68,6 +69,7 @@ export default {
     tickColor: '#e6e6e6'
   },
   yAxis: {
+    allowDecimals: false,
     labels: {
       style: {
         color: '#666',
@@ -87,6 +89,9 @@ export default {
     tickColor: '#e6e6e6'
   },
   legend: {
+    align: 'center',
+    verticalAlign: 'bottom',
+    layout: 'horizontal',
     title: {
       style: {
         fontFamily: "'Roboto', 'Arial', sans-serif",
@@ -103,6 +108,45 @@ export default {
     },
     itemHoverStyle: {
       color: '#ed392a'
+    }
+  },
+  plotOptions: {
+    column: {
+      stacking: 'normal', // Normal bar graph
+      // stacking: "normal", // Stacked bar graph
+      dataLabels: {
+        enabled: false
+      },
+      maxPointWidth: 150
+    },
+    pie: {
+      dataLabels: {
+        enabled: true,
+        distance: 25,
+        style: {
+          fontWeight: 'bold'
+        }
+      },
+      startAngle: 0,
+      endAngle: 360,
+      center: ['50%', '45%'],
+      size: '90%'
+    },
+    bar: {
+      stacking: 'normal', // Normal bar graph
+      // stacking: "normal", // Stacked bar graph
+      dataLabels: {
+        enabled: false
+      },
+      maxPointWidth: 125
+    },
+    line: {
+      marker: {
+        enabled: false,
+        symbol: 'circle',
+        radius: 3
+      },
+      lineWidth: 3
     }
   }
 }

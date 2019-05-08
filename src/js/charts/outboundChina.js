@@ -1,18 +1,17 @@
 import Highcharts from 'Highcharts'
 
-const outboundChina = () => {
+const outboundChina = sheet => {
   Highcharts.chart('outboundchina', {
     // Load Data in from Google Sheets
     data: {
-      googleSpreadsheetKey: '1Wn-eSJJ_Tj03S6juKDIN8ShEhTlvfsIn43KDs03K3Pk',
+      googleSpreadsheetKey: sheet,
       googleSpreadsheetWorksheet: 1
     },
     // General Chart Options
     chart: {
       type: 'line'
     },
-    // Colors
-    // colors: Highcharts.getOptions().colors,
+
     // Chart Title and Subtitle
     title: {
       text:
@@ -23,25 +22,11 @@ const outboundChina = () => {
     // },
     // Credits
     credits: {
-      enabled: true,
       href: 'http://www.moeaic.gov.tw/english/news_bsAn.jsp',
       text:
         'Source: "Statistics," Investment Commission, Ministry of Economic Affairs, ROC. (Taiwan)'
     },
-    // Chart Legend
-    legend: {
-      //   title: {
-      //     text:
-      //       'Legend Title<br/><span style="font-size: 12px; color: #808080; font-weight: normal">(Click to hide)</span>'
-      //   },
-      align: 'center',
-      verticalAlign: 'bottom',
-      layout: 'horizontal'
-    },
-    // X Axis
-    xAxis: {
-      allowDecimals: false
-    },
+
     // Y Axis
     yAxis: {
       title: {
@@ -59,17 +44,6 @@ const outboundChina = () => {
       pointFormatter: function() {
         return `<span style="color:${this.color}">\u25CF </span>
         $${this.y} Billion`
-      }
-    },
-    // Additional Plot Options
-    plotOptions: {
-      line: {
-        marker: {
-          enabled: false,
-          symbol: 'circle',
-          radius: 3
-        },
-        lineWidth: 3
       }
     }
   })

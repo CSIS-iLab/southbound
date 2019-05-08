@@ -1,18 +1,17 @@
 import Highcharts from 'Highcharts'
 
-const fdiToAsean = () => {
+const fdiToAsean = sheet => {
   Highcharts.chart('fditoasean', {
     // Load Data in from Google Sheets
     data: {
-      googleSpreadsheetKey: '1uvXxceRgz3RZtn51krgVjCg_v2CDjInOsfCbSd6BlMM',
+      googleSpreadsheetKey: sheet,
       googleSpreadsheetWorksheet: 1
     },
     // General Chart Options
     chart: {
       type: 'line'
     },
-    // Colors
-    // colors: Highcharts.getOptions().colors,
+
     // Chart Title and Subtitle
     title: {
       text:
@@ -23,25 +22,11 @@ const fdiToAsean = () => {
     // },
     // Credits
     credits: {
-      enabled: true,
       href: 'http://www.aseancenter.org.tw/upload/files/20130111.pdf',
       text:
         'Source: Department of Investment Service, Ministry of Economic Affairs, ROC (Taiwan)'
     },
-    // Chart Legend
-    legend: {
-      //   title: {
-      //     text:
-      //       'Legend Title<br/><span style="font-size: 12px; color: #808080; font-weight: normal">(Click to hide)</span>'
-      //   },
-      align: 'center',
-      verticalAlign: 'bottom',
-      layout: 'horizontal'
-    },
-    // X Axis
-    xAxis: {
-      allowDecimals: false
-    },
+
     // Y Axis
     yAxis: {
       title: {
@@ -58,17 +43,6 @@ const fdiToAsean = () => {
       pointFormatter: function() {
         return `<span style="color:${this.color}">\u25CF </span>
         $${this.y} Billion`
-      }
-    },
-    // Additional Plot Options
-    plotOptions: {
-      line: {
-        marker: {
-          enabled: false,
-          symbol: 'circle',
-          radius: 3
-        },
-        lineWidth: 3
       }
     }
   })

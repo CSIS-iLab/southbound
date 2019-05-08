@@ -1,18 +1,17 @@
 import Highcharts from 'Highcharts'
 
-const exportToChina = () => {
+const exportToChina = sheet => {
   Highcharts.chart('exporttochina', {
     // Load Data in from Google Sheets
     data: {
-      googleSpreadsheetKey: '1fbPsHRpcD65adBAq-SyOu-0U9CpSl6NYXZwf02DNkHk',
+      googleSpreadsheetKey: sheet,
       googleSpreadsheetWorksheet: 1
     },
     // General Chart Options
     chart: {
       type: 'line'
     },
-    // Colors
-    // colors: Highcharts.getOptions().colors,
+
     // Chart Title and Subtitle
     title: {
       text:
@@ -23,7 +22,6 @@ const exportToChina = () => {
     // },
     // Credits
     credits: {
-      enabled: true,
       href: 'http://cus93.trade.gov.tw/FSCE000F/FSCE000F',
       text:
         'Source: "Trade Statistics," Bureau of Trade, Ministry of Economic Affairs, ROC (Taiwan)'
@@ -38,16 +36,12 @@ const exportToChina = () => {
       verticalAlign: 'bottom',
       layout: 'horizontal'
     },
-    // X Axis
-    xAxis: {
-      allowDecimals: false
-    },
+
     // Y Axis
     yAxis: {
       title: {
         text: 'Billions'
       },
-      allowDecimals: false,
       tickInterval: 20
       // labels: {
       //   format: "${value}"
@@ -60,17 +54,6 @@ const exportToChina = () => {
       pointFormatter: function() {
         return `<span style="color:${this.color}">\u25CF </span>
         $${this.y} Billion`
-      }
-    },
-    // Additional Plot Options
-    plotOptions: {
-      line: {
-        marker: {
-          enabled: false,
-          symbol: 'circle',
-          radius: 3
-        },
-        lineWidth: 3
       }
     }
   })

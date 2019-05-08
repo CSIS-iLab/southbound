@@ -1,18 +1,17 @@
 import Highcharts from 'Highcharts'
 
-const fdiToSoutheast = () => {
+const fdiToSoutheast = sheet => {
   Highcharts.chart('fditosoutheast', {
     // Load Data in from Google Sheets
     data: {
-      googleSpreadsheetKey: '1LFR3a4zsyvmivWmICgxXR8uqJB_h_AT5dTfkmwb01WM',
+      googleSpreadsheetKey: sheet,
       googleSpreadsheetWorksheet: 1
     },
     // General Chart Options
     chart: {
       type: 'line'
     },
-    // Colors
-    // colors: Highcharts.getOptions().colors,
+
     // Chart Title and Subtitle
     title: {
       text:
@@ -23,25 +22,11 @@ const fdiToSoutheast = () => {
     // },
     // Credits
     credits: {
-      enabled: true,
       href: 'https://www.dois.moea.gov.tw/Home/relation3',
       text:
         'Source: Department of Investment Service, Ministry of Economic Affairs, ROC (Taiwan)'
     },
-    // Chart Legend
-    legend: {
-      //   title: {
-      //     text:
-      //       'Legend Title<br/><span style="font-size: 12px; color: #808080; font-weight: normal">(Click to hide)</span>'
-      //   },
-      align: 'center',
-      verticalAlign: 'bottom',
-      layout: 'horizontal'
-    },
-    // X Axis
-    xAxis: {
-      allowDecimals: false
-    },
+
     // Y Axis
     yAxis: {
       title: {
@@ -60,17 +45,6 @@ const fdiToSoutheast = () => {
       pointFormatter: function() {
         return `<span style="color:${this.color}">\u25CF </span>
         $${this.y} Billion`
-      }
-    },
-    // Additional Plot Options
-    plotOptions: {
-      line: {
-        marker: {
-          enabled: false,
-          symbol: 'circle',
-          radius: 3
-        },
-        lineWidth: 3
       }
     }
   })

@@ -1,40 +1,29 @@
 import Highcharts from 'Highcharts'
 
-const shareOfInbound = () => {
+const shareOfInbound = sheet => {
   Highcharts.chart('shareofinbound', {
     // Load Data in from Google Sheets
     data: {
-      googleSpreadsheetKey: '18tek6NwxV-vUfkkztYeqlS-v_U8jAmqiIZOngbqT5rI',
+      googleSpreadsheetKey: sheet,
       googleSpreadsheetWorksheet: 1
     },
     // General Chart Options
     chart: {
       type: 'bar'
     },
-    // Colors
-    // colors: Highcharts.getOptions().colors,
-    // Chart Title and Subtitle
+
     title: {
       text:
         'NSP study abroad destination for outbound students from Taiwan, 2015-2016'
     },
     // Credits
     credits: {
-      enabled: true,
       href:
         'https://depart.moe.edu.tw/ed2500/News_Content.aspx?n=2D25F01E87D6EE17&sms=4061A6357922F45A&s=ECAAD5FFD81C8057',
       text:
         'CSIS China Power Project | Source: "105年度世界各主要國家之我國留學生人數統計表" [Statistical Table on Taiwanese Students Studying Abroad in Major Countries Around the World for 2016 (105 niandu shijie gezhuyao guojia zhi woguo liuxuesheng renshu tongjibiao)], Ministry of Education, ROC (Taiwan), December 22, 2016'
     },
-    // Chart Legend
-    legend: {
-      align: 'center',
-      verticalAlign: 'bottom',
-      layout: 'horizontal',
-      reversed: true
-    },
-    xAxis: {},
-    // Y Axis
+
     yAxis: {
       title: '',
       ceiling: 100,
