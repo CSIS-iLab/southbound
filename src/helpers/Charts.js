@@ -289,7 +289,6 @@ export default {
   "8.1": {
     data: {
       complete: function(data) {
-        console.log(data);
         // Filter out every piece of data that isn't considered a part of Other
         const filteredData = data.series.filter(
           item =>

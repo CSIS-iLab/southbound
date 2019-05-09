@@ -7,9 +7,6 @@ export default function InitSheets(sheetData) {
 
   sheetData.forEach((data, index) => {
     const variableData = {
-      data: {
-        rows: data.rows
-      },
       title: {
         text: data.title
       },
@@ -24,6 +21,11 @@ export default function InitSheets(sheetData) {
     const chartOptions = {
       ...Charts[data.key],
       ...variableData
+    };
+
+    chartOptions.data = {
+      ...chartOptions.data,
+      csv: data.rows.map(r => r.join(",")).join("\n")
     };
 
     const container = document.getElementById(`${data.key}`);
