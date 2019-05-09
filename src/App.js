@@ -169,7 +169,6 @@ class App extends Component {
           render={props => (
             <Data
               {...props}
-              siteStructure={siteStructure}
               filteredSheetData={filteredSheetData}
               categories={categories}
               filteredCategories={filteredCategories}
