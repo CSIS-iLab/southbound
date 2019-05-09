@@ -31,9 +31,6 @@ class Page extends React.Component {
         const data = sheetData.find(d => d.key === key);
 
         const variableData = {
-          data: {
-            rows: data.rows
-          },
           title: {
             text: data.title
           },
@@ -48,6 +45,11 @@ class Page extends React.Component {
         const chartOptions = {
           ...Charts[data.key],
           ...variableData
+        };
+
+        chartOptions.data = {
+          ...chartOptions.data,
+          csv: data.rows.map(r => r.join(",")).join("\n")
         };
 
         const container = document.getElementById(`${key}`);
