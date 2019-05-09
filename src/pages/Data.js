@@ -35,6 +35,9 @@ class Data extends React.Component {
 
   componentDidMount() {
     document.title = `${this.state.title} | CSIS Careers`;
+
+    if (this.props.filteredSheetData.length)
+      InitSheets(this.props.filteredSheetData);
   }
 
   componentDidUpdate() {
