@@ -50,7 +50,6 @@ export default {
     },
     tooltip: {
       pointFormatter: function() {
-        console.log(this);
         return `<span style="color:${this.color}">\u25CF </span>
         ${this.y} Units`;
       }
@@ -290,27 +289,28 @@ export default {
   "8.1": {
     data: {
       complete: function(data) {
-        // // Filter out every piece of data that isn't considered a part of Other
-        // const filteredData = data.series.filter(
-        //   item =>
-        //     item.name !== "Indonesia" &&
-        //     item.name !== "Vietnam" &&
-        //     item.name !== "Mainland China" &&
-        //     item.name !== "Other"
-        // );
-        //
-        // // Set these series to invisible on the chart so they don't appear
-        // filteredData.forEach(item => {
-        //   item.showInLegend = false;
-        //   item.visible = false;
-        // });
-        //
-        // // pass these items into the 'Other' series of data as an object key that we can then access later in the toolbar using 'this'
-        // data.series.forEach(item => {
-        //   if (item.name === "Other") {
-        //     item.subData = filteredData;
-        //   }
-        // });
+        console.log(data);
+        // Filter out every piece of data that isn't considered a part of Other
+        const filteredData = data.series.filter(
+          item =>
+            item.name !== "Indonesia" &&
+            item.name !== "Vietnam" &&
+            item.name !== "Mainland China" &&
+            item.name !== "Other"
+        );
+
+        // Set these series to invisible on the chart so they don't appear
+        filteredData.forEach(item => {
+          item.showInLegend = false;
+          item.visible = false;
+        });
+
+        // pass these items into the 'Other' series of data as an object key that we can then access later in the toolbar using 'this'
+        data.series.forEach(item => {
+          if (item.name === "Other") {
+            item.subData = filteredData;
+          }
+        });
       }
     },
     chart: {

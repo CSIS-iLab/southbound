@@ -57,7 +57,7 @@ class Data extends React.Component {
   }
   render() {
     const { filteredSheetData, categories, filteredCategories } = this.props;
-    console.log(categories);
+
     const { page, pageContent } = this.state;
 
     const header = pageContent.find(content => content.component === "header");

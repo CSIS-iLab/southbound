@@ -140,7 +140,7 @@ class App extends Component {
       categories,
       filteredCategories
     } = this.state;
-    console.log(sheetData);
+
     return (
       <div className="wrapper">
         <Header siteStructure={siteStructure} />
