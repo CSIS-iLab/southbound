@@ -17,10 +17,6 @@ const fdiToSoutheast = sheet => {
       text:
         'Taiwan’s FDI to Mainland China and to Southeast Asia, 2001-2010 (US$ billions)'
     },
-    // subtitle: {
-    //   text: 'Optional Subtitle'
-    // },
-    // Credits
     credits: {
       href: 'https://www.dois.moea.gov.tw/Home/relation3',
       text:
@@ -34,14 +30,9 @@ const fdiToSoutheast = sheet => {
       },
       allowDecimals: false,
       tickInterval: 4
-      // labels: {
-      //   format: "${value}"
-      // }
     },
     // Tooltip
     tooltip: {
-      headerFormat:
-        '<span style="font-size: 13px;text-align:center;margin-bottom: 5px;font-weight: bold;font-family: \'Roboto\', arial, sans-serif;">{point.key}</span><br/>',
       pointFormatter: function() {
         return `<span style="color:${this.color}">\u25CF </span>
         $${this.y} Billion`

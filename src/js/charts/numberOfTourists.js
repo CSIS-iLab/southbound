@@ -17,10 +17,6 @@ const numberOfTourists = sheet => {
       text:
         'Number of tourists from Mainland China, Hong Kong and Macau, and Rest of World'
     },
-    // subtitle: {
-    //   text: 'Optional Subtitle'
-    // },
-    // Credits
     credits: {
       href: 'http://admin.taiwan.net.tw/public/public.aspx?no=315',
       text: 'Source: "Tourism Statistics", Tourism Bureau, ROC (Taiwan)'
@@ -32,14 +28,9 @@ const numberOfTourists = sheet => {
         text: 'Millions'
       },
       allowDecimals: false
-      // labels: {
-      //   format: "${value}"
-      // }
     },
     // Tooltip
     tooltip: {
-      headerFormat:
-        '<span style="font-size: 13px;text-align:center;margin-bottom: 5px;font-weight: bold;font-family: \'Roboto\', arial, sans-serif;">{point.key}</span><br/>',
       pointFormatter: function() {
         if (this.y.toString().split('').length === 7) {
           return `<span style="color:${this.color}">\u25CF </span>

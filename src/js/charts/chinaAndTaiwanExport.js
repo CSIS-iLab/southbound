@@ -35,8 +35,6 @@ const chinaAndTaiwanExport = sheet => {
     },
     // Tooltip
     tooltip: {
-      headerFormat:
-        '<span style="font-size: 13px;text-align:center;margin-bottom: 5px;font-weight: bold;font-family: \'Roboto\', arial, sans-serif;">{point.key}</span><br/>',
       pointFormatter: function() {
         return `<span style="color:${this.color}">\u25CF </span>
         $${this.y} Billion`

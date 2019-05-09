@@ -17,10 +17,6 @@ const outboundInvestment = sheet => {
       text:
         'Taiwan’s outbound investment in NSP target countries, 2000-2016 (US$ billions)'
     },
-    // subtitle: {
-    //   text: 'Optional Subtitle'
-    // },
-    // Credits
     credits: {
       href: 'http://www.moeaic.gov.tw/english/news_bsAn.jsp.',
       text:
@@ -38,8 +34,6 @@ const outboundInvestment = sheet => {
     },
     // Tooltip
     tooltip: {
-      headerFormat:
-        '<span style="font-size: 13px;text-align:center;margin-bottom: 5px;font-weight: bold;font-family: \'Roboto\', arial, sans-serif;">{point.key}</span><br/>',
       pointFormatter: function() {
         return `<span style="color:${this.color}">\u25CF </span>
         $${this.y.toFixed(2)} Billion`

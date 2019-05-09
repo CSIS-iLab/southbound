@@ -22,10 +22,12 @@ import sheet from './js/sheet'
 import './scss/main.scss'
 
 window.addEventListener('DOMContentLoaded', () => {
-  Highcharts.setOptions(theme)
+  Highcharts.setOptions(theme({ isDataRepo: false }))
+
   fdiToAsean(sheet)
   fdiToSoutheast(sheet)
   perCapitaGrowth(sheet)
+  Highcharts.setOptions(theme({ isDataRepo: true }))
   unemployment(sheet)
   exportToNSP(sheet)
   outboundInvestment(sheet)
@@ -42,4 +44,33 @@ window.addEventListener('DOMContentLoaded', () => {
   destinationNSP(sheet)
   sourceOfStudents(sheet)
   shareOfInbound(sheet)
+})
+
+window.addEventListener('resize', () => {
+  const highcharts = Array.from(document.querySelectorAll('article'))
+  highcharts.forEach(hC => {
+    const index = hC.dataset.highchartsChart
+    const chart = Highcharts.charts[index]
+
+    const chartWidth = document.querySelector('article').offsetWidth
+    const metaWidth = (chartWidth / 3) * 2
+
+    const newSize = {
+      chart: { width: chartWidth, marginLeft: chartWidth / 2 },
+      title: { widthAdjust: metaWidth * -1 },
+      subtitle: { widthAdjust: metaWidth * -1 }
+    }
+
+    chart.update(newSize)
+
+    const titleHeight = chart.title.getBBox().height
+    const legendWidth = chart.legend.legendWidth
+
+    const newPos = {
+      subtitle: { y: titleHeight },
+      legend: { x: chartWidth * 0.75 - legendWidth / 2 }
+    }
+
+    chart.update(newPos)
+  })
 })

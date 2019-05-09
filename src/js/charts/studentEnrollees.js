@@ -52,9 +52,6 @@ const studentEnrollees = sheet => {
         text: 'Thousands'
       },
       tickInterval: 50000
-      // labels: {
-      //   format: "${value}"
-      // }
     },
     // Tooltip
     tooltip: {
