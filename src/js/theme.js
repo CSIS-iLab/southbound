@@ -1,3 +1,5 @@
+const FAKE_TAGS = 'debt,trade,investment'
+
 export default function(options) {
   const { isDataRepo } = options
   const chartWidth = document.querySelector('article').offsetWidth
@@ -28,8 +30,10 @@ export default function(options) {
       events: {
         load: function() {
           if (isDataRepo) {
+            const tags = FAKE_TAGS
             const type = this.options.chart.type
-
+            const container = this.renderer.box.parentNode
+            container.dataset.tags = tags
             const titleHeight = this.title.getBBox().height
             this.update({
               subtitle: { y: titleHeight }
