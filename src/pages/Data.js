@@ -5,7 +5,7 @@ import PageContent from "../helpers/PageContent";
 import GetData from "../helpers/GetData";
 import CloseMenu from "../helpers/CloseMenu";
 import InitSheets from "../helpers/InitSheets";
-import Theme from "../helpers/Theme";
+import ChartOptions from "../helpers/ChartOptions";
 import Highcharts from "Highcharts";
 
 class Data extends React.Component {
@@ -40,7 +40,7 @@ class Data extends React.Component {
     const { filteredSheetData } = this.props;
 
     if (filteredSheetData && filteredSheetData.length) {
-      Highcharts.setOptions(Theme({ isDataRepo: true }));
+      Highcharts.setOptions(ChartOptions({ isDataRepo: true }));
 
       filteredSheetData.forEach(data => {
         InitSheets(data, { isDataRepo: true });
@@ -50,7 +50,7 @@ class Data extends React.Component {
 
   componentDidUpdate() {
     const { filteredSheetData } = this.props;
-    Highcharts.setOptions(Theme({ isDataRepo: true }));
+    Highcharts.setOptions(ChartOptions({ isDataRepo: true }));
 
     filteredSheetData.forEach(data => {
       InitSheets(data, { isDataRepo: true });

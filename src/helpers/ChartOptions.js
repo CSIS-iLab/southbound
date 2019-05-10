@@ -98,9 +98,7 @@ export default function(options) {
               const value = getReduceSigFigs(dataItem.data, units);
               const suffix = getSuffix(units);
 
-              return `<br><span class="${className}"> \u25CF </span>${name}: ${getPrefix(
-                units
-              )}${value}${suffix}`;
+              return `<p><span class="${className}"> \u25CF </span>${name}<br>&nbsp;&nbsp;&nbsp;${prefix}${value}${suffix}</p>`;
             })
             .join("");
         }
@@ -112,7 +110,9 @@ export default function(options) {
         const suffix = getSuffix(units);
 
         return `<p><span class="${color}">\u25CF </span>
-          ${this.series.name}:<br>  ${prefix}${value}${suffix}</p>`;
+          ${
+            this.series.name
+          }<br>&nbsp;&nbsp;&nbsp;${prefix}${value}${suffix}</p>`;
       }
     },
     plotOptions: {

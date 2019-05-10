@@ -3,7 +3,7 @@ import MarkdownToSections from "../helpers/MarkdownToSections";
 import PageContent from "../helpers/PageContent";
 import GetData from "../helpers/GetData";
 import CloseMenu from "../helpers/CloseMenu";
-import Theme from "../helpers/Theme";
+import ChartOptions from "../helpers/ChartOptions";
 import Highcharts from "Highcharts";
 import InitSheets from "../helpers/InitSheets";
 
@@ -25,7 +25,7 @@ class Page extends React.Component {
   loadCharts = () => {
     const { sheetData } = this.props;
     if (sheetData && sheetData.length) {
-      Highcharts.setOptions(Theme({ isDataRepo: false }));
+      Highcharts.setOptions(ChartOptions({ isDataRepo: false }));
 
       ["3.1", "5.1", "7.1", "8.1"].forEach(key => {
         const data = sheetData.find(d => d.key === key);
