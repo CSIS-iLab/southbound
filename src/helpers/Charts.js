@@ -6,11 +6,12 @@ export default {
     },
     yAxis: {
       title: {
-        text: "Billions"
+        text: "USD"
       }
     },
     tooltip: {
-      shared: true
+      shared: true,
+      valueSuffix: "B"
     }
   },
   // fditosoutheast
@@ -20,12 +21,13 @@ export default {
     },
     yAxis: {
       title: {
-        text: "Billions"
+        text: "USD"
       },
       tickInterval: 4
     },
     tooltip: {
-      shared: true
+      shared: true,
+      valueSuffix: "B"
     }
   },
   // percapitagrowth
@@ -46,7 +48,8 @@ export default {
       min: -12
     },
     tooltip: {
-      shared: true
+      shared: true,
+      valueSuffix: "U"
     }
   },
   // unemployment
@@ -56,11 +59,12 @@ export default {
     },
     yAxis: {
       title: {
-        text: "Percent"
+        text: "People"
       }
     },
     tooltip: {
-      shared: true
+      shared: true,
+      valueSuffix: "%"
     }
   },
   // exporttonsp
@@ -70,12 +74,13 @@ export default {
     },
     yAxis: {
       title: {
-        text: "Billions"
+        text: "USD"
       },
       tickInterval: 20
     },
     tooltip: {
-      shared: true
+      shared: true,
+      valueSuffix: "B"
     }
   },
   // outboundinvestment
@@ -85,11 +90,12 @@ export default {
     },
     yAxis: {
       title: {
-        text: "Billions"
+        text: "USD"
       }
     },
     tooltip: {
-      shared: true
+      shared: true,
+      valueSuffix: "B"
     }
   },
   // outboundchina
@@ -99,11 +105,12 @@ export default {
     },
     yAxis: {
       title: {
-        text: "Billions"
+        text: "USD"
       }
     },
     tooltip: {
-      shared: true
+      shared: true,
+      valueSuffix: "B"
     }
   },
   // exporttochina
@@ -113,12 +120,13 @@ export default {
     },
     yAxis: {
       title: {
-        text: "Billions"
+        text: "USD"
       },
       tickInterval: 20
     },
     tooltip: {
-      shared: true
+      shared: true,
+      valueSuffix: "B"
     }
   },
   // chinaandtaiwanexport
@@ -128,12 +136,13 @@ export default {
     },
     yAxis: {
       title: {
-        text: "Billions"
+        text: "USD"
       },
       tickInterval: 100
     },
     tooltip: {
-      shared: true
+      shared: true,
+      valueSuffix: "B"
     }
   },
   // chinaandtaiwanoutbound
@@ -143,11 +152,12 @@ export default {
     },
     yAxis: {
       title: {
-        text: "Billions"
+        text: "USD"
       }
     },
     tooltip: {
-      shared: true
+      shared: true,
+      valueSuffix: "B"
     }
   },
   // numberoftourists
@@ -157,11 +167,12 @@ export default {
     },
     yAxis: {
       title: {
-        text: "Millions"
+        text: "Tourists"
       }
     },
     tooltip: {
-      shared: true
+      shared: true,
+      valueSuffix: "M"
     }
   },
   // sourceoftourists
@@ -171,12 +182,13 @@ export default {
     },
     yAxis: {
       title: {
-        text: "Millions"
+        text: "Tourists"
       },
       tickInterval: 1000000
     },
     tooltip: {
-      shared: true
+      shared: true,
+      valueSuffix: "M"
     }
   },
   // touristsfromNSP
@@ -191,7 +203,8 @@ export default {
       tickInterval: 1000000
     },
     tooltip: {
-      shared: true
+      shared: true,
+      valueSuffix: "M"
     }
   },
   // touriststotaiwan
@@ -201,12 +214,15 @@ export default {
     },
     yAxis: {
       title: {
-        text: "Millions"
+        text: "Tourists"
       },
       tickInterval: 2000000
     },
     legend: {
       reversed: true
+    },
+    tooltip: {
+      valueSuffix: "M"
     }
   },
   // studentenrollees
@@ -216,12 +232,15 @@ export default {
     },
     yAxis: {
       title: {
-        text: "Thousands"
+        text: "Students"
       },
       tickInterval: 50000
     },
     legend: {
       reversed: true
+    },
+    tooltip: {
+      valueSuffix: "K"
     }
   },
   // destinationofstudents
@@ -231,7 +250,7 @@ export default {
     },
     yAxis: {
       title: {
-        text: "Millions"
+        text: "of Students"
       }
     },
     series: [
@@ -239,7 +258,10 @@ export default {
         index: 0,
         innerSize: "70%"
       }
-    ]
+    ],
+    tooltip: {
+      valueSuffix: "%"
+    }
   },
   // destinationnsp
   "8.3": {
@@ -249,10 +271,7 @@ export default {
     yAxis: {
       ceiling: 100,
       tickInterval: 10,
-      title: { text: "" },
-      labels: {
-        format: "{value}%"
-      }
+      title: { text: "" }
     },
     xAxis: {
       labels: {
@@ -263,7 +282,8 @@ export default {
       reversed: true
     },
     tooltip: {
-      headerFormat: ""
+      headerFormat: "<b>{series.name}</b>",
+      valueSuffix: "%"
     }
   },
   // sourceofstudents
@@ -273,8 +293,11 @@ export default {
     },
     yAxis: {
       title: {
-        text: "Millions"
+        text: "of Students"
       }
+    },
+    tooltip: {
+      valueSuffix: "%"
     },
     series: [
       {
@@ -291,10 +314,7 @@ export default {
     yAxis: {
       ceiling: 100,
       tickInterval: 10,
-      title: { text: "" },
-      labels: {
-        format: "{value}%"
-      }
+      title: { text: "" }
     },
     xAxis: {
       labels: {
@@ -305,7 +325,8 @@ export default {
       reversed: true
     },
     tooltip: {
-      headerFormat: ""
+      headerFormat: "<b>{series.name}</b>",
+      valueSuffix: "%"
     }
   }
 };

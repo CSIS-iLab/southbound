@@ -45,7 +45,12 @@ export default function(options) {
     yAxis: {
       allowDecimals: false,
       labels: {
-        x: -3
+        x: -3,
+        formatter: function() {
+          const { tooltip } = this.chart.userOptions;
+          const value = getReduceSigFigs(this.value, tooltip.valueSuffix);
+          return value + tooltip.valueSuffix;
+        }
       },
       title: {
         margin: 20
@@ -62,18 +67,24 @@ export default function(options) {
       useHTML: true,
       headerFormat: "<span>{point.key}</span>",
       pointFormatter: function() {
-        const { chart, yAxis } = this.series.chart.userOptions;
+        const { chart, yAxis, tooltip } = this.series.chart.userOptions;
         const { className, subData } = this.series.userOptions;
 
         const color = this.className || className;
-        const units = yAxis.title.text
-          .replace(/ions/, "ion")
-          .replace(/ands/, "and");
+        let units = yAxis.title.text;
 
         // FORMAT PIE CHART
         if (chart.type === "pie") {
           return `<br><span class="${color}">\u25CF </span>
-               ${this.y.toFixed(2)}%`;
+               ${this.y.toFixed(2)}${tooltip.valueSuffix} ${units}`;
+        }
+
+        // FORMAT PIE CHART
+        if (chart.type === "bar") {
+          units = "of Students";
+
+          return `<br><span class="${color}">\u25CF </span>
+                ${this.y.toFixed(2)}${tooltip.valueSuffix} ${units}`;
         }
 
         // FORMAT AGGREGATED POINTS
@@ -93,26 +104,29 @@ export default function(options) {
 
           return toolbarData
             .map(dataItem => {
-              const prefix = getPrefix(units);
+              const prefix = getPrefix(tooltip.valueSuffix);
               const name = dataItem.name;
-              const value = getReduceSigFigs(dataItem.data, units);
-              const suffix = getSuffix(units);
+              const value = getReduceSigFigs(
+                dataItem.data,
+                tooltip.valueSuffix
+              );
 
-              return `<p><span class="${className}"> \u25CF </span>${name}<br>&nbsp;&nbsp;&nbsp;${prefix}${value}${suffix}</p>`;
+              return `<p><span class="${className}"> \u25CF </span>${name}<br>&nbsp;&nbsp;&nbsp;${prefix}${value}${
+                tooltip.valueSuffix
+              } ${units}</p>`;
             })
             .join("");
         }
 
         // DEFAULT FORMAT
-        const prefix = getPrefix(units);
+        const prefix = getPrefix(tooltip.valueSuffix);
         const name = this.series.name;
-        const value = getReduceSigFigs(this.y, units);
-        const suffix = getSuffix(units);
+        const value = getReduceSigFigs(this.y, tooltip.valueSuffix);
 
         return `<p><span class="${color}">\u25CF </span>
-          ${
-            this.series.name
-          }<br>&nbsp;&nbsp;&nbsp;${prefix}${value}${suffix}</p>`;
+          ${this.series.name}<br>&nbsp;&nbsp;&nbsp;${prefix}${value}${
+          tooltip.valueSuffix
+        } ${units}</p>`;
       }
     },
     plotOptions: {
@@ -188,41 +202,32 @@ export default function(options) {
   };
 }
 
-function getReduceSigFigs(value, units) {
+function getReduceSigFigs(value, suffix) {
   if (value.toString().length > 4) {
-    switch (true) {
-      case units.toLowerCase().indexOf("thousand") > -1:
+    switch (suffix) {
+      case "K":
         return Math.round((value / 1000) * 10) / 10;
         break;
-      case units.toLowerCase().indexOf("million") > -1:
+      case "M":
         return Math.round((value / 1000000) * 10) / 10;
         break;
-      case units.toLowerCase().indexOf("billion") > -1:
+      case "B":
         return Math.round((value / 1000000000) * 10) / 10;
         break;
       default:
         return value;
     }
-  } else if (
-    value.toString().length > 3 &&
-    units.toLowerCase().indexOf("thousand") > -1
-  ) {
+  } else if (value.toString().length > 3 && suffix === "K") {
     return Math.round((value / 1000) * 10) / 10;
   } else {
     return value;
   }
 }
-function getPrefix(units) {
-  if (units.toLowerCase().indexOf("billion") > -1) {
+
+function getPrefix(suffix) {
+  if (suffix === "B") {
     return "$";
   } else {
     return "";
-  }
-}
-function getSuffix(units) {
-  if (units === "" || units.toLowerCase().indexOf("percent") > -1) {
-    return "%";
-  } else {
-    return " " + units;
   }
 }
