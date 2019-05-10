@@ -38,7 +38,7 @@ const perCapitaGrowth = sheet => {
       pointFormatter: function() {
         console.log(this)
         return `<span style="color:${this.color}">\u25CF </span>
-        ${this.y} Units`
+        ${this.y}`
       }
     }
   })
