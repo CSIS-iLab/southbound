@@ -9,13 +9,7 @@ export default {
       }
     },
     tooltip: {
-      shared: true,
-      pointFormatter: function() {
-        const color = this.className || this.series.userOptions.className;
-
-        return `<br/><span class="${color}">\u25CF </span>
-          $${this.y} Billion`;
-      }
+      shared: true
     }
   },
   "3.2": {
@@ -29,13 +23,7 @@ export default {
       tickInterval: 4
     },
     tooltip: {
-      shared: true,
-      pointFormatter: function() {
-        const color = this.className || this.series.userOptions.className;
-
-        return `<br/><span class="${color}">\u25CF </span>
-        $${this.y} Billion`;
-      }
+      shared: true
     }
   },
   "5.1": {
@@ -55,13 +43,7 @@ export default {
       min: -12
     },
     tooltip: {
-      shared: true,
-      pointFormatter: function() {
-        const color = this.className || this.series.userOptions.className;
-
-        return `<br/><span class="${color}">\u25CF </span>
-        ${this.y} Units`;
-      }
+      shared: true
     }
   },
   "5.2": {
@@ -74,13 +56,7 @@ export default {
       }
     },
     tooltip: {
-      shared: true,
-      pointFormatter: function() {
-        const color = this.className || this.series.userOptions.className;
-
-        return `<br/><span class="${color}">\u25CF </span>
-        ${this.y} %`;
-      }
+      shared: true
     }
   },
   "5.3": {
@@ -94,13 +70,7 @@ export default {
       tickInterval: 20
     },
     tooltip: {
-      shared: true,
-      pointFormatter: function() {
-        const color = this.className || this.series.userOptions.className;
-
-        return `<br/><span class="${color}">\u25CF </span>
-        $${this.y} Billion`;
-      }
+      shared: true
     }
   },
   "5.4": {
@@ -113,13 +83,7 @@ export default {
       }
     },
     tooltip: {
-      shared: true,
-      pointFormatter: function() {
-        const color = this.className || this.series.userOptions.className;
-
-        return `<br/><span class="${color}">\u25CF </span>
-        $${this.y.toFixed(2)} Billion`;
-      }
+      shared: true
     }
   },
   "5.5": {
@@ -132,13 +96,7 @@ export default {
       }
     },
     tooltip: {
-      shared: true,
-      pointFormatter: function() {
-        const color = this.className || this.series.userOptions.className;
-
-        return `<br/><span class="${color}">\u25CF </span>
-        $${this.y} Billion`;
-      }
+      shared: true
     }
   },
   "5.6": {
@@ -152,13 +110,7 @@ export default {
       tickInterval: 20
     },
     tooltip: {
-      shared: true,
-      pointFormatter: function() {
-        const color = this.className || this.series.userOptions.className;
-
-        return `<br/><span class="${color}">\u25CF </span>
-        $${this.y} Billion`;
-      }
+      shared: true
     }
   },
   "5.7": {
@@ -172,13 +124,7 @@ export default {
       tickInterval: 100
     },
     tooltip: {
-      shared: true,
-      pointFormatter: function() {
-        const color = this.className || this.series.userOptions.className;
-
-        return `<br/><span class="${color}">\u25CF </span>
-        $${this.y} Billion`;
-      }
+      shared: true
     }
   },
   "5.8": {
@@ -191,13 +137,7 @@ export default {
       }
     },
     tooltip: {
-      shared: true,
-      pointFormatter: function() {
-        const color = this.className || this.series.userOptions.className;
-
-        return `<br/><span class="${color}">\u25CF </span>
-        $${this.y} Billion`;
-      }
+      shared: true
     }
   },
   "7.1": {
@@ -210,13 +150,7 @@ export default {
       }
     },
     tooltip: {
-      shared: true,
-      pointFormatter: function() {
-        const color = this.className || this.series.userOptions.className;
-
-        return `<br/><span class="${color}">\u25CF </span>
-      $${Math.round(this.y / 1000000 * 10) / 10} Million`;
-      }
+      shared: true
     }
   },
   "7.2": {
@@ -230,13 +164,7 @@ export default {
       tickInterval: 1000000
     },
     tooltip: {
-      shared: true,
-      pointFormatter: function() {
-        const color = this.className || this.series.userOptions.className;
-
-        return `<br/><span class="${color}">\u25CF </span>
-      $${Math.round(this.y / 1000000 * 10) / 10} Million`;
-      }
+      shared: true
     }
   },
   "7.3": {
@@ -250,13 +178,7 @@ export default {
       tickInterval: 1000000
     },
     tooltip: {
-      shared: true,
-      pointFormatter: function() {
-        const color = this.className || this.series.userOptions.className;
-
-        return `<br/><span class="${color}">\u25CF </span>
-      $${Math.round(this.y / 1000000 * 10) / 10} Million`;
-      }
+      shared: true
     }
   },
   "7.4": {
@@ -271,27 +193,6 @@ export default {
     },
     legend: {
       reversed: true
-    },
-    tooltip: {
-      pointFormatter: function() {
-        if (this.y.toString().split("").length === 7) {
-          return `<span class="${
-            this.series.userOptions.className
-          }">\u25CF </span>
-                ${this.series.name}<br>
-               $${this.y
-                 .toString()
-                 .substring(0, 1)}.${this.y
-            .toString()
-            .substring(2, 4)} Million`;
-        } else {
-          return `<span class="${
-            this.series.userOptions.className
-          }">\u25CF </span>
-                 ${this.series.name}<br>
-              $0.${this.y.toString().substring(0, 2)} Million`;
-        }
-      }
     }
   },
   "8.1": {
@@ -306,40 +207,6 @@ export default {
     },
     legend: {
       reversed: true
-    },
-    tooltip: {
-      pointFormatter: function() {
-        const dataSet = this.series;
-        let toolbarData = [];
-
-        if (dataSet.name === "Other") {
-          dataSet.userOptions.subData.forEach(DataItem => {
-            for (let i = 0; i < DataItem.data.length; i++) {
-              if (DataItem.data[i][0] === this.category) {
-                const dataForYear = {
-                  name: DataItem.name,
-                  data: DataItem.data[i][1]
-                };
-                toolbarData.push(dataForYear);
-              }
-            }
-          });
-
-          return toolbarData
-            .map(dataItem => {
-              return `<br><span class="${
-                this.series.userOptions.className
-              }"> \u25CF </span>${dataItem.name}: $${dataItem.data}`;
-            })
-            .join("");
-        } else {
-          return `<span class="${
-            this.series.userOptions.className
-          }">\u25CF </span>
-                  ${this.series.name}<br>
-                 $${this.y.toString()}`;
-        }
-      }
     }
   },
   "8.2": {
@@ -351,14 +218,7 @@ export default {
         text: "Millions"
       }
     },
-    tooltip: {
-      pointFormatter: function() {
-        const color = this.className || this.series.userOptions.className;
 
-        return `<span class="${color}">\u25CF </span>
-               ${this.y.toFixed(2)}%`;
-      }
-    },
     series: [
       {
         index: 0,
@@ -387,13 +247,7 @@ export default {
       reversed: true
     },
     tooltip: {
-      pointFormatter: function() {
-        const color = this.className || this.series.userOptions.className;
-
-        return `<span class="${color}">\u25CF </span>
-                ${this.series.name}<br>
-               ${this.y.toFixed(2)}%`;
-      }
+      headerFormat: ""
     }
   },
   "8.4": {
@@ -405,14 +259,7 @@ export default {
         text: "Millions"
       }
     },
-    tooltip: {
-      pointFormatter: function() {
-        const color = this.className || this.series.userOptions.className;
 
-        return `<span class="${color}">\u25CF </span>
-               ${this.y.toFixed(2)}%`;
-      }
-    },
     series: [
       {
         index: 0,
@@ -441,13 +288,7 @@ export default {
       reversed: true
     },
     tooltip: {
-      pointFormatter: function() {
-        const color = this.className || this.series.userOptions.className;
-
-        return `<span class="${color}">\u25CF </span>
-                ${this.series.name}<br>
-               ${this.y.toFixed(2)}%`;
-      }
+      headerFormat: ""
     }
   }
 };

@@ -70,12 +70,18 @@
 }
 
 .highcharts-tooltip {
-  @include font-size(18px);
   font-family: $font__sans-serif;
+  filter: none !important;
   fill: $color__gray-medium;
+  @include font-size(18px);
 
-  tspan:first-of-type {
+  span span:first-of-type {
     font-weight: bold;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+    line-height: 1;
   }
 }
 

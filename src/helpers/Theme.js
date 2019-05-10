@@ -39,9 +39,6 @@ export default function(options) {
       href: false,
       position: { align: "center" }
     },
-    tooltip: {
-      headerFormat: "{point.key}<br/>"
-    },
     xAxis: {
       allowDecimals: false
     },
@@ -59,6 +56,63 @@ export default function(options) {
       layout: "horizontal",
       itemStyle: {
         textOverflow: null
+      }
+    },
+    tooltip: {
+      useHTML: true,
+      headerFormat: "<span>{point.key}</span>",
+      pointFormatter: function() {
+        const { chart, yAxis } = this.series.chart.userOptions;
+        const { className, subData } = this.series.userOptions;
+
+        const color = this.className || className;
+        const units = yAxis.title.text
+          .replace(/ions/, "ion")
+          .replace(/ands/, "and");
+
+        // FORMAT PIE CHART
+        if (chart.type === "pie") {
+          return `<br><span class="${color}">\u25CF </span>
+               ${this.y.toFixed(2)}%`;
+        }
+
+        // FORMAT AGGREGATED POINTS
+        if (this.series.name === "Other" && subData.length) {
+          let toolbarData = [];
+          subData.forEach(DataItem => {
+            for (let i = 0; i < DataItem.data.length; i++) {
+              if (DataItem.data[i][0] === this.category) {
+                const dataForYear = {
+                  name: DataItem.name,
+                  data: DataItem.data[i][1]
+                };
+                toolbarData.push(dataForYear);
+              }
+            }
+          });
+
+          return toolbarData
+            .map(dataItem => {
+              const prefix = getPrefix(units);
+              const name = dataItem.name;
+              const value = getReduceSigFigs(dataItem.data, units);
+              const suffix = getSuffix(units);
+
+              return `<br><span class="${className}"> \u25CF </span>${name}: ${getPrefix(
+                units
+              )}${value}${suffix}`;
+            })
+            .join("");
+        }
+
+        // DEFAULT FORMAT
+        const prefix = getPrefix(units);
+        const name = this.series.name;
+        const value = getReduceSigFigs(this.y, units);
+        const suffix = getSuffix(units);
+
+        return `<p><span class="${color}">\u25CF </span>
+          ${this.series.name}:<br>  ${prefix}${value}${suffix}</p>`;
       }
     },
     plotOptions: {
@@ -132,4 +186,43 @@ export default function(options) {
       ]
     }
   };
+}
+
+function getReduceSigFigs(value, units) {
+  if (value.toString().length > 4) {
+    switch (true) {
+      case units.toLowerCase().indexOf("thousand") > -1:
+        return Math.round((value / 1000) * 10) / 10;
+        break;
+      case units.toLowerCase().indexOf("million") > -1:
+        return Math.round((value / 1000000) * 10) / 10;
+        break;
+      case units.toLowerCase().indexOf("billion") > -1:
+        return Math.round((value / 1000000000) * 10) / 10;
+        break;
+      default:
+        return value;
+    }
+  } else if (
+    value.toString().length > 3 &&
+    units.toLowerCase().indexOf("thousand") > -1
+  ) {
+    return Math.round((value / 1000) * 10) / 10;
+  } else {
+    return value;
+  }
+}
+function getPrefix(units) {
+  if (units.toLowerCase().indexOf("billion") > -1) {
+    return "$";
+  } else {
+    return "";
+  }
+}
+function getSuffix(units) {
+  if (units === "" || units.toLowerCase().indexOf("percent") > -1) {
+    return "%";
+  } else {
+    return " " + units;
+  }
 }
