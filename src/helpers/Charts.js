@@ -1,4 +1,5 @@
 export default {
+  // fditoasean
   "3.1": {
     chart: {
       type: "line"
@@ -12,6 +13,7 @@ export default {
       shared: true
     }
   },
+  // fditosoutheast
   "3.2": {
     chart: {
       type: "line"
@@ -26,6 +28,7 @@ export default {
       shared: true
     }
   },
+  // percapitagrowth
   "5.1": {
     chart: {
       height: 500,
@@ -46,6 +49,7 @@ export default {
       shared: true
     }
   },
+  // unemployment
   "5.2": {
     chart: {
       type: "line"
@@ -59,6 +63,7 @@ export default {
       shared: true
     }
   },
+  // exporttonsp
   "5.3": {
     chart: {
       type: "line"
@@ -73,6 +78,7 @@ export default {
       shared: true
     }
   },
+  // outboundinvestment
   "5.4": {
     chart: {
       type: "line"
@@ -86,6 +92,7 @@ export default {
       shared: true
     }
   },
+  // outboundchina
   "5.5": {
     chart: {
       type: "line"
@@ -99,6 +106,7 @@ export default {
       shared: true
     }
   },
+  // exporttochina
   "5.6": {
     chart: {
       type: "line"
@@ -113,6 +121,7 @@ export default {
       shared: true
     }
   },
+  // chinaandtaiwanexport
   "5.7": {
     chart: {
       type: "line"
@@ -127,6 +136,7 @@ export default {
       shared: true
     }
   },
+  // chinaandtaiwanoutbound
   "5.8": {
     chart: {
       type: "line"
@@ -140,6 +150,7 @@ export default {
       shared: true
     }
   },
+  // numberoftourists
   "7.1": {
     chart: {
       type: "line"
@@ -153,6 +164,7 @@ export default {
       shared: true
     }
   },
+  // sourceoftourists
   "7.2": {
     chart: {
       type: "line"
@@ -167,6 +179,7 @@ export default {
       shared: true
     }
   },
+  // touristsfromNSP
   "7.3": {
     chart: {
       type: "line"
@@ -181,6 +194,7 @@ export default {
       shared: true
     }
   },
+  // touriststotaiwan
   "7.4": {
     chart: {
       type: "column"
@@ -195,6 +209,7 @@ export default {
       reversed: true
     }
   },
+  // studentenrollees
   "8.1": {
     chart: {
       type: "column"
@@ -209,6 +224,7 @@ export default {
       reversed: true
     }
   },
+  // destinationofstudents
   "8.2": {
     chart: {
       type: "pie"
@@ -218,7 +234,6 @@ export default {
         text: "Millions"
       }
     },
-
     series: [
       {
         index: 0,
@@ -226,6 +241,7 @@ export default {
       }
     ]
   },
+  // destinationnsp
   "8.3": {
     chart: {
       type: "bar"
@@ -250,6 +266,7 @@ export default {
       headerFormat: ""
     }
   },
+  // sourceofstudents
   "8.4": {
     chart: {
       type: "pie"
@@ -259,7 +276,6 @@ export default {
         text: "Millions"
       }
     },
-
     series: [
       {
         index: 0,
@@ -267,6 +283,7 @@ export default {
       }
     ]
   },
+  // shareofinbound
   "8.5": {
     chart: {
       type: "bar"
