@@ -1,5 +1,5 @@
 section.row {
-  &:not(#disclaimer):not(#job_alerts):not(#testimonials):not(#intern_eligibility) {
+  &:not(#disclaimer) {
     &:not(:first-of-type) {
       &::before {
         position: relative;
@@ -14,7 +14,7 @@ section.row {
     }
   }
 
-  &:not(#disclaimer):not(#job_alerts):not(#testimonials) {
+  &:not(#disclaimer) {
     margin-bottom: 3.5rem;
   }
 }
@@ -120,8 +120,18 @@ main:not(.faq) {
   }
 }
 
-.job-post__content {
-  min-height: 100vh;
+.report {
+  > div {
+    display: grid;
+
+    grid-row-gap: 1.5rem;
+
+    @include breakpoint('large') {
+      grid-template-columns: 1fr 0.5fr;
+
+      grid-template-rows: 1fr;
+    }
+  }
 }
 
 .homepage {
@@ -133,24 +143,7 @@ main:not(.faq) {
   }
 }
 
-.data {
-  #job_alerts {
-    @include full-width-background($color__gray-lighter);
-    padding: 2.5rem 0 4rem;
-    background-color: $color__gray-lighter;
-  }
-}
-
-.internships {
-  #testimonials {
-    @include full-width-background($color__gray-lighter);
-    margin-bottom: 1rem;
-    padding: 2.5rem 0 4rem;
-    background-color: $color__gray-lighter;
-  }
-}
-
-.faq {
+.about {
   .header {
     ul {
       @include breakpoint('medium', 'max-width') {

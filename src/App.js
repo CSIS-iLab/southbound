@@ -6,6 +6,8 @@ import Data from "./pages/Data";
 import SiteMap from "./SiteMap";
 import { Route } from "react-router-dom";
 import SmoothScroll from "smooth-scroll";
+import Highcharts from "Highcharts";
+
 const SPREADSHEET_ID = "1X5WZaBcvkt_2e3L2gYvCjsMjAE2KHtinUK1Yl5jwYpA";
 const { gapi } = window;
 
@@ -20,7 +22,7 @@ class App extends Component {
     };
   }
 
-  updateJobs = (input, value) => {
+  updateCharts = (input, value) => {
     let filteredSheetData, filteredCategories;
 
     switch (input) {
@@ -33,9 +35,9 @@ class App extends Component {
 
         filteredCategories = [
           ...new Set(
-            filteredSheetData.map(data => {
-              return data.category["#cdata-section"];
-            })
+            filteredSheetData
+              .map(data => data.tags)
+              .reduce((a, b) => a.concat(b))
           )
         ];
 
@@ -55,9 +57,9 @@ class App extends Component {
             )
           : [...filteredCategories, value];
 
-        filteredSheetData = this.state.sheetData.filter(data =>
-          filteredCategories.includes(data)
-        );
+        filteredSheetData = this.state.sheetData.filter(data => {
+          return data.tags.some(t => filteredCategories.includes(t));
+        });
         break;
       default:
     }
@@ -100,7 +102,9 @@ class App extends Component {
                     title: values[0][0] || "",
                     subtitle: values[1][0] || "",
                     credits: values[2] ? values[2][0] : "",
-                    tags: values[3] ? values[3][0].split(",") : [],
+                    tags: values[3]
+                      ? values[3][0].split(",").map(t => t.trim())
+                      : [],
                     rows: values.slice(4)
                   };
                 });
@@ -129,6 +133,63 @@ class App extends Component {
     new SmoothScroll('a[href*="#"]', {
       header: ".site-header",
       speed: 500
+    });
+
+    window.addEventListener("resize", () => {
+      const highcharts = Array.from(document.querySelectorAll(".chart"));
+      highcharts.forEach(hC => {
+        const index = hC.dataset.highchartsChart;
+        const chart = Highcharts.charts[index];
+
+        const chartWidth = document.querySelector("main").offsetWidth;
+        const metaWidth = chartWidth / 3 * 2;
+
+        const newSize =
+          window.innerWidth > 1080
+            ? {
+                chart: {
+                  height: 500,
+                  width: chartWidth,
+                  marginLeft: chartWidth / 2
+                },
+                title: { widthAdjust: metaWidth * -1, align: "left" },
+                subtitle: { widthAdjust: metaWidth * -1, align: "left" },
+                credits: { align: "left" }
+              }
+            : {
+                chart: { height: 500, width: null, marginLeft: undefined },
+                title: { widthAdjust: -44, align: "center" },
+                subtitle: { widthAdjust: -44, align: "center" },
+                credits: { align: "center" }
+              };
+
+        chart.update(newSize);
+
+        const titleHeight = chart.title.getBBox().height + 24;
+        const legendWidth = chart.legend.legendWidth;
+
+        const newPos =
+          window.innerWidth > 1080
+            ? {
+                chart: {
+                  height: 500
+                },
+                subtitle: { y: titleHeight },
+                legend: {
+                  x: chartWidth * 0.75 - legendWidth / 2,
+                  align: "left"
+                }
+              }
+            : {
+                chart: {
+                  height: 500
+                },
+                subtitle: { y: titleHeight },
+                legend: { x: 0, align: "center" }
+              };
+
+        chart.update(newPos);
+      });
     });
   }
 
@@ -172,14 +233,14 @@ class App extends Component {
               filteredSheetData={filteredSheetData}
               categories={categories}
               filteredCategories={filteredCategories}
-              updateJobs={this.updateJobs}
+              updateCharts={this.updateCharts}
               siteStructure={siteStructure}
               page="data"
             />
           )}
         />
-        <Footer siteStructure={siteStructure} />{" "}
-        <div className="content-overlay" />{" "}
+        <Footer siteStructure={siteStructure} />
+        <div className="content-overlay" />
       </div>
     );
   }

@@ -103,6 +103,10 @@
   }
 
   &-category_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
     label {
       display: inline-block;
       line-height: 1.56;
@@ -125,12 +129,12 @@
   min-height: 350px;
   padding-top: 3rem;
 
-  .job {
+  .chart {
     padding-bottom: 2rem;
 
     &:not(:first-of-type) {
       padding-top: 1.5rem;
-      border-top: 2px solid $color__gray;
+      border-top: 2px solid $color__gray-light;
     }
   }
 }

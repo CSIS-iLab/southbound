@@ -5,6 +5,8 @@ import PageContent from "../helpers/PageContent";
 import GetData from "../helpers/GetData";
 import CloseMenu from "../helpers/CloseMenu";
 import InitSheets from "../helpers/InitSheets";
+import Theme from "../helpers/Theme";
+import Highcharts from "Highcharts";
 
 class Data extends React.Component {
   constructor(props) {
@@ -22,30 +24,41 @@ class Data extends React.Component {
   }
 
   handleCategoryChange = e => {
-    this.props.updateJobs("category", e.target.name);
+    this.props.updateCharts("category", e.target.name);
   };
 
   handleClear = e => {
-    this.props.updateJobs("clear");
+    this.props.updateCharts("clear");
   };
 
   handleSearch = e => {
-    this.props.updateJobs("search", e.target.value);
+    this.props.updateCharts("search", e.target.value);
   };
 
   componentDidMount() {
     document.title = `${this.state.title} | CSIS Careers`;
+    const { filteredSheetData } = this.props;
 
-    if (this.props.filteredSheetData.length)
-      InitSheets(this.props.filteredSheetData);
+    if (filteredSheetData && filteredSheetData.length) {
+      Highcharts.setOptions(Theme({ isDataRepo: true }));
+
+      filteredSheetData.forEach(data => {
+        InitSheets(data, { isDataRepo: true });
+      });
+    }
   }
 
   componentDidUpdate() {
-    InitSheets(this.props.filteredSheetData);
+    const { filteredSheetData } = this.props;
+    Highcharts.setOptions(Theme({ isDataRepo: true }));
+
+    filteredSheetData.forEach(data => {
+      InitSheets(data, { isDataRepo: true });
+    });
   }
 
   componentWillUnmount() {
-    // this.props.updateJobs("clear");
+    this.props.updateCharts("clear");
     const triggers = Array.from(
       document.querySelectorAll(".menu-trigger.is-active")
     );

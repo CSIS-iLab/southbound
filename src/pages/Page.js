@@ -4,8 +4,8 @@ import PageContent from "../helpers/PageContent";
 import GetData from "../helpers/GetData";
 import CloseMenu from "../helpers/CloseMenu";
 import Theme from "../helpers/Theme";
-import Charts from "../helpers/Charts";
 import Highcharts from "Highcharts";
+import InitSheets from "../helpers/InitSheets";
 
 class Page extends React.Component {
   constructor(props) {
@@ -24,36 +24,13 @@ class Page extends React.Component {
 
   loadCharts = () => {
     const { sheetData } = this.props;
-    if (sheetData.length) {
+    if (sheetData && sheetData.length) {
       Highcharts.setOptions(Theme({ isDataRepo: false }));
 
       ["3.1", "5.1", "7.1", "8.1"].forEach(key => {
         const data = sheetData.find(d => d.key === key);
 
-        const variableData = {
-          title: {
-            text: data.title
-          },
-          subTitle: {
-            text: data.subtitle
-          },
-          credits: {
-            text: data.credits
-          }
-        };
-
-        const chartOptions = {
-          ...Charts[data.key],
-          ...variableData
-        };
-
-        chartOptions.data = {
-          ...chartOptions.data,
-          csv: data.rows.map(r => r.join(",")).join("\n")
-        };
-
-        const container = document.getElementById(`${key}`);
-        if (container) Highcharts.chart(container, chartOptions);
+        InitSheets(data, { isDataRepo: false });
       });
     }
   };

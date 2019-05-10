@@ -16,7 +16,7 @@ sections:
           <div><a href="/data" class="forward large">See Data</a></div>
   test1:
     index: 2
-    component: cantilever
+    component: report
     title: Test
     content:
         - |-
@@ -24,7 +24,7 @@ sections:
           <article id="3.1"></article>
   test2:
     index: 3
-    component: cantilever
+    component: report
     title: Test
     content:
         - |-
@@ -32,7 +32,7 @@ sections:
           <article id="5.1"></article>
   test3:
     index: 4
-    component: cantilever
+    component: report
     title: Test
     content:
         - |-
@@ -40,7 +40,7 @@ sections:
           <article id="7.1"></article>
   test4:
     index: 5
-    component: cantilever
+    component: report
     title: Test
     content:
         - |-

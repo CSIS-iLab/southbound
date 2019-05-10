@@ -1,65 +1,68 @@
 import Highcharts from "Highcharts";
-import Theme from "./Theme";
 import Charts from "./Charts";
 
-export default function InitSheets(sheetData) {
-  Highcharts.setOptions(Theme({ isDataRepo: true }));
+export default function InitSheets(data, location) {
+  const { isDataRepo } = location;
+  const variableData = {
+    title: {
+      text: data.title
+    },
+    subtitle: {
+      text: isDataRepo ? data.subtitle : ""
+    },
+    credits: {
+      text: data.credits
+    }
+  };
 
-  sheetData.forEach((data, index) => {
-    const variableData = {
-      title: {
-        text: data.title
-      },
-      subTitle: {
-        text: data.subtitle
-      },
-      credits: {
-        text: data.credits
+  const chartOptions = {
+    ...Charts[data.key],
+    ...variableData
+  };
+
+  chartOptions.data = {
+    ...chartOptions.data,
+    csv: data.rows.map(r => r.join(",")).join("\n"),
+    complete: d => {
+      if (chartOptions.chart.type === "pie") {
+        d.series[0].data = d.series[0].data.map(s => {
+          const name = s[0].toLowerCase().replace(/ /g, "-");
+
+          return { name: s[0], y: s[1], className: `color-${name}` };
+        });
       }
-    };
+      let filtered = [];
+      const excluded = [
+        "Myanmar",
+        "Malaysia",
+        "Cambodia",
+        "Philippines",
+        "Thailand"
+      ];
+      d.series.forEach(s => {
+        const name = s.name.toLowerCase().replace(/ /g, "-");
 
-    const chartOptions = {
-      ...Charts[data.key],
-      ...variableData
-    };
+        s.className = `color-${name}`;
 
-    chartOptions.data = {
-      ...chartOptions.data,
-      csv: data.rows.map(r => r.join(",")).join("\n")
-    };
+        // Filter out every piece of data that isn't considered a part of Other
+        if (excluded.includes(s.name)) filtered.push(s);
+      });
 
-    const container = document.getElementById(`${data.key}`);
-    if (container) Highcharts.chart(container, chartOptions);
-  });
+      // Set these series to invisible on the chart so they don't appear
+      filtered.forEach(item => {
+        item.showInLegend = false;
+        item.visible = false;
+      });
 
-  Highcharts.setOptions(Theme({ isDataRepo: false }));
+      // pass these items into the 'Other' series of data as an object key that we can then access later in the toolbar using 'this'
+      d.series.forEach(item => {
+        if (item.name === "Other") {
+          item.subData = filtered;
+        }
+      });
+    }
+  };
 
-  window.addEventListener("resize", () => {
-    const highcharts = Array.from(document.querySelectorAll(".chart"));
-    highcharts.forEach(hC => {
-      const index = hC.dataset.highchartsChart;
-      const chart = Highcharts.charts[index];
-
-      const chartWidth = document.querySelector("main").offsetWidth;
-      const metaWidth = (chartWidth / 3) * 2;
-
-      const newSize = {
-        chart: { width: chartWidth, marginLeft: chartWidth / 2 },
-        title: { widthAdjust: metaWidth * -1 },
-        subtitle: { widthAdjust: metaWidth * -1 }
-      };
-
-      chart.update(newSize);
-
-      const titleHeight = chart.title.getBBox().height;
-      const legendWidth = chart.legend.legendWidth;
-
-      const newPos = {
-        subtitle: { y: titleHeight },
-        legend: { x: chartWidth * 0.75 - legendWidth / 2 }
-      };
-
-      chart.update(newPos);
-    });
-  });
+  const container = document.getElementById(`${data.key}`);
+  if (container) Highcharts.chart(container, chartOptions);
 }

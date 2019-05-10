@@ -1,0 +1,273 @@
+@import url('https://code.highcharts.com/css/highcharts.css');
+
+.highcharts-title {
+  font-weight: bold;
+  fill: $color__gray-medium;
+
+  main.data & {
+    @include fluid-type(24px, 26px);
+  }
+}
+
+.highcharts-subtitle {
+  font-family: $font__sans-serif;
+  line-height: $font__line-height-body;
+  fill: $color__gray-medium;
+
+  main.data & {
+    @include fluid-type(18px, 20px);
+  }
+}
+
+.highcharts-credits {
+  &,
+  &:hover {
+    font-family: $font__sans-serif;
+    cursor: default;
+    fill: $color__gray-medium;
+    @include font-size(10px);
+
+    main.data & {
+      @include font-size(12px);
+    }
+  }
+}
+
+.highcharts-axis-title {
+  font-family: $font__sans-serif;
+  fill: $color__gray-medium;
+
+  main.data & {
+    @include font-size(14px);
+  }
+}
+
+.highcharts-xaxis-labels {
+  font-family: $font__sans-serif;
+  fill: $color__gray-medium;
+
+  main.data & {
+    @include font-size(12px);
+  }
+}
+
+.highcharts-yaxis-labels {
+  font-family: $font__sans-serif;
+  fill: $color__gray-medium;
+
+  main.data & {
+    @include font-size(12px);
+  }
+}
+
+.highcharts-legend-item {
+  font-family: $font__sans-serif;
+  fill: $color__gray-medium;
+
+  main.data & {
+    @include font-size(12px);
+  }
+}
+
+.highcharts-tooltip {
+  @include font-size(18px);
+  font-family: $font__sans-serif;
+  fill: $color__gray-medium;
+
+  tspan:first-of-type {
+    font-weight: bold;
+  }
+}
+
+.highcharts-xaxis-grid .highcharts-grid-line {
+  stroke-width: 1px;
+}
+
+.highcharts-axis-line {
+  stroke-width: 0;
+}
+
+/* stylelint-disable */
+[class*='color'] {
+  &,
+  .highcharts-graph {
+    color: #4f412d;
+    stroke: #4f412d;
+  }
+
+  rect {
+    stroke: #fff;
+  }
+
+  &:not(.highcharts-data-label-connector) {
+    fill: #4f412d;
+  }
+}
+
+[class*='south'] {
+  &,
+  .highcharts-graph {
+    color: #968f88;
+    stroke: #968f88;
+  }
+
+  .highcharts-point,
+  &:not(.highcharts-data-label-connector) {
+    fill: #968f88;
+  }
+}
+
+[class*='asean'] {
+  &,
+  .highcharts-graph {
+    color: #766368;
+    stroke: #766368;
+  }
+
+  .highcharts-point,
+  &:not(.highcharts-data-label-connector) {
+    fill: #766368;
+  }
+}
+
+[class*='nsp'],
+[class*='youth'] {
+  &,
+  .highcharts-graph {
+    color: #d2c5c8;
+    stroke: #d2c5c8;
+  }
+
+  .highcharts-point,
+  &:not(.highcharts-data-label-connector) {
+    fill: #d2c5c8;
+  }
+}
+
+[class*='china'] {
+  &,
+  .highcharts-graph {
+    color: #c95363;
+    stroke: #c95363;
+  }
+
+  .highcharts-point,
+  &:not(.highcharts-data-label-connector) {
+    fill: #c95363;
+  }
+}
+
+[class*='indonesia'],
+[class*='japan'] {
+  &,
+  .highcharts-graph {
+    color: #65345b;
+    stroke: #65345b;
+  }
+
+  .highcharts-point,
+  &:not(.highcharts-data-label-connector) {
+    fill: #65345b;
+  }
+}
+
+[class*='korea'] {
+  &,
+  .highcharts-graph {
+    color: #41a385;
+    stroke: #41a385;
+  }
+
+  .highcharts-point,
+  &:not(.highcharts-data-label-connector) {
+    fill: #41a385;
+  }
+}
+
+[class*='africa'],
+[class*='india'],
+[class*='kong'] {
+  &,
+  .highcharts-graph {
+    color: #db6548;
+    stroke: #db6548;
+  }
+
+  .highcharts-point,
+  &:not(.highcharts-data-label-connector) {
+    fill: #db6548;
+  }
+}
+
+[class*='singapore'],
+[class*='africa'] {
+  &,
+  .highcharts-graph {
+    color: #6b64ca;
+    stroke: #6b64ca;
+  }
+
+  .highcharts-point,
+  &:not(.highcharts-data-label-connector) {
+    fill: #6b64ca;
+  }
+}
+
+[class*='us'],
+[class*='america'],
+[class*='vietnam'] {
+  &,
+  .highcharts-graph {
+    color: #b76cc2;
+    stroke: #b76cc2;
+  }
+
+  .highcharts-point,
+  &:not(.highcharts-data-label-connector) {
+    fill: #b76cc2;
+  }
+}
+
+[class*='aus'] {
+  &,
+  .highcharts-graph {
+    color: teal;
+    stroke: teal;
+  }
+
+  .highcharts-point,
+  &:not(.highcharts-data-label-connector) {
+    fill: teal;
+  }
+}
+
+[class*='europe'],
+[class*='taiwan'] {
+  &,
+  .highcharts-graph {
+    color: #6084c9;
+    stroke: #6084c9;
+  }
+
+  .highcharts-point,
+  &:not(.highcharts-data-label-connector) {
+    fill: #6084c9;
+  }
+}
+
+[class*='oceania'],
+[class*='canada'],
+[class*='zealand'],
+[class*='nz'] {
+  &,
+  .highcharts-graph {
+    color: #cc6a8a;
+    stroke: #cc6a8a;
+  }
+
+  .highcharts-point,
+  &:not(.highcharts-data-label-connector) {
+    fill: #cc6a8a;
+  }
+}
+/* stylelint-enable */

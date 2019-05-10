@@ -9,8 +9,11 @@ export default {
       }
     },
     tooltip: {
+      shared: true,
       pointFormatter: function() {
-        return `<span style="color:${this.color}">\u25CF </span>
+        const color = this.className || this.series.userOptions.className;
+
+        return `<br/><span class="${color}">\u25CF </span>
           $${this.y} Billion`;
       }
     }
@@ -19,38 +22,44 @@ export default {
     chart: {
       type: "line"
     },
-
     yAxis: {
       title: {
         text: "Billions"
       },
-      allowDecimals: false,
       tickInterval: 4
     },
     tooltip: {
+      shared: true,
       pointFormatter: function() {
-        return `<span style="color:${this.color}">\u25CF </span>
+        const color = this.className || this.series.userOptions.className;
+
+        return `<br/><span class="${color}">\u25CF </span>
         $${this.y} Billion`;
       }
     }
   },
   "5.1": {
     chart: {
+      height: 500,
       type: "line"
     },
-
     xAxis: {
-      offset: -140
+      offset: -200
     },
     yAxis: {
       title: {
-        text: ""
+        text: "Units"
       },
-      tickInterval: 4
+      tickInterval: 4,
+      max: 12,
+      min: -12
     },
     tooltip: {
+      shared: true,
       pointFormatter: function() {
-        return `<span style="color:${this.color}">\u25CF </span>
+        const color = this.className || this.series.userOptions.className;
+
+        return `<br/><span class="${color}">\u25CF </span>
         ${this.y} Units`;
       }
     }
@@ -59,15 +68,17 @@ export default {
     chart: {
       type: "line"
     },
-
     yAxis: {
       title: {
         text: "Percent"
       }
     },
     tooltip: {
+      shared: true,
       pointFormatter: function() {
-        return `<span style="color:${this.color}">\u25CF </span>
+        const color = this.className || this.series.userOptions.className;
+
+        return `<br/><span class="${color}">\u25CF </span>
         ${this.y} %`;
       }
     }
@@ -83,8 +94,11 @@ export default {
       tickInterval: 20
     },
     tooltip: {
+      shared: true,
       pointFormatter: function() {
-        return `<span style="color:${this.color}">\u25CF </span>
+        const color = this.className || this.series.userOptions.className;
+
+        return `<br/><span class="${color}">\u25CF </span>
         $${this.y} Billion`;
       }
     }
@@ -99,8 +113,11 @@ export default {
       }
     },
     tooltip: {
+      shared: true,
       pointFormatter: function() {
-        return `<span style="color:${this.color}">\u25CF </span>
+        const color = this.className || this.series.userOptions.className;
+
+        return `<br/><span class="${color}">\u25CF </span>
         $${this.y.toFixed(2)} Billion`;
       }
     }
@@ -109,16 +126,17 @@ export default {
     chart: {
       type: "line"
     },
-
     yAxis: {
       title: {
         text: "Billions"
-      },
-      allowDecimals: false
+      }
     },
     tooltip: {
+      shared: true,
       pointFormatter: function() {
-        return `<span style="color:${this.color}">\u25CF </span>
+        const color = this.className || this.series.userOptions.className;
+
+        return `<br/><span class="${color}">\u25CF </span>
         $${this.y} Billion`;
       }
     }
@@ -127,12 +145,6 @@ export default {
     chart: {
       type: "line"
     },
-    legend: {
-      align: "center",
-      verticalAlign: "bottom",
-      layout: "horizontal"
-    },
-
     yAxis: {
       title: {
         text: "Billions"
@@ -140,8 +152,11 @@ export default {
       tickInterval: 20
     },
     tooltip: {
+      shared: true,
       pointFormatter: function() {
-        return `<span style="color:${this.color}">\u25CF </span>
+        const color = this.className || this.series.userOptions.className;
+
+        return `<br/><span class="${color}">\u25CF </span>
         $${this.y} Billion`;
       }
     }
@@ -157,8 +172,11 @@ export default {
       tickInterval: 100
     },
     tooltip: {
+      shared: true,
       pointFormatter: function() {
-        return `<span style="color:${this.color}">\u25CF </span>
+        const color = this.className || this.series.userOptions.className;
+
+        return `<br/><span class="${color}">\u25CF </span>
         $${this.y} Billion`;
       }
     }
@@ -167,15 +185,17 @@ export default {
     chart: {
       type: "line"
     },
-
     yAxis: {
       title: {
         text: "Billions"
       }
     },
     tooltip: {
+      shared: true,
       pointFormatter: function() {
-        return `<span style="color:${this.color}">\u25CF </span>
+        const color = this.className || this.series.userOptions.className;
+
+        return `<br/><span class="${color}">\u25CF </span>
         $${this.y} Billion`;
       }
     }
@@ -187,22 +207,15 @@ export default {
     yAxis: {
       title: {
         text: "Millions"
-      },
-      allowDecimals: false
+      }
     },
     tooltip: {
+      shared: true,
       pointFormatter: function() {
-        if (this.y.toString().split("").length === 7) {
-          return `<span style="color:${this.color}">\u25CF </span>
-               $${this.y
-                 .toString()
-                 .substring(0, 1)}.${this.y
-            .toString()
-            .substring(2, 4)} Million`;
-        } else {
-          return `<span style="color:${this.color}">\u25CF </span>
-              $0.${this.y.toString().substring(0, 2)} Million`;
-        }
+        const color = this.className || this.series.userOptions.className;
+
+        return `<br/><span class="${color}">\u25CF </span>
+      $${Math.round(this.y / 1000000 * 10) / 10} Million`;
       }
     }
   },
@@ -217,18 +230,12 @@ export default {
       tickInterval: 1000000
     },
     tooltip: {
+      shared: true,
       pointFormatter: function() {
-        if (this.y.toString().split("").length === 7) {
-          return `<span style="color:${this.color}">\u25CF </span>
-               $${this.y
-                 .toString()
-                 .substring(0, 1)}.${this.y
-            .toString()
-            .substring(2, 4)} Million`;
-        } else {
-          return `<span style="color:${this.color}">\u25CF </span>
-              $0.${this.y.toString().substring(0, 2)} Million`;
-        }
+        const color = this.className || this.series.userOptions.className;
+
+        return `<br/><span class="${color}">\u25CF </span>
+      $${Math.round(this.y / 1000000 * 10) / 10} Million`;
       }
     }
   },
@@ -243,18 +250,12 @@ export default {
       tickInterval: 1000000
     },
     tooltip: {
+      shared: true,
       pointFormatter: function() {
-        if (this.y.toString().split("").length === 7) {
-          return `<span style="color:${this.color}">\u25CF </span>
-               $${this.y
-                 .toString()
-                 .substring(0, 1)}.${this.y
-            .toString()
-            .substring(2, 4)} Million`;
-        } else {
-          return `<span style="color:${this.color}">\u25CF </span>
-              $0.${this.y.toString().substring(0, 2)} Million`;
-        }
+        const color = this.className || this.series.userOptions.className;
+
+        return `<br/><span class="${color}">\u25CF </span>
+      $${Math.round(this.y / 1000000 * 10) / 10} Million`;
       }
     }
   },
@@ -268,10 +269,15 @@ export default {
       },
       tickInterval: 2000000
     },
+    legend: {
+      reversed: true
+    },
     tooltip: {
       pointFormatter: function() {
         if (this.y.toString().split("").length === 7) {
-          return `<span style="color:${this.color}">\u25CF </span>
+          return `<span class="${
+            this.series.userOptions.className
+          }">\u25CF </span>
                 ${this.series.name}<br>
                $${this.y
                  .toString()
@@ -279,7 +285,9 @@ export default {
             .toString()
             .substring(2, 4)} Million`;
         } else {
-          return `<span style="color:${this.color}">\u25CF </span>
+          return `<span class="${
+            this.series.userOptions.className
+          }">\u25CF </span>
                  ${this.series.name}<br>
               $0.${this.y.toString().substring(0, 2)} Million`;
         }
@@ -287,45 +295,19 @@ export default {
     }
   },
   "8.1": {
-    data: {
-      complete: function(data) {
-        // Filter out every piece of data that isn't considered a part of Other
-        const filteredData = data.series.filter(
-          item =>
-            item.name !== "Indonesia" &&
-            item.name !== "Vietnam" &&
-            item.name !== "Mainland China" &&
-            item.name !== "Other"
-        );
-
-        // Set these series to invisible on the chart so they don't appear
-        filteredData.forEach(item => {
-          item.showInLegend = false;
-          item.visible = false;
-        });
-
-        // pass these items into the 'Other' series of data as an object key that we can then access later in the toolbar using 'this'
-        data.series.forEach(item => {
-          if (item.name === "Other") {
-            item.subData = filteredData;
-          }
-        });
-      }
-    },
     chart: {
       type: "column"
     },
-
     yAxis: {
       title: {
         text: "Thousands"
       },
       tickInterval: 50000
     },
+    legend: {
+      reversed: true
+    },
     tooltip: {
-      headerFormat:
-        "<span style=\"font-size: 13px;text-align:center;margin-bottom: 5px;font-weight: bold;font-family: 'Roboto', arial, sans-serif;\">{point.key}</span><br/>",
-
       pointFormatter: function() {
         const dataSet = this.series;
         let toolbarData = [];
@@ -343,14 +325,17 @@ export default {
             }
           });
 
-          const toolbarFormat = `${toolbarData.map(dataItem => {
-            return `<br><span style="color:${this.color}"> \u25CF </span>${
-              dataItem.name
-            }: $${dataItem.data}`;
-          })}`;
-          return toolbarFormat;
+          return toolbarData
+            .map(dataItem => {
+              return `<br><span class="${
+                this.series.userOptions.className
+              }"> \u25CF </span>${dataItem.name}: $${dataItem.data}`;
+            })
+            .join("");
         } else {
-          return `<span style="color:${this.color}">\u25CF </span>
+          return `<span class="${
+            this.series.userOptions.className
+          }">\u25CF </span>
                   ${this.series.name}<br>
                  $${this.y.toString()}`;
         }
@@ -368,52 +353,44 @@ export default {
     },
     tooltip: {
       pointFormatter: function() {
-        return `<span style="color:${this.color}">\u25CF </span>
+        const color = this.className || this.series.userOptions.className;
+
+        return `<span class="${color}">\u25CF </span>
                ${this.y.toFixed(2)}%`;
       }
     },
-
     series: [
       {
         index: 0,
         innerSize: "70%"
       }
-    ],
-    responsive: {
-      rules: [
-        {
-          condition: {
-            maxWidth: 600,
-            minWidth: 200
-          },
-          chartOptions: {
-            plotOptions: {
-              pie: {
-                dataLabels: {
-                  distance: -20
-                }
-              }
-            }
-          }
-        }
-      ]
-    }
+    ]
   },
   "8.3": {
     chart: {
       type: "bar"
     },
     yAxis: {
-      title: "",
       ceiling: 100,
       tickInterval: 10,
+      title: { text: "" },
       labels: {
         format: "{value}%"
       }
     },
+    xAxis: {
+      labels: {
+        format: "{}"
+      }
+    },
+    legend: {
+      reversed: true
+    },
     tooltip: {
       pointFormatter: function() {
-        return `<span style="color:${this.color}">\u25CF </span>
+        const color = this.className || this.series.userOptions.className;
+
+        return `<span class="${color}">\u25CF </span>
                 ${this.series.name}<br>
                ${this.y.toFixed(2)}%`;
       }
@@ -430,7 +407,9 @@ export default {
     },
     tooltip: {
       pointFormatter: function() {
-        return `<span style="color:${this.color}">\u25CF </span>
+        const color = this.className || this.series.userOptions.className;
+
+        return `<span class="${color}">\u25CF </span>
                ${this.y.toFixed(2)}%`;
       }
     },
@@ -439,43 +418,33 @@ export default {
         index: 0,
         innerSize: "70%"
       }
-    ],
-    responsive: {
-      rules: [
-        {
-          condition: {
-            maxWidth: 600,
-            minWidth: 200
-          },
-          chartOptions: {
-            plotOptions: {
-              pie: {
-                dataLabels: {
-                  distance: -20
-                }
-              }
-            }
-          }
-        }
-      ]
-    }
+    ]
   },
   "8.5": {
     chart: {
       type: "bar"
     },
-
     yAxis: {
-      title: "",
       ceiling: 100,
       tickInterval: 10,
+      title: { text: "" },
       labels: {
         format: "{value}%"
       }
     },
+    xAxis: {
+      labels: {
+        format: "{}"
+      }
+    },
+    legend: {
+      reversed: true
+    },
     tooltip: {
       pointFormatter: function() {
-        return `<span style="color:${this.color}">\u25CF </span>
+        const color = this.className || this.series.userOptions.className;
+
+        return `<span class="${color}">\u25CF </span>
                 ${this.series.name}<br>
                ${this.y.toFixed(2)}%`;
       }
