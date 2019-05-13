@@ -1,7 +1,7 @@
 export default function(options) {
   const { isDataRepo } = options;
   const chartWidth = document.querySelector("main").offsetWidth;
-  const metaWidth = (chartWidth / 3) * 2;
+  const metaWidth = chartWidth / 3 * 2;
 
   return {
     chart: {
@@ -35,56 +35,32 @@ export default function(options) {
         }
       }
     },
-    credits: {
-      href: false,
-      position: { align: "center" }
-    },
-    xAxis: {
-      allowDecimals: false
-    },
-    yAxis: {
-      allowDecimals: false,
-      labels: {
-        x: -3,
-        formatter: function() {
-          const { tooltip } = this.chart.userOptions;
-          const value = getReduceSigFigs(this.value, tooltip.valueSuffix);
-          return value + tooltip.valueSuffix;
-        }
-      },
-      title: {
-        margin: 20
-      }
-    },
-    legend: {
-      verticalAlign: "bottom",
-      layout: "horizontal",
-      itemStyle: {
-        textOverflow: null
-      }
-    },
     tooltip: {
       useHTML: true,
+      valuePrefix: "",
       headerFormat: "<span>{point.key}</span>",
       pointFormatter: function() {
         const { chart, yAxis, tooltip } = this.series.chart.userOptions;
+        const { valueSuffix, valuePrefix } = tooltip;
         const { className, subData } = this.series.userOptions;
 
         const color = this.className || className;
-        let units = yAxis.title.text;
+
+        let units = yAxis.title.text.toLowerCase();
+        units = units === "usd" ? "USD" : units;
 
         // FORMAT PIE CHART
         if (chart.type === "pie") {
           return `<br><span class="${color}">\u25CF </span>
-               ${this.y.toFixed(2)}${tooltip.valueSuffix} ${units}`;
+        ${this.y.toFixed(1)}${tooltip.valueSuffix} ${units}`;
         }
 
-        // FORMAT PIE CHART
+        // FORMAT BAR CHART
         if (chart.type === "bar") {
           units = "of Students";
 
           return `<br><span class="${color}">\u25CF </span>
-                ${this.y.toFixed(2)}${tooltip.valueSuffix} ${units}`;
+        ${this.y.toFixed(1)}${tooltip.valueSuffix} ${units}`;
         }
 
         // FORMAT AGGREGATED POINTS
@@ -104,29 +80,52 @@ export default function(options) {
 
           return toolbarData
             .map(dataItem => {
-              const prefix = getPrefix(tooltip.valueSuffix);
               const name = dataItem.name;
-              const value = getReduceSigFigs(
-                dataItem.data,
-                tooltip.valueSuffix
-              );
+              const value = getReduceSigFigs(dataItem.data, valueSuffix);
 
-              return `<p><span class="${className}"> \u25CF </span>${name}<br>&nbsp;&nbsp;&nbsp;${prefix}${value}${
-                tooltip.valueSuffix
-              } ${units}</p>`;
+              return `<p><span class="${className}"> \u25CF </span>${name}<br>&nbsp;&nbsp;&nbsp;${valuePrefix ||
+                ""}${value}${valueSuffix} ${units}</p>`;
             })
             .join("");
         }
 
         // DEFAULT FORMAT
-        const prefix = getPrefix(tooltip.valueSuffix);
         const name = this.series.name;
-        const value = getReduceSigFigs(this.y, tooltip.valueSuffix);
+        const value = getReduceSigFigs(this.y, valueSuffix);
 
         return `<p><span class="${color}">\u25CF </span>
-          ${this.series.name}<br>&nbsp;&nbsp;&nbsp;${prefix}${value}${
-          tooltip.valueSuffix
-        } ${units}</p>`;
+          ${this.series.name}<br>&nbsp;&nbsp;&nbsp;${valuePrefix ||
+          ""}${value}${valueSuffix} ${units}</p>`;
+      }
+    },
+    credits: {
+      href: false,
+      position: { align: "center" }
+    },
+    xAxis: {
+      allowDecimals: false
+    },
+    yAxis: {
+      allowDecimals: false,
+      labels: {
+        x: -3,
+        formatter: function() {
+          const { valuePrefix, valueSuffix } = this.chart.userOptions.tooltip;
+
+          const value = getReduceSigFigs(this.value, valueSuffix);
+
+          return `${valuePrefix || ""}${value}${valueSuffix}`;
+        }
+      },
+      title: {
+        margin: 20
+      }
+    },
+    legend: {
+      verticalAlign: "bottom",
+      layout: "horizontal",
+      itemStyle: {
+        textOverflow: null
       }
     },
     plotOptions: {
@@ -203,31 +202,31 @@ export default function(options) {
 }
 
 function getReduceSigFigs(value, suffix) {
-  if (value.toString().length > 4) {
+  if (value >= 1000000000) {
+    return Math.round(value / 1000000000 * 10) / 10;
+  } else if (value >= 1000000 && value < 1000000000) {
     switch (suffix) {
-      case "K":
-        return Math.round((value / 1000) * 10) / 10;
-        break;
       case "M":
-        return Math.round((value / 1000000) * 10) / 10;
+        return Math.round(value / 1000000 * 10) / 10;
         break;
       case "B":
-        return Math.round((value / 1000000000) * 10) / 10;
+        return Math.round(value / 1000000000 * 10) / 10;
         break;
       default:
         return value;
     }
-  } else if (value.toString().length > 3 && suffix === "K") {
-    return Math.round((value / 1000) * 10) / 10;
+  } else if (value < 1000000) {
+    switch (suffix) {
+      case "M":
+        return Math.round(value / 1000000 * 10) / 10;
+        break;
+      case "K":
+        return Math.round(value / 1000 * 10) / 10;
+        break;
+      default:
+        return value;
+    }
   } else {
     return value;
-  }
-}
-
-function getPrefix(suffix) {
-  if (suffix === "B") {
-    return "$";
-  } else {
-    return "";
   }
 }

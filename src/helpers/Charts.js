@@ -11,6 +11,7 @@ export default {
     },
     tooltip: {
       shared: true,
+      valuePrefix: "$",
       valueSuffix: "B"
     }
   },
@@ -27,6 +28,7 @@ export default {
     },
     tooltip: {
       shared: true,
+      valuePrefix: "$",
       valueSuffix: "B"
     }
   },
@@ -41,7 +43,7 @@ export default {
     },
     yAxis: {
       title: {
-        text: "Units"
+        text: "Change"
       },
       tickInterval: 4,
       max: 12,
@@ -49,7 +51,7 @@ export default {
     },
     tooltip: {
       shared: true,
-      valueSuffix: "U"
+      valueSuffix: "%"
     }
   },
   // unemployment
@@ -80,6 +82,7 @@ export default {
     },
     tooltip: {
       shared: true,
+      valuePrefix: "$",
       valueSuffix: "B"
     }
   },
@@ -95,6 +98,7 @@ export default {
     },
     tooltip: {
       shared: true,
+      valuePrefix: "$",
       valueSuffix: "B"
     }
   },
@@ -110,6 +114,7 @@ export default {
     },
     tooltip: {
       shared: true,
+      valuePrefix: "$",
       valueSuffix: "B"
     }
   },
@@ -126,6 +131,7 @@ export default {
     },
     tooltip: {
       shared: true,
+      valuePrefix: "$",
       valueSuffix: "B"
     }
   },
@@ -142,6 +148,7 @@ export default {
     },
     tooltip: {
       shared: true,
+      valuePrefix: "$",
       valueSuffix: "B"
     }
   },
@@ -157,6 +164,7 @@ export default {
     },
     tooltip: {
       shared: true,
+      valuePrefix: "$",
       valueSuffix: "B"
     }
   },
