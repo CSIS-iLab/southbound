@@ -57,13 +57,16 @@ class App extends Component {
             )
           : [...filteredCategories, value];
 
-        filteredSheetData = this.state.sheetData.filter(data => {
-          return data.tags.some(t => filteredCategories.includes(t));
+        filteredSheetData = this.state.sheetData;
+        this.state.sheetData.map(data => {
+          data.hide = data.tags.some(t => filteredCategories.includes(t))
+            ? false
+            : true;
+          return data;
         });
         break;
       default:
     }
-
     this.setState({ filteredSheetData, filteredCategories });
   };
 
@@ -142,7 +145,7 @@ class App extends Component {
         const chart = Highcharts.charts[index];
 
         const chartWidth = document.querySelector("main").offsetWidth;
-        const metaWidth = chartWidth / 3 * 2;
+        const metaWidth = (chartWidth / 3) * 2;
 
         const newSize =
           window.innerWidth > 1080

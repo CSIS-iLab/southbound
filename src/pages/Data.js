@@ -153,7 +153,7 @@ class Data extends React.Component {
                     <li
                       key={data.key}
                       id={data.key}
-                      className="chart"
+                      className={`chart ${data.hide ? "hide" : ""}`}
                       dataset-tags={data.tags}
                     />
                   );
