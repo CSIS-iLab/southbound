@@ -29,7 +29,7 @@
   "scripts": {
     "start":
       "netlify-lambda build src/lambda && netlify-lambda serve src/lambda | react-app-rewired start",
-    "build": "bundle exec ruby write.rb && react-app-rewired build",
+    "build": "run-p build:**",
     "build:app": "react-app-rewired build",
     "build:lambda": "netlify-lambda build src/lambda",
     "test": "react-app-rewired test --env=jsdom",
