@@ -8,9 +8,6 @@ import { Route } from "react-router-dom";
 import SmoothScroll from "smooth-scroll";
 import Highcharts from "Highcharts";
 
-const SPREADSHEET_ID = "1X5WZaBcvkt_2e3L2gYvCjsMjAE2KHtinUK1Yl5jwYpA";
-const { gapi } = window;
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -71,129 +68,34 @@ class App extends Component {
   };
 
   componentDidMount() {
-    gapi.load("client", () => {
-      gapi.client
-        .init({
-          apiKey: "AIzaSyA1ol27C1FVv-F6940xNXY-VImb5ZCE3JE",
-          discoveryDocs: [
-            "https://sheets.googleapis.com/$discovery/rest?version=v4"
-          ]
-        })
-        .then(() => {
-          gapi.client.sheets.spreadsheets
-            .get({
-              spreadsheetId: SPREADSHEET_ID
-            })
-            .then(response => {
-              const ranges = response.result.sheets.map(
-                sheet => sheet.properties.title
-              );
+    fetch("/charts.json")
+      .then(response => {
+        return response.json();
+      })
+      .then(sheetData => {
+        const categories = [
+          ...new Set(
+            sheetData.map(data => data.tags).reduce((a, b) => a.concat(b))
+          )
+        ];
 
-              const fetches = ranges.map(sheet => {
-                const request = {
-                  spreadsheetId: SPREADSHEET_ID,
-                  range: `'${sheet}'!A:Z`
-                };
-                return gapi.client.sheets.spreadsheets.values.get(request);
-              });
+        this.setState(
+          {
+            sheetData,
+            categories,
+            filteredSheetData: sheetData,
+            filteredCategories: categories
+          }
+          // () => console.log(this.state)
+        );
 
-              Promise.all(fetches).then(responses => {
-                let sheetData = responses.map((response, index) => {
-                  const { values } = response.result;
-                  return {
-                    key: ranges[index],
-                    title: values[0][0] || "",
-                    subtitle: values[1][0] || "",
-                    credits: values[2] ? values[2][0] : "",
-                    tags: values[3]
-                      ? values[3][0].split(",").map(t => t.trim())
-                      : [],
-                    rows: values.slice(4)
-                  };
-                });
-
-                const categories = [
-                  ...new Set(
-                    sheetData
-                      .map(data => data.tags)
-                      .reduce((a, b) => a.concat(b))
-                  )
-                ];
-                this.setState(
-                  {
-                    sheetData,
-                    categories,
-                    filteredSheetData: sheetData,
-                    filteredCategories: categories
-                  }
-                  // () => console.log(this.state)
-                );
-              });
-            });
+        new SmoothScroll('a[href*="#"]', {
+          header: ".site-header",
+          speed: 500
         });
-    });
 
-    new SmoothScroll('a[href*="#"]', {
-      header: ".site-header",
-      speed: 500
-    });
-
-    window.addEventListener("resize", () => {
-      const highcharts = Array.from(document.querySelectorAll(".chart"));
-      highcharts.forEach(hC => {
-        const index = hC.dataset.highchartsChart;
-        const chart = Highcharts.charts[index];
-
-        const chartWidth = document.querySelector("main").offsetWidth;
-        const metaWidth = (chartWidth / 3) * 2;
-
-        const newSize =
-          window.innerWidth > 1080
-            ? {
-                chart: {
-                  height: 500,
-                  width: chartWidth,
-                  marginLeft: chartWidth / 2
-                },
-                title: { widthAdjust: metaWidth * -1, align: "left" },
-                subtitle: { widthAdjust: metaWidth * -1, align: "left" },
-                credits: { align: "left" }
-              }
-            : {
-                chart: { height: 500, width: null, marginLeft: undefined },
-                title: { widthAdjust: -44, align: "center" },
-                subtitle: { widthAdjust: -44, align: "center" },
-                credits: { align: "center" }
-              };
-
-        chart.update(newSize);
-
-        const titleHeight = chart.title.getBBox().height + 24;
-        const legendWidth = chart.legend.legendWidth;
-
-        const newPos =
-          window.innerWidth > 1080
-            ? {
-                chart: {
-                  height: 500
-                },
-                subtitle: { y: titleHeight },
-                legend: {
-                  x: chartWidth * 0.75 - legendWidth / 2,
-                  align: "left"
-                }
-              }
-            : {
-                chart: {
-                  height: 500
-                },
-                subtitle: { y: titleHeight },
-                legend: { x: 0, align: "center" }
-              };
-
-        chart.update(newPos);
+        window.addEventListener("resize", resize);
       });
-    });
   }
 
   render() {
@@ -247,6 +149,63 @@ class App extends Component {
       </div>
     );
   }
+}
+
+function resize() {
+  const highcharts = Array.from(document.querySelectorAll(".chart"));
+  highcharts.forEach(hC => {
+    const index = hC.dataset.highchartsChart;
+    const chart = Highcharts.charts[index];
+
+    const chartWidth = document.querySelector("main").offsetWidth;
+    const metaWidth = (chartWidth / 3) * 2;
+
+    const newSize =
+      window.innerWidth > 1080
+        ? {
+            chart: {
+              height: 500,
+              width: chartWidth,
+              marginLeft: chartWidth / 2
+            },
+            title: { widthAdjust: metaWidth * -1, align: "left" },
+            subtitle: { widthAdjust: metaWidth * -1, align: "left" },
+            credits: { align: "left" }
+          }
+        : {
+            chart: { height: 500, width: null, marginLeft: undefined },
+            title: { widthAdjust: -44, align: "center" },
+            subtitle: { widthAdjust: -44, align: "center" },
+            credits: { align: "center" }
+          };
+
+    chart.update(newSize);
+
+    const titleHeight = chart.title.getBBox().height + 24;
+    const legendWidth = chart.legend.legendWidth;
+
+    const newPos =
+      window.innerWidth > 1080
+        ? {
+            chart: {
+              height: 500
+            },
+            subtitle: { y: titleHeight },
+            legend: {
+              x: chartWidth * 0.75 - legendWidth / 2,
+              align: "left"
+            }
+          }
+        : {
+            chart: {
+              height: 500
+            },
+            subtitle: { y: titleHeight },
+            legend: { x: 0, align: "center" }
+          };
+
+    chart.update(newPos);
+  });
 }
 
 export default App;
