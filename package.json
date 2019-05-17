@@ -1,10 +1,10 @@
 {
-  "name": "career_portal",
+  "name": "southbound",
   "version": "0.1.0",
-  "description": "The website for the CSIS Career Portal.",
+  "description": "The website for the Southbound report.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/CSIS-iLab/career_portal.git"
+    "url": "https://github.com/CSIS-iLab/southbound.git"
   },
   "dependencies": {
     "@babel/core": "^7.4.4",
@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "build": "bundle exec ruby write.rb && react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject"
   },
