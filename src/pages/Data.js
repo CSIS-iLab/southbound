@@ -36,25 +36,22 @@ class Data extends React.Component {
   };
 
   componentDidMount() {
-    document.title = `${this.state.title} | CSIS Careers`;
-    const { filteredSheetData } = this.props;
-
-    if (filteredSheetData && filteredSheetData.length) {
-      Highcharts.setOptions(ChartOptions({ isDataRepo: true }));
-
-      filteredSheetData.forEach(data => {
-        InitSheets(data, { isDataRepo: true });
-      });
-    }
+    document.title = `${this.state.title} | CSIS Careers`
+    const { filteredSheetData } = this.props
   }
 
   componentDidUpdate() {
-    const { filteredSheetData } = this.props;
-    Highcharts.setOptions(ChartOptions({ isDataRepo: true }));
+    const { filteredSheetData } = this.props
 
-    filteredSheetData.forEach(data => {
-      InitSheets(data, { isDataRepo: true });
-    });
+    if (!this.state.intialized) {
+      Highcharts.setOptions(ChartOptions({ isDataRepo: true }))
+
+      filteredSheetData.forEach(data => {
+        InitSheets(data, { isDataRepo: true })
+      })
+
+      this.setState({ intialized: true })
+    }
   }
 
   componentWillUnmount() {
