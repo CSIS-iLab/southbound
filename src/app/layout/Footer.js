@@ -1,5 +1,5 @@
-import React from "react";
-import logo from "../assets/images/csis_logo_black.svg";
+import React from 'react'
+import logo from '../../assets/images/csis_logo_black.svg'
 
 export default class Footer extends React.Component {
   render() {
@@ -9,6 +9,6 @@ export default class Footer extends React.Component {
         Footer Footer Footer Footer Footer Footer Footer Footer Footer Footer
         Footer Footer
       </footer>
-    );
+    )
   }
 }
