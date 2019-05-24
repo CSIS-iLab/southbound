@@ -1,51 +1,49 @@
-import React from "react";
-import MarkdownToSections from "../helpers/MarkdownToSections";
-import ValueToJSX from "../helpers/ValueToJSX";
-import PageContent from "../helpers/PageContent";
-import GetData from "../helpers/GetData";
-import CloseMenu from "../helpers/CloseMenu";
-import InitSheets from "../helpers/InitSheets";
-import ChartOptions from "../helpers/ChartOptions";
-import Highcharts from "Highcharts";
+import React from 'react'
+import MarkdownToSections from '../helpers/MarkdownToSections'
+import ValueToJSX from '../helpers/ValueToJSX'
+import PageContent from '../helpers/PageContent'
+import GetData from '../helpers/GetData'
+import CloseMenu from '../helpers/CloseMenu'
+import InitSheets from '../helpers/InitSheets'
+import ChartOptions from '../helpers/ChartOptions'
+import Highcharts from 'Highcharts'
 
 class Data extends React.Component {
   constructor(props) {
-    super(props);
-    const { siteStructure, page } = this.props;
+    super(props)
+    const { siteStructure, page } = this.props
 
-    const pageContent = PageContent(siteStructure, page, GetData(page));
+    const pageContent = PageContent(siteStructure, page, GetData(page))
 
     this.state = {
       siteStructure,
       pageContent,
       page,
       title: GetData(page).title
-    };
+    }
   }
 
   handleCategoryChange = e => {
-    this.props.updateCharts("category", e.target.name);
-  };
+    this.props.updateCharts('category', e.target.name)
+  }
 
   handleClear = e => {
-    this.props.updateCharts("clear");
-  };
+    this.props.updateCharts('clear')
+  }
 
   handleSearch = e => {
-    this.props.updateCharts("search", e.target.value);
-  };
+    this.props.updateCharts('search', e.target.value)
+  }
 
   componentDidMount() {
     document.title = `${this.state.title} | CSIS Careers`
-    const { filteredSheetData } = this.props
+    Highcharts.setOptions(ChartOptions({ isDataRepo: true }))
   }
 
   componentDidUpdate() {
     const { filteredSheetData } = this.props
 
     if (!this.state.intialized) {
-      Highcharts.setOptions(ChartOptions({ isDataRepo: true }))
-
       filteredSheetData.forEach(data => {
         InitSheets(data, { isDataRepo: true })
       })
@@ -55,29 +53,29 @@ class Data extends React.Component {
   }
 
   componentWillUnmount() {
-    this.props.updateCharts("clear");
+    this.props.updateCharts('clear')
     const triggers = Array.from(
-      document.querySelectorAll(".menu-trigger.is-active")
-    );
+      document.querySelectorAll('.menu-trigger.is-active')
+    )
     triggers.forEach(trigger => {
-      const target = document.querySelector(trigger.dataset.target);
-      CloseMenu(trigger, target);
-    });
+      const target = document.querySelector(trigger.dataset.target)
+      CloseMenu(trigger, target)
+    })
 
     window.scrollTo({
       top: 0
-    });
+    })
   }
   render() {
-    const { filteredSheetData, categories, filteredCategories } = this.props;
+    const { filteredSheetData, categories, filteredCategories } = this.props
 
-    const { page, pageContent } = this.state;
+    const { page, pageContent } = this.state
 
-    const header = pageContent.find(content => content.component === "header");
-    const headerContent = header ? header.content : {};
+    const header = pageContent.find(content => content.component === 'header')
+    const headerContent = header ? header.content : {}
     const otherContent = pageContent.filter(
-      content => content.component !== "header"
-    );
+      content => content.component !== 'header'
+    )
 
     return (
       <main className={page}>
@@ -88,16 +86,19 @@ class Data extends React.Component {
                 headerContent[content],
                 `header__${content}`,
                 content
-              );
+              )
             })}
           </div>
         </section>
         <div id="listings">
           <section className="listings__filters">
             <div className="listings__filters-search">
-              <div className="filters-label">Filter by keyword</div>
+              <label htmlFor="chart-search" className="filters-label">
+                Filter by keyword
+              </label>
               <div className="listings__filters-search-box">
                 <input
+                  id="chart-search"
                   type="search"
                   placeholder="Search"
                   onChange={this.handleSearch}
@@ -118,7 +119,7 @@ class Data extends React.Component {
                     <li key={category}>
                       <label
                         className={
-                          filteredCategories.includes(category) ? "checked" : ""
+                          filteredCategories.includes(category) ? 'checked' : ''
                         }
                       >
                         <input
@@ -130,7 +131,7 @@ class Data extends React.Component {
                         <span className="label">{category}</span>
                       </label>
                     </li>
-                  );
+                  )
                 })}
               </ul>
               <button className="block clear-all" onClick={this.handleClear}>
@@ -150,10 +151,10 @@ class Data extends React.Component {
                     <li
                       key={data.key}
                       id={data.key}
-                      className={`chart ${data.hide ? "hide" : ""}`}
+                      className={`chart ${data.hide ? 'hide' : ''}`}
                       dataset-tags={data.tags}
                     />
-                  );
+                  )
                 })
               ) : (
                 <div className="loader" />
@@ -163,8 +164,8 @@ class Data extends React.Component {
         </div>
         {MarkdownToSections(otherContent)}
       </main>
-    );
+    )
   }
 }
 
-export default Data;
+export default Data

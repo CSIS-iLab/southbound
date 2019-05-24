@@ -9,6 +9,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
     "@threespot/freeze-scroll": "^1.0.3",
+    "googleapis": "^40.0.0",
     "react": "^16.8.6",
     "react-app-polyfill": "^1.0.0",
     "react-dom": "^16.8.6",
@@ -19,7 +20,7 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "bundle exec ruby write.rb && react-app-rewired build",
+    "build": "node write.js && react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject"
   },
