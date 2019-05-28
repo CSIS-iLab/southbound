@@ -62,9 +62,6 @@ $ serve -s build
 - To parse markdown
   - [gray-matter](https://github.com/jonschlinkert/gray-matter)
   - [raw-loader](https://github.com/webpack-contrib/raw-loader)
-- To bypass cors issues, a proxy server and lambda functions serve a resource when `"/.netlify/functions/cors/"` is added as a prefix in fetch:
-  - [netlify-lambda](https://github.com/netlify/create-react-app-lambda)
-  - [http-proxy-middleware](https://github.com/chimurai/http-proxy-middleware)
 
 ## Project Organization
 
@@ -78,13 +75,13 @@ The `content` folder contains markdown files that can be used to set up a routes
 Contains helper utility functions, React components, layouts, that render elements that may be repeated through out the site. Pages have state and lifecycle methods. App.js sets up data flow and routing.
 
 ### src/lambda
-Contains lambda functions.
+Can contain lambda functions that will run provided an npm script and netlify.toml file
 
 ### public
 Contains the page template. Only files inside public can be used from public/index.html. [learn more](https://facebook.github.io/create-react-app/docs/using-the-public-folder#docsNav)
 
 ### forestry
-Configuration files for the Forestry CMS live here, including the default front matter UI fields for the different content types.
+Configuration files for the Forestry CMS can live here, including the front matter UI fields and settings for the different content types.
 
 ## Contributing
 ### Branching
