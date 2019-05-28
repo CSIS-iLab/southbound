@@ -27,7 +27,7 @@ async function getData() {
       subtitle: values[1][0] || '',
       credits: values[2] ? values[2][0] : '',
       tags: values[3] ? values[3][0].split(',').map(t => t.trim()) : [],
-      credits: values[4] ? values[4][0] : '',
+      pdf: values[4] ? values[4][0] : '',
       rows: values.slice(5)
     }
   })
