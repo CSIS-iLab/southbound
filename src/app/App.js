@@ -148,7 +148,9 @@ function resize() {
   const highcharts = Array.from(document.querySelectorAll('.chart'))
   highcharts.forEach(hC => {
     const index = hC.dataset.highchartsChart
+
     const chart = Highcharts.charts[index]
+    if (!chart) return
 
     const chartWidth = document.querySelector('main').offsetWidth
     const metaWidth = (chartWidth / 3) * 2
