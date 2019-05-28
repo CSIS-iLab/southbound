@@ -1,7 +1,7 @@
 # southbound
 The website for the China Power Southbound Report
 It is built using [Create React App Rewired](https://github.com/timarney/react-app-rewired)
-Data is connected to a work book in the China Power Google Drive folder. Triggering a new deploy runs the Google API via ruby write.rb and updates data in public/charts.json
+Data is connected to a work book in the China Power Google Drive folder. Triggering a new deploy runs the Google API via node write.js and updates data in src/app/charts.json
 
 ## Table of Contents
 * [Quick-Start Instructions](#quick-start-instructions)
@@ -81,7 +81,7 @@ Contains helper utility functions, React components, layouts, that render elemen
 Contains lambda functions.
 
 ### public
-Contains the page template. Only files inside public can be used from public/index.html. Data files produced by forestry can go here. [learn more](https://facebook.github.io/create-react-app/docs/using-the-public-folder#docsNav)
+Contains the page template. Only files inside public can be used from public/index.html. [learn more](https://facebook.github.io/create-react-app/docs/using-the-public-folder#docsNav)
 
 ### forestry
 Configuration files for the Forestry CMS live here, including the default front matter UI fields for the different content types.
