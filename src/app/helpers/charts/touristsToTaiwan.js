@@ -36,8 +36,10 @@ const touristsToTaiwan = sheet => {
           return `<span style="color:${this.color}">\u25CF </span>
                 ${this.series.name}<br>
                $${this.y
-                 .toString()
-                 .substring(0, 1)}.${this.y.toString().substring(2, 4)} Million`
+    .toString()
+    .substring(0, 1)}.${this.y
+  .toString()
+  .substring(2, 4)} Million`
         } else {
           return `<span style="color:${this.color}">\u25CF </span>
                  ${this.series.name}<br>

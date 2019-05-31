@@ -8,6 +8,7 @@ import { Route } from 'react-router-dom'
 import SmoothScroll from 'smooth-scroll'
 import Highcharts from 'Highcharts'
 import sheetData from './charts.json'
+import { withRouter } from 'react-router-dom'
 
 class App extends Component {
   constructor(props) {
@@ -16,55 +17,83 @@ class App extends Component {
       siteStructure: SiteMap,
       categories: [],
       filteredCategories: [],
+      filteredSheetData: [],
       sheetData: []
     }
   }
 
-  updateCharts = (input, value) => {
+  updateCharts = (input, value, param) => {
     let filteredSheetData, filteredCategories
 
     switch (input) {
-      case 'search':
-        filteredSheetData = this.state.sheetData.filter(data =>
-          JSON.stringify(data)
+    case 'search':
+      filteredSheetData = this.state.sheetData.map(data => {
+        data.hide = !Object.values(data).some(d =>
+          d
+            .toString()
             .toLowerCase()
             .includes(value.toLowerCase())
         )
+        return data
+      })
 
-        filteredCategories = [
-          ...new Set(
-            filteredSheetData
-              .map(data => data.tags)
-              .reduce((a, b) => a.concat(b))
-          )
-        ]
+      filteredCategories = [
+        ...new Set(
+          filteredSheetData
+            .filter(data => !data.hide)
+            .map(data => data.tags)
+            .reduce((a, b) => a.concat(b))
+        )
+      ]
 
-        break
+      break
 
-      case 'clear':
-        filteredCategories = this.state.categories
-        filteredSheetData = this.state.sheetData
-        break
+    case 'id':
+      filteredSheetData = this.state.sheetData.map(data => {
+        data.hide = data.key !== value
+        return data
+      })
 
-      case 'category':
-        filteredCategories = this.state.filteredCategories
+      filteredCategories = [
+        ...new Set(
+          filteredSheetData
+            .filter(data => !data.hide)
+            .map(data => data.tags)
+            .reduce((a, b) => a.concat(b))
+        )
+      ]
+      break
 
+    case 'clear':
+      filteredCategories = this.state.categories
+      filteredSheetData = this.state.sheetData
+      break
+
+    case 'category':
+      filteredCategories = this.state.filteredCategories
+
+      if (!param) {
         filteredCategories = filteredCategories.includes(value)
           ? filteredCategories.filter(
-              cat => cat.toLowerCase() !== value.toLowerCase()
-            )
+            cat => cat.toLowerCase() !== value.toLowerCase()
+          )
           : [...filteredCategories, value]
 
-        filteredSheetData = this.state.sheetData
-        this.state.sheetData.map(data => {
-          data.hide = data.tags.some(t => filteredCategories.includes(t))
-            ? false
-            : true
-          return data
-        })
-        break
-      default:
+        this.props.history.push('/data')
+      } else {
+        filteredCategories = [value]
+      }
+
+      filteredSheetData = this.state.sheetData.map(data => {
+        data.hide = !data.tags.some(t => filteredCategories.includes(t))
+        return data
+      })
+
+      break
+    default:
+      return
     }
+
     this.setState({ filteredSheetData, filteredCategories })
   }
 
@@ -87,8 +116,6 @@ class App extends Component {
       header: '.site-header',
       speed: 500
     })
-
-    window.addEventListener('resize', resize)
   }
 
   render() {
@@ -124,7 +151,7 @@ class App extends Component {
         />
         <Route
           exact
-          path="/data"
+          path="/data/:query?/:value?"
           render={props => (
             <Data
               {...props}
@@ -144,63 +171,4 @@ class App extends Component {
   }
 }
 
-function resize() {
-  const highcharts = Array.from(document.querySelectorAll('.chart'))
-  highcharts.forEach(hC => {
-    const index = hC.dataset.highchartsChart
-
-    const chart = Highcharts.charts[index]
-    if (!chart) return
-
-    const chartWidth = document.querySelector('main').offsetWidth
-    const metaWidth = (chartWidth / 3) * 2
-
-    const newSize =
-      window.innerWidth > 1080
-        ? {
-            chart: {
-              height: 500,
-              width: chartWidth,
-              marginLeft: chartWidth / 2
-            },
-            title: { widthAdjust: metaWidth * -1, align: 'left' },
-            subtitle: { widthAdjust: metaWidth * -1, align: 'left' },
-            credits: { align: 'left' }
-          }
-        : {
-            chart: { height: 500, width: null, marginLeft: undefined },
-            title: { widthAdjust: -44, align: 'center' },
-            subtitle: { widthAdjust: -44, align: 'center' },
-            credits: { align: 'center' }
-          }
-
-    chart.update(newSize)
-
-    const titleHeight = chart.title.getBBox().height + 24
-    const legendWidth = chart.legend.legendWidth
-
-    const newPos =
-      window.innerWidth > 1080
-        ? {
-            chart: {
-              height: 500
-            },
-            subtitle: { y: titleHeight },
-            legend: {
-              x: chartWidth * 0.75 - legendWidth / 2,
-              align: 'left'
-            }
-          }
-        : {
-            chart: {
-              height: 500
-            },
-            subtitle: { y: titleHeight },
-            legend: { x: 0, align: 'center' }
-          }
-
-    chart.update(newPos)
-  })
-}
-
-export default App
+export default withRouter(App)

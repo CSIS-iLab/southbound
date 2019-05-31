@@ -96,16 +96,6 @@ main:not(.faq) {
     @include breakpoint('xlarge') {
       grid-column-gap: return-map-value($size__grid-gap, 'xlarge');
     }
-
-    div:nth-child(odd):last-of-type {
-      /* stylelint-disable */
-      -ms-grid-column-span: 3;
-      /* stylelint-enable */
-
-      grid-column-end: span 2;
-      grid-column-start: 1;
-      grid-row-start: last-line;
-    }
   }
 }
 

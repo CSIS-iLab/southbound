@@ -5,6 +5,7 @@ module.exports = function override(config, env) {
     SmoothScroll: 'smooth-scroll',
     Highcharts: 'Highcharts'
   }
+
   config.devtool = 'inline-source-map'
 
   config.module.rules.push({
@@ -20,17 +21,23 @@ module.exports = function override(config, env) {
   config.module.rules.push({
     test: /\.(js|jsx)$/,
     exclude: /node_modules/,
-    loader: 'babel-loader',
+    use: [
+      {
+        loader: 'babel-loader',
 
-    options: {
-      presets: [
-        '@babel/preset-env',
-        '@babel/preset-react',
-        {
-          plugins: ['@babel/plugin-proposal-class-properties']
+        options: {
+          presets: [
+            '@babel/preset-react',
+            {
+              plugins: ['@babel/plugin-proposal-class-properties']
+            }
+          ]
         }
-      ]
-    }
+      },
+      {
+        loader: 'eslint-loader'
+      }
+    ]
   })
 
   config.plugins.push(new StyleLintPlugin({ fix: true }))

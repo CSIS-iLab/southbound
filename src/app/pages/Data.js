@@ -24,7 +24,10 @@ class Data extends React.Component {
   }
 
   handleCategoryChange = e => {
-    this.props.updateCharts('category', e.target.name)
+    const tag = e.target
+    this.setState({ queried: false }, () => {
+      this.props.updateCharts('category', tag.name, false)
+    })
   }
 
   handleClear = e => {
@@ -38,17 +41,47 @@ class Data extends React.Component {
   componentDidMount() {
     document.title = `${this.state.title} | CSIS Careers`
     Highcharts.setOptions(ChartOptions({ isDataRepo: true }))
-  }
 
-  componentDidUpdate() {
-    const { filteredSheetData } = this.props
+    const { intialized, queried } = this.state
+    const { filteredSheetData, match, updateCharts } = this.props
 
-    if (!this.state.intialized) {
+    if (!intialized && filteredSheetData.length) {
       filteredSheetData.forEach(data => {
         InitSheets(data, { isDataRepo: true })
       })
 
       this.setState({ intialized: true })
+    }
+  }
+
+  componentDidUpdate() {
+    const { intialized, queried } = this.state
+    const { filteredSheetData, match, updateCharts } = this.props
+
+    if (!intialized && filteredSheetData.length) {
+      filteredSheetData.forEach(data => {
+        InitSheets(data, { isDataRepo: true })
+      })
+
+      this.setState({ intialized: true })
+    }
+
+    if (!queried && filteredSheetData.length) {
+      const { query, value } = match.params
+      switch (query) {
+      case 'id':
+        this.setState({ queried: true })
+        updateCharts('id', value)
+        return
+
+      case 'category':
+        this.setState({ queried: true })
+        updateCharts('category', value, true)
+
+        return
+      default:
+        return
+      }
     }
   }
 
@@ -68,7 +101,6 @@ class Data extends React.Component {
   }
   render() {
     const { filteredSheetData, categories, filteredCategories } = this.props
-
     const { page, pageContent } = this.state
 
     const header = pageContent.find(content => content.component === 'header')
@@ -134,9 +166,6 @@ class Data extends React.Component {
                   )
                 })}
               </ul>
-              <button className="block clear-all" onClick={this.handleClear}>
-                Clear All
-              </button>
             </div>
             <p className="listings__filters-summary">
               {filteredCategories.length} categories selected
@@ -153,7 +182,36 @@ class Data extends React.Component {
                       id={data.key}
                       className={`chart ${data.hide ? 'hide' : ''}`}
                       dataset-tags={data.tags}
-                    />
+                    >
+                      <section className="chart-text">
+                        <h2 className="chart-text_title">{data.title}</h2>
+                        <p className="chart-text_subtitle">{data.subtitle}</p>
+                        <ul className="chart-text_tags">
+                          {data.tags.map(t => (
+                            <li
+                              key={t}
+                              className={
+                                filteredCategories.includes(t)
+                                  ? 'tag active'
+                                  : 'tag'
+                              }
+                            >
+                              {t}
+                            </li>
+                          ))}
+                        </ul>
+                        <a href={data.pdf} className="icon-search">
+                          Find in Report
+                        </a>
+                      </section>
+                      <figure className="chart-figure">
+                        <div className="chart-figure_graph" />
+                        <figcaption className="chart-figure_caption">
+                          <p>CSIS China Power Project</p>
+                          <p>{data.credits}</p>
+                        </figcaption>
+                      </figure>
+                    </li>
                   )
                 })
               ) : (

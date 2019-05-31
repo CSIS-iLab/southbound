@@ -1,68 +1,104 @@
-import Highcharts from "Highcharts";
-import Charts from "./Charts";
+import Highcharts from 'Highcharts'
+import Charts from './Charts'
+import { ChartColors } from './ChartOptions'
 
 export default function InitSheets(data, location) {
-  const { isDataRepo } = location;
-  const variableData = {
-    title: {
-      text: data.title
-    },
-    subtitle: {
-      text: isDataRepo ? data.subtitle : ""
-    },
-    credits: {
-      text: data.credits
-    }
-  };
+  const { isDataRepo } = location
 
-  const chartOptions = {
-    ...Charts[data.key],
-    ...variableData
-  };
+  let chart = Charts[data.key]
 
-  chartOptions.data = {
-    ...chartOptions.data,
-    csv: data.rows.map(r => r.join(",")).join("\n"),
+  chart.data = {
+    ...chart.data,
+    csv: data.rows.map(r => r.join(',')).join('\n'),
     complete: d => {
-      if (chartOptions.chart.type === "pie") {
-        d.series[0].data = d.series[0].data.map(s => {
-          const name = s[0].toLowerCase().replace(/ /g, "-");
+      const { type } = chart.chart
+      let series = type === 'pie' ? d.series[0].data : d.series
 
-          return { name: s[0], y: s[1], className: `color-${name}` };
-        });
+      if (type === 'pie') {
+        series = series.map((s, i) => {
+          return {
+            name: s[0],
+            y: s[1]
+          }
+        })
       }
-      let filtered = [];
-      const excluded = [
-        "Myanmar",
-        "Malaysia",
-        "Cambodia",
-        "Philippines",
-        "Thailand"
-      ];
-      d.series.forEach(s => {
-        const name = s.name.toLowerCase().replace(/ /g, "-");
 
-        s.className = `color-${name}`;
+      if (chart.aggregate) {
+        let otherSeries = {}
+        let excluded = []
+        let aggregateData
 
-        // Filter out every piece of data that isn't considered a part of Other
-        if (excluded.includes(s.name)) filtered.push(s);
-      });
+        series.forEach(s => {
+          const name = s.name.toLowerCase().replace(/ /g, '-')
+          s.className = `color-${name}`
 
-      // Set these series to invisible on the chart so they don't appear
-      filtered.forEach(item => {
-        item.showInLegend = false;
-        item.visible = false;
-      });
+          if (
+            chart.aggregate.includes(s.name) ||
+            s.name.toLowerCase().includes('other')
+          ) {
+            s.showInLegend = false
+            s.visible = false
+            excluded.push(s)
+          }
+        })
 
-      // pass these items into the 'Other' series of data as an object key that we can then access later in the toolbar using 'this'
-      d.series.forEach(item => {
-        if (item.name === "Other") {
-          item.subData = filtered;
+        series = series.filter(
+          s =>
+            !chart.aggregate.includes(s.name) &&
+            !s.name.toLowerCase().includes('other')
+        )
+
+        if (excluded.length) {
+          if (type === 'pie') {
+            aggregateData = excluded.map(e => e.y).reduce((a, b) => a + b)
+            otherSeries.y = aggregateData
+          } else {
+            let xAxis = Array.from(
+              new Set(
+                excluded
+                  .map(e => e.data)
+                  .reduce((a, b) => a.concat(b))
+                  .map(e => e[0])
+              )
+            )
+
+            let excludedData = excluded.map(e => e.data)
+
+            aggregateData = xAxis.map((x, i) => {
+              let total = excludedData
+                .map(y => y[i])
+                .reduce((a, b) => {
+                  let sum = (a[1] ? a[1] : a) + (b[1] ? b[1] : b)
+                  return sum
+                })
+              return total[1] ? total : [x, total]
+            })
+          }
+          otherSeries.data = aggregateData
+
+          otherSeries.name = 'Other'
+          otherSeries.subData = excluded
+
+          series = [otherSeries, ...series]
         }
-      });
-    }
-  };
+      }
 
-  const container = document.getElementById(`${data.key}`);
-  if (container) Highcharts.chart(container, chartOptions);
+      series.forEach((s, i) => {
+        s.color =
+          Charts[data.key].legend && Charts[data.key].legend.reversed
+            ? ChartColors[series.length - 1 - i]
+            : ChartColors[i]
+      })
+
+      if (type === 'pie') {
+        d.series[0].data = series
+      } else {
+        d.series = series
+      }
+    }
+  }
+
+  const container = document.getElementById(`${data.key}`)
+  const figure = container.querySelector('.chart-figure_graph')
+  if (figure) Highcharts.chart(figure, chart)
 }

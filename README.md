@@ -1,7 +1,8 @@
 # southbound
 The website for the China Power Southbound Report
 It is built using [Create React App Rewired](https://github.com/timarney/react-app-rewired)
-Data is connected to a work book in the China Power Google Drive folder. Triggering a new deploy runs the Google API via node write.js and updates data in src/app/charts.json
+
+Data is connected to a Google Sheet workbook in the China Power Google Drive folder. Triggering a new deploy runs the Google API via node write.js and updates data in src/app/charts.json
 
 ## Table of Contents
 * [Quick-Start Instructions](#quick-start-instructions)
@@ -22,7 +23,7 @@ $ npm start
 
 ### development
 
-This will give you file watching, browser synchronisation, auto-rebuild, CSS injecting, etc.
+This will give you file watching, browser synchronization, auto-rebuild, CSS injecting, etc.
 
 ```shell
 $ npm start
@@ -52,13 +53,14 @@ $ serve -s build
 - Polyfills for older browsers used by our global audience:
   - @babel/polyfill
   - react-app-polyfill
-- Create React App Rewired's config-overrides.js allows the use of other style utilites in order to conform with other CSIS projects:
+- Create React App Rewired's config-overrides.js allows the use of other style utilities in order to conform with other CSIS projects:
   - [Autoprefixer](https://github.com/postcss/autoprefixer)
   - [postcss](http://postcss.org/)
   - [stylelint](https://stylelint.io/)
   - [sass-loader](https://github.com/webpack-contrib/sass-loader)
   - [node-sass](https://github.com/sass/node-sass)
   - [cssnano](https://cssnano.co/)
+  - for js: [eslint](https://eslint.org/)
 - To parse markdown
   - [gray-matter](https://github.com/jonschlinkert/gray-matter)
   - [raw-loader](https://github.com/webpack-contrib/raw-loader)

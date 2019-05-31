@@ -35,8 +35,10 @@ const numberOfTourists = sheet => {
         if (this.y.toString().split('').length === 7) {
           return `<span style="color:${this.color}">\u25CF </span>
                $${this.y
-                 .toString()
-                 .substring(0, 1)}.${this.y.toString().substring(2, 4)} Million`
+    .toString()
+    .substring(0, 1)}.${this.y
+  .toString()
+  .substring(2, 4)} Million`
         } else {
           return `<span style="color:${this.color}">\u25CF </span>
               $0.${this.y.toString().substring(0, 2)} Million`
