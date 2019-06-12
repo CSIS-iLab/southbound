@@ -47,7 +47,7 @@
 
     &:hover .line,
     &:focus .line {
-      background-color: $color__blue-medium;
+      background-color: $color__orange;
     }
 
     &.is-active .line {
@@ -67,7 +67,7 @@
     }
 
     &.is-active:hover .line {
-      background-color: $color__blue-medium;
+      background-color: $color__orange;
     }
   }
 

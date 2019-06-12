@@ -126,10 +126,10 @@ main:not(.faq) {
 
 .homepage {
   #disclaimer {
-    @include full-width-background($color__blue);
+    @include full-width-background($color__orange);
     padding: 2.5rem 0 4rem;
     color: $color__white;
-    background-color: $color__blue;
+    background-color: $color__orange;
   }
 }
 

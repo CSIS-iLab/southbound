@@ -15,11 +15,6 @@ button {
     display: block;
   }
 
-  &.clear-all {
-    @extend %link-gray;
-    font-weight: bold;
-  }
-
   &::before,
   &::after {
     @extend %icon-pseudo-element;
@@ -34,8 +29,10 @@ button {
   }
 
   &.btn {
-    &.dark {
-      @include button-dark;
+    @include button;
+
+    &--acive {
+      @include button--active;
     }
   }
 }

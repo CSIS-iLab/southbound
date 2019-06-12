@@ -6,7 +6,7 @@
   transition: all 0.2s ease-in-out;
   @each $size in $sizes__default {
     @include breakpoint($size) {
-      $height: return-map-value($size__header-height, $size);
+      $height: return-map-value($sizes__header-height, $size);
       height: $height;
     }
   }

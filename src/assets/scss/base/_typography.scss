@@ -2,12 +2,16 @@
 // }
 
 body,
-button,
+button {
+  color: $color__black;
+  @extend %font-hind;
+}
+
 input,
 select,
 textarea {
   color: $color__gray-medium;
-  @extend %sans-serif;
+  @extend %font-input;
 }
 
 /*================================
@@ -18,28 +22,41 @@ textarea {
   h#{$i} {
     margin: 0 0 0.5rem;
     color: $color__black;
-    @extend %sans-serif;
+    @extend %font-hind;
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
   }
 }
 
 h1 {
-  line-height: 1.06;
-  @include fluid-type(36px, 53px);
+  color: $color__white;
+  line-height: 0.94;
+  @include fluid-type(54px, 80px);
 }
 
 h2 {
-  @include fluid-type(32px, 35.2px);
   margin-bottom: 0.75rem;
+  @include fluid-type(32px, 40px);
+
+  font-weight: 400;
+
+  .homepage & {
+    font-weight: 100;
+  }
 }
 
 h3 {
-  @include fluid-type(24px, 26px);
+  @include fluid-type(26px, 32px);
+
+  font-weight: 400;
+
+  .homepage & {
+    font-weight: 100;
+  }
 }
 
 h4 {
-  @include fluid-type(20px, 22px);
+  @include fluid-type(22px, 24px);
 }
 /*============================
 =            Copy            =
@@ -55,7 +72,7 @@ p {
   .header__intro & {
     @include fluid-type(18px, 20px);
     margin-bottom: 2rem;
-    @extend %serif;
+    @extend %font-hind;
   }
 }
 
@@ -98,13 +115,13 @@ blockquote {
   &,
   p {
     color: $color__black;
-    @extend %serif;
+    @extend %font-hind;
     line-height: 1.5;
     @include font-size(20px);
 
     cite {
       color: $color__gray_darker;
-      @extend %sans-serif;
+      @extend %font-hind;
       font-style: normal;
       @include font-size(16px);
     }

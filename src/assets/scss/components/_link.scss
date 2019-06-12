@@ -1,64 +1,14 @@
 a {
   text-decoration: none;
+
   background-repeat: repeat-x;
   background-position: 0 87.5%;
 
   &:focus {
-    @extend %focus;
     padding: 0 0.125rem;
+    background-color: rgba($color__focus, 0.15);
     background-position: 0 87.5%;
-  }
-
-  &.backward {
-    text-transform: uppercase;
-  }
-
-  &.forward {
-    text-transform: uppercase;
-  }
-
-  &.profile {
-    @include breakpoint('large') {
-      @include button-dark;
-      padding: 0.75rem;
-    }
-  }
-
-  &.apply {
-    display: inline-block;
-    min-width: 180px;
-    padding: 0.75rem;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-    @include button-dark;
-    @include font-size(15px);
-
-    .job-content__body & {
-      margin-bottom: 4.5rem;
-
-      @include breakpoint($break: 'medium', $dir: 'max-width') {
-        display: none;
-      }
-    }
-
-    .job-content__about & {
-      margin-top: 1rem;
-      margin-bottom: 3rem;
-    }
-  }
-
-  &.large {
-    font-weight: bold;
-    @include breakpoint('medium') {
-      @include font-size(22px);
-    }
-
-    &,
-    &::after,
-    &::before {
-      @include font-size(20px);
-    }
+    border: solid 1px $color__focus;
   }
 
   &::before,
@@ -75,50 +25,48 @@ a {
   }
 
   main & {
-    // main section:not(#test) & {
-    &:not(.dark) {
-      @extend %link-dark;
-    }
-
-    &.dark:not(.btn) {
-      @extend %link-light;
-    }
-  }
-
-  main & {
+    color: rgba($color__black, 0.75);
+    background-image: linear-gradient(
+      to bottom,
+      rgba($color__gray-medium, 0.6) 0,
+      rgba($color__gray-medium, 0.6) 100%
+    );
     background-size: 1px 1px;
 
-    &:hover,
-    &:focus {
+    .data & {
+      color: rgba($color__black, 0.65);
+    }
+
+    &:hover {
+      color: $color__orange;
       background-size: 1px 0;
+    }
+
+    &:visited {
+      color: $color__gray-medium;
+
+      background-image: linear-gradient(
+        to bottom,
+        $color__gray-medium 0,
+        $color__gray-medium 100%
+      );
     }
 
     &[class] {
       background-size: 1px 0;
-
-      &.external {
-        &:hover,
-        &:focus {
-          background-size: 1px 1px;
-        }
-      }
     }
   }
 
-  &.profile::before {
-    content: '\e80d';
+  &.document::before {
+    content: '\e806';
   }
 
   &.external::after {
     content: '\e802';
   }
 
-  &.backward::before {
-    content: '\e805';
-  }
-
-  &.forward::after {
-    content: '\e807';
+  &.download::after {
+    content: '\e811';
   }
 
   &.menu-item__link {
@@ -135,7 +83,7 @@ a {
 
       &:hover,
       &:focus {
-        border-left: 6px solid $color__blue;
+        border-left: 6px solid $color__orange;
       }
     }
 
@@ -148,29 +96,5 @@ a {
         padding: 0.25rem 0.5rem;
       }
     }
-  }
-}
-
-#about p + div {
-  @include breakpoint('medium') {
-    display: block;
-    text-align: right;
-  }
-}
-
-#listing a:visited {
-  color: $color__blue-medium;
-}
-
-#test {
-  ul,
-  li {
-    margin-top: 0;
-    padding-left: 0;
-    list-style-type: none;
-  }
-
-  a.large:visited {
-    color: $color__blue-medium;
   }
 }

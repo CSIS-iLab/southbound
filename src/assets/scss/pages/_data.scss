@@ -112,11 +112,11 @@
       display: inline-block;
       color: $color__white;
       line-height: 1.56;
-      background-color: $color__gray;
+      background-color: $color__gray-medium;
       cursor: pointer;
 
       &.checked {
-        background-color: $color__test;
+        background-color: $color__orange;
       }
 
       @include breakpoint('large') {

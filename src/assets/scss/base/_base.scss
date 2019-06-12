@@ -9,7 +9,6 @@ html {
 }
 
 body {
-
   --breakpoint: 'xsmall';
   position: relative;
   margin: 0;
@@ -43,7 +42,7 @@ footer {
   max-width: 1400px;
   margin: auto;
   @each $size in $sizes__default {
-    $padding: return-map-value($size__container-padding, $size);
+    $padding: return-map-value($sizes__container-padding, $size);
     @include breakpoint(#{$size}) {
       width: calc(100vw - #{$padding} * 2);
     }

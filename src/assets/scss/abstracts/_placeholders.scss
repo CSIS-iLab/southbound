@@ -2,13 +2,18 @@
 =            Placeholders            =
 ====================================*/
 
-%sans-serif {
-  font-family: $font__sans-serif;
+%font-hind {
+  font-family: 'Hind Vadodara', sans-serif;
   font-display: swap;
 }
 
-%serif {
-  font-family: $font__serif;
+%font-gibson {
+  font-family: canada-type-gibson, sans-serif;
+  font-display: swap;
+}
+
+%font-input {
+  font-family: input-sans-compressed, sans-serif;
   font-display: swap;
 }
 
@@ -23,14 +28,13 @@
 }
 
 %figcaption {
-  color: $color__gray-darker;
-  @extend %sans-serif;
+  @extend %font-gibson;
   @include font-size(16px);
   line-height: 1.25;
 }
 
 %focus {
-  outline: 2px solid $color__blue-soft;
+  outline: 2px solid $color__focus;
 }
 
 %link-gray {
@@ -39,56 +43,6 @@
   &:hover,
   &:focus {
     color: $color__black;
-  }
-}
-
-%link-light {
-  color: $color__blue-light;
-
-  background-image: linear-gradient(
-    to bottom,
-    $color__blue-light 0,
-    $color__blue-light 100%
-  );
-
-  &::before,
-  &::after {
-    color: $color__blue-light;
-  }
-
-  &:hover,
-  &:focus {
-    color: $color__white;
-
-    &::before,
-    &::after {
-      color: $color__white;
-    }
-  }
-}
-
-%link-dark {
-  color: $color__blue;
-
-  background-image: linear-gradient(
-    to bottom,
-    $color__blue 0,
-    $color__blue 100%
-  );
-
-  &:hover,
-  &:focus {
-    color: $color__blue-dark;
-
-    &::before,
-    &::after {
-      color: $color__blue-dark;
-    }
-  }
-
-  &::before,
-  &::after {
-    color: $color__blue;
   }
 }
 
@@ -115,7 +69,7 @@
     $size: nth($sizes__default, $size_index - 1);
     $size_up: nth($sizes__default, $size_index);
 
-    $margin: return-map-value($size__container-padding, $size) * -1;
+    $margin: return-map-value($sizes__container-padding, $size) * -1;
 
     @include breakpoint(
       $break: return-map-value($breakpoints, $size),
@@ -130,7 +84,7 @@
 %negative-margin {
   @each $size in $sizes__default {
     @include breakpoint($size) {
-      $margin: return-map-value($size__container-padding, $size) * -1;
+      $margin: return-map-value($sizes__container-padding, $size) * -1;
       margin: 0 $margin;
     }
   }

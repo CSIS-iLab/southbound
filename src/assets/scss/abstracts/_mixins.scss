@@ -4,16 +4,24 @@
   font-size: calculate-rem($size);
 }
 
-@mixin button-dark {
+@mixin button {
   padding: 0.5rem;
   color: $color__white;
-  background-color: $color__blue;
-  border-radius: 3px;
+  background-color: rgba($color__gray-medium, 0.6);
 
   &:hover,
   &:focus {
     color: $color__white;
-    background-color: $color__blue-dark;
+    background-color: rgba($color__gray-medium, 0.8);
+  }
+}
+
+@mixin button--active {
+  background-color: $color__orange;
+
+  &:hover,
+  &:focus {
+    background-color: $color__orange-dark;
   }
 }
 

@@ -81,16 +81,22 @@ figure {
 
   figcaption {
     max-width: calc(
-      100vw - #{return-map-value($size__container-padding, 'small') * 2}
+      100vw - #{return-map-value($sizes__container-padding, 'small') * 2}
     );
 
     @include breakpoint($break: 'medium', $until: 'large') {
       max-width: calc(
-        100vw - #{return-map-value($size__container-padding, 'medium') * 2}
+        100vw - #{return-map-value($sizes__container-padding, 'medium') * 2}
       );
     }
 
     margin: auto;
     @extend %figcaption;
+
+    color: rgba($color__black, 0.65);
+
+    .data & {
+      color: rgba($color__black, 0.5);
+    }
   }
 }

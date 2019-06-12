@@ -10,8 +10,8 @@
     }
 
     &_title {
-      color: $color__gray-medium;
-      font-weight: bold;
+      color: $color__black;
+      @extend %font-gibson;
 
       main.data & {
         @include fluid-type(24px, 26px);
@@ -19,13 +19,11 @@
     }
 
     &_subtitle {
-      color: $color__gray-medium;
-      font-family: $font__sans-serif;
+      color: rgba($color__black, 0.65);
+      @extend %font-hind;
       line-height: $font__line-height-body;
 
-      main.data & {
-        @include fluid-type(18px, 20px);
-      }
+      @include fluid-type(18px, 20px);
     }
 
     &_tags {
@@ -33,13 +31,6 @@
       flex-wrap: wrap;
 
       .tag {
-        color: $color__white;
-        background-color: $color__gray;
-
-        &.active {
-          background-color: $color__test;
-        }
-
         @include breakpoint('medium') {
           margin-right: 1rem;
         }
@@ -55,7 +46,7 @@
 
   &-figure_caption p {
     margin: 0;
-    font-family: $font__sans-serif;
+    @extend %font-gibson;
     cursor: default;
     @include font-size(10px);
 
@@ -74,8 +65,12 @@
   }
 }
 
+.highcharts-background {
+  fill: $color__white;
+}
+
 .highcharts-axis-title {
-  font-family: $font__sans-serif;
+  @extend %font-hind;
   fill: $color__gray-medium;
 
   main.data & {
@@ -84,7 +79,7 @@
 }
 
 .highcharts-xaxis-labels {
-  font-family: $font__sans-serif;
+  @extend %font-hind;
   fill: $color__gray-medium;
 
   main.data & {
@@ -93,7 +88,7 @@
 }
 
 .highcharts-yaxis-labels {
-  font-family: $font__sans-serif;
+  @extend %font-hind;
   fill: $color__gray-medium;
 
   main.data & {
@@ -102,7 +97,7 @@
 }
 
 .highcharts-legend-item {
-  font-family: $font__sans-serif;
+  @extend %font-hind;
   fill: $color__gray-medium;
 
   main.data & {
@@ -111,7 +106,7 @@
 }
 
 .highcharts-tooltip {
-  font-family: $font__sans-serif;
+  @extend %font-hind;
   filter: none !important;
   fill: $color__gray-medium;
   @include font-size(18px);
@@ -127,7 +122,7 @@
 }
 
 .highcharts-tooltip-box {
-  stroke: $color__gray;
+  stroke: $color__gray-medium;
 }
 
 .highcharts-xaxis-grid .highcharts-grid-line {
