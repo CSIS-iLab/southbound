@@ -1,57 +1,152 @@
 ---
-title: Southbound!
 slug: homepage
+title: The New Southbound Policy
 sections:
   header:
     index: 1
     component: header
     content:
-      intro: |-
-        # Lorem ipsum dolor
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      image: |-
-          ![alt text](https://res.cloudinary.com/csisideaslab/image/upload/v1541004113/on-the-radar/GettyImages-1054021808.jpg "Sample")
-      text: |-
-          _Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum._
-          <div><a href="/data" class="forward large">See Data</a></div>
-  test1:
-    index: 2
-    component: report
-    title: Test
-    chart: "3.1"
+      hero:
+        background: https://res.cloudinary.com/csisideaslab/image/upload/v1541004113/on-the-radar/GettyImages-1054021808.jpg   
+        overlay: https://res.cloudinary.com/csisideaslab/image/upload/v1541004113/on-the-radar/GettyImages-1054021808.jpg   
+        supertitle: Taiwan's new
+        title: Southbound Policy
+        subtitle: Deepening Taiwan’s Regional Integration
+        published: Published June 2019
+        updated: last updated August 2019
+      jump: |-
+        On this page:
+        * <a href="#">The NSP’s Four Pillars</a>
+        * <a href="#">The NSP’s Four Pillars</a>
+        * <a href="#">The NSP’s Four Pillars</a>
+      download: |-
+        <a href="#" class="download">Download the Full Report</a>
+        PDF, 88 pages, 2.8MB
+      share:
+  intro:
+    index: 1
+    component: one-column
     content:
-        - |-
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut <a href="https://www.1.com">Link link link</a> aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  test2:
-    index: 3
-    component: report
-    title: Test
-    chart: "5.1"
-    content:
-        - |-
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut <a href="https://www.1.com">Link link link</a> aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      abstract: |-
+        In a concerted effort to expand Taiwan’s presence across the Indo-Pacific, President Tsai Ing-wen introduced the New Southbound Policy (NSP) in 2016. The NSP is designed to strengthen Taipei’s relationships with the ten countries of ASEAN, six states in South Asia, Australia, and New Zealand. The policy aims to leverage Taiwan’s cultural, educational, technological, agricultural, and economic assets to enhance Taiwan’s regional integration and promote the broader development of the Indo-Pacific region.
 
-  test3:
+        ![alt text](https://res.cloudinary.com/csisideaslab/image/upload/v1541004113/on-the-radar/GettyImages-1054021808.jpg "Countries included in the Southbound Policy: the ten countries of ASEAN, Australia, Bangladesh, Bhutan, India, Nepal, New Zealand, Pakistan, and Sri Lanka")
+
+        The plan hinges upon forging a “sense of economy community” and forming “a consensus for cooperation” with the eighteen nations identified by Taipei as potential partners. Since Taiwan lacks formal diplomatic ties with the countries targeted by the NSP, Taipei must creatively foster bilateral collaboration. To this end, the Tsai administration has rallied local governments and civil society organizations to collaborate with the central government’s implementation efforts.
+  four_pillars:
+    index: 2
+    component: one-column
+    title: The NSP’s Four Pillars
+    content:
+        - |-
+  pillar_one:
+    index: 3
+    component: two-column
+    content:
+        title: |-
+          <h3><span class="index">01</span> Promote economic collaboration: </h3>
+
+        description: Cooperate with the target countries on supply chains, domestic demand markets and infrastructure projects.
+        text: |-
+          * Employer contributions to a 403(b) plan
+          * Flexible Savings Account (FSA)
+          * Life Insurance
+          * Transit Benefits
+        chart: "3.1"
+  pillar_two:
     index: 4
-    component: report
-    title: Test
-    chart: "7.1"
+    component: two-column
     content:
-        - |-
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut <a href="https://www.1.com">Link link link</a> aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  test4:
+        title: |-
+          <h3><span class="index">01</span> Promote economic collaboration: </h3>
+
+        description: Cooperate with the target countries on supply chains, domestic demand markets and infrastructure projects.
+        text: |-
+          * Employer contributions to a 403(b) plan
+          * Flexible Savings Account (FSA)
+          * Life Insurance
+          * Transit Benefits
+        chart: "5.1"
+  pillar_three:
     index: 5
-    component: report
-    title: Test
-    chart: "8.1"
+    component: two-column
     content:
-        - |-
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut <a href="https://www.1.com">Link link link</a> aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  disclaimer:
+        title: |-
+          <h3><span class="index">01</span> Promote economic collaboration: </h3>
+
+        description: Cooperate with the target countries on supply chains, domestic demand markets and infrastructure projects.
+        text: |-
+          * Employer contributions to a 403(b) plan
+          * Flexible Savings Account (FSA)
+          * Life Insurance
+          * Transit Benefits
+        chart: "7.1"
+  pillar_four:
     index: 6
-    component: columns
+    component: two-column
     content:
-      - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        title: |-
+          <h3><span class="index">01</span> Promote economic collaboration: </h3>
+
+        description: Cooperate with the target countries on supply chains, domestic demand markets and infrastructure projects.
+        text: |-
+          * Employer contributions to a 403(b) plan
+          * Flexible Savings Account (FSA)
+          * Life Insurance
+          * Transit Benefits
+        chart: "8.1"
+  flagship:
+    index: 6
+    component: one-column
+    title: Flagship Projects and Innovative Fields
+    content:
+      intro: |-
+          Taiwan’s Office of Trade Negotiations has laid out five flagship projects and three potential-laden fields for collaboration. These programs are designed to capitalize on the pillars of the New Southbound Policy and enhance mutually beneficial ties with targeted countries across the Indo-Pacific.
+      five-flagship-programs: |-
+          ### Five Flagship Programs
+          * <h5>Agricultural development</h5>
+
+            Increase cooperation and innovation between Taiwan and partner countries.
+
+          * <h5>Agricultural development</h5>
+
+            Increase cooperation and innovation between Taiwan and partner countries.
+
+          * <h5>Agricultural development</h5>
+
+            Increase cooperation and innovation between Taiwan and partner countries.
+
+          * <h5>Agricultural development</h5>
+
+            Increase cooperation and innovation between Taiwan and partner countries.
+
+          * <h5>Agricultural development</h5>
+
+            Increase cooperation and innovation between Taiwan and partner countries.
+      three-innovative-fields: |-
+          #### Three Innovative Fields
+          * <h5>Agricultural development:</h5><p> Help local firms expand their business abroad and aid the development of e-commerce platforms in regional markets.</p>
+          * <h5>Agricultural development:</h5><p> Help local firms expand their business abroad and aid the development of e-commerce platforms in regional markets.</p>
+          * <h5>Agricultural development:</h5><p> Help local firms expand their business abroad and aid the development of e-commerce platforms in regional markets.</p>
+  outro:
+    index: 7
+    component: one-column
+    content:
+        - |-        
+          Given the multidimensional nature of the NSP, its success should be evaluated incrementally. We encourage you to visit our <a href="/data">Data Repository</a>, which tracks several of the key performance benchmarks for the policy. More details regarding the NSP can be found in our longer publication.
+  further-reading:
+    index: 8
+    component: one-column
+    content:
       - |-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        #### Further Reading
+        * Executive Yuan. "<a href="#" class="external">New Southbound Policy.</a>" Office of Trade Negotiations.
+        * Executive Yuan. "<a href="#" class="external">New Southbound Policy.</a>" Office of Trade Negotiations.
+        * Executive Yuan. "<a href="#" class="external">New Southbound Policy.</a>" Office of Trade Negotiations.
+        * Executive Yuan. "<a href="#" class="external">New Southbound Policy.</a>" Office of Trade Negotiations.
+        * Executive Yuan. "<a href="#" class="external">New Southbound Policy.</a>" Office of Trade Negotiations.
+        * Executive Yuan. "<a href="#" class="external">New Southbound Policy.</a>" Office of Trade Negotiations.
+        * Executive Yuan. "<a href="#" class="external">New Southbound Policy.</a>" Office of Trade Negotiations.
+        * Executive Yuan. "<a href="#" class="external">New Southbound Policy.</a>" Office of Trade Negotiations.
+
 ---

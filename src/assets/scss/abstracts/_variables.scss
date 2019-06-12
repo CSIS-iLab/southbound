@@ -9,13 +9,16 @@ $color__orange-dark: #d46e02;
 
 $color__focus: #4cc6f2;
 
-$color__white: #fcfcfc;
+$color__white: #fff;
+$color__gray-lightest: #fcfcfc;
 $color__gray-lighter: #f3f3f3;
 $color__gray-light: #e3e5e7;
-$color__gray-medium: #707c8c;
+$color__gray-medium-cool: #707c8c;
+$color__gray-medium-warm: #8f8f8f;
 $color__gray-dark: #5d6365;
 $color__gray-darker: #42494b;
-$color__black: #333;
+$color__gray-darkest: #333;
+$color__black: #000;
 
 /*----------  Typography  ----------*/
 
@@ -47,6 +50,7 @@ $sizes__container-padding: (
   'xlarge': 48px
 );
 
+$size__gap: 32px;
 $size__padding-mobile: 20px;
 $size__padding-desktop: 24px;
 
@@ -85,13 +89,6 @@ $sizes__header-height: (
   'medium': 80px,
   'large': 80px,
   'xlarge': 80px
-);
-
-$size__grid-gap: (
-  'small': 0,
-  'medium': 24px,
-  'large': 48px,
-  'xlarge': 72px
 );
 
 $size__footer-padding-top: (

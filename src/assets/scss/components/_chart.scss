@@ -1,8 +1,4 @@
 .chart {
-  @include breakpoint('large') {
-    display: flex;
-  }
-
   &-text {
     @include breakpoint('large') {
       flex-shrink: 0;
@@ -10,7 +6,7 @@
     }
 
     &_title {
-      color: $color__black;
+      color: $color__gray-darkest;
       @extend %font-gibson;
 
       main.data & {
@@ -19,11 +15,7 @@
     }
 
     &_subtitle {
-      color: rgba($color__black, 0.65);
-      @extend %font-hind;
-      line-height: $font__line-height-body;
-
-      @include fluid-type(18px, 20px);
+      @extend %p3;
     }
 
     &_tags {
@@ -44,34 +36,25 @@
     }
   }
 
-  &-figure_caption p {
-    margin: 0;
-    @extend %font-gibson;
-    cursor: default;
-    @include font-size(10px);
-
+  &-figure_caption {
     main.data & {
-      @include font-size(12px);
+      padding-top: 0.5rem;
+      border-top: 1px solid rgba($color__black, 0.2);
     }
 
-    &:first-of-type {
-      display: none;
-      color: $color__black;
-
-      main.data & {
-        display: block;
-      }
+    p {
+      @extend %p4;
     }
   }
 }
 
 .highcharts-background {
-  fill: $color__white;
+  fill: $color__gray-lightest;
 }
 
 .highcharts-axis-title {
   @extend %font-hind;
-  fill: $color__gray-medium;
+  fill: $color__gray-medium-cool;
 
   main.data & {
     @include font-size(14px);
@@ -80,7 +63,7 @@
 
 .highcharts-xaxis-labels {
   @extend %font-hind;
-  fill: $color__gray-medium;
+  fill: $color__gray-medium-cool;
 
   main.data & {
     @include font-size(12px);
@@ -89,7 +72,7 @@
 
 .highcharts-yaxis-labels {
   @extend %font-hind;
-  fill: $color__gray-medium;
+  fill: $color__gray-medium-cool;
 
   main.data & {
     @include font-size(12px);
@@ -98,7 +81,7 @@
 
 .highcharts-legend-item {
   @extend %font-hind;
-  fill: $color__gray-medium;
+  fill: $color__gray-medium-cool;
 
   main.data & {
     @include font-size(12px);
@@ -108,7 +91,7 @@
 .highcharts-tooltip {
   @extend %font-hind;
   filter: none !important;
-  fill: $color__gray-medium;
+  fill: $color__gray-medium-cool;
   @include font-size(18px);
 
   span span:first-of-type {
@@ -122,7 +105,7 @@
 }
 
 .highcharts-tooltip-box {
-  stroke: $color__gray-medium;
+  stroke: $color__gray-medium-cool;
 }
 
 .highcharts-xaxis-grid .highcharts-grid-line {

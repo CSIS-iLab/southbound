@@ -34,7 +34,7 @@ class Page extends React.Component {
         InitSheets(data, { isDataRepo: false })
       })
     }
-  };
+  }
 
   componentDidMount() {
     document.title = `${this.state.title} | CSIS Careers`
@@ -65,7 +65,8 @@ class Page extends React.Component {
       <main className={page}>
         {pageContent
           ? pageContent.map(section => {
-            const chart = sheetData.find(d => d.key === section.chart)
+            const chart = sheetData.find(d => d.key === section.content.chart)
+
             return (
               <section
                 key={section.key}
@@ -88,18 +89,15 @@ class Page extends React.Component {
                   }
                 >
                   {Object.entries(section.content).map(value => {
-                    return ValueToJSX(
-                      value[1],
-                      `${section.component}__${value[0]}`,
-                      value[0]
-                    )
-                  })}
-                  {chart ? (
-                    <article id={section.chart}>
-                      <figure className="chart-figure">
+                    return chart && value[0] === 'chart' ? (
+                      <figure
+                        key="chart"
+                        id={value[1]}
+                        className="chart-figure"
+                      >
                         <div className="chart-figure_graph" />
                         <figcaption className="chart-figure_caption">
-                          <h3>{chart.title}</h3>
+                          <h5>{chart.title}</h5>
                           <p>{chart.credits}</p>
                           <a href={chart.pdf} className="icon-search">
                               Find in Report
@@ -112,10 +110,14 @@ class Page extends React.Component {
                           </a>
                         </figcaption>
                       </figure>
-                    </article>
-                  ) : (
-                    ''
-                  )}
+                    ) : (
+                      ValueToJSX(
+                        value[1],
+                        `${section.component} ${value[0]}`,
+                        value[0]
+                      )
+                    )
+                  })}
                 </div>
               </section>
             )

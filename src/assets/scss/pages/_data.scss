@@ -8,7 +8,7 @@
       height: 0;
       min-height: 0;
       overflow: hidden;
-      background-color: $color__white;
+      background-color: $color__gray-lightest;
       opacity: 0;
       transition: all 0.2s ease-in-out;
     }
@@ -43,7 +43,7 @@
 
   @include breakpoint('large', $dir: 'max-width') {
     padding-bottom: 1.5rem;
-    border-bottom: solid 1px $color__gray-dark;
+    border-bottom: solid 1px rgba($color__black, 0.2);
   }
   @include breakpoint('large') {
     display: flex;
@@ -110,9 +110,9 @@
 
     label {
       display: inline-block;
-      color: $color__white;
+      color: $color__gray-lightest;
       line-height: 1.56;
-      background-color: $color__gray-medium;
+      background-color: $color__gray-medium-cool;
       cursor: pointer;
 
       &.checked {
@@ -129,6 +129,7 @@
 .listings__results-list {
   min-height: 350px;
   padding-top: 3rem;
+  padding-left: 0;
 
   .chart {
     padding-bottom: 2rem;

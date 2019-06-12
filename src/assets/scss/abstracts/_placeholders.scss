@@ -27,14 +27,60 @@
   color: $color__gray-darker;
 }
 
-%figcaption {
-  @extend %font-gibson;
-  @include font-size(16px);
-  line-height: 1.25;
+%further-reading {
+  ul {
+    margin-top: 1rem;
+    padding-left: 0;
+    list-style-type: none;
+
+    li {
+      @extend %p3;
+      margin-bottom: 1rem;
+    }
+  }
 }
 
 %focus {
   outline: 2px solid $color__focus;
+}
+
+%p1 {
+  @include fluid-type(18px, 20px);
+  line-height: $font__line-height-body;
+}
+
+%p2 {
+  @include font-size(18px);
+  color: rgba($color__gray-darkest, 0.75);
+  line-height: 1.4;
+}
+
+%p3 {
+  @include font-size(16px);
+  color: rgba($color__gray-darkest, 0.65);
+  line-height: 1.25;
+}
+
+%p4 {
+  @include font-size(13px);
+  color: rgba($color__gray-darkest, 0.65);
+  line-height: 1.24;
+
+  main.homepage & {
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid rgba($color__gray-darkest, 0.35);
+  }
+
+  main.data & {
+    @include font-size(14px);
+    color: $color__gray-medium-warm;
+    @extend %font-gibson;
+    line-height: 1.29;
+
+    &:first-child {
+      display: none;
+    }
+  }
 }
 
 %link-gray {
@@ -42,7 +88,7 @@
 
   &:hover,
   &:focus {
-    color: $color__black;
+    color: $color__gray-darkest;
   }
 }
 
@@ -54,7 +100,6 @@
   font-weight: normal;
   line-height: 1em;
   text-align: center;
-  transition: all 0.3s ease-in-out;
   speak: none;
   -webkit-font-smoothing: antialiased;
   @include font-size(14px);

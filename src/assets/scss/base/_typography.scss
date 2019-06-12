@@ -3,14 +3,14 @@
 
 body,
 button {
-  color: $color__black;
+  color: $color__gray-darkest;
   @extend %font-hind;
 }
 
 input,
 select,
 textarea {
-  color: $color__gray-medium;
+  color: $color__gray-medium-cool;
   @extend %font-input;
 }
 
@@ -22,14 +22,14 @@ textarea {
   h#{$i} {
     margin: 0 0 0.5rem;
     color: $color__black;
-    @extend %font-hind;
+    @extend %font-gibson;
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
   }
 }
 
 h1 {
-  color: $color__white;
+  color: $color__gray-lightest;
   line-height: 0.94;
   @include fluid-type(54px, 80px);
 }
@@ -42,21 +42,33 @@ h2 {
 
   .homepage & {
     font-weight: 100;
+    text-align: center;
   }
 }
 
 h3 {
   @include fluid-type(26px, 32px);
-
   font-weight: 400;
 
   .homepage & {
     font-weight: 100;
+
+    span {
+      color: $color__orange;
+      font-weight: 400;
+    }
   }
 }
 
 h4 {
+  font-weight: 400;
   @include fluid-type(22px, 24px);
+}
+
+h5 {
+  color: $color__gray-darkest;
+  font-weight: 500;
+  @include font-size(20px);
 }
 /*============================
 =            Copy            =
@@ -64,45 +76,31 @@ h4 {
 
 p {
   section & {
-    @include font-size(18px);
-    margin: 0.25rem 0 1rem;
-    line-height: $font__line-height-body;
-  }
-
-  .header__intro & {
-    @include fluid-type(18px, 20px);
-    margin-bottom: 2rem;
-    @extend %font-hind;
+    @extend %p1;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
   }
 }
 
 ul {
   margin-top: 0;
-  padding-left: 0;
-  list-style-type: none;
+  padding-left: 1.5rem;
 
-  section & {
-    @include font-size(18px);
-  }
-
-  li {
-    margin-bottom: 0.5rem;
-  }
-
-  .cantilever &,
-  .column & {
-    padding-left: 2rem;
-    list-style-type: disc;
+  main & {
+    @include fluid-type(18px, 20px);
 
     li {
-      padding-left: 1rem;
-      line-height: 1.33;
+      margin-bottom: 0.5rem;
+
+      p {
+        flex-basis: calc(100% - 10px);
+      }
     }
   }
 }
 
 strong {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 em {
@@ -114,7 +112,7 @@ blockquote {
 
   &,
   p {
-    color: $color__black;
+    color: $color__gray-darkest;
     @extend %font-hind;
     line-height: 1.5;
     @include font-size(20px);

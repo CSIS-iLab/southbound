@@ -15,7 +15,8 @@ export default function(options) {
 
   return {
     chart: {
-      height: window.innerWidth > 1080 ? 500 : 750,
+      height:
+        isDataRepo && window.innerWidth > 1080 ? 400 : isDataRepo ? 275 : 300,
       styledMode: false
     },
     colors: ChartColors,

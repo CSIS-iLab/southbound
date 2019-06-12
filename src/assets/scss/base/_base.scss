@@ -13,7 +13,8 @@ body {
   position: relative;
   margin: 0;
   overflow-x: hidden;
-  background: $color__white;
+  background: $color__gray-lightest;
+  @extend %font-hind;
 
   @include breakpoint('small') {
     --breakpoint: 'small';
@@ -37,15 +38,22 @@ body {
 }
 
 nav,
-main,
 footer {
-  max-width: 1400px;
+  max-width: $size__header__max-width;
+}
+
+main {
+  max-width: $size__container__max-width;
+}
+
+main,
+nav,
+footer {
   margin: auto;
-  @each $size in $sizes__default {
-    $padding: return-map-value($sizes__container-padding, $size);
-    @include breakpoint(#{$size}) {
-      width: calc(100vw - #{$padding} * 2);
-    }
+  padding: 0 $size__padding-mobile;
+
+  @include breakpoint('medium') {
+    padding: 0 $size__padding-desktop;
   }
 }
 
@@ -65,10 +73,7 @@ header {
 a,
 i,
 button {
-  &,
-  &::before {
-    transition: all 0.2s ease-in-out;
-  }
+  transition: all 0.2s ease-in-out;
 }
 
 .wrapper {
@@ -95,7 +100,7 @@ button {
   bottom: 0;
   left: 0;
   z-index: -10;
-  background-color: $color__black;
+  background-color: $color__gray-darkest;
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s ease-in-out;

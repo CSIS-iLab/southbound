@@ -180,10 +180,10 @@ class Data extends React.Component {
                     <li
                       key={data.key}
                       id={data.key}
-                      className={`chart ${data.hide ? 'hide' : ''}`}
+                      className={`two-column chart ${data.hide ? 'hide' : ''}`}
                       dataset-tags={data.tags}
                     >
-                      <section className="chart-text">
+                      <section className="text chart-text">
                         <h2 className="chart-text_title">{data.title}</h2>
                         <p className="chart-text_subtitle">{data.subtitle}</p>
                         <ul className="chart-text_tags">

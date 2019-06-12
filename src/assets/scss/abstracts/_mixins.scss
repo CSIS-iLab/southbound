@@ -6,13 +6,13 @@
 
 @mixin button {
   padding: 0.5rem;
-  color: $color__white;
-  background-color: rgba($color__gray-medium, 0.6);
+  color: $color__gray-lightest;
+  background-color: rgba($color__gray-medium-cool, 0.6);
 
   &:hover,
   &:focus {
-    color: $color__white;
-    background-color: rgba($color__gray-medium, 0.8);
+    color: $color__gray-lightest;
+    background-color: rgba($color__gray-medium-cool, 0.8);
   }
 }
 
@@ -183,7 +183,7 @@
 }
 
 @mixin site-header-white() {
-  background-color: $color__white;
+  background-color: $color__gray-lightest;
   background-image: none;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12),
     0 1px 1px 0 rgba(0, 0, 0, 0.14);
