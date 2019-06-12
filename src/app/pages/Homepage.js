@@ -5,6 +5,7 @@ import CloseMenu from '../helpers/CloseMenu'
 import ChartOptions from '../helpers/ChartOptions'
 import Highcharts from 'Highcharts'
 import InitSheets from '../helpers/InitSheets'
+import PageHeader from '../helpers/PageHeader'
 import ValueToJSX from '../helpers/ValueToJSX'
 
 class Page extends React.Component {
@@ -73,7 +74,13 @@ class Page extends React.Component {
 
                 <div className={'subsection ' + section.component}>
                   {Object.entries(section.content).map(value => {
-                    return chart && value[0] === 'chart' ? (
+                    return section.key === 'header' ? (
+                      PageHeader(
+                        value[1],
+                        `${section.component} ${value[0]}`,
+                        value[0]
+                      )
+                    ) : chart && value[0] === 'chart' ? (
                       <figure
                         key="chart"
                         id={value[1]}
@@ -83,12 +90,12 @@ class Page extends React.Component {
                         <figcaption className="chart-figure_caption">
                           <h5>{chart.title}</h5>
                           <p>{chart.credits}</p>
-                          <a href={chart.pdf} className="icon-search">
+                          <a href={chart.pdf} className="icon-report">
                               Find in Report
                           </a>
                           <a
                             href={`data/id/${section.chart}`}
-                            className="icon-search"
+                            className="icon-graph"
                           >
                               View in Data Repository
                           </a>

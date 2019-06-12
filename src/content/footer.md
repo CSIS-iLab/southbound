@@ -2,8 +2,5 @@
 slug: footer
 description:
   - |-
-    You can set up a job alert to email you jobs that match your skill set. If you already have job agent(s) set up, you can login to update your current settings or profile.
-    [Create a new Job Alert](#)
-email: employment@csis.org
-phone: 202-887-0200
+    In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. 
 ---

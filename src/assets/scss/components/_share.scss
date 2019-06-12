@@ -1,6 +1,7 @@
 .share {
   display: flex;
   align-items: center;
+  list-style-type: none;
 
   .job-header & {
     @include breakpoint('large', 'max-width') {

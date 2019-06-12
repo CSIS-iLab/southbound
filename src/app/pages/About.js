@@ -6,6 +6,7 @@ import ChartOptions from '../helpers/ChartOptions'
 import Highcharts from 'Highcharts'
 import InitSheets from '../helpers/InitSheets'
 import ValueToJSX from '../helpers/ValueToJSX'
+import PageHeader from '../helpers/PageHeader'
 
 class Page extends React.Component {
   constructor(props) {
@@ -43,6 +44,7 @@ class Page extends React.Component {
   render() {
     const { pageContent, page } = this.state
     const { sheetData } = this.props
+
     return (
       <main className={page}>
         {pageContent
@@ -53,11 +55,17 @@ class Page extends React.Component {
 
                 <div className={'subsection ' + section.component}>
                   {Object.entries(section.content).map(value => {
-                    return ValueToJSX(
-                      value[1],
-                      `${section.component} ${value[0]}`,
-                      value[0]
-                    )
+                    return section.key === 'header'
+                      ? PageHeader(
+                        value[1],
+                        `${section.component} ${value[0]}`,
+                        value[0]
+                      )
+                      : ValueToJSX(
+                        value[1],
+                        `${section.component} ${value[0]}`,
+                        value[0]
+                      )
                   })}
                 </div>
               </section>

@@ -13,7 +13,7 @@ body {
   position: relative;
   margin: 0;
   overflow-x: hidden;
-  background: $color__gray-lightest;
+  background: $color__white;
   @extend %font-hind;
 
   @include breakpoint('small') {

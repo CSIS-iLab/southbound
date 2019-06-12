@@ -1,6 +1,7 @@
 import React from 'react'
 import MarkdownToSections from '../helpers/MarkdownToSections'
 import ValueToJSX from '../helpers/ValueToJSX'
+import PageHeader from '../helpers/PageHeader'
 import PageContent from '../helpers/PageContent'
 import GetData from '../helpers/GetData'
 import CloseMenu from '../helpers/CloseMenu'
@@ -114,7 +115,7 @@ class Data extends React.Component {
         <section id="#header">
           <div className="header">
             {Object.keys(headerContent).map(content => {
-              return ValueToJSX(
+              return PageHeader(
                 headerContent[content],
                 `header__${content}`,
                 content
@@ -139,7 +140,7 @@ class Data extends React.Component {
             </div>
 
             <div className="listings__filters-category">
-              <input type="checkbox" id="filter-trigger" checked />
+              <input type="checkbox" id="filter-trigger" defaultChecked />
 
               <label htmlFor="filter-trigger" className="filters-label">
                 Filter by tag
@@ -196,7 +197,7 @@ class Data extends React.Component {
                             </li>
                           ))}
                         </ul>
-                        <a href={data.pdf} className="icon-search">
+                        <a href={data.pdf} className="icon-report">
                           Find in Report
                         </a>
                       </section>

@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../assets/images/csis_logo_black.svg'
+import logo from '../../assets/images/csis_logo-short.svg'
 
 export default class Footer extends React.Component {
   render() {

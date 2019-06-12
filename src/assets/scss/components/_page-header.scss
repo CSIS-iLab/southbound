@@ -1,0 +1,6 @@
+#page-header {
+  @include breakpoint('medium') {
+    display: flex;
+    justify-content: space-between;
+  }
+}

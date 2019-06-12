@@ -5,7 +5,7 @@ export default class SocialShare extends React.Component {
     const { job, location } = this.props
 
     return (
-      <ul className={location === 'footer' ? 'post-footer__nav-menu' : ''}>
+      <ul className="share">
         <li>
           <a
             className="icon icon-facebook"
@@ -32,26 +32,12 @@ export default class SocialShare extends React.Component {
             <span className="visually-hidden">Share on Twitter</span>
           </a>
         </li>
-        <li>
-          <a
-            className="icon icon-linkedin"
-            href={`https://www.linkedin.com/shareArticle?mini=true&amp;url=${
-              window.location.href
-            }&amp;summary=${job.title['#cdata-section']}&amp;source=CSIS`}
-            rel="noopener noreferrer"
-            target="_blank"
-            title="Share on Linkedin"
-          >
-            <span className="visually-hidden">Share on Linkedin</span>
-          </a>
-        </li>
+
         <li>
           <i
             tabIndex="0"
             className="icon icon-email"
-            href={`mailto:?subject=${job.title['#cdata-section']}&amp;body=${
-              window.location.href
-            }`}
+            href={`mailto:?subject=${'x'}&amp;body=${window.location.href}`}
             title="Email"
           >
             <span className="visually-hidden">Email</span>
@@ -65,19 +51,6 @@ export default class SocialShare extends React.Component {
           >
             <span className="visually-hidden">Share on Facebook</span>
           </i>
-        </li>
-        <li className="list-item__copy">
-          <i
-            tabIndex="0"
-            className="icon icon-copy-link"
-            onClick={this.handleCopy}
-            onMouseOut={this.handleCopied}
-            title="Copy"
-          >
-            <span className="visually-hidden">Copy</span>
-          </i>
-
-          <span className="copy-text">Copied!</span>
         </li>
       </ul>
     )
