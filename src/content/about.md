@@ -6,35 +6,49 @@ sections:
     index: 1
     component: header
     content:
-      intro: |-
-          # About
-      image: |-
-       ![alt text](https://res.cloudinary.com/csisideaslab/image/upload/v1541004113/on-the-radar/GettyImages-1054021808.jpg "Sample")
       text: |-
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut <a href="https://www.1.com">Link link link</a> aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  test:
+          On this page:
+          * <a href="#">The NSP’s Four Pillars</a>
+          * <a href="#">The NSP’s Four Pillars</a>
+          * <a href="#">The NSP’s Four Pillars</a>
+  about:
     index: 2
-    component: cantilever
-    title: Link Styles
+    component: one-column
+    title: About this publication
     content:
-        - |-
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut <a href="https://www.1.com">Link link link</a> aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a href="https://www.2.com" class="external">EEO is the Law</a></p>
+      - |-
+        <aside><h4>AboutCSIS</h4><p>Established in Washington, D.C., over 50 years ago, the Center for Strategic and International Studies (CSIS) is a bipartisan, nonprofit policy research organization dedicated to providing strategic insights and policy solutions to help decisionmakers chart a course toward a better world. To learn more about CSIS, visit <a href="https://www.csis.org" class="external">www.CSIS.org.</a></p></aside>
 
-          <div><a href="https://www.3.com" class="external">EEO is the Law</a></div>
-          <div><a href="https://www.3.com" class="external dark">EEO is the Law</a></div>
-          <h4 class="large"><a href="https://www.4.com" class="large">Job Job Job</a></h4>
-          <h4 class="large"><a href="https://www.google.com" class="large">Visited Job Job</a></h4>
-          <div><a href="https://www.5.com" class="forward large block">Action</a></div>
-          <div><a href="https://www.6.com" class="backward large block">Back</a></div>
-          <ul class="menu">
-          <li><a href="https://www.7.com" class="btn menu-item">LISTINGS</a></li>
-          <li><a href="https://www.8.com" class="btn menu-item">Internships</a></li>
-          <li><a href="https://www.9.com" class="btn menu-item">faq</a></li>
-          <li><a href="https://www.10.com" class="btn menu-item dark profile">My profile</a></li>
+        Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque. Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel rhoncus nibh, ut tincidunt turpis. Integer ac enim pellentesque,
 
-          </ul>
-          <div><a href="https://www.12.com" class="btn dark back-to-top"></a></div>
-          <button class="block clear-all">Clear All</button>
-          <button class="btn dark block apply">Apply</button>
+        Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque. Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel rhoncus nibh, ut tincidunt turpis. Integer ac enim pellentesque,
+
+  authors:
+    index: 3
+    component: one-column
+    title: Authors
+    content:
+      - |-
+        * <h4>Author Name</h4>
+
+          Title
+
+          Increase cooperation and innovation between Taiwan and partner countries.
+
+        * <h4>Agricultural development</h4>
+
+          Title
+
+          Increase cooperation and innovation between Taiwan and partner countries.
+  thanks:
+    index: 4
+    component: one-column
+    title: Special Thanks
+    content:
+      - |-
+        Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque. Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel rhoncus nibh, ut tincidunt turpis. Integer ac enim pellentesque,
+
+        #### CSIS iDeas Lab
+        The printed and digital versions of this report are products of the Andreas C. Dracopoulos iDeas Lab, the in-house digital, multimedia, and design agency at the Center for Strategic and International Studies.
 
 ---

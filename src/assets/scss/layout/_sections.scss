@@ -9,16 +9,6 @@ section::before {
   @include fluid-type(54px, 80px);
 }
 
-#outro::before {
-  content: '...';
-  margin: 1.5rem 0 4.5rem;
-}
-
-#intro::after {
-  content: '...';
-  margin: 5rem 0 4.5rem;
-}
-
 .subsection {
   margin: auto;
 
@@ -39,7 +29,8 @@ section::before {
   h3,
   h4,
   p,
-  ul {
+  ul,
+  aside {
     max-width: $size__one-column__max-width;
     margin-right: auto;
     margin-left: auto;
@@ -49,13 +40,32 @@ section::before {
     margin-bottom: 4.5rem;
   }
 
-  .component-image {
-    @include breakpoint('medium') {
+  .component-image,
+  aside {
+    @include breakpoint('large') {
       float: right;
       margin-left: 2rem;
     }
+  }
+  @include breakpoint('medium', 'max-width') {
+    display: flex;
+    flex-wrap: wrap;
 
+    aside {
+      order: 99;
+    }
+  }
+
+  .component-image {
     @each $size in $sizes__default {
+      @include breakpoint($size) {
+        max-width: return-map-value($sizes__one-column__image, $size);
+      }
+    }
+  }
+
+  aside {
+    @each $size in $sizes__desktop {
       @include breakpoint($size) {
         max-width: return-map-value($sizes__one-column__image, $size);
       }
@@ -100,25 +110,54 @@ section::before {
   }
 }
 
-[id^='pillar'] {
-  margin-bottom: 4.5rem;
+.about {
+  #about,
+  #authors {
+    &::after {
+      content: '...';
+      margin: 1.5rem 0 4.5rem;
+    }
+  }
 
-  .extra {
-    @extend %p2;
+  #thanks {
+    h4 {
+      margin-top: 2rem;
+      text-align: left;
+    }
   }
 }
 
-.five-flagship-programs {
-  ul {
-    @include breakpoint('medium') {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
+.homepage {
+  #outro::before {
+    content: '...';
+    margin: 1.5rem 0 4.5rem;
+  }
 
-    li {
+  #intro::after {
+    content: '...';
+    margin: 5rem 0 4.5rem;
+  }
+
+  [id^='pillar'] {
+    margin-bottom: 4.5rem;
+
+    .extra {
+      @extend %p2;
+    }
+  }
+
+  .five-flagship-programs {
+    ul {
       @include breakpoint('medium') {
-        flex-basis: 47%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      li {
+        @include breakpoint('medium') {
+          flex-basis: 47%;
+        }
       }
 
       p:not(:first-child) {
@@ -136,18 +175,18 @@ section::before {
       }
     }
   }
-}
 
-.three-innovative-fields {
-  li > * {
-    display: inline;
+  .three-innovative-fields {
+    li > * {
+      display: inline;
+    }
   }
-}
 
-#further-reading {
-  @include full-width-background($color__gray-lighter);
-  margin-top: 4rem;
-  padding: 2.5rem 0 1.5rem;
-  background-color: $color__gray-lighter;
-  @extend %further-reading;
+  #further-reading {
+    @include full-width-background($color__gray-lighter);
+    margin-top: 4rem;
+    padding: 2.5rem 0 1.5rem;
+    background-color: $color__gray-lighter;
+    @extend %further-reading;
+  }
 }

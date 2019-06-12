@@ -40,7 +40,7 @@ export default function HeaderNav(obj) {
                 to={siteStructure[page].to}
                 exact
               >
-                {siteStructure[page].header_title}
+                {siteStructure[page].title}
               </NavLink>
             </li>
           )

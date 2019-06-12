@@ -51,17 +51,9 @@ class Page extends React.Component {
               <section key={section.key} id={section.key} className={'row '}>
                 {section.title ? <h2>{section.title}</h2> : ''}
 
-                <div
-                  className={
-                    'subsection ' +
-                      (section.component !== 'cantilever'
-                        ? section.component
-                        : '')
-                  }
-                >
+                <div className={'subsection ' + section.component}>
                   {Object.entries(section.content).map(value => {
-                    return
-                    ValueToJSX(
+                    return ValueToJSX(
                       value[1],
                       `${section.component} ${value[0]}`,
                       value[0]

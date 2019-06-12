@@ -1,23 +1,23 @@
 export default {
-  data: {
-    templated: false,
-    to: '/data',
-    index: 1,
-    header_title: 'Data',
-    footer_title: 'Data Repository'
-  },
-  about: {
-    templated: false,
-    to: '/about',
-    index: 1,
-    header_title: 'About',
-    footer_title: 'About'
-  },
   homepage: {
     index: 0,
     menu: false,
     to: '/',
-    header_title: 'HOME LOGO',
-    content: []
+    header_title: 'HOME LOGO'
+  },
+  summary: {
+    index: 1,
+    to: '/',
+    title: 'Summary'
+  },
+  data: {
+    to: '/data',
+    index: 2,
+    title: 'Data Repository'
+  },
+  about: {
+    to: '/about',
+    index: 3,
+    title: 'About'
   }
 }
