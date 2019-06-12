@@ -5,7 +5,7 @@
       flex-basis: 40%;
     }
 
-    &_title {
+    &__title {
       color: $color__gray-darkest;
       @extend %font-gibson;
 
@@ -14,17 +14,26 @@
       }
     }
 
-    &_subtitle {
+    &__subtitle {
       @extend %p3;
     }
+  }
 
-    &_tags {
-      display: flex;
-      flex-wrap: wrap;
+  &-text__tags {
+    @extend %btn-list;
 
-      .tag {
-        @include breakpoint('medium') {
-          margin-right: 1rem;
+    li {
+      > * {
+        @include button;
+      }
+
+      &.checked {
+        > * {
+          @include button-checked;
+        }
+
+        &:hover > * {
+          background-color: $color__orange;
         }
       }
     }
@@ -46,10 +55,6 @@
       @extend %p4;
     }
   }
-}
-
-.highcharts-background {
-  fill: $color__gray-lightest;
 }
 
 .highcharts-axis-title {

@@ -6,25 +6,13 @@ sections:
     index: 1
     component: header
     content:
-      hero:
-        background: https://res.cloudinary.com/csisideaslab/image/upload/v1541004113/on-the-radar/GettyImages-1054021808.jpg   
-        overlay: https://res.cloudinary.com/csisideaslab/image/upload/v1541004113/on-the-radar/GettyImages-1054021808.jpg   
-        supertitle: Taiwan's new
-        title: Southbound Policy
-        subtitle: Deepening Taiwan’s Regional Integration
-        published: Published June 2019
-        updated: last updated August 2019
-      jump: |-
-        On this page:
-        * <a href="#">The NSP’s Four Pillars</a>
-        * <a href="#">The NSP’s Four Pillars</a>
-        * <a href="#">The NSP’s Four Pillars</a>
-      download: |-
-        <a href="#" class="download">Download the Full Report</a>
-        PDF, 88 pages, 2.8MB
-      share:
+      text: |-
+          On this page:
+          * <a href="#">The NSP’s Four Pillars</a>
+          * <a href="#">The NSP’s Four Pillars</a>
+          * <a href="#">The NSP’s Four Pillars</a>
   intro:
-    index: 1
+    index: 2
     component: one-column
     content:
       abstract: |-
@@ -34,13 +22,13 @@ sections:
 
         The plan hinges upon forging a “sense of economy community” and forming “a consensus for cooperation” with the eighteen nations identified by Taipei as potential partners. Since Taiwan lacks formal diplomatic ties with the countries targeted by the NSP, Taipei must creatively foster bilateral collaboration. To this end, the Tsai administration has rallied local governments and civil society organizations to collaborate with the central government’s implementation efforts.
   four_pillars:
-    index: 2
+    index: 3
     component: one-column
     title: The NSP’s Four Pillars
     content:
         - |-
   pillar_one:
-    index: 3
+    index: 4
     component: two-column
     content:
         title: |-
@@ -54,7 +42,7 @@ sections:
           * Transit Benefits
         chart: "3.1"
   pillar_two:
-    index: 4
+    index: 5
     component: two-column
     content:
         title: |-
@@ -68,7 +56,7 @@ sections:
           * Transit Benefits
         chart: "5.1"
   pillar_three:
-    index: 5
+    index: 6
     component: two-column
     content:
         title: |-
@@ -82,7 +70,7 @@ sections:
           * Transit Benefits
         chart: "7.1"
   pillar_four:
-    index: 6
+    index: 7
     component: two-column
     content:
         title: |-
@@ -96,7 +84,7 @@ sections:
           * Transit Benefits
         chart: "8.1"
   flagship:
-    index: 6
+    index: 8
     component: one-column
     title: Flagship Projects and Innovative Fields
     content:
@@ -129,13 +117,13 @@ sections:
           * <h5>Agricultural development:</h5><p> Help local firms expand their business abroad and aid the development of e-commerce platforms in regional markets.</p>
           * <h5>Agricultural development:</h5><p> Help local firms expand their business abroad and aid the development of e-commerce platforms in regional markets.</p>
   outro:
-    index: 7
+    index: 9
     component: one-column
     content:
         - |-        
           Given the multidimensional nature of the NSP, its success should be evaluated incrementally. We encourage you to visit our <a href="/data">Data Repository</a>, which tracks several of the key performance benchmarks for the policy. More details regarding the NSP can be found in our longer publication.
   further-reading:
-    index: 8
+    index: 10
     component: one-column
     content:
       - |-

@@ -68,16 +68,7 @@ class Page extends React.Component {
             const chart = sheetData.find(d => d.key === section.content.chart)
 
             return (
-              <section
-                key={section.key}
-                id={section.key}
-                className={
-                  'row ' +
-                    (section.component === 'cantilever'
-                      ? section.component
-                      : '')
-                }
-              >
+              <section key={section.key} id={section.key} className={'row '}>
                 {section.title ? <h2>{section.title}</h2> : ''}
 
                 <div

@@ -139,13 +139,13 @@ class Data extends React.Component {
             </div>
 
             <div className="listings__filters-category">
-              <input type="checkbox" id="filter-trigger" />
+              <input type="checkbox" id="filter-trigger" checked />
 
               <label htmlFor="filter-trigger" className="filters-label">
-                Filter by category
+                Filter by tag
               </label>
 
-              <ul className="listings__filters-category_list">
+              <ul className="listings__filters-category__list">
                 {categories.map(category => {
                   return (
                     <li key={category}>
@@ -167,12 +167,8 @@ class Data extends React.Component {
                 })}
               </ul>
             </div>
-            <p className="listings__filters-summary">
-              {filteredCategories.length} categories selected
-            </p>
           </section>
           <section className="listings__results">
-            <h2 className="listings__results-summary">Results</h2>
             <ul className="listings__results-list">
               {filteredSheetData ? (
                 filteredSheetData.map(data => {
@@ -184,19 +180,19 @@ class Data extends React.Component {
                       dataset-tags={data.tags}
                     >
                       <section className="text chart-text">
-                        <h2 className="chart-text_title">{data.title}</h2>
-                        <p className="chart-text_subtitle">{data.subtitle}</p>
-                        <ul className="chart-text_tags">
+                        <h2 className="chart-text__title">{data.title}</h2>
+                        <p className="chart-text__subtitle">{data.subtitle}</p>
+                        <ul className="chart-text__tags">
                           {data.tags.map(t => (
                             <li
                               key={t}
                               className={
                                 filteredCategories.includes(t)
-                                  ? 'tag active'
+                                  ? 'checked tag'
                                   : 'tag'
                               }
                             >
-                              {t}
+                              <span>{t}</span>
                             </li>
                           ))}
                         </ul>

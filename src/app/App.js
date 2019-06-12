@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import Header from './layout/Header'
 import Footer from './layout/Footer'
-import Page from './pages/Page'
+import Homepage from './pages/Homepage'
+import About from './pages/About'
 import Data from './pages/Data'
 import SiteMap from './SiteMap'
 import { Route } from 'react-router-dom'
@@ -134,7 +135,7 @@ class App extends Component {
           exact
           path="/"
           render={props => (
-            <Page
+            <Homepage
               {...props}
               sheetData={sheetData}
               siteStructure={siteStructure}
@@ -146,7 +147,7 @@ class App extends Component {
           exact
           path="/about"
           render={props => (
-            <Page {...props} siteStructure={siteStructure} page="about" />
+            <About {...props} siteStructure={siteStructure} page="about" />
           )}
         />
         <Route

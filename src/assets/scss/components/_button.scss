@@ -30,9 +30,5 @@ button {
 
   &.btn {
     @include button;
-
-    &--acive {
-      @include button--active;
-    }
   }
 }

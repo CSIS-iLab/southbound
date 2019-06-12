@@ -23,8 +23,11 @@
 }
 
 %filters-label {
-  @include font-size(16px);
+  display: block;
+  margin-bottom: 0.5rem;
   color: $color__gray-darker;
+  @include font-size(16px);
+  @extend %font-gibson;
 }
 
 %further-reading {
@@ -34,8 +37,8 @@
     list-style-type: none;
 
     li {
-      @extend %p3;
       margin-bottom: 1rem;
+      @extend %p3;
     }
   }
 }
@@ -45,24 +48,23 @@
 }
 
 %p1 {
-  @include fluid-type(18px, 20px);
   line-height: $font__line-height-body;
+  @include fluid-type(18px, 20px);
 }
 
 %p2 {
-  @include font-size(18px);
   color: rgba($color__gray-darkest, 0.75);
   line-height: 1.4;
+  @include font-size(18px);
 }
 
 %p3 {
-  @include font-size(16px);
   color: rgba($color__gray-darkest, 0.65);
   line-height: 1.25;
+  @include font-size(16px);
 }
 
 %p4 {
-  @include font-size(13px);
   color: rgba($color__gray-darkest, 0.65);
   line-height: 1.24;
 
@@ -72,15 +74,16 @@
   }
 
   main.data & {
-    @include font-size(14px);
     color: $color__gray-medium-warm;
-    @extend %font-gibson;
     line-height: 1.29;
 
     &:first-child {
       display: none;
     }
+    @include font-size(14px);
+    @extend %font-gibson;
   }
+  @include font-size(13px);
 }
 
 %link-gray {
@@ -96,13 +99,42 @@
   position: relative;
   top: -0.05rem;
   display: inline-block;
-  @extend %fontello;
   font-weight: normal;
   line-height: 1em;
   text-align: center;
   speak: none;
   -webkit-font-smoothing: antialiased;
+  @extend %fontello;
   @include font-size(14px);
+}
+
+%btn-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    margin-bottom: 1.25rem;
+
+    @include breakpoint('medium') {
+      margin-bottom: 0.75rem;
+    }
+
+    > * {
+      margin-right: 1rem;
+
+      > * {
+        @include button;
+      }
+
+      &.checked {
+        > * {
+          @include button-checked;
+        }
+      }
+    }
+  }
 }
 
 %mobile-margin {
