@@ -201,8 +201,8 @@ class Data extends React.Component {
                         </a>
                       </section>
                       <figure className="chart-figure">
-                        <div className="chart-figure_graph" />
-                        <figcaption className="chart-figure_caption">
+                        <div className="chart-figure__graph" />
+                        <figcaption className="chart-figure__caption">
                           <p>CSIS China Power Project</p>
                           <p>{data.credits}</p>
                         </figcaption>

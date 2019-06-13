@@ -65,12 +65,10 @@ export default function InitSheets(data, location) {
             let excludedData = excluded.map(e => e.data)
 
             aggregateData = xAxis.map((x, i) => {
-              let total = excludedData
-                .map(y => y[i])
-                .reduce((a, b) => {
-                  let sum = (a[1] ? a[1] : a) + (b[1] ? b[1] : b)
-                  return sum
-                })
+              let total = excludedData.map(y => y[i]).reduce((a, b) => {
+                let sum = (a[1] ? a[1] : a) + (b[1] ? b[1] : b)
+                return sum
+              })
               return total[1] ? total : [x, total]
             })
           }
@@ -99,6 +97,6 @@ export default function InitSheets(data, location) {
   }
 
   const container = document.getElementById(`${data.key}`)
-  const figure = container.querySelector('.chart-figure_graph')
+  const figure = container.querySelector('.chart-figure__graph')
   if (figure) Highcharts.chart(figure, chart)
 }

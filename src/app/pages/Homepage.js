@@ -112,9 +112,11 @@ class Page extends React.Component {
                         id={value[1]}
                         className="chart-figure"
                       >
-                        <div className="chart-figure_graph" />
-                        <figcaption className="chart-figure_caption">
-                          <h5>{chart.title}</h5>
+                        <div className="chart-figure__graph" />
+                        <figcaption className="chart-figure__caption">
+                          <p className="chart-figure__caption-title">
+                            {chart.title}
+                          </p>
                           <p>{chart.credits}</p>
                           <a href={chart.pdf} className="icon-report">
                               Find in Report
