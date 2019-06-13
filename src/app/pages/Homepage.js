@@ -28,7 +28,7 @@ class Page extends React.Component {
     if (sheetData && sheetData.length) {
       Highcharts.setOptions(ChartOptions({ isDataRepo: false }))
 
-      const chartIDs = ['3.1', '5.1', '7.1', '8.1']
+      const chartIDs = ['5.3', '8.4', '7.4', '3.1']
       chartIDs.forEach(key => {
         const data = sheetData.find(d => d.key === key)
 
