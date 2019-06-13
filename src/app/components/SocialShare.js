@@ -32,7 +32,19 @@ export default class SocialShare extends React.Component {
             <span className="visually-hidden">Share on Twitter</span>
           </a>
         </li>
-
+        <li>
+          <a
+            className="icon icon-linkedin"
+            href={`https://www.linkedin.com/shareArticle?mini=true&amp;url=${
+              window.location.href
+            }&amp;summary=${'x'}&amp;source=CSIS`}
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Share on Linkedin"
+          >
+            <span className="visually-hidden">Share on Linkedin</span>
+          </a>
+        </li>
         <li>
           <i
             tabIndex="0"
@@ -46,7 +58,7 @@ export default class SocialShare extends React.Component {
         <li>
           <i
             tabIndex="0"
-            className="icon icon-printer"
+            className="icon icon-print"
             onClick={() => window.print()}
           >
             <span className="visually-hidden">Share on Facebook</span>

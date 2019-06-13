@@ -144,6 +144,16 @@ section::before {
     .extra {
       @extend %p2;
     }
+
+    li {
+      p:first-child {
+        display: inline;
+      }
+
+      p:not(:first-child) {
+        @extend %p2;
+      }
+    }
   }
 
   .five-flagship-programs {
@@ -153,19 +163,11 @@ section::before {
         flex-wrap: wrap;
         justify-content: space-between;
       }
+    }
 
-      li {
-        @include breakpoint('medium') {
-          flex-basis: 47%;
-        }
-      }
-
-      p:not(:first-child) {
-        @extend %p3;
-      }
-
-      &::before {
-        content: none;
+    li {
+      @include breakpoint('medium') {
+        flex-basis: 47%;
       }
 
       &:nth-child(even) {
@@ -173,6 +175,14 @@ section::before {
           margin-left: 32px;
         }
       }
+    }
+
+    p:not(:first-child) {
+      @extend %p3;
+    }
+
+    &::before {
+      content: none;
     }
   }
 

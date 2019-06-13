@@ -32,56 +32,108 @@ sections:
     component: two-column
     content:
         title: |-
-          <h3><span class="index">01</span> Promote economic collaboration: </h3>
+          <h3><span className="index">01</span> Promote economic collaboration: </h3>
 
         description: Cooperate with the target countries on supply chains, domestic demand markets and infrastructure projects.
         text: |-
-          * Employer contributions to a 403(b) plan
-          * Flexible Savings Account (FSA)
-          * Life Insurance
-          * Transit Benefits
+          * Supply Chains: Integrate Taiwan’s competitive industries with the supply chains of other economies, including not only NSP partners but also Japan and the United States.
+
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+
+            The Asia Silicon Valley Development Plan is designed to strengthen industrial links between Taiwan and its economic partners.
+
+          * Domestic Demand Markets: PromoteTaiwan’s industrial brand abroad by increasingexports.
+
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+
+            The Taiwan External TradeDevelopment Council is promotingTaiwan’s image abroad by organizingfairs and exhibitions in partner countries
+
+          * Infrastructure Projects: Create a collaborative platform for exporting infrastructure construction services and turnkey projects.
+
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+
+            Companies from Taiwan, Japan, and Indonesia collaborated to construct Jakarta’s first mass rapid transit line.
         chart: "3.1"
   pillar_two:
     index: 5
     component: two-column
     content:
         title: |-
-          <h3><span class="index">01</span> Promote economic collaboration: </h3>
+          <h3><span className="index">01</span> Promote economic collaboration: </h3>
 
         description: Cooperate with the target countries on supply chains, domestic demand markets and infrastructure projects.
         text: |-
-          * Employer contributions to a 403(b) plan
-          * Flexible Savings Account (FSA)
-          * Life Insurance
-          * Transit Benefits
+          * Supply Chains: Integrate Taiwan’s competitive industries with the supply chains of other economies, including not only NSP partners but also Japan and the United States.
+
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+
+            The Asia Silicon Valley Development Plan is designed to strengthen industrial links between Taiwan and its economic partners.
+
+          * Domestic Demand Markets: PromoteTaiwan’s industrial brand abroad by increasingexports.
+
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+
+            The Taiwan External TradeDevelopment Council is promotingTaiwan’s image abroad by organizingfairs and exhibitions in partner countries
+
+          * Infrastructure Projects: Create a collaborative platform for exporting infrastructure construction services and turnkey projects.
+
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+
+            Companies from Taiwan, Japan, and Indonesia collaborated to construct Jakarta’s first mass rapid transit line.
         chart: "5.1"
   pillar_three:
     index: 6
     component: two-column
     content:
         title: |-
-          <h3><span class="index">01</span> Promote economic collaboration: </h3>
+          <h3><span className="index">01</span> Promote economic collaboration: </h3>
 
         description: Cooperate with the target countries on supply chains, domestic demand markets and infrastructure projects.
         text: |-
-          * Employer contributions to a 403(b) plan
-          * Flexible Savings Account (FSA)
-          * Life Insurance
-          * Transit Benefits
+          * Supply Chains: Integrate Taiwan’s competitive industries with the supply chains of other economies, including not only NSP partners but also Japan and the United States.
+
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+
+            The Asia Silicon Valley Development Plan is designed to strengthen industrial links between Taiwan and its economic partners.
+
+          * Domestic Demand Markets: PromoteTaiwan’s industrial brand abroad by increasingexports.
+
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+
+            The Taiwan External TradeDevelopment Council is promotingTaiwan’s image abroad by organizingfairs and exhibitions in partner countries
+
+          * Infrastructure Projects: Create a collaborative platform for exporting infrastructure construction services and turnkey projects.
+
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+
+            Companies from Taiwan, Japan, and Indonesia collaborated to construct Jakarta’s first mass rapid transit line.
         chart: "7.1"
   pillar_four:
     index: 7
     component: two-column
     content:
         title: |-
-          <h3><span class="index">01</span> Promote economic collaboration: </h3>
+          <h3><span className="index">01</span> Promote economic collaboration: </h3>
 
         description: Cooperate with the target countries on supply chains, domestic demand markets and infrastructure projects.
         text: |-
-          * Employer contributions to a 403(b) plan
-          * Flexible Savings Account (FSA)
-          * Life Insurance
-          * Transit Benefits
+          * Supply Chains: Integrate Taiwan’s competitive industries with the supply chains of other economies, including not only NSP partners but also Japan and the United States.
+
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+
+            The Asia Silicon Valley Development Plan is designed to strengthen industrial links between Taiwan and its economic partners.
+
+          * Domestic Demand Markets: PromoteTaiwan’s industrial brand abroad by increasingexports.
+
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+
+            The Taiwan External TradeDevelopment Council is promotingTaiwan’s image abroad by organizingfairs and exhibitions in partner countries
+
+          * Infrastructure Projects: Create a collaborative platform for exporting infrastructure construction services and turnkey projects.
+
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+
+            Companies from Taiwan, Japan, and Indonesia collaborated to construct Jakarta’s first mass rapid transit line.
         chart: "8.1"
   flagship:
     index: 8
@@ -128,13 +180,13 @@ sections:
     content:
       - |-
         #### Further Reading
-        * Executive Yuan. "<a href="#" class="external">New Southbound Policy.</a>" Office of Trade Negotiations.
-        * Executive Yuan. "<a href="#" class="external">New Southbound Policy.</a>" Office of Trade Negotiations.
-        * Executive Yuan. "<a href="#" class="external">New Southbound Policy.</a>" Office of Trade Negotiations.
-        * Executive Yuan. "<a href="#" class="external">New Southbound Policy.</a>" Office of Trade Negotiations.
-        * Executive Yuan. "<a href="#" class="external">New Southbound Policy.</a>" Office of Trade Negotiations.
-        * Executive Yuan. "<a href="#" class="external">New Southbound Policy.</a>" Office of Trade Negotiations.
-        * Executive Yuan. "<a href="#" class="external">New Southbound Policy.</a>" Office of Trade Negotiations.
-        * Executive Yuan. "<a href="#" class="external">New Southbound Policy.</a>" Office of Trade Negotiations.
+        * Executive Yuan. "<a href="#" className="external">New Southbound Policy.</a>" Office of Trade Negotiations.
+        * Executive Yuan. "<a href="#" className="external">New Southbound Policy.</a>" Office of Trade Negotiations.
+        * Executive Yuan. "<a href="#" className="external">New Southbound Policy.</a>" Office of Trade Negotiations.
+        * Executive Yuan. "<a href="#" className="external">New Southbound Policy.</a>" Office of Trade Negotiations.
+        * Executive Yuan. "<a href="#" className="external">New Southbound Policy.</a>" Office of Trade Negotiations.
+        * Executive Yuan. "<a href="#" className="external">New Southbound Policy.</a>" Office of Trade Negotiations.
+        * Executive Yuan. "<a href="#" className="external">New Southbound Policy.</a>" Office of Trade Negotiations.
+        * Executive Yuan. "<a href="#" className="external">New Southbound Policy.</a>" Office of Trade Negotiations.
 
 ---

@@ -40,6 +40,31 @@ class Page extends React.Component {
   componentDidMount() {
     document.title = `${this.state.title} | CSIS Careers`
     this.loadCharts()
+
+    const triggers = Array.from(document.querySelectorAll('.detail__trigger'))
+
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', function() {
+        let explainers = Array.from(document.querySelectorAll('.sc-explainer'))
+        explainers.forEach(explainer => explainer.classList.remove('is-active'))
+
+        if (trigger.classList.contains('is-active')) {
+          this.setAttribute('aria-expanded', 'false')
+          this.classList.remove('is-active')
+        } else {
+          this.setAttribute('aria-expanded', 'true')
+          this.classList.add('is-active')
+        }
+      })
+    })
+
+    let exits = Array.from(document.querySelectorAll('.icon-x'))
+
+    exits.forEach(exit => {
+      exit.addEventListener('click', () =>
+        exit.parentNode.parentNode.classList.remove('is-active')
+      )
+    })
   }
   componentDidUpdate() {
     this.loadCharts()

@@ -112,7 +112,7 @@ class Data extends React.Component {
 
     return (
       <main className={page}>
-        <section id="#header">
+        <section id="header">
           <div className="header">
             {Object.keys(headerContent).map(content => {
               return PageHeader(
