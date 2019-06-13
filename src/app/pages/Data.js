@@ -1,7 +1,7 @@
 import React from 'react'
 import MarkdownToSections from '../helpers/MarkdownToSections'
 import ValueToJSX from '../helpers/ValueToJSX'
-import PageHeader from '../helpers/PageHeader'
+import PageHeader from '../layout/PageHeader'
 import PageContent from '../helpers/PageContent'
 import GetData from '../helpers/GetData'
 import CloseMenu from '../helpers/CloseMenu'
@@ -112,16 +112,15 @@ class Data extends React.Component {
 
     return (
       <main className={page}>
-        <section id="header">
-          <div className="header">
-            {Object.keys(headerContent).map(content => {
-              return PageHeader(
-                headerContent[content],
-                `header__${content}`,
-                content
-              )
-            })}
-          </div>
+        <section id="page-header">
+          {Object.keys(headerContent).map(content => {
+            return PageHeader(
+              headerContent[content],
+              `header__${content}`,
+              content,
+              this.state.title
+            )
+          })}
         </section>
         <div id="listings">
           <section className="listings__filters">

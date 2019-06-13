@@ -87,7 +87,7 @@
         top: 33%;
         margin-right: 0.5rem;
         color: rgba($color__gray-dark, 0.35);
-        content: '\e806';
+        content: '\0041';
       }
 
       input {
@@ -129,7 +129,7 @@
       display: none;
     }
 
-    &:not(:first-of-type) {
+    &:not(.hide) ~ .chart {
       margin-top: 3rem;
     }
   }

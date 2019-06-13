@@ -1,6 +1,122 @@
 #page-header {
-  @include breakpoint('medium') {
-    display: flex;
-    justify-content: space-between;
+  max-width: $size__header__max-width;
+  margin: 0 -1.5rem;
+
+  @include breakpoint('large') {
+    margin: 0 calc((#{$size__header__max-width} - 100%) / -2);
+  }
+
+  .page-header {
+    &__content {
+      position: relative;
+      min-height: 500px;
+      color: $color__white;
+      background-image: url('../images/taiwan-dots_small.png'),
+        url('../images/sb_header_small.jpg');
+      background-repeat: no-repeat, repeat;
+      background-position: 20px bottom, left bottom;
+      background-size: 106px, contain;
+
+      @include breakpoint('medium') {
+        background-image: url('../images/taiwan-dots_large.png'),
+          url('../images/sb_header_large.jpg');
+        background-size: contain, contain;
+      }
+
+      @include breakpoint('large') {
+        min-height: 650px;
+        background-position: 16% bottom, left bottom;
+      }
+
+      &-wrapper {
+        position: absolute;
+        bottom: 112px;
+        max-width: 450px;
+        padding: 0 20px;
+
+        @include breakpoint('medium') {
+          bottom: 4rem;
+          left: calc((100% - 225px) / 2);
+        }
+      }
+
+      &-subtitle,
+      &-date {
+        @include breakpoint('medium', 'max-width') {
+          margin-left: 120px;
+        }
+
+        .data &,
+        .about & {
+          display: none;
+        }
+      }
+
+      &-subtitle {
+        @include font-size(20px);
+        margin-bottom: 1rem;
+        padding-bottom: 1.5rem;
+
+        background-image: linear-gradient(
+          to bottom,
+          $color__white 0,
+          $color__white 100%
+        );
+
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+        background-size: 240px 1px;
+      }
+    }
+
+    &__highlights {
+      max-width: $size__container__max-width;
+      margin: auto;
+
+      @include breakpoint('medium') {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .h1 {
+    font-weight: 500;
+    line-height: 1;
+
+    span {
+      display: block;
+    }
+
+    &.page-header__content-site {
+      .homepage & {
+        display: none;
+      }
+
+      span {
+        &:first-child {
+          text-transform: uppercase;
+          @include fluid-type(24px, 28px);
+        }
+
+        &:last-child {
+          @include fluid-type(31px, 42px);
+        }
+      }
+    }
+
+    &:not(.page-header__content-site) {
+      span {
+        &:first-child:not(:only-child) {
+          @include fluid-type(34px, 28px);
+          text-transform: uppercase;
+
+          .data &,
+          .about & {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }

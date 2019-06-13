@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown/with-html'
 import ImageBlock from './ImageBlock'
-import ParagraphBlock from '../helpers/ParagraphBlock'
+import ParagraphBlock from './ParagraphBlock'
 
 export default function ValueToJSX(source, className, key) {
   return (

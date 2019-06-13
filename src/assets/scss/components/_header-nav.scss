@@ -74,7 +74,7 @@
   &-menu {
     margin: 0;
     padding: 0;
-    transition: transform 0.5s linear, opacity 0s linear 0.3s;
+    transition: transform 0.5s linear, opacity 0s linear 0.2s;
 
     @include breakpoint('large', 'max-width') {
       position: absolute;

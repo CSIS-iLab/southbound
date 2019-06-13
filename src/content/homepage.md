@@ -2,7 +2,7 @@
 slug: homepage
 title: The New Southbound Policy
 sections:
-  header:
+  page-header:
     index: 1
     component: header
     content:

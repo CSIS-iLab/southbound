@@ -2,7 +2,7 @@
 title: Data Repository
 slug: data
 sections:
-  header:
+  page-header:
     index: 1
     component: header
     content:

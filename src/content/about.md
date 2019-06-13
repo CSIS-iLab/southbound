@@ -2,7 +2,7 @@
 title: About
 slug: about
 sections:
-  header:
+  page-header:
     index: 1
     component: header
     content:

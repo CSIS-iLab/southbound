@@ -102,7 +102,7 @@ i {
   background-color: $color__gray-darkest;
   visibility: hidden;
   opacity: 0;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   &.is-active {
     visibility: visible;

@@ -97,15 +97,17 @@
 
 %icon-pseudo-element {
   position: relative;
-  top: -0.05rem;
   display: inline-block;
   font-weight: normal;
+  font-style: normal;
   line-height: 1em;
   text-align: center;
   speak: none;
+  /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
-  @extend %fontello;
+  -moz-osx-font-smoothing: grayscale;
   @include font-size(14px);
+  @extend %fontello;
 }
 
 %btn-list {

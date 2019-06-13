@@ -6,7 +6,7 @@ import ChartOptions from '../helpers/ChartOptions'
 import Highcharts from 'Highcharts'
 import InitSheets from '../helpers/InitSheets'
 import ValueToJSX from '../helpers/ValueToJSX'
-import PageHeader from '../helpers/PageHeader'
+import PageHeader from '../layout/PageHeader'
 
 class Page extends React.Component {
   constructor(props) {
@@ -55,11 +55,12 @@ class Page extends React.Component {
 
                 <div className={'subsection ' + section.component}>
                   {Object.entries(section.content).map(value => {
-                    return section.key === 'header'
+                    return section.key === 'page-header'
                       ? PageHeader(
                         value[1],
                         `${section.component} ${value[0]}`,
-                        value[0]
+                        value[0],
+                        this.state.title
                       )
                       : ValueToJSX(
                         value[1],
