@@ -148,11 +148,15 @@ sections:
 
             Increase cooperation and innovation between Taiwan and partner countries.
 
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+
             In partnership with the Indonesian Ministry of Agriculture, Taiwan has set up a Modern Agriculture Demo Farm in Karawang. The project is designed to assist Indonesia’s development through technology and knowledge sharing. 
 
           * <h5>Medical and Public Health Cooperation</h5>
 
             Bolster medical capacity in partner countries and create regional supply chains.
+
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
 
             Under the “One Country, One Center” framework, the Ministry of Health and Welfare is partnering with hospitals in partner countries to bolster health care and medical cooperation. Projects have been launched in India, Indonesia, Malaysia, the Philippines, Thailand, and Vietnam.  
 
@@ -160,11 +164,15 @@ sections:
 
             Provide partner countries with the necessary resources to improve the skills of their workers. Offer opportunities for foreign workers and students to live and work in Taiwan.
 
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+
             Taiwan is working on revising its immigration laws to make it easier for skilled professionals and foreign students to live and work in Taiwan.
 
           * <h5>Innovative Industries</h5>
 
             Strengthen regional collaboration and increase innovative output in key industries through promoting R&D and capacity building.
+
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
 
             Collaboration in areas such as green energy, smart machinery, and biotechnology provides Taiwan with an opportunity to not only assist targeted developing countries but also enhance its ties with R&D leaders such as Japan and the United States. 
 
@@ -172,14 +180,18 @@ sections:
 
             Promote student and youth exchanges to enhance regional cooperation and support the next generation of leaders. Encourage civil society engagement with regional counterparts.
 
-            The Taiwan-Asia Exchange Foundation was established in August 2018 to strengthen ties with NSP partner countries.
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
 
-            The Yushan Forum is a Taiwan-initiated annual forum designed to foster dialogue, cooperation, and cultural exchange throughout the region. Areas of focus include economic prosperity, technology, innovation, and public health. 
+            The Taiwan-Asia Exchange Foundation was established in August 2018 to strengthen ties with NSP partner countries. The Yushan Forum is a Taiwan-initiated annual forum designed to foster dialogue, cooperation, and cultural exchange throughout the region. Areas of focus include economic prosperity, technology, innovation, and public health. 
       three-innovative-fields: |-
           #### Three Innovative Fields
           * <h5>E-commerce:</h5><p> Help local firms expand their business abroad and aid the development of e-commerce platforms in regional markets.</p>
-          * <h5>Infrastructure:</h5><p>Provide financial support to help Taiwan companies work on infrastructure development projects in partner countries.</p>
-          * <h5>Tourism:</h5><p>Expand domestic tourism services, promote Taiwan as a tourist destination overseas, and ease visa entry requirements.</p> <p>The Tourism Bureau has focused on marketing Taiwan as a Muslim-friendly destination by opening prayer rooms and certifying halal restaurants and hotels.</p>
+          * <h5>Infrastructure:</h5><p> Provide financial support to help Taiwan companies work on infrastructure development projects in partner countries.</p>
+          * <h5>Tourism:</h5><p> Expand domestic tourism services, promote Taiwan as a tourist destination overseas, and ease visa entry requirements.</p>
+
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+          
+            The Tourism Bureau has focused on marketing Taiwan as a Muslim-friendly destination by opening prayer rooms and certifying halal restaurants and hotels.
   outro:
     index: 9
     component: one-column
