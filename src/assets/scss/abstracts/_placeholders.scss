@@ -87,11 +87,11 @@
 }
 
 %link-gray {
-  color: $color__gray-darker;
+  color: rgba($color__gray-darkest, 0.65);
 
   &:hover,
   &:focus {
-    color: $color__gray-darkest;
+    color: $color__black;
   }
 }
 

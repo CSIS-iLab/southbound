@@ -1,6 +1,5 @@
 .site-header {
   position: relative;
-  width: 100vw;
   background-color: $color__gray-lighter;
   border-bottom: 2px solid $color__gray-darker;
   transition: all 0.2s ease-in-out;
@@ -24,22 +23,39 @@
   }
 
   .site-logo {
+    @extend %font-gibson;
+    @include fluid-type(16px, 27px);
     display: inline-block;
     height: 100%;
-    padding: 0 0.125rem;
-    line-height: 0;
+    padding: 1rem;
+    overflow: hidden;
+    font-weight: 100;
+    line-height: 1.5;
     background-color: $color__gray-darkest;
+
+    &:hover {
+      background-color: $color__black;
+    }
+
+    a:hover,
+    a:visited,
+    a:focus {
+      color: $color__white;
+    }
 
     &:not(:focus) {
       outline: 2px solid transparent;
     }
+  }
 
-    &__icon {
-      max-height: 2rem;
+  svg {
+    display: block;
+    max-height: 0;
+    opacity: 0.6;
 
-      @include breakpoint('large') {
-        max-height: 50px;
-      }
+    @include breakpoint('medium') {
+      width: 46px;
+      max-height: 1rem;
     }
   }
 }

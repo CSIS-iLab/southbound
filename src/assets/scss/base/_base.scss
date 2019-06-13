@@ -40,6 +40,7 @@ body {
 nav,
 footer {
   max-width: $size__header__max-width;
+  margin: auto;
 }
 
 main {
@@ -47,7 +48,6 @@ main {
 }
 
 main,
-nav,
 footer {
   margin: auto;
   padding: 0 $size__padding-mobile;

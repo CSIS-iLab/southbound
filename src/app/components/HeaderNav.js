@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import logo from '../../assets/images/csis_logo-short.svg'
+import { ReactComponent as Logo } from '../../assets/images/csis_logo-short.svg'
 
 export default function HeaderNav(obj) {
   const { siteStructure } = obj
@@ -11,15 +11,12 @@ export default function HeaderNav(obj) {
 
   return (
     <nav className="site-header__nav" role="navigation">
-      <NavLink to="/" className="site-logo" exact>
-        <img
-          className="site-logo__icon"
-          src={logo}
-          alt="CSIS | Careers"
-          title="CSIS | Careers"
-        />{' '}
-        Southbound
-      </NavLink>
+      <button className="site-logo">
+        <NavLink to="/" exact>
+          <Logo />
+          <span> The New Southbound Policy</span>
+        </NavLink>
+      </button>
       <button
         className="site-header__nav-trigger menu-trigger"
         aria-expanded="false"
