@@ -109,13 +109,11 @@ ul {
 
       &::before {
         position: absolute;
-        top: 0.8rem;
+        top: 1rem;
         left: -0.6rem;
-        width: 0.4rem;
-        height: 0.4rem;
-        background-color: $color__black;
-        border-radius: 50%;
-        content: '';
+        content: '•';
+        line-height: 0;
+        @include font-size(20px);
       }
     }
   }
