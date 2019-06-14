@@ -11,8 +11,7 @@ section::before {
   h3,
   h4,
   p,
-  ul,
-  aside {
+  ul {
     max-width: $size__one-column__max-width;
     margin-right: auto;
     margin-left: auto;
@@ -22,9 +21,15 @@ section::before {
     margin-bottom: 4.5rem;
   }
 
-  .component-image,
-  aside {
+  .component-image {
     @include breakpoint('small') {
+      float: right;
+      margin-left: 2rem;
+    }
+  }
+
+  aside {
+    @include breakpoint('medium') {
       float: right;
       margin-left: 2rem;
     }
@@ -49,6 +54,7 @@ section::before {
   @include breakpoint('medium', 'max-width') {
     aside {
       order: 99;
+      margin: auto;
     }
   }
 }
@@ -87,124 +93,5 @@ section::before {
         }
       }
     }
-  }
-}
-
-.about {
-  #about,
-  #authors {
-    &::after {
-      content: '...';
-      margin: 1.5rem 0 4.5rem;
-    }
-  }
-
-  #thanks {
-    h4 {
-      margin-top: 2rem;
-      text-align: left;
-    }
-  }
-}
-
-.homepage {
-  #outro::before {
-    content: '...';
-    margin: 1.5rem 0 4.5rem;
-  }
-
-  #intro::after {
-    content: '...';
-    margin: 5rem 0 4.5rem;
-  }
-
-  [id^='pillar'],
-  .five-flagship-programs,
-  .three-innovative-fields {
-    margin-bottom: 4.5rem;
-
-    li {
-      p:first-of-type {
-        display: inline;
-      }
-
-      p:not(:first-of-type) {
-        @extend %p2;
-      }
-    }
-  }
-
-  .abstract {
-    @include breakpoint($break: 'small', $until: 'medium') {
-      display: flex;
-      flex-wrap: wrap;
-
-      p {
-        flex-basis: 100%;
-        @include order;
-      }
-
-      .component-image {
-        order: 3;
-
-        + p {
-          flex-grow: 1;
-          flex-basis: calc(50% - 1rem);
-          order: 2;
-        }
-      }
-    }
-  }
-
-  .five-flagship-programs {
-    ul {
-      @extend %plain-list;
-
-      @include breakpoint('medium') {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-    }
-
-    li {
-      // margin: 0;
-      padding-left: 68px;
-      background-repeat: no-repeat;
-      background-position: left top;
-      background-size: 48px;
-      transition: all 0.2s ease-in-out;
-
-      &:nth-child(even) {
-        @include breakpoint('medium') {
-          margin-left: 32px;
-        }
-      }
-      @include breakpoint('medium') {
-        flex-basis: 47%;
-      }
-
-      @for $i from 1 through length($icons) {
-        &:nth-child(#{$i}) {
-          $icon: nth($icons, $i);
-
-          background-image: url('../images/program-#{$icon}.png');
-        }
-      }
-    }
-  }
-
-  .three-innovative-fields {
-    li > *:not(:last-child) {
-      display: inline;
-    }
-  }
-
-  #further-reading {
-    @include full-width-background($color__gray-lighter);
-    margin-top: 4rem;
-    padding: 2.5rem 0 1.5rem;
-    background-color: $color__gray-lighter;
-    @extend %further-reading;
   }
 }

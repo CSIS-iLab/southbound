@@ -1,0 +1,52 @@
+.about {
+  #about_publication,
+  #authors {
+    &::after {
+      content: '...';
+      margin: 1.5rem 0 4.5rem;
+    }
+  }
+
+  .component-image {
+    order: 3;
+
+    + p {
+      flex-grow: 1;
+      flex-basis: calc(50% - 1rem);
+      order: 2;
+    }
+  }
+
+  .about {
+    display: flex;
+    flex-wrap: wrap;
+    @include order;
+
+    > div {
+      flex-grow: 1;
+      flex-basis: 50%;
+
+      @include breakpoint('medium') {
+        max-width: calc(650px - 100px);
+        margin-left: auto;
+      }
+    }
+
+    > aside {
+      order: 2;
+    }
+  }
+
+  #authors {
+    ul {
+      @extend %plain-list;
+    }
+  }
+
+  #special_thanks {
+    h4 {
+      margin-top: 2rem;
+      text-align: left;
+    }
+  }
+}

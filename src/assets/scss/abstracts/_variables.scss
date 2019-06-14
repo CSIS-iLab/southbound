@@ -32,8 +32,8 @@ $font__line-height-body: 1.6;
 
 $sizes__default: ('xsmall', 'small', 'medium', 'large', 'xlarge');
 
-$sizes__mobile: ('medium', 'large');
-$sizes__desktop: ('large', 'xlarge');
+$sizes__mobile: ('xsmall', 'small');
+$sizes__desktop: ('medium', 'large', 'xlarge');
 
 $breakpoints: (
   'xsmall': 0,

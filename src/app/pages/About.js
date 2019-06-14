@@ -62,11 +62,7 @@ class Page extends React.Component {
                         value[0],
                         this.state.title
                       )
-                      : ValueToJSX(
-                        value[1],
-                        `${section.component} ${value[0]}`,
-                        value[0]
-                      )
+                      : ValueToJSX(value[1], value[0], value[0])
                   })}
                 </div>
               </section>
