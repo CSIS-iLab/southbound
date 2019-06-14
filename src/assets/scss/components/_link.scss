@@ -2,13 +2,13 @@ a {
   text-decoration: none;
 
   background-repeat: repeat-x;
-  background-position: 0 87.5%;
+  background-position: 0 100%;
 
   &:focus {
     padding: 0 0.125rem;
     background-color: rgba($color__focus, 0.15);
-    background-position: 0 87.5%;
     border: solid 1px $color__focus;
+    outline: 0;
   }
 
   &::before,
@@ -74,11 +74,6 @@ a {
     background-size: 80% 1px;
   }
 
-  &.link-external::after {
-    content: '\0043';
-    @include font-size(12px);
-  }
-
   &.menu-item__link {
     width: 100%;
     font-weight: bold;
@@ -129,9 +124,13 @@ a {
   }
 
   #page-header &,
-  .chart-figure & {
+  .chart & {
     display: block;
     text-transform: uppercase;
+
+    &:hover {
+      color: $color__black;
+    }
   }
 }
 
@@ -144,6 +143,7 @@ a {
 
 .icon-external {
   &::after {
+    @include font-size(12px);
     content: '\0043';
   }
 }

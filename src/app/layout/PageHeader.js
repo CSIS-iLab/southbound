@@ -57,9 +57,9 @@ export default function PageHeader(source, classNameName, key, title) {
         </section>
 
         <section className="actions">
-          <button className="download">
+          <a href="@" className="download">
             {ValueToJSX(HeaderContent.download)}
-          </button>
+          </a>
           <SocialShare location="header" />
         </section>
       </section>

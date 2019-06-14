@@ -14,7 +14,10 @@
     #page-header & {
       width: 2.5rem;
       height: 2.5rem;
-      border: 1px solid $color__gray-medium-cool;
+
+      &:not(:focus) {
+        border: 1px solid $color__gray-medium-cool;
+      }
 
       &:hover {
         background-color: $color__gray-medium-cool;
@@ -28,7 +31,10 @@
     .site-footer & {
       width: 2rem;
       height: 2rem;
-      border: 1px solid rgba($color__white, 0.5);
+
+      &:not(:focus) {
+        border: 1px solid rgba($color__white, 0.5);
+      }
 
       &:hover {
         border: 1px solid rgba($color__white, 0.9);
@@ -49,18 +55,12 @@
       @include font-size(24px);
       transition: 0.2s ease-in-out;
 
-      .page-header & {
-        &,
-        &:visited {
-          color: $color__gray-darkest;
-        }
+      #page-header & {
+        color: $color__gray-darkest;
       }
 
       .site-footer & {
-        &,
-        &:visited {
-          color: rgba($color__white, 0.8);
-        }
+        color: rgba($color__white, 0.8);
       }
     }
   }
@@ -68,7 +68,6 @@
   &:focus {
     padding: 0 0.125rem;
     background-position: 0 87.5%;
-    border: 1px solid $color__focus;
     outline: 0;
   }
 }

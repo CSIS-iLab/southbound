@@ -24,7 +24,7 @@ section::before {
 
   .component-image,
   aside {
-    @include breakpoint('large') {
+    @include breakpoint('small') {
       float: right;
       margin-left: 2rem;
     }
@@ -135,7 +135,7 @@ section::before {
   }
 
   .abstract {
-    @include breakpoint($break: 'small', $until: 'large') {
+    @include breakpoint($break: 'small', $until: 'medium') {
       display: flex;
       flex-wrap: wrap;
 
@@ -148,6 +148,7 @@ section::before {
         order: 3;
 
         + p {
+          flex-grow: 1;
           flex-basis: calc(50% - 1rem);
           order: 2;
         }

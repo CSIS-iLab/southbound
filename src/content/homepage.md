@@ -40,19 +40,19 @@ sections:
         text: |-
           * Supply Chains: Integrate Taiwan’s competitive industries with the supply chains of other economies, including not only NSP partners but also Japan and the United States.
 
-            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">&ctdot;</i></button>
 
             The Asia Silicon Valley Development Plan is designed to strengthen industrial links between Taiwan and its economic partners.
 
           * Domestic Demand Markets: Promote Taiwan’s industrial brand abroad by increasing exports.
 
-            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">&ctdot;</i></button>
 
             The Taiwan External Trade Development Council is promoting Taiwan’s image abroad by organizing fairs and exhibitions in partner countries.
 
           * Infrastructure Projects: Create a collaborative platform for exporting infrastructure construction services and turnkey projects.
 
-            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">&ctdot;</i></button>
 
             Companies from Taiwan, Japan, and Indonesia collaborated to construct Jakarta’s first mass rapid transit line.
         chart: "5.3"
@@ -67,13 +67,13 @@ sections:
         text: |-
           * Education Ties: Deepen educational ties by offering scholarships to students from partner countries. Enhance domestic cooperation between academia and industry. Provide enhanced youth technical training.
 
-            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">&ctdot;</i></button>
 
             The Center for Southeast Asian Studies at National Chengchi University leads a consortium of 13 leading institutions for Southeast Asian studies from across the region.
 
           * Industry Talent: Promote a two-way flow of professionals and help match foreign workers with local companies.
 
-            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">&ctdot;</i></button>
 
             Taiwan has streamlined the process for applying for work visas and created a new visa for job seekers from overseas.
 
@@ -90,13 +90,13 @@ sections:
         text: |-
           * Health Care: Boost bilateral pharmaceutical certifications and new drug and medical equipment development. Support the development of medical care and training of public health workers overseas.
 
-            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">&ctdot;</i></button>
 
             Taiwan boasts a highly developed public health care system and one of the world’s most technologically advanced medical equipment industries.
 
           * Culture: Use film, broadcasting, and online games to promote Taiwan’s culture. Encourage exchanges between cities in Taiwan and cities elsewhere in the region.
 
-            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">&ctdot;</i></button>
 
             The Taiwan-Asia Exchange Foundation and the Vietnam National Institute of Culture and Arts Studies have partnered to create art programs, artist-in-residence projects, and various workshops.
 
@@ -106,7 +106,7 @@ sections:
 
           * Agriculture: Provide agricultural technology assistance and increase business exchanges with partner countries.
 
-            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">&ctdot;</i></button>
 
             The total value of Taiwan’s agricultural exports hit $5.47 billion in 2018, marking a 20-year high.
         chart: "7.4"
@@ -121,7 +121,7 @@ sections:
         text: |-
           * Regional Integration: Actively pursue economic cooperation agreements. Update and strengthen current bilateral investment and taxation treaties.
 
-            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">&ctdot;</i></button>
 
             In 2018, Taiwan and Indonesia signed an MOU that opened the possibility of creating special economic zones and cooperating on infrastructure development.
 
@@ -129,7 +129,7 @@ sections:
 
           * Strategic Alliances: Build a comprehensive foreign aid mechanism and encourage Taiwan businesses to participate in overseas development projects. Strengthen official and nonofficial cooperation between Taiwan and foreign partners.
 
-            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">&ctdot;</i></button>
 
             Taiwan has established a $3.5 billion fund to assist partner countries with development projects.
 
@@ -148,7 +148,7 @@ sections:
 
             Increase cooperation and innovation between Taiwan and partner countries.
 
-            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">&ctdot;</i></button>
 
             In partnership with the Indonesian Ministry of Agriculture, Taiwan has set up a Modern Agriculture Demo Farm in Karawang. The project is designed to assist Indonesia’s development through technology and knowledge sharing.
 
@@ -156,7 +156,7 @@ sections:
 
             Bolster medical capacity in partner countries and create regional supply chains.
 
-            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">&ctdot;</i></button>
 
             Under the “One Country, One Center” framework, the Ministry of Health and Welfare is partnering with hospitals in partner countries to bolster health care and medical cooperation. Projects have been launched in India, Indonesia, Malaysia, the Philippines, Thailand, and Vietnam.  
 
@@ -164,7 +164,7 @@ sections:
 
             Provide partner countries with the necessary resources to improve the skills of their workers. Offer opportunities for foreign workers and students to live and work in Taiwan.
 
-            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">&ctdot;</i></button>
 
             Taiwan is working on revising its immigration laws to make it easier for skilled professionals and foreign students to live and work in Taiwan.
 
@@ -172,7 +172,7 @@ sections:
 
             Strengthen regional collaboration and increase innovative output in key industries through promoting R&D and capacity building.
 
-            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">&ctdot;</i></button>
 
             Collaboration in areas such as green energy, smart machinery, and biotechnology provides Taiwan with an opportunity to not only assist targeted developing countries but also enhance its ties with R&D leaders such as Japan and the United States.
 
@@ -180,7 +180,7 @@ sections:
 
             Promote student and youth exchanges to enhance regional cooperation and support the next generation of leaders. Encourage civil society engagement with regional counterparts.
 
-            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">&ctdot;</i></button>
 
             The Taiwan-Asia Exchange Foundation was established in August 2018 to strengthen ties with NSP partner countries. The Yushan Forum is a Taiwan-initiated annual forum designed to foster dialogue, cooperation, and cultural exchange throughout the region. Areas of focus include economic prosperity, technology, innovation, and public health.
       three-innovative-fields: |-
@@ -189,7 +189,7 @@ sections:
           * <h5>Infrastructure:</h5><p> Provide financial support to help Taiwan companies work on infrastructure development projects in partner countries.</p>
           * <h5>Tourism:</h5><p> Expand domestic tourism services, promote Taiwan as a tourist destination overseas, and ease visa entry requirements.</p>
 
-            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
+            <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">&ctdot;</i></button>
 
             The Tourism Bureau has focused on marketing Taiwan as a Muslim-friendly destination by opening prayer rooms and certifying halal restaurants and hotels.
   outro:

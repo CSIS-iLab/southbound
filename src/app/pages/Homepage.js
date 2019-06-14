@@ -110,7 +110,7 @@ class Page extends React.Component {
                       <figure
                         key="chart"
                         id={value[1]}
-                        className="chart-figure"
+                        className="chart chart-figure"
                       >
                         <div className="chart-figure__graph" />
                         <figcaption className="chart-figure__caption">

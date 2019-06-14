@@ -8,9 +8,9 @@ sections:
     content:
       text: |-
           On this page:
-          * <a href="#">The NSP’s Four Pillars</a>
-          * <a href="#">The NSP’s Four Pillars</a>
-          * <a href="#">The NSP’s Four Pillars</a>
+          * <a href="#about">About this publication</a>
+          * <a href="#authors">Authors</a>
+          * <a href="#thanks">Special Thanks</a>
   about:
     index: 2
     component: one-column

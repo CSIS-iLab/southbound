@@ -33,24 +33,23 @@ button {
 
   &.detail__trigger {
     position: relative;
-    bottom: 0.3rem;
     left: 0.3rem;
     display: inline-flex;
     justify-content: center;
-    padding: 0.25rem 0.4rem;
-    color: $color__white;
-    background-color: rgba($color__gray-medium-cool, 0.6);
-    border-radius: 12px;
-
-    &:hover {
-      background-color: rgba($color__gray-medium-cool, 0.8);
-    }
+    padding: 2px;
 
     i {
       display: block;
-      margin: -0.2rem 0 0.6rem;
+      padding: 0.25rem 0.4rem 0.25rem 0.2rem;
+      color: $color__white;
       font-size: 20px;
-      line-height: 0;
+      line-height: 0.4;
+      background-color: rgba($color__gray-medium-cool, 0.6);
+      border-radius: 12px;
+
+      &:hover {
+        background-color: rgba($color__gray-medium-cool, 0.8);
+      }
     }
 
     + p {
@@ -59,10 +58,12 @@ button {
     }
 
     &.is-active {
-      background-color: $color__orange;
+      i {
+        background-color: $color__orange;
 
-      &:hover {
-        background-color: $color__orange-dark;
+        &:hover {
+          background-color: $color__orange-dark;
+        }
       }
 
       + p {
