@@ -42,7 +42,7 @@ export default function PageHeader(source, classNameName, key, title) {
         </div>
       </section>
       <section className="page-header__highlights">
-        <section id="jump-links">
+        <section className="jump-links">
           <ReactMarkdown
             escapeHtml={false}
             unwrapDisallowed={true}
@@ -56,8 +56,10 @@ export default function PageHeader(source, classNameName, key, title) {
           />
         </section>
 
-        <section id="actions">
-          <div className="download">{ValueToJSX(HeaderContent.download)}</div>
+        <section className="actions">
+          <button className="download">
+            {ValueToJSX(HeaderContent.download)}
+          </button>
           <SocialShare location="header" />
         </section>
       </section>

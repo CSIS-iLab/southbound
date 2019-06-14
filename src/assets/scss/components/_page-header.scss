@@ -2,10 +2,6 @@
   max-width: $size__header__max-width;
   margin: 0 -1.5rem;
 
-  @include breakpoint('large') {
-    margin: 0 calc((#{$size__header__max-width} - 100%) / -2);
-  }
-
   .page-header {
     &__content {
       position: relative;
@@ -16,17 +12,6 @@
       background-repeat: no-repeat, repeat;
       background-position: 20px bottom, left bottom;
       background-size: 106px, contain;
-
-      @include breakpoint('medium') {
-        background-image: url('../images/taiwan-dots_large.png'),
-          url('../images/sb_header_large.jpg');
-        background-size: contain, contain;
-      }
-
-      @include breakpoint('large') {
-        min-height: 650px;
-        background-position: 16% bottom, left bottom;
-      }
 
       &-wrapper {
         position: absolute;
@@ -42,18 +27,16 @@
 
       &-subtitle,
       &-date {
-        @include breakpoint('medium', 'max-width') {
-          margin-left: 120px;
-        }
-
         .data &,
         .about & {
           display: none;
         }
+        @include breakpoint('medium', 'max-width') {
+          margin-left: 120px;
+        }
       }
 
       &-subtitle {
-        @include font-size(20px);
         margin-bottom: 1rem;
         padding-bottom: 1.5rem;
 
@@ -66,16 +49,101 @@
         background-repeat: no-repeat;
         background-position: 0 100%;
         background-size: 240px 1px;
+        @include font-size(20px);
+      }
+
+      @include breakpoint('medium') {
+        background-image: url('../images/taiwan-dots_large.png'),
+          url('../images/sb_header_large.jpg');
+        background-size: contain, contain;
+      }
+
+      @include breakpoint('large') {
+        min-height: 650px;
+        background-position: 16% bottom, left bottom;
       }
     }
 
     &__highlights {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       max-width: $size__container__max-width;
       margin: auto;
+      margin-bottom: 4rem;
+      padding: 4rem 20px;
 
-      @include breakpoint('medium') {
-        display: flex;
-        justify-content: space-between;
+      @include breakpoint('large') {
+        padding: 4rem 0;
+      }
+
+      &::after {
+        position: relative;
+        bottom: -4rem;
+        display: block;
+        flex-basis: 100%;
+        border-bottom: 1px solid rgba($color__gray-darkest, 0.65);
+        content: '';
+      }
+
+      > * {
+        @include breakpoint('medium', 'max-width') {
+          flex-basis: 100%;
+        }
+      }
+
+      .actions {
+        @include breakpoint('medium', 'max-width') {
+          order: -1;
+        }
+
+        @include breakpoint('medium') {
+          flex-shrink: 0;
+          margin-left: 5rem;
+        }
+      }
+
+      .jump-links {
+        @include breakpoint('medium') {
+          flex-basis: calc(100% - 280px - 5rem);
+        }
+
+        ul {
+          @extend %plain-list;
+        }
+
+        p {
+          margin: 0;
+        }
+
+        .icon-download {
+          text-transform: uppercase;
+        }
+      }
+
+      .download {
+        display: block;
+        max-width: 280px;
+        margin: 0 auto 1.5rem;
+        padding: 0.6rem 1.2rem;
+        text-align: left;
+        background-color: $color__gray-lighter;
+        border: solid 1px rgba($color__gray-light, 0.48);
+        box-shadow: 0 2px 4px 0 rgba($color__black, 0.04);
+
+        &:hover,
+        &:focus {
+          background-color: $color__gray-light;
+
+          .link-download::after {
+            color: $color__gray-darkest;
+          }
+        }
+
+        p {
+          @extend %p4;
+          margin: 0;
+        }
       }
     }
   }
@@ -108,15 +176,19 @@
     &:not(.page-header__content-site) {
       span {
         &:first-child:not(:only-child) {
-          @include fluid-type(34px, 28px);
           text-transform: uppercase;
 
           .data &,
           .about & {
             display: none;
           }
+          @include fluid-type(34px, 28px);
         }
       }
     }
+  }
+
+  @include breakpoint('large') {
+    margin: 0 calc((#{$size__header__max-width} - 100%) / -2);
   }
 }

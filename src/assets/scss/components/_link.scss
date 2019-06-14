@@ -14,8 +14,9 @@ a {
   &::before,
   &::after {
     @extend %icon-pseudo-element;
+    transition: all 0.2s ease-in-out;
 
-    section:not(.header) & {
+    section:not(.page-header) &:not(.icon) {
       color: rgba($color__gray-medium-cool, 0.5);
     }
   }
@@ -43,26 +44,29 @@ a {
     }
 
     &:visited {
-      color: $color__gray-medium-cool;
+      section:not(#page-header) & {
+        color: $color__gray-medium-cool;
 
-      background-image: linear-gradient(
-        to bottom,
-        $color__gray-medium-cool 0,
-        $color__gray-medium-cool 100%
-      );
+        background-image: linear-gradient(
+          to bottom,
+          $color__gray-medium-cool 0,
+          $color__gray-medium-cool 100%
+        );
+      }
     }
 
     &[class] {
       @include font-size(15px);
-      color: rgba($color__gray-darkest, 0.65);
-      text-transform: uppercase;
       background-size: 1px 0;
-    }
-  }
 
-  #page-header a[class],
-  #listings__results a[class] {
-    text-transform: uppercase;
+      &:not(.icon) {
+        color: rgba($color__gray-darkest, 0.65);
+      }
+
+      section:not(#further-reading) & {
+        text-transform: uppercase;
+      }
+    }
   }
 
   #page-header &:not([class]) {
@@ -70,16 +74,9 @@ a {
     background-size: 80% 1px;
   }
 
-  &.document::before {
-    content: '\0046';
-  }
-
-  &.external::after {
+  &.link-external::after {
     content: '\0043';
-  }
-
-  &.download::after {
-    content: '\004e';
+    @include font-size(12px);
   }
 
   &.menu-item__link {
@@ -109,5 +106,54 @@ a {
         padding: 0.25rem 0.5rem;
       }
     }
+  }
+}
+
+[class^='icon-'] {
+  &::before,
+  &::after {
+    @extend %icon-pseudo-element;
+    transition: all 0.2s ease-in-out;
+
+    section:not(.page-header):not(.site-footer) & {
+      color: rgba($color__gray-medium-cool, 0.5);
+    }
+  }
+
+  &::after {
+    margin-left: 0.25rem;
+  }
+
+  &::before {
+    margin-right: 0.25rem;
+  }
+
+  #page-header &,
+  .chart-figure & {
+    display: block;
+    text-transform: uppercase;
+  }
+}
+
+.icon-download,
+.icon-external {
+  &::before {
+    content: none;
+  }
+}
+
+.icon-external {
+  &::after {
+    content: '\0043';
+  }
+}
+
+.icon-download {
+  &::after {
+    content: '\004e';
+  }
+
+  #page-header & {
+    color: $color__gray-darkest;
   }
 }

@@ -18,6 +18,6 @@ southbound:
   ISBN_info: 978-1-4422-8053-3 (pb); 978-1-4422-8054-0 (eBook)
   publisher: CSIS/Rowman & Littlefield
   download: |-
-      <a href="#" class="download">Download the Full Report</a>
+      <a href="#" class="link-download">Download the Full Report</a>
 
 ---

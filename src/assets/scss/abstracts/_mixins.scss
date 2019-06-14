@@ -32,11 +32,10 @@
   }
 }
 
-@mixin grid-gap {
-  @each $size in $sizes__desktop {
-    @include breakpoint($size) {
-      $gap: return-map-value($size__grid-gap, $size);
-      grid-column-gap: $gap;
+@mixin order {
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      order: $i;
     }
   }
 }

@@ -61,7 +61,7 @@ $size__one-column__paragraph: 50%;
 
 $sizes__one-column__image: (
   'xsmall': 90%,
-  'small': 50%,
+  'small': calc(50% - 1rem),
   'medium': 280px,
   'large': 325px,
   'xlarge': 325px

@@ -4,7 +4,7 @@ slug: about
 sections:
   page-header:
     index: 1
-    component: header
+    component: page-header
     content:
       text: |-
           On this page:
@@ -17,7 +17,7 @@ sections:
     title: About this publication
     content:
       - |-
-        <aside><h4>AboutCSIS</h4><p>Established in Washington, D.C., over 50 years ago, the Center for Strategic and International Studies (CSIS) is a bipartisan, nonprofit policy research organization dedicated to providing strategic insights and policy solutions to help decisionmakers chart a course toward a better world. To learn more about CSIS, visit <a href="https://www.csis.org" class="external">www.CSIS.org.</a></p></aside>
+        <aside><h4>AboutCSIS</h4><p>Established in Washington, D.C., over 50 years ago, the Center for Strategic and International Studies (CSIS) is a bipartisan, nonprofit policy research organization dedicated to providing strategic insights and policy solutions to help decisionmakers chart a course toward a better world. To learn more about CSIS, visit <a href="https://www.csis.org" class="icon-external">www.CSIS.org.</a></p></aside>
 
         Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque. Ut porta viverra est, ut dignissim elit elementum ut. Nunc vel rhoncus nibh, ut tincidunt turpis. Integer ac enim pellentesque,
 

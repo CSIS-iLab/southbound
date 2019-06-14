@@ -5,6 +5,8 @@
 @import 'abstracts/mixins';
 @import 'abstracts/placeholders';
 
+@import 'vendor/fontello';
+
 @import 'base/base';
 @import 'base/content-transition';
 @import 'base/helpers';
@@ -27,5 +29,3 @@
 
 @import 'pages/data';
 @import 'pages/post';
-
-@import 'vendor/fontello';

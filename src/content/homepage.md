@@ -4,13 +4,13 @@ title: Southbound Policy
 sections:
   page-header:
     index: 1
-    component: header
+    component: page-header
     content:
       text: |-
           On this page:
-          * <a href="#">The NSP’s Four Pillars</a>
-          * <a href="#">The NSP’s Four Pillars</a>
-          * <a href="#">The NSP’s Four Pillars</a>
+          * <a href="#four_pillars">The NSP’s Four Pillars</a>
+          * <a href="#flagship">Flagship Projects and Innovative Fields</a>
+          * <a href="#further-reading">Further Reading</a>
   intro:
     index: 2
     component: one-column
@@ -75,7 +75,7 @@ sections:
 
             <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
 
-            Taiwan has streamlined the process for applying for work visas and created a new visa for job seekers from overseas. 
+            Taiwan has streamlined the process for applying for work visas and created a new visa for job seekers from overseas.
 
           * New Immigrants: Help first-generation immigrants secure job opportunities. Connect second-generation immigrants with their ancestral countries through academic and cultural exchanges.
         chart: "8.4"
@@ -98,7 +98,7 @@ sections:
 
             <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
 
-            The Taiwan-Asia Exchange Foundation and the Vietnam National Institute of Culture and Arts Studies have partnered to create art programs, artist-in-residence projects, and various workshops. 
+            The Taiwan-Asia Exchange Foundation and the Vietnam National Institute of Culture and Arts Studies have partnered to create art programs, artist-in-residence projects, and various workshops.
 
           * Tourism: Ease visa requirements to increase inbound tourism to Taiwan. Make Taiwan’s tourism more inclusive by expanding the language-training of tour guides and creating a Muslim-friendly travel environment.
 
@@ -108,7 +108,7 @@ sections:
 
             <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
 
-            The total value of Taiwan’s agricultural exports hit $5.47 billion in 2018, marking a 20-year high. 
+            The total value of Taiwan’s agricultural exports hit $5.47 billion in 2018, marking a 20-year high.
         chart: "7.4"
   pillar_four:
     index: 7
@@ -123,11 +123,11 @@ sections:
 
             <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
 
-            In 2018, Taiwan and Indonesia signed an MOU that opened the possibility of creating special economic zones and cooperating on infrastructure development. 
+            In 2018, Taiwan and Indonesia signed an MOU that opened the possibility of creating special economic zones and cooperating on infrastructure development.
 
           * Negotiations and Dialogue: Promote multilevel and all-encompassing negotiations and dialogue with partner countries. Open dialogue and negotiations with China.
 
-          * Strategic Alliances: Build a comprehensive foreign aid mechanism and encourage Taiwan businesses to participate in overseas development projects. Strengthen official and nonofficial cooperation between Taiwan and foreign partners. 
+          * Strategic Alliances: Build a comprehensive foreign aid mechanism and encourage Taiwan businesses to participate in overseas development projects. Strengthen official and nonofficial cooperation between Taiwan and foreign partners.
 
             <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
 
@@ -141,7 +141,7 @@ sections:
     title: Flagship Projects and Innovative Fields
     content:
       intro: |-
-          Taiwan’s Office of Trade Negotiations has laid out five flagship projects and three potential-laden fields for collaboration. These programs are designed to capitalize on the pillars of the NSP and enhance mutually beneficial ties with targeted countries across the Indo-Pacific. 
+          Taiwan’s Office of Trade Negotiations has laid out five flagship projects and three potential-laden fields for collaboration. These programs are designed to capitalize on the pillars of the NSP and enhance mutually beneficial ties with targeted countries across the Indo-Pacific.
       five-flagship-programs: |-
           ### Five Flagship Programs
           * <h5>Agricultural development</h5>
@@ -150,7 +150,7 @@ sections:
 
             <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
 
-            In partnership with the Indonesian Ministry of Agriculture, Taiwan has set up a Modern Agriculture Demo Farm in Karawang. The project is designed to assist Indonesia’s development through technology and knowledge sharing. 
+            In partnership with the Indonesian Ministry of Agriculture, Taiwan has set up a Modern Agriculture Demo Farm in Karawang. The project is designed to assist Indonesia’s development through technology and knowledge sharing.
 
           * <h5>Medical and Public Health Cooperation</h5>
 
@@ -174,7 +174,7 @@ sections:
 
             <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
 
-            Collaboration in areas such as green energy, smart machinery, and biotechnology provides Taiwan with an opportunity to not only assist targeted developing countries but also enhance its ties with R&D leaders such as Japan and the United States. 
+            Collaboration in areas such as green energy, smart machinery, and biotechnology provides Taiwan with an opportunity to not only assist targeted developing countries but also enhance its ties with R&D leaders such as Japan and the United States.
 
           * <h5>Youth Exchanges and Policy Forums</h5>
 
@@ -182,7 +182,7 @@ sections:
 
             <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
 
-            The Taiwan-Asia Exchange Foundation was established in August 2018 to strengthen ties with NSP partner countries. The Yushan Forum is a Taiwan-initiated annual forum designed to foster dialogue, cooperation, and cultural exchange throughout the region. Areas of focus include economic prosperity, technology, innovation, and public health. 
+            The Taiwan-Asia Exchange Foundation was established in August 2018 to strengthen ties with NSP partner countries. The Yushan Forum is a Taiwan-initiated annual forum designed to foster dialogue, cooperation, and cultural exchange throughout the region. Areas of focus include economic prosperity, technology, innovation, and public health.
       three-innovative-fields: |-
           #### Three Innovative Fields
           * <h5>E-commerce:</h5><p> Help local firms expand their business abroad and aid the development of e-commerce platforms in regional markets.</p>
@@ -190,7 +190,7 @@ sections:
           * <h5>Tourism:</h5><p> Expand domestic tourism services, promote Taiwan as a tourist destination overseas, and ease visa entry requirements.</p>
 
             <button className="detail__trigger" aria-expanded="false" aria-label="Toggle Explainer"><i className="ellipse">…</i></button>
-          
+
             The Tourism Bureau has focused on marketing Taiwan as a Muslim-friendly destination by opening prayer rooms and certifying halal restaurants and hotels.
   outro:
     index: 9
@@ -204,13 +204,13 @@ sections:
     content:
       - |-
         #### Further Reading
-        * Executive Yuan. "<a href="https://www.ey.gov.tw/otnen/" className="external">New Southbound Policy.</a>" Office of Trade Negotiations.
-        * Bonnie S. Glaser, Scott Kennedy, Derek Mitchell, and Matthew P. Funaiole. "<a href="https://www.csis.org/analysis/new-southbound-policy" className="external">The New Southbound Policy: Deepening Taiwan’s Regional Integration.</a>" Center for Strategic and International Studies, 2018.
-        * Ministry of Economic Affairs, ROC (Taiwan). "<a href="https://www.moea.gov.tw/MNS/english/news/News.aspx?kind=6&menu_id=176&news_id=72912" className="external">The New Soutbound Policy: A Practical Approach Moving Full Steam Ahead.</a>" October 10, 2018.
-        * Ministry of Foreign Affairs, ROC (Taiwan). "<a href="https://nspp.mofa.gov.tw/nsppe/" className="external">New Southbound Policy Portal.</a>" New Southbound Policy.
-        * Tsai Ing-wen. "<a href="https://english.president.gov.tw/News/5552." className="external">President Tsai Attends Opening of Yushan Forum.</a>" Office of the President, ROC (Taiwan), October 11, 2017.
-        * Tsai Ing-wen. "<a href="https://english.president.gov.tw/News/5232" className="external">President Tsai's Remarks at Yushan Forum: Asian Dialogue for Innovation and Progress.</a>" Office of the President, ROC (Taiwan), October 11, 2017.
-        * Alan H. Yang. "<a href="http://lawdata.com.tw/tw/detail.aspx?no=297532" className="external">Revisiting Taiwan's New Southbound Policy: Agenda, Networks and Challenges.</a>" Issues and Studies 56, no. 1 (2017): 123-143.
-        * Alan H. Yang. "<a href="https://www.worldscientific.com/doi/abs/10.1142/S1013251118400039" className="external">Unpacking Taiwan’s Presence in Southeast Asia: The International Socialization of the New Southbound Policy.</a>" Issues & Studies 54, no. 1 (2018): 1-30.
+        * Executive Yuan. "<a href="https://www.ey.gov.tw/otnen/" className="icon-external">New Southbound Policy."</a> Office of Trade Negotiations.
+        * Bonnie S. Glaser, Scott Kennedy, Derek Mitchell, and Matthew P. Funaiole. "<a href="https://www.csis.org/analysis/new-southbound-policy" className="icon-external">The New Southbound Policy: Deepening Taiwan’s Regional Integration."</a> Center for Strategic and International Studies, 2018.
+        * Ministry of Economic Affairs, ROC (Taiwan). "<a href="https://www.moea.gov.tw/MNS/english/news/News.aspx?kind=6&menu_id=176&news_id=72912" className="icon-external">The New Soutbound Policy: A Practical Approach Moving Full Steam Ahead."</a> October 10, 2018.
+        * Ministry of Foreign Affairs, ROC (Taiwan). "<a href="https://nspp.mofa.gov.tw/nsppe/" className="icon-external">New Southbound Policy Portal."</a> New Southbound Policy.
+        * Tsai Ing-wen. "<a href="https://english.president.gov.tw/News/5552." className="icon-external">President Tsai Attends Opening of Yushan Forum."</a> Office of the President, ROC (Taiwan), October 11, 2017.
+        * Tsai Ing-wen. "<a href="https://english.president.gov.tw/News/5232" className="icon-external">President Tsai's Remarks at Yushan Forum: Asian Dialogue for Innovation and Progress."</a> Office of the President, ROC (Taiwan), October 11, 2017.
+        * Alan H. Yang. "<a href="http://lawdata.com.tw/tw/detail.aspx?no=297532" className="icon-external">Revisiting Taiwan's New Southbound Policy: Agenda, Networks and Challenges."</a> Issues and Studies 56, no. 1 (2017): 123-143.
+        * Alan H. Yang. "<a href="https://www.worldscientific.com/doi/abs/10.1142/S1013251118400039" className="icon-external">Unpacking Taiwan’s Presence in Southeast Asia: The International Socialization of the New Southbound Policy."</a> Issues & Studies 54, no. 1 (2018): 1-30.
 
 ---

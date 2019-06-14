@@ -22,6 +22,16 @@
   font-display: swap;
 }
 
+%ellipse {
+  display: block;
+  font-weight: 100;
+  line-height: 1;
+  letter-spacing: 1rem;
+  text-align: center;
+  @extend %font-gibson;
+  @include fluid-type(54px, 80px);
+}
+
 %filters-label {
   display: block;
   margin-bottom: 0.5rem;
@@ -32,9 +42,7 @@
 
 %further-reading {
   ul {
-    margin-top: 1rem;
-    padding-left: 0;
-    list-style-type: none;
+    @extend %plain-list;
 
     li {
       margin-bottom: 1rem;
@@ -62,27 +70,40 @@
   color: rgba($color__gray-darkest, 0.65);
   line-height: 1.25;
   @include font-size(16px);
+
+  figcaption & {
+    @extend %font-gibson;
+  }
 }
 
 %p4 {
   color: rgba($color__gray-darkest, 0.65);
   line-height: 1.24;
 
-  main.homepage & {
-    padding-bottom: 0.25rem;
-    border-bottom: 1px solid rgba($color__gray-darkest, 0.35);
+  .chart-figure & {
+    main.homepage & {
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid rgba($color__gray-darkest, 0.35);
+    }
+
+    main.data & {
+      color: $color__gray-medium-warm;
+      line-height: 1.29;
+
+      &:first-child {
+        display: none;
+      }
+
+      @include font-size(14px);
+      @extend %font-gibson;
+    }
   }
 
-  main.data & {
-    color: $color__gray-medium-warm;
-    line-height: 1.29;
-
-    &:first-child {
-      display: none;
-    }
+  .download & {
     @include font-size(14px);
     @extend %font-gibson;
   }
+
   @include font-size(13px);
 }
 
@@ -93,6 +114,13 @@
   &:focus {
     color: $color__black;
   }
+}
+
+%plain-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
 }
 
 %icon-pseudo-element {
@@ -113,8 +141,7 @@
 %btn-list {
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
-  list-style-type: none;
+  @extend %plain-list;
 
   li {
     margin-bottom: 1.25rem;

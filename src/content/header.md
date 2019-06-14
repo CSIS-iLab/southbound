@@ -9,7 +9,7 @@ hero:
   published: Published June 2019
   updated: last updated August 2019
 download: |-
-    <a href="#" class="download">Download the Full Report</a>
+    <span  class="icon-download">Download the Full Report</span>
     PDF, 88 pages, 2.8MB
 share:
 ---

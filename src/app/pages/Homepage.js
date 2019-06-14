@@ -130,11 +130,7 @@ class Page extends React.Component {
                         </figcaption>
                       </figure>
                     ) : (
-                      ValueToJSX(
-                        value[1],
-                        `${section.component} ${value[0]}`,
-                        value[0]
-                      )
+                      ValueToJSX(value[1], value[0], value[0])
                     )
                   })}
                 </div>

@@ -1,58 +1,42 @@
 .share {
   display: flex;
+  justify-content: center;
   align-items: center;
-  list-style-type: none;
-
-  .job-header & {
-    @include breakpoint('large', 'max-width') {
-      display: none;
-    }
-    @include breakpoint('xlarge', 'max-width') {
-      margin-top: 1rem;
-    }
-  }
-
-  ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-
-    li {
-      margin: 0;
-    }
-  }
+  @extend %plain-list;
 
   .icon {
     display: block;
-    width: 1.75rem;
-    height: 1.75rem;
     margin: 0 0 0 0.5rem;
-    border: 1px solid $color__gray-medium-cool;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.2s ease-in-out;
-    @include font-size(20px);
 
-    .post-footer & {
-      width: 2rem;
-      height: 2rem;
-    }
+    #page-header & {
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 1px solid $color__gray-medium-cool;
 
-    &:hover {
-      background-color: $color__gray-medium-cool;
+      &:hover {
+        background-color: $color__gray-medium-cool;
 
-      &::before {
-        color: $color__gray-lightest;
+        &::before {
+          color: $color__gray-lightest;
+        }
       }
     }
 
-    &:focus {
-      @extend %focus;
-      padding: 0 0.125rem;
-      background-position: 0 87.5%;
+    .site-footer & {
+      width: 2rem;
+      height: 2rem;
+      border: 1px solid rgba($color__white, 0.5);
+
+      &:hover {
+        border: 1px solid rgba($color__white, 0.9);
+
+        &::before {
+          color: $color__gray-lightest;
+        }
+      }
     }
 
     &::before {
@@ -62,16 +46,29 @@
       width: 100%;
       height: 100%;
       margin: 0;
-      color: $color__gray-darkest;
-    }
+      @include font-size(24px);
+      transition: 0.2s ease-in-out;
 
-    &.icon-email::before {
-      font-size: 0.67rem;
-    }
+      .page-header & {
+        &,
+        &:visited {
+          color: $color__gray-darkest;
+        }
+      }
 
-    &.icon-printer::before,
-    &.icon-copy-link::before {
-      font-size: 0.825rem;
+      .site-footer & {
+        &,
+        &:visited {
+          color: rgba($color__white, 0.8);
+        }
+      }
     }
+  }
+
+  &:focus {
+    padding: 0 0.125rem;
+    background-position: 0 87.5%;
+    border: 1px solid $color__focus;
+    outline: 0;
   }
 }
