@@ -30,7 +30,7 @@ export default class Footer extends React.Component {
           </div>
 
           <h5 className="faded-half">Follow Us</h5>
-          <ul className="site-footer__description-social">
+          <ul className="site-footer__description-social share">
             <li>
               <a
                 href="https://www.facebook.com/CSIS.org/"
@@ -71,29 +71,29 @@ export default class Footer extends React.Component {
           </ul>
         </section>
 
-        <section className="site-footer__copyright">
+        <section className="site-footer__copyright faded-half">
           {ValueToJSX(FooterContent.copyright[0])}
         </section>
 
         <section className="site-footer__report">
-          <div>
+          <div className='site-footer__report-title'>
             {Object.keys(FooterContent.southbound.report).map(key => {
               return ValueToJSX(FooterContent.southbound.report[key], null, key)
             })}
           </div>
 
-          <div>
+          <div className="site-footer__report-authors">
             {Object.keys(FooterContent.southbound.authors).map(key => {
               return ValueToJSX(FooterContent.southbound.authors[key], null, key)
             })}
           </div>
-          <div>
+          <div className="site-footer__report-info">
             {Object.keys(FooterContent.southbound.info).map(key => {
               return ValueToJSX(FooterContent.southbound.info[key], null, key)
             })}
           </div>
-          <div>
-            {ValueToJSX(FooterContent.southbound.download)}
+          <div className='site-footer__report-download'>
+            <li>{ValueToJSX(FooterContent.southbound.download)}</li>
           </div>
         </section>
       </footer>
