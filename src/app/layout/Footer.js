@@ -24,10 +24,13 @@ export default class Footer extends React.Component {
               title="Center for Strategic and   International Studies" 
             />
           </a>
+          
+          <div className="site-footer__description-details">
+            {ValueToJSX(FooterContent.description[0])}
+          </div>
 
-          {ValueToJSX(FooterContent.description[0])}
-
-          <ul className="site-footer__description-social">Follow Us
+          <h5 className="faded-half">Follow Us</h5>
+          <ul className="site-footer__description-social">
             <li>
               <a
                 href="https://www.facebook.com/CSIS.org/"
