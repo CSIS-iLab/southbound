@@ -3,13 +3,13 @@ import ReactMarkdown from 'react-markdown/with-html'
 import ImageBlock from './ImageBlock'
 import ParagraphBlock from './ParagraphBlock'
 
-export default function ValueToJSX(source, className, key) {
+export default function ValueToJSX(source, key) {
   return (
     <ReactMarkdown
       escapeHtml={false}
       unwrapDisallowed={true}
       key={key || ''}
-      className={className || ''}
+      className={key || ''}
       source={source || ''}
       renderers={{
         image: ImageBlock,

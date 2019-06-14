@@ -125,10 +125,6 @@ class App extends Component {
       header: '.site-header',
       speed: 500
     })
-
-    document.querySelector('.download').addEventListener('click', () => {
-      window.alert('download')
-    })
   }
 
   render() {

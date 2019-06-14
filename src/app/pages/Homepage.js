@@ -8,7 +8,7 @@ import InitSheets from '../helpers/InitSheets'
 import PageHeader from '../layout/PageHeader'
 import ValueToJSX from '../helpers/ValueToJSX'
 
-class Page extends React.Component {
+class Homepage extends React.Component {
   constructor(props) {
     super(props)
     const { siteStructure, page } = this.props
@@ -100,12 +100,7 @@ class Page extends React.Component {
                 <div className={'subsection ' + section.component}>
                   {Object.entries(section.content).map(value => {
                     return section.key === 'page-header' ? (
-                      PageHeader(
-                        value[1],
-                        `${section.component} ${value[0]}`,
-                        value[0],
-                        this.state.title
-                      )
+                      PageHeader(value[1], this.state.title)
                     ) : chart && value[0] === 'chart' ? (
                       <figure
                         key="chart"
@@ -130,7 +125,7 @@ class Page extends React.Component {
                         </figcaption>
                       </figure>
                     ) : (
-                      ValueToJSX(value[1], value[0], value[0])
+                      ValueToJSX(value[1], value[0])
                     )
                   })}
                 </div>
@@ -143,4 +138,4 @@ class Page extends React.Component {
   }
 }
 
-export default Page
+export default Homepage

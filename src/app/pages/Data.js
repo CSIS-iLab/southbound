@@ -124,14 +124,7 @@ class Data extends React.Component {
     return (
       <main className={page}>
         <section id="page-header">
-          {Object.keys(headerContent).map(content => {
-            return PageHeader(
-              headerContent[content],
-              `header__${content}`,
-              content,
-              this.state.title
-            )
-          })}
+          {PageHeader(headerContent.text, this.state.title)}
         </section>
         <div id="listings">
           <section className="listings__filters">

@@ -6,11 +6,11 @@ import GetData from '../helpers/GetData'
 import ValueToJSX from '../helpers/ValueToJSX'
 import SocialShare from '../components/SocialShare'
 
-export default function PageHeader(source, classNameName, key, title) {
+export default function PageHeader(source, title) {
   const HeaderContent = GetData('header')
-  console.log(11)
+
   return (
-    <React.Fragment>
+    <React.Fragment key="page-header">
       <section className="page-header__content">
         <div className="page-header__content-wrapper">
           <div
@@ -46,8 +46,6 @@ export default function PageHeader(source, classNameName, key, title) {
           <ReactMarkdown
             escapeHtml={false}
             unwrapDisallowed={true}
-            key={key || ''}
-            classNameName={classNameName || ''}
             source={source || ''}
             renderers={{
               image: ImageBlock,

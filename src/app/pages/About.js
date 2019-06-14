@@ -5,7 +5,7 @@ import CloseMenu from '../helpers/CloseMenu'
 import ValueToJSX from '../helpers/ValueToJSX'
 import PageHeader from '../layout/PageHeader'
 
-class Page extends React.Component {
+class About extends React.Component {
   constructor(props) {
     super(props)
     const { siteStructure, page } = this.props
@@ -52,13 +52,8 @@ class Page extends React.Component {
                 <div className={'subsection ' + section.component}>
                   {Object.entries(section.content).map(value => {
                     return section.key === 'page-header'
-                      ? PageHeader(
-                        value[1],
-                        `${section.component} ${value[0]}`,
-                        value[0],
-                        this.state.title
-                      )
-                      : ValueToJSX(value[1], value[0], value[0])
+                      ? PageHeader(value[1], this.state.title)
+                      : ValueToJSX(value[1], value[0])
                   })}
                 </div>
               </section>
@@ -70,4 +65,4 @@ class Page extends React.Component {
   }
 }
 
-export default Page
+export default About
