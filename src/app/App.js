@@ -7,7 +7,6 @@ import Data from './pages/Data'
 import SiteMap from './SiteMap'
 import { Route } from 'react-router-dom'
 import SmoothScroll from 'smooth-scroll'
-import Highcharts from 'Highcharts'
 import sheetData from './charts.json'
 import { withRouter } from 'react-router-dom'
 

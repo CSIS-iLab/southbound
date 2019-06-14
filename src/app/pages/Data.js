@@ -1,6 +1,5 @@
 import React from 'react'
 import MarkdownToSections from '../helpers/MarkdownToSections'
-import ValueToJSX from '../helpers/ValueToJSX'
 import PageHeader from '../layout/PageHeader'
 import PageContent from '../helpers/PageContent'
 import GetData from '../helpers/GetData'
@@ -49,7 +48,7 @@ class Data extends React.Component {
     Highcharts.setOptions(ChartOptions({ isDataRepo: true }))
 
     const { intialized } = this.state
-    const { filteredSheetData, match, updateCharts } = this.props
+    const { filteredSheetData } = this.props
 
     if (!intialized && filteredSheetData.length) {
       filteredSheetData.forEach(data => {

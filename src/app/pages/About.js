@@ -2,9 +2,6 @@ import React from 'react'
 import PageContent from '../helpers/PageContent'
 import GetData from '../helpers/GetData'
 import CloseMenu from '../helpers/CloseMenu'
-import ChartOptions from '../helpers/ChartOptions'
-import Highcharts from 'Highcharts'
-import InitSheets from '../helpers/InitSheets'
 import ValueToJSX from '../helpers/ValueToJSX'
 import PageHeader from '../layout/PageHeader'
 
@@ -43,7 +40,6 @@ class Page extends React.Component {
 
   render() {
     const { pageContent, page } = this.state
-    const { sheetData } = this.props
 
     return (
       <main className={page}>
