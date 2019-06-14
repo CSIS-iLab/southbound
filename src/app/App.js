@@ -24,6 +24,7 @@ class App extends Component {
   }
 
   updateCharts = (input, value, param) => {
+    if (!this.state.sheetData.length) return
     let filteredSheetData, filteredCategories
 
     switch (input) {

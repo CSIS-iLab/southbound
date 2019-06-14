@@ -1,6 +1,6 @@
 ---
 slug: homepage
-title: The New Southbound Policy
+title: Southbound Policy
 sections:
   page-header:
     index: 1

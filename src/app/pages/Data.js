@@ -36,6 +36,11 @@ class Data extends React.Component {
   }
 
   handleSearch = e => {
+    window.scrollTo({
+      top: document.querySelector('#listings').getBoundingClientRect().top,
+      behavior: 'smooth'
+    })
+
     this.props.updateCharts('search', e.target.value)
   }
 

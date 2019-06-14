@@ -38,7 +38,7 @@ class Page extends React.Component {
   }
 
   componentDidMount() {
-    document.title = `${this.state.title} | CSIS Careers`
+    document.title = 'The New Southbond Policy | CSIS'
     this.loadCharts()
 
     const triggers = Array.from(document.querySelectorAll('.detail__trigger'))
