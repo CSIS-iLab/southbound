@@ -110,6 +110,15 @@
           @include font-size(15px);
         }
       }
+    
     }
+  }
+
+  &__copyright {
+    background-color: $color__black-light;
+  }
+
+  &__report {
+    background-color: $color__gray-darker;
   }
 }
