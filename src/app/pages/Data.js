@@ -109,10 +109,12 @@ class Data extends React.Component {
     const { filteredSheetData, categories, filteredCategories } = this.props
     const { page, pageContent } = this.state
 
-    const header = pageContent.find(content => content.component === 'header')
+    const header = pageContent.find(
+      content => content.component === 'page-header'
+    )
     const headerContent = header ? header.content : {}
     const otherContent = pageContent.filter(
-      content => content.component !== 'header'
+      content => content.component !== 'page-header'
     )
 
     return (
