@@ -115,6 +115,10 @@
           @extend %plain-list;
         }
 
+        li {
+          padding-left: 0;
+        }
+
         p {
           margin: 0;
 

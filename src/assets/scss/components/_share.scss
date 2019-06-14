@@ -4,6 +4,10 @@
   align-items: center;
   @extend %plain-list;
 
+  li {
+    padding-left: 0;
+  }
+
   .icon {
     display: block;
     margin: 0 0 0 0.5rem;

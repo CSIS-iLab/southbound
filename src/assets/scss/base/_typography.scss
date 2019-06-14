@@ -98,10 +98,24 @@ ul {
     @include fluid-type(18px, 20px);
 
     li {
+      position: relative;
       margin-bottom: 0.5rem;
+      padding-left: 1rem;
+      list-style-type: none;
 
       p {
         flex-basis: calc(100% - 10px);
+      }
+
+      &::before {
+        position: absolute;
+        top: 0.8rem;
+        left: -0.6rem;
+        width: 0.4rem;
+        height: 0.4rem;
+        background-color: $color__black;
+        border-radius: 50%;
+        content: '';
       }
     }
   }

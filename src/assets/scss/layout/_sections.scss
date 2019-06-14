@@ -30,12 +30,6 @@ section::before {
     }
   }
 
-  @include breakpoint('medium', 'max-width') {
-    aside {
-      order: 99;
-    }
-  }
-
   .component-image {
     @each $size in $sizes__default {
       @include breakpoint($size) {
@@ -49,6 +43,12 @@ section::before {
       @include breakpoint($size) {
         max-width: return-map-value($sizes__one-column__image, $size);
       }
+    }
+  }
+
+  @include breakpoint('medium', 'max-width') {
+    aside {
+      order: 99;
     }
   }
 }
@@ -158,6 +158,8 @@ section::before {
 
   .five-flagship-programs {
     ul {
+      @extend %plain-list;
+
       @include breakpoint('medium') {
         display: flex;
         flex-wrap: wrap;
@@ -166,13 +168,27 @@ section::before {
     }
 
     li {
-      @include breakpoint('medium') {
-        flex-basis: 47%;
-      }
+      // margin: 0;
+      padding-left: 68px;
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 48px;
+      transition: all 0.2s ease-in-out;
 
       &:nth-child(even) {
         @include breakpoint('medium') {
           margin-left: 32px;
+        }
+      }
+      @include breakpoint('medium') {
+        flex-basis: 47%;
+      }
+
+      @for $i from 1 through length($icons) {
+        &:nth-child(#{$i}) {
+          $icon: nth($icons, $i);
+
+          background-image: url('../images/program-#{$icon}.png');
         }
       }
     }
