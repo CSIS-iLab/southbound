@@ -24,8 +24,10 @@ class App extends Component {
   }
 
   updateCharts = (input, value, param) => {
-    if (!this.state.sheetData.length) return
-    let filteredSheetData, filteredCategories
+    let filteredSheetData,
+      filteredCategories,
+      tags,
+      queried = true
 
     switch (input) {
     case 'search':
@@ -39,14 +41,13 @@ class App extends Component {
         return data
       })
 
-      filteredCategories = [
-        ...new Set(
-          filteredSheetData
-            .filter(data => !data.hide)
-            .map(data => data.tags)
-            .reduce((a, b) => a.concat(b))
-        )
-      ]
+      tags = filteredSheetData
+        .filter(data => !data.hide)
+        .map(data => data.tags)
+
+      if (tags.length < 1) return
+
+      filteredCategories = [...new Set(tags.reduce((a, b) => a.concat(b)))]
 
       break
 
@@ -56,19 +57,20 @@ class App extends Component {
         return data
       })
 
-      filteredCategories = [
-        ...new Set(
-          filteredSheetData
-            .filter(data => !data.hide)
-            .map(data => data.tags)
-            .reduce((a, b) => a.concat(b))
-        )
-      ]
+      tags = filteredSheetData
+        .filter(data => !data.hide)
+        .map(data => data.tags)
+
+      if (tags.length < 1) return
+
+      filteredCategories = [...new Set(tags.reduce((a, b) => a.concat(b)))]
+
       break
 
     case 'clear':
       filteredCategories = this.state.categories
       filteredSheetData = this.state.sheetData
+      queried = false
       break
 
     case 'category':
@@ -96,7 +98,7 @@ class App extends Component {
       return
     }
 
-    this.setState({ filteredSheetData, filteredCategories })
+    this.setState({ filteredSheetData, filteredCategories, queried })
   }
 
   componentDidMount() {
@@ -126,7 +128,8 @@ class App extends Component {
       sheetData,
       filteredSheetData,
       categories,
-      filteredCategories
+      filteredCategories,
+      queried
     } = this.state
 
     return (
@@ -161,6 +164,7 @@ class App extends Component {
               categories={categories}
               filteredCategories={filteredCategories}
               updateCharts={this.updateCharts}
+              queried={queried}
               siteStructure={siteStructure}
               page="data"
             />

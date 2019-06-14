@@ -26,7 +26,7 @@ class Data extends React.Component {
 
   handleCategoryChange = e => {
     const tag = e.target
-    this.setState({ queried: false }, () => {
+    this.setState({ param: false }, () => {
       this.props.updateCharts('category', tag.name, false)
     })
   }
@@ -48,7 +48,7 @@ class Data extends React.Component {
     document.title = `${this.state.title} | CSIS Careers`
     Highcharts.setOptions(ChartOptions({ isDataRepo: true }))
 
-    const { intialized, queried } = this.state
+    const { intialized } = this.state
     const { filteredSheetData, match, updateCharts } = this.props
 
     if (!intialized && filteredSheetData.length) {
@@ -61,7 +61,7 @@ class Data extends React.Component {
   }
 
   componentDidUpdate() {
-    const { intialized, queried } = this.state
+    const { intialized, param } = this.state
     const { filteredSheetData, match, updateCharts } = this.props
 
     if (!intialized && filteredSheetData.length) {
@@ -72,16 +72,16 @@ class Data extends React.Component {
       this.setState({ intialized: true })
     }
 
-    if (!queried && filteredSheetData.length) {
+    if (!param && filteredSheetData.length) {
       const { query, value } = match.params
       switch (query) {
       case 'id':
-        this.setState({ queried: true })
+        this.setState({ param: true })
         updateCharts('id', value)
         return
 
       case 'category':
-        this.setState({ queried: true })
+        this.setState({ param: true })
         updateCharts('category', value, true)
 
         return
@@ -106,7 +106,12 @@ class Data extends React.Component {
     })
   }
   render() {
-    const { filteredSheetData, categories, filteredCategories } = this.props
+    const {
+      filteredSheetData,
+      categories,
+      filteredCategories,
+      queried
+    } = this.props
     const { page, pageContent } = this.state
 
     const header = pageContent.find(
@@ -154,16 +159,14 @@ class Data extends React.Component {
 
               <ul className="listings__filters-category__list">
                 {categories.map(category => {
+                  const checked = filteredCategories.includes(category)
+
                   return (
                     <li key={category}>
-                      <label
-                        className={
-                          filteredCategories.includes(category) ? 'checked' : ''
-                        }
-                      >
+                      <label className={queried && checked ? 'checked' : ''}>
                         <input
                           type="checkbox"
-                          checked={filteredCategories.includes(category)}
+                          checked={checked}
                           name={category}
                           onChange={this.handleCategoryChange}
                         />
