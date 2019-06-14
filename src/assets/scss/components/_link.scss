@@ -76,11 +76,7 @@ a {
 
   &.menu-item__link {
     width: 100%;
-    font-weight: bold;
-    text-align: left;
-    text-transform: uppercase;
-    @include font-size(16px);
-    @extend %link-gray;
+    @extend %nav-link;
 
     @include breakpoint('large', 'max-width') {
       padding: 1.75rem;

@@ -11,23 +11,20 @@ export default function HeaderNav(obj) {
 
   return (
     <nav className="site-header__nav" role="navigation">
-      <button className="site-logo">
-        <NavLink to="/" exact>
+      <div className="site-logo">
+        <a href="https://www.csis.org" class="link-csis">
           <Logo />
+        </a>
+        <NavLink to="/" exact>
           <span> The New Southbound Policy</span>
         </NavLink>
-      </button>
+      </div>
       <button
         className="site-header__nav-trigger menu-trigger"
         aria-expanded="false"
         aria-label="Toggle Menu"
         data-target=".site-header__nav-menu"
-      >
-        <span className="line" />
-        <span className="line" />
-        <span className="line" />
-        <span className="visually-hidden">Menu</span>
-      </button>
+      />
       <ul className="site-header__nav-menu">
         {orderedSiteStructure.map(page => {
           return (

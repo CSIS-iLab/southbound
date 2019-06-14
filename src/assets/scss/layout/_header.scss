@@ -27,15 +27,7 @@
     @include fluid-type(16px, 27px);
     display: inline-block;
     height: 100%;
-    padding: 1rem;
-    overflow: hidden;
     font-weight: 100;
-    line-height: 1.5;
-    background-color: $color__gray-darkest;
-
-    &:hover {
-      background-color: $color__black;
-    }
 
     a:hover,
     a:visited,
@@ -46,16 +38,59 @@
     &:not(:focus) {
       outline: 2px solid transparent;
     }
-  }
 
-  svg {
-    display: block;
-    max-height: 0;
-    opacity: 0.6;
+    @include breakpoint('xlarge') {
+      display: block;
+      width: 350px;
+      padding: 0 20px;
+      line-height: 1.5;
+      background-color: $color__gray-dark-cool;
+    }
 
-    @include breakpoint('medium') {
-      width: 46px;
-      max-height: 1rem;
+    a {
+      justify-content: center;
+      align-items: center;
+
+      @include breakpoint('xlarge', 'max-width') {
+        display: inline-flex;
+        height: 100%;
+      }
+
+      @include breakpoint('xlarge') {
+        background-color: transparent;
+      }
+
+      &:not(.link-csis) {
+        line-height: 1;
+        @include breakpoint('xlarge', 'max-width') {
+          padding: 0 0.75rem;
+          background-color: $color__gray-dark-cool;
+        }
+
+        @include breakpoint('xlarge') {
+          display: flex;
+        }
+      }
+
+      &.link-csis {
+        @include breakpoint('xlarge', 'max-width') {
+          background-color: $color__gray-darkest;
+        }
+
+        @include breakpoint('large', $until: 'xlarge') {
+          padding: 0 0.75rem;
+        }
+
+        @include breakpoint('xlarge') {
+          display: inline-flex;
+        }
+
+        svg {
+          @include breakpoint('large') {
+            width: 45px;
+          }
+        }
+      }
     }
   }
 }
