@@ -18,15 +18,13 @@ class App extends Component {
       categories: [],
       filteredCategories: [],
       filteredSheetData: [],
-      sheetData: []
+      sheetData: [],
+      queried: false
     }
   }
 
   updateCharts = (input, value, param) => {
-    let filteredSheetData,
-      filteredCategories,
-      tags,
-      queried = true
+    let filteredSheetData, filteredCategories, tags, queried
 
     switch (input) {
     case 'search':
@@ -69,7 +67,7 @@ class App extends Component {
     case 'clear':
       filteredCategories = this.state.categories
       filteredSheetData = this.state.sheetData
-      queried = false
+
       break
 
     case 'category':
@@ -97,6 +95,15 @@ class App extends Component {
       return
     }
 
+    filteredSheetData =
+      filteredCategories.length > 0
+        ? filteredSheetData
+        : this.state.sheetData.map(d => {
+          return { ...d, hide: false }
+        })
+
+    queried = filteredCategories.length !== this.state.categories.length
+
     this.setState({ filteredSheetData, filteredCategories, queried })
   }
 
@@ -109,8 +116,7 @@ class App extends Component {
       {
         sheetData,
         categories,
-        filteredSheetData: sheetData,
-        filteredCategories: categories
+        filteredSheetData: sheetData
       }
       // () => console.log(this.state)
     )
