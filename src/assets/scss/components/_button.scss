@@ -7,7 +7,7 @@ button {
   @include font-size(15px);
 
   &:focus {
-    @extend %focus;
+    @extend %form-focus;
   }
 
   &.block {

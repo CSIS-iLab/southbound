@@ -37,18 +37,8 @@ body {
   }
 }
 
-nav,
-footer {
-  max-width: $size__header__max-width;
-  margin: auto;
-}
-
 main {
   max-width: $size__container__max-width;
-}
-
-main,
-footer {
   margin: auto;
   padding: 0 $size__padding-mobile;
 

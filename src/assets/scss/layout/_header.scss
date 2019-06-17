@@ -3,59 +3,164 @@
   background-color: $color__gray-lighter;
   border-bottom: 2px solid $color__gray-darker;
   transition: all 0.2s ease-in-out;
+
+  &--hidden {
+    opacity: 0;
+  }
+
+  .site-logo {
+    display: flex;
+    height: 100%;
+    font-weight: 100;
+    transition: all 0.2s ease-in-out;
+    @include full-width-background($color__gray-dark-cool, left, true);
+
+    @include breakpoint('large') {
+      display: block;
+      width: 350px;
+      line-height: 1.2;
+    }
+
+    &::before {
+      z-index: 0;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:not(.site-logo--csis):not(.site-logo--home) {
+      @include breakpoint('large') {
+        background-color: $color__gray-dark-cool;
+      }
+    }
+
+    &.site-logo--csis {
+      background-color: $color__black;
+
+      &::before {
+        @include breakpoint('large') {
+          background-color: $color__black;
+        }
+      }
+
+      svg {
+        fill-opacity: 1;
+      }
+    }
+
+    &.site-logo--home {
+      @include breakpoint('large') {
+        background-color: $color__orange;
+
+        &::before {
+          background-color: $color__orange;
+        }
+      }
+    }
+
+    a {
+      justify-content: center;
+      align-items: center;
+      white-space: nowrap;
+
+      &:hover,
+      &:visited,
+      &:focus {
+        color: $color__white;
+      }
+
+      @include breakpoint('large', 'max-width') {
+        display: inline-flex;
+        height: 100%;
+      }
+
+      &.link-home {
+        @extend %font-gibson;
+        @include fluid-type(16px, 27px);
+        @include breakpoint('large', 'max-width') {
+          padding-right: 20px;
+        }
+        @include breakpoint('large', $until: 'large') {
+          padding: 0 20px;
+        }
+      }
+
+      &.link-csis {
+        @include breakpoint('large') {
+          display: inline-flex;
+          margin-top: 1rem;
+          padding-right: 20px;
+        }
+      }
+    }
+
+    svg {
+      width: 0;
+      fill-opacity: 0.6;
+      transition: all 0.2s ease-in-out;
+
+      @include breakpoint('large') {
+        width: 40px;
+      }
+    }
+  }
   @each $size in $sizes__default {
     @include breakpoint($size) {
       $height: return-map-value($sizes__header-height, $size);
       height: $height;
     }
   }
+}
 
-  &--hidden {
-    opacity: 0;
-  }
-
-  &--minimal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 10;
-  }
+.site-header--minimal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
 
   .site-logo {
-    @extend %font-gibson;
-    @include fluid-type(16px, 27px);
-    display: inline-block;
-    height: 100%;
-    padding: 1rem;
-    overflow: hidden;
-    font-weight: 100;
-    line-height: 1.5;
-    background-color: $color__gray-darkest;
-
-    &:hover {
-      background-color: $color__black;
+    @include breakpoint('large') {
+      display: flex;
+      width: unset;
     }
 
-    a:hover,
-    a:visited,
-    a:focus {
-      color: $color__white;
+    &::before {
+      background-color: $color__gray-darkest;
     }
 
-    &:not(:focus) {
-      outline: 2px solid transparent;
+    a {
+      display: inline-flex;
+      height: 100%;
+
+      &.link-home {
+        padding: 0 20px;
+        background-color: $color__gray-dark-cool;
+      }
+
+      &.link-csis {
+        margin-top: 0;
+        padding-right: 20px;
+        background-color: $color__gray-darkest;
+      }
     }
-  }
 
-  svg {
-    display: block;
-    max-height: 0;
-    opacity: 0.6;
+    &.site-logo--home {
+      &::before {
+        background-color: $color__gray-darkest;
+      }
 
-    @include breakpoint('medium') {
-      width: 46px;
-      max-height: 1rem;
+      a.link-home {
+        background-color: $color__orange;
+      }
+    }
+
+    &.site-logo--csis {
+      a.link-csis {
+        background-color: $color__black;
+      }
+
+      a.link-home {
+        background-color: $color__gray-dark-cool;
+      }
     }
   }
 }

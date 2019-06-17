@@ -10,8 +10,7 @@ button {
 input,
 select,
 textarea {
-  color: $color__gray-medium-cool;
-  @extend %font-input;
+  color: $color__gray-darkest;
 }
 
 /*================================

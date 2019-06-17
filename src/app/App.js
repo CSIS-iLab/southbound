@@ -9,6 +9,7 @@ import { Route } from 'react-router-dom'
 import SmoothScroll from 'smooth-scroll'
 import sheetData from './charts.json'
 import { withRouter } from 'react-router-dom'
+import scroll from '@threespot/freeze-scroll'
 
 class App extends Component {
   constructor(props) {
@@ -42,9 +43,10 @@ class App extends Component {
         .filter(data => !data.hide)
         .map(data => data.tags)
 
-      if (tags.length < 1) return
-
-      filteredCategories = [...new Set(tags.reduce((a, b) => a.concat(b)))]
+      filteredCategories =
+          tags.length > 0
+            ? [...new Set(tags.reduce((a, b) => a.concat(b)))]
+            : []
 
       break
 
@@ -90,17 +92,16 @@ class App extends Component {
         return data
       })
 
+      filteredSheetData =
+          filteredCategories.length > 0
+            ? filteredSheetData
+            : this.state.sheetData.map(d => {
+              return { ...d, hide: false }
+            })
       break
     default:
       return
     }
-
-    filteredSheetData =
-      filteredCategories.length > 0
-        ? filteredSheetData
-        : this.state.sheetData.map(d => {
-          return { ...d, hide: false }
-        })
 
     queried = filteredCategories.length !== this.state.categories.length
 
@@ -125,6 +126,16 @@ class App extends Component {
       header: '.site-header',
       speed: 500
     })
+
+    document.addEventListener(
+      'scrollStart',
+      () => {
+        const overlay = document.querySelector('.content-overlay')
+        overlay.classList.remove('is-active')
+        scroll.unfreeze()
+      },
+      false
+    )
   }
 
   render() {

@@ -25,7 +25,7 @@ class Data extends React.Component {
 
   handleCategoryChange = e => {
     const tag = e.target
-    this.setState({ param: false }, () => {
+    this.setState({ param: false, searchTerm: '' }, () => {
       this.props.updateCharts('category', tag.name, false)
     })
   }
@@ -40,6 +40,7 @@ class Data extends React.Component {
       behavior: 'smooth'
     })
 
+    this.setState({ searchTerm: e.target.value })
     this.props.updateCharts('search', e.target.value)
   }
 
@@ -103,6 +104,8 @@ class Data extends React.Component {
     window.scrollTo({
       top: 0
     })
+
+    this.setState({ param: false, searchTerm: '' })
   }
   render() {
     const {
@@ -111,7 +114,7 @@ class Data extends React.Component {
       filteredCategories,
       queried
     } = this.props
-    const { page, pageContent } = this.state
+    const { page, pageContent, searchTerm } = this.state
 
     const header = pageContent.find(
       content => content.component === 'page-header'
@@ -138,6 +141,7 @@ class Data extends React.Component {
                   type="search"
                   placeholder="Search"
                   onChange={this.handleSearch}
+                  value={searchTerm}
                 />
               </div>
             </div>

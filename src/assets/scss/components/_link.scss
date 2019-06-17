@@ -4,11 +4,9 @@ a {
   background-repeat: repeat-x;
   background-position: 0 100%;
 
-  &:focus {
+  &:not(.download):focus {
     padding: 0 0.125rem;
-    background-color: rgba($color__focus, 0.15);
-    border: solid 1px $color__focus;
-    outline: 0;
+    @extend %link-focus;
   }
 
   &::before,
@@ -70,48 +68,32 @@ a {
   }
 
   #page-header &:not([class]) {
-    background-repeat-x: no-repeat;
+    background-repeat: no-repeat;
     background-size: 80% 1px;
   }
 
   &.menu-item__link {
     width: 100%;
-    font-weight: bold;
-    text-align: left;
-    text-transform: uppercase;
-    @include font-size(16px);
-    @extend %link-gray;
+    @extend %nav-link;
+    padding-left: 1.25rem;
 
-    @include breakpoint('large', 'max-width') {
-      padding: 1.75rem;
-      border-left: 6px solid transparent;
-
-      &:hover,
-      &:focus {
-        border-left: 6px solid $color__orange;
-      }
-    }
-
-    @include breakpoint('large') {
-      text-align: center;
-    }
-
-    &:not(.profile) {
-      @include breakpoint('large') {
-        padding: 0.25rem 0.5rem;
-      }
+    ~ ul a {
+      @extend %nav-summary-link;
+      color: rgba($color__gray-darkest, 0.65);
     }
   }
 }
 
 [class^='icon-'] {
+  transition: all 0.2s ease-in-out;
+
   &::before,
   &::after {
     @extend %icon-pseudo-element;
-    transition: all 0.2s ease-in-out;
 
-    section:not(.page-header):not(.site-footer) & {
+    section:not(.page-header):not(.site-footer) &:not(:hover):not(:focus) {
       color: rgba($color__gray-medium-cool, 0.5);
+      transition: all 0.2s ease-in-out;
     }
   }
 
@@ -151,9 +133,5 @@ a {
 .icon-download {
   &::after {
     content: '\004e';
-  }
-
-  #page-header & {
-    color: $color__gray-darkest;
   }
 }
