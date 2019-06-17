@@ -5,12 +5,13 @@
     &__content {
       position: relative;
       min-height: 500px;
+      margin: 0 calc((100vw - 100%) / -2);
       color: $color__white;
       background-image: url('../images/taiwan-dots_small.png'),
         url('../images/sb_header_small.jpg');
-      background-repeat: no-repeat, repeat;
+      background-repeat: no-repeat, no-repeat;
       background-position: 20px bottom, left bottom;
-      background-size: 106px, contain;
+      background-size: 106px, cover;
 
       &-wrapper {
         position: absolute;
@@ -54,12 +55,12 @@
       @include breakpoint('medium') {
         background-image: url('../images/taiwan-dots_large.png'),
           url('../images/sb_header_large.jpg');
-        background-size: contain, contain;
+        background-size: contain, cover;
       }
 
       @include breakpoint('large') {
         min-height: 650px;
-        background-position: 16% bottom, left bottom;
+        background-position: 16% bottom, center top;
       }
     }
 
