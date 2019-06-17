@@ -10,70 +10,72 @@ export default class Footer extends React.Component {
 
     return (
       <footer className="site-footer">
-        <section className="site-footer__description">
-          <a
-            href="https://www.csis.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="csis-link"
-          >
-            <img 
-              src={logo} 
-              className="csis-logo"  
-              alt="Center for Strategic and International Studies"
-              title="Center for Strategic and   International Studies" 
-            />
-          </a>
+        <div className="breakpoint">
+          <section className="site-footer__description">
+            <a
+              href="https://www.csis.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="csis-link"
+            >
+              <img 
+                src={logo} 
+                className="csis-logo"  
+                alt="Center for Strategic and International Studies"
+                title="Center for Strategic and   International Studies" 
+              />
+            </a>
           
-          <div className="site-footer__description-details">
-            {ValueToJSX(FooterContent.description[0])}
-          </div>
+            <div className="site-footer__description-details">
+              {ValueToJSX(FooterContent.description[0])}
+            </div>
 
-          <h5 className="faded-half">Follow Us</h5>
-          <ul className="site-footer__description-social share">
-            <li>
-              <a
-                href="https://www.facebook.com/CSIS.org/"
-                className="icon icon-facebook"
-              >
-                <span className="visually-hidden">Facebook</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/CSIS" className="icon icon-twitter">
-                <span className="visually-hidden">Twitter</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/company/csis"
-                className="icon icon-linkedin"
-              >
-                <span className="visually-hidden">LinkedIn</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.youtube.com/channel/UCr5jq6MC_VCe1c5ciIZtk_w"
-                className="icon icon-youtube"
-              >
-                <span className="visually-hidden">Youtube</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/csis/?hl=en"
-                className="icon icon-instagram"
-              >
-                <span className="visually-hidden">Instagram</span>
-              </a>
-            </li>
-          </ul>
-        </section>
+            <h5 className="faded-half">Follow Us</h5>
+            <ul className="site-footer__description-social share">
+              <li>
+                <a
+                  href="https://www.facebook.com/CSIS.org/"
+                  className="icon icon-facebook"
+                >
+                  <span className="visually-hidden">Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/CSIS" className="icon icon-twitter">
+                  <span className="visually-hidden">Twitter</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/csis"
+                  className="icon icon-linkedin"
+                >
+                  <span className="visually-hidden">LinkedIn</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/channel/UCr5jq6MC_VCe1c5ciIZtk_w"
+                  className="icon icon-youtube"
+                >
+                  <span className="visually-hidden">Youtube</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/csis/?hl=en"
+                  className="icon icon-instagram"
+                >
+                  <span className="visually-hidden">Instagram</span>
+                </a>
+              </li>
+            </ul>
+          </section>
 
-        <section className="site-footer__copyright faded-half">
-          {ValueToJSX(FooterContent.copyright[0])}
-        </section>
+          <section className="site-footer__copyright--desktop faded-half">
+            {ValueToJSX(FooterContent.copyright[0])}
+          </section>
+        </div>
 
         <section className="site-footer__report">
           <div className='site-footer__report-title'>
@@ -95,6 +97,10 @@ export default class Footer extends React.Component {
           <div className='site-footer__report-download'>
             <li>{ValueToJSX(FooterContent.southbound.download)}</li>
           </div>
+        </section>
+
+        <section className="site-footer__copyright--mobile faded-half">
+          {ValueToJSX(FooterContent.copyright[0])}
         </section>
       </footer>
     )

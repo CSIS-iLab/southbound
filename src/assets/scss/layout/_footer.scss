@@ -14,13 +14,15 @@
     opacity: 0.5;
   }
 
-  &__description {
-    padding: 2.5rem 1.25rem;
-    background-color: $color__black-light;
-
+  .breakpoint {
     @include breakpoint('medium') {
       flex-basis: 33%;
     }
+  }
+
+  &__description {
+    padding: 2.5rem 1.25rem;
+    background-color: $color__black-light;
 
     &-details {
       p {
@@ -41,9 +43,7 @@
     }
   }
 
-  &__copyright {
-    order: 3;
-    padding: 0.75rem 1.25rem 1.25rem;
+  &__copyright--mobile {
     background-color: $color__black-light;
 
     @include breakpoint('medium') {
@@ -52,6 +52,25 @@
     
     p {
       @include font-size(14px);
+      margin: 0.75rem 1.25rem 1.25rem;
+    }
+
+    a {
+      color: $color__white;
+    }
+  }
+
+  &__copyright--desktop {
+    display: none;
+    background-color: $color__black-light;
+
+    @include breakpoint('medium') {
+      display: block;
+    }
+    
+    p {
+      @include font-size(14px);
+      margin: 0.75rem 1.25rem 1.25rem;
     }
 
     a {
@@ -128,10 +147,6 @@
       }
     
     }
-  }
-
-  &__copyright {
-    background-color: $color__black-light;
   }
 
   &__report {
