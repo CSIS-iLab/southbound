@@ -10,7 +10,7 @@ follow:
 copyright:
   - |-
     ©2019 by the Center for Strategic
-      and  International Studies. All rights reserved. |<a class="privacy-policy" href="https://www.csis.org/privacy-policy" target="_blank" rel="nofollow"> Privacy Policy</a> | <a class="privacy-policy" href="https://www.csis.org/reprint-permissions" target="_blank" rel="nofollow">Reprint Permissions</a>
+      and  International Studies. All rights reserved. |<a class="privacy-policy" href="https://www.csis.org/privacy-policy" target="_blank" rel="nofollow noreferrer"> Privacy Policy</a> | <a class="privacy-policy" href="https://www.csis.org/reprint-permissions" target="_blank" rel="nofollow noreferrer">Reprint Permissions</a>
 southbound:
   cover: 'https://res.cloudinary.com/csisideaslab/image/upload/v1560804941/southbound/southbound-cover.png'
   report:

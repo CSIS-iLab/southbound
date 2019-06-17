@@ -64,8 +64,11 @@ a {
     }
 
     &[class] {
-      @include font-size(15px);
       background-size: 1px 0;
+
+      &:not(.icon-external) {
+        @include font-size(15px);
+      }
 
       &:not(.icon) {
         color: rgba($color__gray-darkest, 0.65);

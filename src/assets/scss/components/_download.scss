@@ -1,5 +1,4 @@
 .download {
-  display: inline-flex;
   align-items: center;
   padding: 0.6rem 1.2rem;
 
@@ -8,6 +7,7 @@
   }
 
   .site-footer & {
+    display: inline-flex;
     background-color: rgba($color__gray-lightest, 0.2);
     box-shadow: 0 2px 4px 0 rgba($color__black, 0.04);
 
@@ -80,6 +80,7 @@
 
   .site-header &,
   .page-header & {
+    display: block;
     max-width: 280px;
     margin: 0 auto 1.5rem;
 

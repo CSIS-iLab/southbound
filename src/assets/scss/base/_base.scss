@@ -44,10 +44,10 @@ main {
 
   @include breakpoint('medium') {
     padding: 0 $size__padding-desktop;
+  }
 
-    &.about {
-      padding-bottom: 4rem;
-    }
+  &.about {
+    padding-bottom: 4rem;
   }
 }
 

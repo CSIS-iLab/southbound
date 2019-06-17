@@ -21,7 +21,7 @@ export default class Footer extends React.Component {
               <Logo
                 className="csis-link__logo"
                 alt="Center for Strategic and International Studies"
-                title="Center for Strategic and   International Studies"
+                title="Center for Strategic and International Studies"
               />
             </a>
             <div className="site-footer__description-details">
