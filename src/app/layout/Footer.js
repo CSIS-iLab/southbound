@@ -2,6 +2,7 @@ import React from 'react'
 import GetData from '../helpers/GetData'
 import ValueToJSX from '../helpers/ValueToJSX'
 import logo from '../../assets/images/csis_logo-long.svg'
+import southboundReport from '../../assets/images/southbound-cover.png'
 
 export default class Footer extends React.Component {
   render() {
@@ -80,24 +81,41 @@ export default class Footer extends React.Component {
         </div>
 
         <section className="site-footer__report">
-          <div className='site-footer__report-title'>
-            {Object.keys(FooterContent.southbound.report).map(key => {
-              return ValueToJSX(FooterContent.southbound.report[key], null, key)
-            })}
+          <div className="site-footer__report-image">
+            <a
+              href="https://www.csis.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="csis-link"
+            >
+              <img 
+                src={southboundReport} 
+                className="csis-logo"  
+                alt="Center for Strategic and International Studies"
+                title="Center for Strategic and   International Studies" 
+              />
+            </a>
           </div>
+          <div className="site-footer__report-details">
+            <div className='site-footer__report-details-title'>
+              {Object.keys(FooterContent.southbound.report).map(key => {
+                return ValueToJSX(FooterContent.southbound.report[key], null, key)
+              })}
+            </div>
 
-          <div className="site-footer__report-authors">
-            {Object.keys(FooterContent.southbound.authors).map(key => {
-              return ValueToJSX(FooterContent.southbound.authors[key], null, key)
-            })}
-          </div>
-          <div className="site-footer__report-info">
-            {Object.keys(FooterContent.southbound.info).map(key => {
-              return ValueToJSX(FooterContent.southbound.info[key], null, key)
-            })}
-          </div>
-          <div className='site-footer__report-download'>
-            <li>{ValueToJSX(FooterContent.southbound.download)}</li>
+            <div className="site-footer__report-details-authors">
+              {Object.keys(FooterContent.southbound.authors).map(key => {
+                return ValueToJSX(FooterContent.southbound.authors[key],null, key)
+              })}
+            </div>
+            <div className="site-footer__report-details-info">
+              {Object.keys(FooterContent.southbound.info).map(key => {
+                return ValueToJSX(FooterContent.southbound.info[key],   null, key)
+              })}
+            </div>
+            <div className='site-footer__report-details-download'>
+              <li>{ValueToJSX(FooterContent.southbound.download)}</li>
+            </div>
           </div>
         </section>
       </footer>

@@ -69,73 +69,85 @@
   }
 
   &__report {
-    padding: 2.5rem 1.25rem;
     background-color: $color__gray-darker;
 
     @include breakpoint('medium') {
+      display: flex;
       flex-basis: 66.6%;
     }
 
-    &-title {
-      h4 {
-        margin: 0;
-        color: $color__white;
-      }
-
-      p {
-        margin: 0 0 1.5rem;
-      }
+    &-image {
+      margin: 2.5rem 1.5rem 0 3rem;;
     }
 
-    &-authors {
-      p {
-        @include font-size(16px);
+    &-details {
+      margin-left: 1.25rem;
 
-        &:first-of-type {
+      @include breakpoint('medium') {
+        margin-top: 2.5rem;
+        margin-left: 0;
+      }
+
+      &-title {
+        h4 {
           margin: 0;
-          text-transform: uppercase;
-          opacity: 0.5;
-        }
-
-        &:not(:first-of-type) {
-          margin: 0;
-          opacity: 0.9;
-        }
-      }
-    }
-
-    &-info {
-      margin: 1rem 0;
-
-      p {
-        margin: 0;
-        @include font-size(14px);
-        opacity: 0.6;
-
-        &:last-of-type {
-          margin-top: 0.5rem;
-        }
-      }
-    }
-
-    &-download {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      height: 75px;
-      background-color: $color__gray-dark;
-
-      li {
-        margin-left: 20px;
-        list-style-type: none;
-
-        a {
           color: $color__white;
-          text-transform: uppercase;
-          @include font-size(15px);
+        }
+  
+        p {
+          margin: 0 0 1.5rem;
         }
       }
-    
+  
+      &-authors {
+        p {
+          @include font-size(16px);
+  
+          &:first-of-type {
+            margin: 0;
+            text-transform: uppercase;
+            opacity: 0.5;
+          }
+  
+          &:not(:first-of-type) {
+            margin: 0;
+            opacity: 0.9;
+          }
+        }
+      }
+  
+      &-info {
+        margin: 1rem 0;
+  
+        p {
+          margin: 0;
+          opacity: 0.6;
+          @include font-size(14px);
+  
+          &:last-of-type {
+            margin-top: 0.5rem;
+          }
+        }
+      }
+  
+      &-download {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 75px;
+        background-color: $color__gray-dark;
+  
+        li {
+          margin-left: 20px;
+          list-style-type: none;
+  
+          a {
+            color: $color__white;
+            text-transform: uppercase;
+            @include font-size(15px);
+          }
+        }
+      }
     }
   }
 }
