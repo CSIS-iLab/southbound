@@ -143,6 +143,7 @@ a {
   &::after {
     @include font-size(12px);
     content: '\0043';
+    margin-right: 0.25rem;
   }
 }
 
