@@ -71,7 +71,12 @@ export default class HeaderNav extends React.Component {
     return (
       <nav className="site-header__nav" role="navigation">
         <div className="site-logo">
-          <a href="https://www.csis.org" className="link-csis">
+          <a
+            href="https://www.csis.org"
+            className="link-csis"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Logo />
           </a>
           <NavLink className="link-home" to="/" exact>

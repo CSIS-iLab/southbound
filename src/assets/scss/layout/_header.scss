@@ -66,6 +66,12 @@
         color: $color__white;
       }
 
+      &:focus {
+        padding: 0;
+        background-color: transparent;
+        border: 0;
+      }
+
       @include breakpoint('large', 'max-width') {
         display: inline-flex;
         height: 100%;
