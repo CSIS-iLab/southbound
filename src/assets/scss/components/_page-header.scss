@@ -1,5 +1,4 @@
 #page-header {
-  max-width: $size__header__max-width;
   margin: 0 -1.5rem;
 
   .page-header {
@@ -129,34 +128,6 @@
 
         .icon-download {
           text-transform: uppercase;
-        }
-      }
-
-      .download {
-        display: block;
-        max-width: 280px;
-        margin: 0 auto 1.5rem;
-        padding: 0.6rem 1.2rem;
-        text-align: left;
-        background-color: $color__gray-lighter;
-        box-shadow: 0 2px 4px 0 rgba($color__black, 0.04);
-
-        &:not(:focus) {
-          border: solid 1px rgba($color__gray-light, 0.48);
-        }
-
-        &:hover,
-        &:focus {
-          background-color: $color__gray-light;
-
-          .link-download::after {
-            color: $color__gray-darkest;
-          }
-        }
-
-        p {
-          @extend %p4;
-          margin: 0;
         }
       }
     }

@@ -117,7 +117,7 @@ class Homepage extends React.Component {
                               Find in Report
                           </a>
                           <a
-                            href={`data/id/${section.chart}`}
+                            href={`data/id/${value[1]}`}
                             className="icon-graph"
                           >
                               View in Data Repository

@@ -9,6 +9,7 @@ import { Route } from 'react-router-dom'
 import SmoothScroll from 'smooth-scroll'
 import sheetData from './charts.json'
 import { withRouter } from 'react-router-dom'
+import scroll from '@threespot/freeze-scroll'
 
 class App extends Component {
   constructor(props) {
@@ -125,6 +126,16 @@ class App extends Component {
       header: '.site-header',
       speed: 500
     })
+
+    document.addEventListener(
+      'scrollStart',
+      () => {
+        const overlay = document.querySelector('.content-overlay')
+        overlay.classList.remove('is-active')
+        scroll.unfreeze()
+      },
+      false
+    )
   }
 
   render() {

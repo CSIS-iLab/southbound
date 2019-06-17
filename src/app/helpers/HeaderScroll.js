@@ -25,14 +25,19 @@ export default function HeaderScroll() {
 
     if (scrollPos < lastScrollPos) {
       header.classList.remove(hidden_class)
-      header.classList.add(minimal_class)
+
+      if (scrollPos > 250) {
+        header.classList.add(minimal_class)
+      }
     } else {
       header.classList.add(hidden_class)
     }
   } else {
     offsetScroll = true
     header.classList.remove(hidden_class)
-    header.classList.remove(minimal_class)
+    if (scrollPos < 250) {
+      header.classList.remove(minimal_class)
+    }
   }
 
   lastScrollPos = scrollPos

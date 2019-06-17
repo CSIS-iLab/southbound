@@ -4,7 +4,7 @@ input[type='checkbox'] {
 
   &:focus + label,
   &:focus + span.label {
-    @extend %focus;
+    @extend %form-focus;
   }
 }
 
@@ -22,7 +22,7 @@ input[type='search'] {
   }
 
   &:focus {
-    @extend %focus;
+    @extend %form-focus;
   }
 
   &::placeholder {
