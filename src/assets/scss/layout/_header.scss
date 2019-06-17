@@ -14,7 +14,7 @@
     transition: all 0.2s ease-in-out;
     @include full-width-background($color__gray-dark-cool, left, true);
 
-    @include breakpoint('large') {
+    @include breakpoint('medium') {
       display: block;
       width: 350px;
       line-height: 1.2;
@@ -26,7 +26,7 @@
     }
 
     &:not(.site-logo--csis):not(.site-logo--home) {
-      @include breakpoint('large') {
+      @include breakpoint('medium') {
         background-color: $color__gray-dark-cool;
       }
     }
@@ -35,7 +35,7 @@
       background-color: $color__black;
 
       &::before {
-        @include breakpoint('large') {
+        @include breakpoint('medium') {
           background-color: $color__black;
         }
       }
@@ -46,7 +46,7 @@
     }
 
     &.site-logo--home {
-      @include breakpoint('large') {
+      @include breakpoint('medium') {
         background-color: $color__orange;
 
         &::before {
@@ -72,7 +72,7 @@
         border: 0;
       }
 
-      @include breakpoint('large', 'max-width') {
+      @include breakpoint('medium', 'max-width') {
         display: inline-flex;
         height: 100%;
       }
@@ -80,13 +80,13 @@
       &.link-home {
         @extend %font-gibson;
         @include fluid-type(16px, 27px);
-        @include breakpoint('large', 'max-width') {
+        @include breakpoint('medium', 'max-width') {
           padding-right: 20px;
         }
       }
 
       &.link-csis {
-        @include breakpoint('large') {
+        @include breakpoint('medium') {
           display: inline-flex;
           margin-top: 1rem;
           padding-right: 20px;
@@ -99,7 +99,7 @@
       fill-opacity: 0.6;
       transition: all 0.2s ease-in-out;
 
-      @include breakpoint('large') {
+      @include breakpoint('medium') {
         width: 40px;
       }
     }
@@ -120,13 +120,13 @@
   z-index: 10;
 
   .site-logo {
-    @include breakpoint('large') {
+    @include breakpoint('medium') {
       display: flex;
       width: unset;
     }
 
     &::before {
-      @include breakpoint('large') {
+      @include breakpoint('medium') {
         background-color: $color__gray-darkest;
       }
     }
@@ -138,7 +138,7 @@
       &.link-home {
         background-color: $color__gray-dark-cool;
 
-        @include breakpoint('large') {
+        @include breakpoint('medium') {
           padding: 0 20px;
         }
       }
@@ -146,7 +146,7 @@
       &.link-csis {
         margin-top: 0;
         background-color: $color__gray-darkest;
-        @include breakpoint('large') {
+        @include breakpoint('medium') {
           padding-right: 20px;
         }
       }
