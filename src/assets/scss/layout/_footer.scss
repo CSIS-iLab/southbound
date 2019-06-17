@@ -41,40 +41,18 @@
     &-social {
       justify-content: flex-start;
     }
-  }
 
-  &__copyright--mobile {
-    background-color: $color__black-light;
-
-    @include breakpoint('medium') {
-      display: none;
-    }
-    
-    p {
-      @include font-size(14px);
-      margin: 0.75rem 1.25rem 1.25rem;
-    }
-
-    a {
-      color: $color__white;
-    }
-  }
-
-  &__copyright--desktop {
-    display: none;
-    background-color: $color__black-light;
-
-    @include breakpoint('medium') {
-      display: block;
-    }
-    
-    p {
-      @include font-size(14px);
-      margin: 0.75rem 1.25rem 1.25rem;
-    }
-
-    a {
-      color: $color__white;
+    &--copyright {
+      background-color: $color__black-light;
+      
+      p {
+        @include font-size(14px);
+        margin: 0.75rem 1.25rem 1.25rem;
+      }
+  
+      a {
+        color: $color__white;
+      }
     }
   }
 

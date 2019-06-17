@@ -72,7 +72,7 @@ export default class Footer extends React.Component {
             </ul>
           </section>
 
-          <section className="site-footer__copyright--desktop faded-half">
+          <section className="site-footer__description--copyright faded-half">
             {ValueToJSX(FooterContent.copyright[0])}
           </section>
         </div>
@@ -97,10 +97,6 @@ export default class Footer extends React.Component {
           <div className='site-footer__report-download'>
             <li>{ValueToJSX(FooterContent.southbound.download)}</li>
           </div>
-        </section>
-
-        <section className="site-footer__copyright--mobile faded-half">
-          {ValueToJSX(FooterContent.copyright[0])}
         </section>
       </footer>
     )
