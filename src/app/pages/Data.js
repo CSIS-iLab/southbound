@@ -127,7 +127,9 @@ class Data extends React.Component {
     return (
       <main className={page}>
         <section id="page-header">
-          {PageHeader(headerContent.text, this.state.title)}
+          <div className="page-header">
+            {PageHeader(headerContent.text, this.state.title)}
+          </div>
         </section>
         <div id="listings">
           <section className="listings__filters">
@@ -209,7 +211,6 @@ class Data extends React.Component {
                       <figure className="chart-figure">
                         <div className="chart-figure__graph" />
                         <figcaption className="chart-figure__caption">
-                          <p>CSIS China Power Project</p>
                           <p>{data.credits}</p>
                         </figcaption>
                       </figure>

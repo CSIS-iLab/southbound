@@ -71,7 +71,7 @@ export default class Footer extends React.Component {
                   </a>
                 </li>
               </ul>
-            </div>{' '}
+            </div>
             <section className="site-footer__description-copyright ">
               {ValueToJSX(FooterContent.copyright[0])}
             </section>

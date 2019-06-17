@@ -109,13 +109,9 @@
     }
 
     main.data & {
+      margin: 0;
       color: $color__gray-medium-warm;
       line-height: 1.29;
-
-      &:first-child {
-        display: none;
-      }
-
       @extend %font-gibson;
     }
   }
