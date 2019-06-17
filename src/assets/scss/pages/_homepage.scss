@@ -100,7 +100,7 @@
   #further-reading {
     @include full-width-background($color__gray-lighter);
     margin-top: 4rem;
-    padding: 2.5rem 0 1.5rem;
+    padding: 2.5rem 0 4rem;
     background-color: $color__gray-lighter;
     @extend %further-reading;
   }
