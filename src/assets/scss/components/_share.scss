@@ -1,11 +1,14 @@
 .share {
   display: flex;
-  justify-content: center;
   align-items: center;
   @extend %plain-list;
 
   li {
     padding-left: 0;
+  }
+
+  .page-header & {
+    justify-content: center;
   }
 
   .icon {
@@ -36,7 +39,7 @@
       width: 3.1rem;
       height: 3.1rem;
       margin: 0 0.5rem 0 0;
-      color: $color__white;
+      color: rgba($color__white, 0.8);
 
       @include breakpoint('medium') {
         width: 2.1rem;
@@ -48,10 +51,10 @@
       }
 
       &:hover {
-        background-color: $color__white;
+        background-color: rgba($color__white, 0.9);
 
         &::before {
-          color: $color__black-light;
+          color: $color__gray-darkest;
         }
       }
     }

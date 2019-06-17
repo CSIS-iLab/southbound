@@ -74,18 +74,25 @@ h5 {
 ============================*/
 
 p {
-  section & {
-    @extend %p1;
-    margin-top: 0.25rem;
-    margin-bottom: 1rem;
-
-    .about & {
-      @include font-size(18px);
-    }
+  .site-footer & {
+    @extend %p3;
+    color: rgba($color__white, 0.8);
   }
 
-  aside & {
-    @extend %p2;
+  main {
+    section & {
+      @extend %p1;
+      margin-top: 0.25rem;
+      margin-bottom: 1rem;
+
+      .about & {
+        @include font-size(18px);
+      }
+    }
+
+    aside & {
+      @extend %p2;
+    }
   }
 }
 

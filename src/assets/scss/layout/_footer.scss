@@ -1,34 +1,64 @@
 .site-footer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 0;
-  color: $color__gray-lightest;
-  background-color: $color__black-light;
+  max-width: $size__header__max-width;
+  background-color: $color__gray-darkest;
+  @include full-width-background($color__gray-darkest);
+  @extend %font-gibson;
 
-  @include breakpoint('medium') {
-    flex-direction: row;
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
   }
 
-  .faded-half {
-    opacity: 0.5;
+  p {
+    @extend %font-hind;
   }
 
-  .breakpoint {
+  &__copyright {
+    flex-basis: 100%;
     @include breakpoint('medium') {
-      flex-basis: 33.3%;
+      display: none;
+    }
+
+    p {
+      margin: 0;
+      padding: 0.75rem 20px 1.5rem;
+
+      @extend %p4;
+      color: rgba($color__white, 0.5);
     }
   }
 
   &__description {
-    margin: 2.5rem 1.25rem;
-    background-color: $color__black-light;
+    @include breakpoint('medium', 'max-width') {
+      padding: 3rem 20px;
+    }
 
-    &-details {
+    @include breakpoint('medium') {
+      flex-basis: 425px;
+      padding: 3rem 3rem 1rem 20px;
+    }
+
+    .csis-link {
+      &:hover svg {
+        fill-opacity: 1;
+      }
+
+      svg {
+        max-width: 325px;
+        transition: all 0.2s ease-in-out;
+        fill-opacity: 0.77;
+      }
+    }
+
+    &-copyright {
+      @include breakpoint('medium', 'max-width') {
+        display: none;
+      }
+
       p {
-        margin: 1rem 0;
-        opacity: 0.8;
-        @include font-size(16px);
+        margin: 3rem 0 0;
+        @extend %p4;
+        color: rgba($color__white, 0.5);
       }
     }
 
@@ -38,113 +68,87 @@
         align-items: center;
       }
 
-      h5 {
-        color: $color__white;
+      > div {
+        @extend %p3;
+        margin: 0 0 0.25rem;
+        color: rgba($color__white, 0.5);
+        letter-spacing: 1px;
         text-transform: uppercase;
-        @include font-size(20px);
 
         @include breakpoint('medium') {
           margin: 0 0.75rem 0 0;
-          @include font-size(16px);
         }
-      }
-
-      ul {
-        justify-content: flex-start;
-      }
-    }
-
-    &--copyright {
-      background-color: $color__black-light;
-      
-      p {
-        @include font-size(14px);
-        margin: 0.75rem 1.25rem 1.25rem;
-      }
-  
-      a {
-        color: $color__white;
       }
     }
   }
 
   &__report {
-    background-color: $color__gray-darker;
+    background-color: $color__gray-dark-cool;
+
+    @include breakpoint('medium', 'max-width') {
+      flex-basis: 100%;
+      padding: 3rem 20px;
+    }
 
     @include breakpoint('medium') {
       display: flex;
-      flex-basis: 66.6%;
+      flex-basis: calc(100% - 425px);
+      padding: 3rem 20px 1rem;
+      @include full-width-background($color__gray-dark-cool);
+    }
+
+    &::before {
+      @include breakpoint('medium') {
+        background-color: $color__gray-darkest;
+      }
     }
 
     &-image {
-      margin: 2.5rem 1.5rem 0 3rem;;
+      margin-right: 1.5rem;
+      @include breakpoint('medium', 'max-width') {
+        display: none;
+      }
     }
 
     &-details {
-      margin-left: 1.25rem;
-
-      @include breakpoint('medium') {
-        margin-top: 2.5rem;
-        margin-left: 0;
-      }
-
       &-title {
         h4 {
           margin: 0;
           color: $color__white;
         }
-  
+
         p {
-          margin: 0 0 1.5rem;
+          @extend %p2;
+          margin: 0 0 2rem;
+          color: $color__white;
         }
       }
-  
+
       &-authors {
-        p {
-          @include font-size(16px);
-  
+        > div {
+          @extend %p3;
+
           &:first-of-type {
-            margin: 0;
+            color: rgba($color__white, 0.5);
             text-transform: uppercase;
-            opacity: 0.5;
           }
-  
+
           &:not(:first-of-type) {
-            margin: 0;
-            opacity: 0.9;
+            color: rgba($color__white, 0.9);
+            font-weight: 100;
           }
         }
       }
-  
+
       &-info {
         margin: 1rem 0;
-  
-        p {
-          margin: 0;
-          opacity: 0.6;
-          @include font-size(14px);
-  
+
+        > div {
+          @extend %p4;
+          color: rgba($color__white, 0.6);
+
           &:last-of-type {
-            margin-top: 0.5rem;
-          }
-        }
-      }
-  
-      &-download {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        height: 75px;
-        background-color: $color__gray-dark;
-  
-        li {
-          margin-left: 20px;
-          list-style-type: none;
-  
-          a {
-            color: $color__white;
-            text-transform: uppercase;
-            @include font-size(15px);
+            margin-top: 0.25rem;
           }
         }
       }
