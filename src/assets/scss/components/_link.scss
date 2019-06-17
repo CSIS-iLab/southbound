@@ -74,6 +74,15 @@ a {
         color: rgba($color__gray-darkest, 0.65);
       }
 
+      &.icon-external {
+        &:hover {
+          &,
+          &::after {
+            color: $color__orange;
+          }
+        }
+      }
+
       section:not(#further-reading) & {
         text-transform: uppercase;
       }
@@ -107,7 +116,7 @@ a {
   &::after {
     @extend %icon-pseudo-element;
 
-    section:not(.page-header):not(.site-footer) &:not(:hover):not(:focus) {
+    section:not(.page-header):not(.site-footer) {
       color: rgba($color__gray-medium-cool, 0.5);
       transition: all 0.2s ease-in-out;
     }
