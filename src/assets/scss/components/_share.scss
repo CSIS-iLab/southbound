@@ -36,6 +36,7 @@
       width: 3rem;
       height: 3rem;
       margin: 0 0.5rem 0 0;
+      color: $color__white;
 
       &:not(:focus) {
         border: 1px solid rgba($color__white, 0.5);
