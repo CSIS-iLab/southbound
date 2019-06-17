@@ -104,7 +104,10 @@ export default class HeaderNav extends React.Component {
             )
           })}
           <li className="menu-item menu-item--large ">
-            <a href="@" className="download">
+            <a
+              href="https://csis-prod.s3.amazonaws.com/s3fs-public/publication/180613_Glaser_NewSouthboundPolicy_Web.pdf?AcoayLFliB9_iAvbmYvP_jM27mEXw5xL"
+              className="download"
+            >
               <span className="icon-download">Download the Full Report</span>
             </a>
           </li>

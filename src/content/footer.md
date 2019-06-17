@@ -32,5 +32,5 @@ southbound:
     publisher: |-
            <div>CSIS/Rowman & Littlefield
   download: |-
-        <a href="@" className="download"><img src="https://res.cloudinary.com/csisideaslab/image/upload/v1560804941/southbound/southbound-cover.png" class="download__image" alt="The New Southbound Policy Report Cover" title="Download The New Southbound Policy Report"><span  class="icon-download">Download the Full Report</span></a>
+        <img src="https://res.cloudinary.com/csisideaslab/image/upload/v1560804941/southbound/southbound-cover.png" class="download__image" alt="The New Southbound Policy Report Cover" title="Download The New Southbound Policy Report"><span  class="icon-download">Download the Full Report</span>
 ---
