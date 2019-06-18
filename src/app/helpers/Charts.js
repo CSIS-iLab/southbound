@@ -33,7 +33,29 @@ export default {
     }
   },
   // percapitagrowth
-  '5.1': {
+  '5.1.1': {
+    chart: {
+      height: 500,
+      type: 'line'
+    },
+    xAxis: {
+      offset: -200
+    },
+    yAxis: {
+      title: {
+        text: 'Change'
+      },
+      tickInterval: 2,
+      max: 14,
+      min: -14
+    },
+    tooltip: {
+      shared: true,
+      valueSuffix: '%'
+    }
+  },
+  // percapitagrowth
+  '5.1.2': {
     chart: {
       height: 500,
       type: 'line'
