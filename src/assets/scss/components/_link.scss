@@ -2,7 +2,7 @@ a {
   text-decoration: none;
 
   background-repeat: no-repeat;
-  background-position: 0 100%;
+  background-position: 0 95%;
 
   &:not(.download):focus {
     @extend %link-focus;
@@ -86,8 +86,13 @@ a {
     }
   }
 
+  .jump-links & {
+    @include font-size(18px);
+  }
+
   aside &,
-  #further-reading & {
+  #further-reading &,
+  .jump-links & {
     color: rgba($color__gray-darkest, 0.75);
   }
 
