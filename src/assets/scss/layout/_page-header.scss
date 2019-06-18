@@ -117,6 +117,10 @@
         padding: 4rem $size__padding-desktop;
       }
 
+      .errorpage & {
+        display: none;
+      }
+
       main:not(.data) & {
         margin-bottom: 4rem;
 
@@ -165,7 +169,6 @@
           margin: 0;
 
           &:not(:only-child):first-child {
-            @extend %font-gibson;
             @include font-size(16px);
             text-transform: uppercase;
           }
