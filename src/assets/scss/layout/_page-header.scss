@@ -3,6 +3,10 @@
     margin-top: $size__header-height-mobile;
   }
 
+  @include breakpoint('large') {
+    margin: 0 calc((#{$size__header__max-width} - 100%) / -2) 3.5rem;
+  }
+
   .page-header {
     &__content {
       position: relative;
@@ -81,8 +85,7 @@
 
       &-subtitle,
       &-date {
-        .data &,
-        .about & {
+        main:not(.homepage) & {
           display: none;
         }
       }
@@ -114,6 +117,10 @@
 
       @include breakpoint('large') {
         padding: 4rem $size__padding-desktop;
+      }
+
+      .errorpage & {
+        display: none;
       }
 
       main:not(.data) & {
@@ -151,23 +158,10 @@
           flex-basis: calc(100% - 280px - 5rem);
         }
 
-        ul {
-          @extend %plain-list;
-        }
+        @extend %link-list;
 
         li {
           margin: 0;
-          padding-left: 0;
-        }
-
-        p {
-          margin: 0;
-
-          &:not(:only-child):first-child {
-            @extend %font-gibson;
-            @include font-size(16px);
-            text-transform: uppercase;
-          }
         }
       }
     }
@@ -225,8 +219,7 @@
         &:first-child:not(:only-child) {
           text-transform: uppercase;
 
-          .data &,
-          .about & {
+          main:not(.homepage) & {
             display: none;
           }
           @include fluid-type(34px, 28px);
@@ -240,9 +233,5 @@
         margin-top: 1.25rem;
       }
     }
-  }
-
-  @include breakpoint('large') {
-    margin: 0 calc((#{$size__header__max-width} - 100%) / -2);
   }
 }

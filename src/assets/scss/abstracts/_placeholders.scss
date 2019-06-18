@@ -190,6 +190,26 @@
   }
 }
 
+%link-list {
+  ul {
+    @extend %plain-list;
+  }
+
+  li {
+    padding-left: 0;
+  }
+
+  p {
+    margin: 0;
+
+    &:not(:only-child):first-child {
+      @extend %font-gibson;
+      @include font-size(16px);
+      text-transform: uppercase;
+    }
+  }
+}
+
 %icon-pseudo-element {
   position: relative;
   display: inline-block;

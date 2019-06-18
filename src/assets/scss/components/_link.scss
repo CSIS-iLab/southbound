@@ -45,7 +45,7 @@ a {
     );
     background-size: 100% 1px;
 
-    &:hover {
+    &:not(.download):hover {
       color: $color__orange;
       background-size: 100% 0;
     }
@@ -65,7 +65,7 @@ a {
     &[class]:not(.icon-external) {
       background-size: 1px 0;
 
-      &:not(.icon):not(.icon-report):not(.icon-graph) {
+      &:not(.icon):not(.icon-report):not(.icon-graph):not(.download) {
         color: rgba($color__gray-darkest, 0.65);
       }
 
@@ -92,7 +92,8 @@ a {
 
   aside &,
   #further-reading &,
-  .jump-links & {
+  .jump-links &,
+  .directory-links & {
     color: rgba($color__gray-darkest, 0.75);
   }
 

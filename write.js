@@ -7,7 +7,7 @@ async function getData() {
 
   let spreadsheet = await sheets.spreadsheets.get({
     spreadsheetId: SPREADSHEET_ID,
-    auth: process.env.GAPI_KEY
+    auth: 'AIzaSyA1ol27C1FVv-F6940xNXY-VImb5ZCE3JE'
   })
 
   let ranges = spreadsheet.data.sheets.map(sheet => sheet.properties.title)
@@ -16,7 +16,7 @@ async function getData() {
     let response = await sheets.spreadsheets.values.get({
       spreadsheetId: SPREADSHEET_ID,
       range: `'${sheet}'!A:Z`,
-      auth: process.env.GAPI_KEY
+      auth: 'AIzaSyA1ol27C1FVv-F6940xNXY-VImb5ZCE3JE'
     })
 
     let values = response.data.values

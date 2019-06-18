@@ -1,0 +1,19 @@
+.errorpage {
+  #error-directory {
+    max-width: $size__one-column__max-width;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .directory {
+    margin-bottom: 5rem;
+
+    &-links {
+      @extend %link-list;
+
+      li {
+        @extend %p2;
+      }
+    }
+  }
+}
