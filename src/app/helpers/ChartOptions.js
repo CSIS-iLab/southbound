@@ -97,7 +97,8 @@ export default function(options) {
         }
       },
       title: {
-        margin: 20
+        margin: 10,
+        x: -15
       }
     },
     legend: {

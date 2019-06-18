@@ -45,9 +45,9 @@ export default {
       title: {
         text: 'Change'
       },
-      tickInterval: 4,
-      max: 12,
-      min: -12
+      tickInterval: 2,
+      max: 14,
+      min: -14
     },
     tooltip: {
       shared: true,
@@ -271,7 +271,8 @@ export default {
   // destinationnsp
   '8.3': {
     chart: {
-      type: 'bar'
+      type: 'bar',
+      marginRight: 20
     },
     yAxis: {
       ceiling: 100,
@@ -310,7 +311,8 @@ export default {
   // shareofinbound
   '8.5': {
     chart: {
-      type: 'bar'
+      type: 'bar',
+      marginRight: 20
     },
     yAxis: {
       ceiling: 100,
