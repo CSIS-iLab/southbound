@@ -13,6 +13,7 @@ figure.component-image {
 
   figcaption.img-caption {
     margin-top: 0.5rem;
+    @extend %font-gibson;
   }
 }
 
