@@ -117,7 +117,6 @@ export default function(options) {
       pie: {
         colors: ChartColors,
         dataLabels: {
-          distance: 25,
           crop: false,
           overflow: 'allow'
         },
@@ -138,7 +137,7 @@ export default function(options) {
       rules: [
         {
           condition: {
-            maxWidth: 600
+            maxWidth: 480
           },
           chartOptions: {
             plotOptions: {
@@ -160,6 +159,13 @@ export default function(options) {
             },
             legend: {
               align: isDataRepo ? 'left' : 'center'
+            },
+            plotOptions: {
+              pie: {
+                dataLabels: {
+                  distance: 50
+                }
+              }
             },
             credits: {
               position: { align: isDataRepo ? 'right' : 'center' }
