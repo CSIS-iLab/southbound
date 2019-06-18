@@ -33,6 +33,11 @@
           color: $color__gray-lightest;
         }
       }
+
+      &[tabindex]:focus {
+        @extend %link-focus;
+        outline: 0;
+      }
     }
 
     .site-footer & {
@@ -86,11 +91,5 @@
         }
       }
     }
-  }
-
-  &:focus {
-    padding: 0 0.125rem;
-    background-position: 0 87.5%;
-    outline: 0;
   }
 }
