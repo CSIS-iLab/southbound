@@ -10,10 +10,21 @@ const HeaderContent = GetData('header')
 export default class PageHeader extends React.Component {
   render() {
     const { title, source } = this.props
+    const taiwan_graphic =
+      window.innerWidth > 480
+        ? 'https://res.cloudinary.com/csisideaslab/image/upload/v1560872950/southbound/taiwan-dots_large.png'
+        : 'https://res.cloudinary.com/csisideaslab/image/upload/v1560872950/southbound/taiwan-dots_small.png'
+
     return (
       <React.Fragment key="page-header">
         <section className="page-header__content">
           <div className="page-header__content-wrapper">
+            <img
+              className="page-header__content-graphic"
+              src={taiwan_graphic}
+              alt="Decorative Taiwan Graphic"
+            />
+
             <div
               className="h1 page-header__content-site"
               itemProp="name headline"
@@ -30,15 +41,17 @@ export default class PageHeader extends React.Component {
               <span>{title}</span>
             </h1>
 
-            <div className="page-header__content-subtitle">
-              <span>{HeaderContent.hero.subtitle}</span>
-            </div>
-            <div className="page-header__content-date">
-              {HeaderContent.hero.published}
-            </div>
+            <div className="page-header__content-details">
+              <div className="page-header__content-subtitle">
+                <span>{HeaderContent.hero.subtitle}</span>
+              </div>
+              <div className="page-header__content-date">
+                {HeaderContent.hero.published}
+              </div>
 
-            <div className="page-header__content-date">
-              {HeaderContent.hero.updated}
+              <div className="page-header__content-date">
+                {HeaderContent.hero.updated}
+              </div>
             </div>
           </div>
         </section>
