@@ -19,5 +19,9 @@ export default {
     to: '/about',
     index: 3,
     title: 'About'
-  }
+  },
+  errorpage: {
+    index: 4,
+    menu: false,
+  },
 }
