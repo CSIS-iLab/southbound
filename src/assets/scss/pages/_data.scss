@@ -68,10 +68,10 @@
     }
 
     &-box {
+      position: relative;
       display: flex;
       height: 3.75rem;
       margin-bottom: 2rem;
-      padding: 0 0.75rem;
       background-color: $color__white;
       border: solid 1px rgba($color__gray-dark, 0.15);
 
@@ -80,15 +80,17 @@
       }
 
       &::before {
+        position: absolute;
         @extend %icon-pseudo-element;
         top: 33%;
-        margin-right: 0.5rem;
+        margin-left: 1rem;
         color: rgba($color__gray-dark, 0.35);
         content: '\0041';
       }
 
       input {
-        width: calc(100% - 2rem);
+        width: 100%;
+        padding: 0 0.75rem 0 2.5rem;
       }
     }
   }
