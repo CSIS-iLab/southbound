@@ -6,7 +6,6 @@ import { ReactComponent as Logo } from '../../assets/images/csis_logo-long.svg'
 export default class Footer extends React.Component {
   render() {
     const FooterContent = GetData('footer')
-    const { siteStructure } = this.props
 
     return (
       <footer className="site-footer">

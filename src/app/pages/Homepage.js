@@ -113,7 +113,12 @@ class Homepage extends React.Component {
                             {chart.title}
                           </p>
                           <p>{chart.credits}</p>
-                          <a href={chart.pdf} className="icon-report">
+                          <a
+                            href={`https://csis-prod.s3.amazonaws.com/s3fs-public/publication/180613_Glaser_NewSouthboundPolicy_Web.pdf#${
+                              chart.pdf
+                            }?AcoayLFliB9_iAvbmYvP_jM27mEXw5xL`}
+                            className="icon-report"
+                          >
                               Find in Report
                           </a>
                           <a
