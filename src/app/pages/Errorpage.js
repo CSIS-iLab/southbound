@@ -40,9 +40,7 @@ class Errorpage extends React.Component {
   }
 
   render() {
-    const { pageContent, page, siteStructure } = this.state
-    console.log(siteStructure)
-
+    const { pageContent, page } = this.state
     return (
       <main className={page}>
         {pageContent
@@ -55,6 +53,7 @@ class Errorpage extends React.Component {
                   {Object.entries(section.content).map(value => {
                     return section.key === 'page-header' ? (
                       <PageHeader
+                        key={value[0]}
                         source={value[1]}
                         title={this.state.title}
                       />
@@ -67,6 +66,18 @@ class Errorpage extends React.Component {
             )
           })
           : ''}
+
+        <div id="error-directory">
+          <a
+            href="https://csis-prod.s3.amazonaws.com/s3fs-public/publication/180613_Glaser_NewSouthboundPolicy_Web.pdf?AcoayLFliB9_iAvbmYvP_jM27mEXw5xL"
+            className="download"
+          >
+            {ValueToJSX(GetData(page)['download'])}
+          </a>
+          <div className="directory-links">
+            {ValueToJSX(GetData(page)['directory-links'])}
+          </div>
+        </div>
       </main>
     )
   }

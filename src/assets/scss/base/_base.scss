@@ -46,8 +46,9 @@ main {
     padding: 0 $size__padding-desktop;
   }
 
-  &.about {
-    padding-bottom: 4rem;
+  &.about,
+  &.errorpage {
+    padding-bottom: 4.5rem;
   }
 }
 
