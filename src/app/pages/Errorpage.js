@@ -25,12 +25,43 @@ class Errorpage extends React.Component {
     document.title = `${this.state.title} | CSIS`
   }
 
+  componentWillUnmount() {
+    const triggers = Array.from(
+      document.querySelectorAll('.menu-trigger.is-active')
+    )
+    triggers.forEach(trigger => {
+      const target = document.querySelector(trigger.dataset.target)
+      CloseMenu(trigger, target)
+    })
+
+    window.scrollTo({
+      top: 0
+    })
+  }
+
   render() {
-    const { siteStructure } = this.state
+    const { pageContent, page, siteStructure } = this.state
     console.log(siteStructure)
+
     return (
-      <main>
-        <h1>This is the 404 page!!!</h1>
+      <main className={page}>
+        {pageContent
+          ? pageContent.map(section => {
+            return (
+              <section key={section.key} id={section.key} className={'row '}>
+                {section.title ? <h2>{section.title}</h2> : ''}
+
+                <div className={'subsection ' + section.component}>
+                  {Object.entries(section.content).map(value => {
+                    return section.key === 'page-header'
+                      ? PageHeader(value[1], this.state.title)
+                      : ValueToJSX(value[1], value[0])
+                  })}
+                </div>
+              </section>
+            )
+          })
+          : ''}
       </main>
     )
   }

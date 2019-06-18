@@ -82,7 +82,8 @@
       &-subtitle,
       &-date {
         .data &,
-        .about & {
+        .about &,
+        .errorpage & {
           display: none;
         }
       }

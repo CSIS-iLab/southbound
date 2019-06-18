@@ -160,46 +160,46 @@ class App extends Component {
       <div className="wrapper">
         <Header siteStructure={siteStructure} />
         <Switch>
-        <Route
-          exact
-          path="/"
-          render={props => (
-            <Homepage
-              {...props}
-              sheetData={sheetData}
-              siteStructure={siteStructure}
-              page="homepage"
-            />
-          )}
-        />
-        <Route
-          exact
-          path="/about"
-          render={props => (
-            <About {...props} siteStructure={siteStructure} page="about" />
-          )}
-        />
-        <Route
-          exact
-          path="/data/:query?/:value?"
-          render={props => (
-            <Data
-              {...props}
-              filteredSheetData={filteredSheetData}
-              categories={categories}
-              filteredCategories={filteredCategories}
-              updateCharts={this.updateCharts}
-              queried={queried}
-              siteStructure={siteStructure}
-              page="data"
-            />
-          )}
-        />
-        <Route
-          render={props => (
-            <Errorpage {...props} siteStructure={siteStructure} page="errorpage" />
-          )}
-        />
+          <Route
+            exact
+            path="/"
+            render={props => (
+              <Homepage
+                {...props}
+                sheetData={sheetData}
+                siteStructure={siteStructure}
+                page="homepage"
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/about"
+            render={props => (
+              <About {...props} siteStructure={siteStructure} page="about" />
+            )}
+          />
+          <Route
+            exact
+            path="/data/:query?/:value?"
+            render={props => (
+              <Data
+                {...props}
+                filteredSheetData={filteredSheetData}
+                categories={categories}
+                filteredCategories={filteredCategories}
+                updateCharts={this.updateCharts}
+                queried={queried}
+                siteStructure={siteStructure}
+                page="data"
+              />
+            )}
+          />
+          <Route
+            render={props => (
+              <Errorpage {...props} siteStructure={siteStructure} page="errorpage" />
+            )}
+          />
         </Switch>
         <Footer siteStructure={siteStructure} />
         <div className="content-overlay" />
