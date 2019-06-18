@@ -16,6 +16,7 @@ class Data extends React.Component {
     const pageContent = PageContent(siteStructure, page, GetData(page))
 
     this.state = {
+      searchTerm: '',
       siteStructure,
       pageContent,
       page,
@@ -35,13 +36,23 @@ class Data extends React.Component {
   }
 
   handleSearch = e => {
-    window.scrollTo({
-      top: document.querySelector('#listings').getBoundingClientRect().top,
-      behavior: 'smooth'
-    })
-
     this.setState({ searchTerm: e.target.value })
     this.props.updateCharts('search', e.target.value)
+  }
+
+  noResults = () => {
+    return (
+      <div className="no-results">
+        <h4>No entries found.</h4>
+        <p>Try checking your search term for typos or toggle different tags.</p>
+        <button
+          onClick={this.handleClear}
+          className="no-results__clear clear-all"
+        >
+          Clear all filters
+        </button>
+      </div>
+    )
   }
 
   componentDidMount() {
@@ -58,6 +69,15 @@ class Data extends React.Component {
 
       this.setState({ intialized: true })
     }
+
+    const search = document.querySelector('input[type="search"]')
+
+    search.addEventListener('focus', event => {
+      window.scrollTo({
+        top: search.getBoundingClientRect().top,
+        behavior: 'smooth'
+      })
+    })
   }
 
   componentDidUpdate() {
@@ -114,6 +134,7 @@ class Data extends React.Component {
       filteredCategories,
       queried
     } = this.props
+
     const { page, pageContent, searchTerm } = this.state
 
     const header = pageContent.find(
@@ -123,6 +144,11 @@ class Data extends React.Component {
     const otherContent = pageContent.filter(
       content => content.component !== 'page-header'
     )
+
+    let chartCount
+
+    if (filteredSheetData.length)
+      chartCount = filteredSheetData.filter(c => !c.hide).length
 
     return (
       <main className={page}>
@@ -141,7 +167,7 @@ class Data extends React.Component {
                 <input
                   id="chart-search"
                   type="search"
-                  placeholder="Search"
+                  placeholder="Search the visualizations"
                   onChange={this.handleSearch}
                   value={searchTerm}
                 />
@@ -176,7 +202,12 @@ class Data extends React.Component {
               </ul>
             </div>
           </section>
-          <section className="listings__results">
+          <section
+            className={`listings__results ${
+              !chartCount ? 'listings__results--empty' : ''
+            }`}
+          >
+            {this.noResults()}
             <ul className="listings__results-list">
               {filteredSheetData ? (
                 filteredSheetData.map(data => {

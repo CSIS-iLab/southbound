@@ -69,7 +69,9 @@ class App extends Component {
 
     case 'clear':
       filteredCategories = this.state.categories
-      filteredSheetData = this.state.sheetData
+      filteredSheetData = this.state.sheetData.map(d => {
+        return { ...d, hide: false }
+      })
 
       break
 
@@ -105,7 +107,7 @@ class App extends Component {
     }
 
     queried = filteredCategories.length !== this.state.categories.length
-
+    console.log(input)
     this.setState({ filteredSheetData, filteredCategories, queried })
   }
 

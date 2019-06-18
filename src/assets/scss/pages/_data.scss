@@ -115,7 +115,6 @@
 }
 
 .listings__results-list {
-  min-height: 350px;
   @extend %plain-list;
 
   @include breakpoint('medium', 'max-width') {
@@ -140,6 +139,27 @@
       @include breakpoint('medium') {
         margin-top: 3rem;
       }
+    }
+  }
+}
+
+.no-results {
+  .listings__results:not(.listings__results--empty) & {
+    display: none;
+  }
+
+  p {
+    @extend %p3;
+    color: rgba($color__gray-darkest, 0.75);
+  }
+
+  button {
+    @extend %clear-all;
+
+    &::before {
+      content: '⨯';
+      @extend %icon-pseudo-element;
+      @include font-size(24px);
     }
   }
 }

@@ -40,6 +40,23 @@
   @extend %font-gibson;
 }
 
+%clear-all {
+  display: block;
+  color: rgba($color__gray-darkest, 0.65);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  @include font-size(15px);
+  @extend %font-gibson;
+
+  &:hover {
+    color: $color__gray-darkest;
+
+    &::before {
+      color: $color__gray-darkest;
+    }
+  }
+}
+
 %nav-trigger {
   color: $color__white;
   letter-spacing: 0.7px;
