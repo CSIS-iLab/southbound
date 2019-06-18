@@ -16,10 +16,12 @@
     padding: 0.25rem 0.5rem;
   }
 
-  &:hover,
-  &:focus {
-    color: $color__gray-lightest;
-    background-color: rgba($color__gray-medium-cool, 0.8);
+  .listings__filters & {
+    &:hover,
+    &:focus {
+      color: $color__gray-lightest;
+      background-color: rgba($color__gray-medium-cool, 0.8);
+    }
   }
 }
 
