@@ -31,6 +31,10 @@ h1 {
   color: $color__gray-lightest;
   line-height: 0.94;
   @include fluid-type(54px, 80px);
+
+  &.h1 {
+    font-weight: 500;
+  }
 }
 
 h2 {
