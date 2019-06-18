@@ -16,7 +16,7 @@ sections:
     component: one-column
     title: About this publication
     content:
-        about: |-
+        intro: |-
           <aside><h4>About CSIS</h4><p>Established in Washington, D.C., over 50 years ago, the Center for Strategic and International Studies (CSIS) is a bipartisan, nonprofit policy research organization dedicated to providing strategic insights and policy solutions to help decisionmakers chart a course toward a better world. To learn more about CSIS, visit <a href="https://www.csis.org" class="icon-external" target="_blank" rel="nofollow noreferrer">www.CSIS.org.</a></p></aside>
 
           <div><p>This website examines the core principles of Taiwan's New Southbound Policy, Taiwan's whole-of-government effort to enhance its regional integration and promote peaceful development across the Indo-Pacific. The website has been designed to serve as a digital companion to <a href="https://www.csis.org/analysis/new-southbound-policy" class="icon-external" target="_blank" rel="nofollow noreferrer">Deepening Taiwan's Regional Integration</a>, a comprehensive report on the New Southbound Policy that was published bt CSIS in January 2018. Much has happened since the report was published. For this website, the authors have compiled new information regarding the policy and updated many of the graphics found in the original report. Further additions will be made as new information or data becomes available.</p></div>
