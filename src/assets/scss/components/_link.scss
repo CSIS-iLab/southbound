@@ -37,7 +37,7 @@ a {
   }
 
   main & {
-    color: rgba($color__gray-darkest, 0.75);
+    color: $color__gray-darkest;
     background-image: linear-gradient(
       to bottom,
       rgba($color__gray-medium-cool, 0.6) 0,
@@ -84,6 +84,11 @@ a {
         }
       }
     }
+  }
+
+  aside &,
+  #further-reading & {
+    color: rgba($color__gray-darkest, 0.75);
   }
 
   #page-header &:not([class]) {
