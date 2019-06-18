@@ -44,6 +44,7 @@
         height: 100%;
         margin: auto;
         padding: 0 $size__padding-desktop;
+        overflow: hidden;
 
         @include breakpoint('medium') {
           left: calc((100% - 225px) / 2);
@@ -64,11 +65,17 @@
           width: 120px;
           height: auto;
         }
+
         @include breakpoint('medium') {
           grid-row-end: 4;
           grid-row-start: 1;
           width: auto;
-          height: 100%;
+        }
+
+        .homepage & {
+          @include breakpoint('medium') {
+            height: 100%;
+          }
         }
       }
 
