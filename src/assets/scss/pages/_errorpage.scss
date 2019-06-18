@@ -1,0 +1,41 @@
+.errorpage {
+  h2 {
+    margin-top: 3rem;
+  }
+
+  div {
+    max-width: $size__one-column__max-width;
+  }
+
+  .directory {
+    margin-bottom: 5rem;
+
+    &__header {
+      margin: 0 auto;
+      text-transform: uppercase;
+      @include font-size(16px);
+    }
+
+    &__links {
+      padding-left: 0;
+
+      li {
+        padding-left: 0;
+        color: rgba($color__gray-darkest, 0.75);
+        @include font-size(18px);
+
+        &::before {
+          content: '';
+        }
+
+        a {
+          color: rgba($color__gray-darkest, 0.75);
+
+          &:hover {
+            color: $color__orange;
+          }
+        }
+      }
+    }
+  }
+}
