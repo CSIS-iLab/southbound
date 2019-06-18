@@ -207,9 +207,11 @@
       align-self: end;
       margin-bottom: 0;
 
-      @include breakpoint('medium', 'max-width') {
-        grid-column-end: 3;
-        grid-column-start: 1;
+      .homepage & {
+        @include breakpoint('medium', 'max-width') {
+          grid-column-end: 3;
+          grid-column-start: 1;
+        }
       }
 
       span {
