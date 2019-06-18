@@ -66,9 +66,11 @@ class Homepage extends React.Component {
 
         if (trigger.classList.contains('is-active')) {
           this.setAttribute('aria-expanded', 'false')
+          this.setAttribute('aria-label', 'Show More')
           this.classList.remove('is-active')
         } else {
           this.setAttribute('aria-expanded', 'true')
+          this.setAttribute('aria-label', 'Show Less')
           this.classList.add('is-active')
         }
       })
