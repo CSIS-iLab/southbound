@@ -141,6 +141,7 @@ a {
 #page-header [class^='icon-'],
 .chart [class^='icon-'] {
   display: block;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   @extend %font-gibson;
   @include font-size(15px);
