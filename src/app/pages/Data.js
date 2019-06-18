@@ -1,11 +1,11 @@
 import React from 'react'
 import MarkdownToSections from '../helpers/MarkdownToSections'
-import PageHeader from '../layout/PageHeader'
 import PageContent from '../helpers/PageContent'
 import GetData from '../helpers/GetData'
 import CloseMenu from '../helpers/CloseMenu'
 import InitSheets from '../helpers/InitSheets'
 import ChartOptions from '../helpers/ChartOptions'
+import PageHeader from '../layout/PageHeader'
 import Highcharts from 'Highcharts'
 
 class Data extends React.Component {
@@ -45,7 +45,7 @@ class Data extends React.Component {
   }
 
   componentDidMount() {
-    document.title = `${this.state.title} | CSIS Careers`
+    document.title = `${this.state.title} | CSIS`
     Highcharts.setOptions(ChartOptions({ isDataRepo: true }))
 
     const { intialized } = this.state
@@ -128,7 +128,7 @@ class Data extends React.Component {
       <main className={page}>
         <section id="page-header">
           <div className="page-header">
-            {PageHeader(headerContent.text, this.state.title)}
+            <PageHeader source={headerContent.text} title={this.state.title} />
           </div>
         </section>
         <div id="listings">

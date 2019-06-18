@@ -21,7 +21,7 @@ class About extends React.Component {
   }
 
   componentDidMount() {
-    document.title = `${this.state.title} | CSIS Careers`
+    document.title = `${this.state.title} | CSIS`
   }
 
   componentWillUnmount() {
@@ -51,9 +51,14 @@ class About extends React.Component {
 
                 <div className={'subsection ' + section.component}>
                   {Object.entries(section.content).map(value => {
-                    return section.key === 'page-header'
-                      ? PageHeader(value[1], this.state.title)
-                      : ValueToJSX(value[1], value[0])
+                    return section.key === 'page-header' ? (
+                      <PageHeader
+                        source={value[1]}
+                        title={this.state.title}
+                      />
+                    ) : (
+                      ValueToJSX(value[1], value[0])
+                    )
                   })}
                 </div>
               </section>

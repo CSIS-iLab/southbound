@@ -37,12 +37,28 @@ class Homepage extends React.Component {
     }
   }
 
+  addTableOfContents = () => {
+    const headings = Array.from(document.querySelectorAll('h2'))
+    headings.push(document.querySelector('#further-reading h4'))
+
+    let counter = 0
+
+    headings.forEach((header, i) => {
+      let hash = 'toc-' + counter
+
+      header.id = hash
+
+      counter++
+    })
+  }
+
   componentDidMount() {
     document.title = 'The New Southbond Policy | CSIS'
     this.loadCharts()
 
-    const triggers = Array.from(document.querySelectorAll('.detail__trigger'))
+    this.addTableOfContents()
 
+    const triggers = Array.from(document.querySelectorAll('.detail__trigger'))
     triggers.forEach(trigger => {
       trigger.addEventListener('click', function() {
         let explainers = Array.from(document.querySelectorAll('.sc-explainer'))
@@ -56,14 +72,6 @@ class Homepage extends React.Component {
           this.classList.add('is-active')
         }
       })
-    })
-
-    let exits = Array.from(document.querySelectorAll('.icon-x'))
-
-    exits.forEach(exit => {
-      exit.addEventListener('click', () =>
-        exit.parentNode.parentNode.classList.remove('is-active')
-      )
     })
   }
   componentDidUpdate() {
@@ -100,7 +108,11 @@ class Homepage extends React.Component {
                 <div className={'subsection ' + section.component}>
                   {Object.entries(section.content).map(value => {
                     return section.key === 'page-header' ? (
-                      PageHeader(value[1], this.state.title)
+                      <PageHeader
+                        key={value[1]}
+                        source={value[1]}
+                        title={this.state.title}
+                      />
                     ) : chart && value[0] === 'chart' ? (
                       <figure
                         key="chart"

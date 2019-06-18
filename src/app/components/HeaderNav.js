@@ -20,19 +20,19 @@ export default class HeaderNav extends React.Component {
       .querySelector('.site-header__nav-menu .menu-item:first-of-type')
       .append(toc_container)
 
-    const headings = Array.from(document.querySelectorAll('h2'))
-    headings.push(document.querySelector('#further-reading h4'))
+    const headings = [
+      'The NSP’s Four Pillars',
+      'Flagship Projects and Innovative Fields',
+      'Further Reading'
+    ]
 
     let counter = 0
     let toc_items = ''
 
-    headings.forEach((header, i) => {
-      const text = header.innerHTML
+    headings.forEach((heading, i) => {
       let hash = 'toc-' + counter
 
-      header.id = hash
-
-      toc_items += `<li><a href="#${hash}">${text}</a></li>`
+      toc_items += `<li><a href="/#${hash}">${heading}</a></li>`
 
       counter++
     })
@@ -92,7 +92,7 @@ export default class HeaderNav extends React.Component {
         <ul className="site-header__nav-menu">
           {orderedSiteStructure.map(page => {
             return (
-              <li key={page} className="menu-item">
+              <li key={page} className={'menu-item '}>
                 <NavLink
                   className="menu-item__link"
                   to={siteStructure[page].to}

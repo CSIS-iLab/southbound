@@ -131,7 +131,9 @@
   @include font-size(21px);
 
   .site-header--minimal & {
-    @include font-size(15px);
+    @include breakpoint('medium') {
+      @include font-size(15px);
+    }
   }
 
   @include breakpoint('medium') {
