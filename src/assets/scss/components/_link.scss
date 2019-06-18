@@ -130,11 +130,17 @@ a {
   }
 }
 
+#page-header [class^='icon-'] {
+  color: rgba($color__gray-darkest, 0.75);
+}
+
+.chart [class^='icon-'] {
+  color: rgba($color__gray-darkest, 0.65);
+}
+
 #page-header [class^='icon-'],
 .chart [class^='icon-'] {
   display: block;
-
-  color: rgba($color__gray-darkest, 0.75);
   text-transform: uppercase;
   @extend %font-gibson;
   @include font-size(15px);
