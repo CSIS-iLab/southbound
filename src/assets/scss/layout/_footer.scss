@@ -21,7 +21,7 @@
 
     p {
       margin: 0;
-      padding: 0.75rem 20px 1.5rem;
+      padding: 0.75rem $size__padding-mobile 1.5rem;
 
       @extend %p4;
       color: rgba($color__white, 0.5);
@@ -30,12 +30,12 @@
 
   &__description {
     @include breakpoint('medium', 'max-width') {
-      padding: 3rem 20px;
+      padding: 3rem $size__padding-mobile;
     }
 
     @include breakpoint('medium') {
       flex-basis: 425px;
-      padding: 3rem 3rem 1rem 20px;
+      padding: 3rem 3rem 1rem $size__padding-desktop;
     }
 
     .csis-link {
@@ -87,13 +87,13 @@
 
     @include breakpoint('medium', 'max-width') {
       flex-basis: 100%;
-      padding: 3rem 20px;
+      padding: 3rem $size__padding-mobile;
     }
 
     @include breakpoint('medium') {
       display: flex;
       flex-basis: calc(100% - 425px);
-      padding: 3rem 20px 1rem;
+      padding: 3rem $size__padding-desktop 1rem;
       @include full-width-background($color__gray-dark-cool);
     }
 

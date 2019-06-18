@@ -33,10 +33,8 @@
 }
 
 .listings__filters {
-  margin-bottom: 3rem;
-  @include breakpoint('large', $dir: 'max-width') {
-    padding-bottom: 1.5rem;
-  }
+  margin-bottom: 2.5rem;
+
   @include breakpoint('large') {
     display: flex;
   }
@@ -118,17 +116,28 @@
   min-height: 350px;
   @extend %plain-list;
 
+  @include breakpoint('medium', 'max-width') {
+    width: 100vw;
+    margin: 0 calc((100vw - 100%) / -2);
+  }
+
   .chart {
     padding: 1.5rem 2rem 2.5rem;
     background-color: $color__white;
     box-shadow: 0 2px 4px 0 rgba($color__black, 0.08);
+    @include breakpoint('medium', 'max-width') {
+      margin-bottom: 0;
+      border-bottom: 1px solid rgba($color__gray-darkest, 0.2);
+    }
 
     &.hide {
       display: none;
     }
 
     &:not(.hide) ~ .chart {
-      margin-top: 3rem;
+      @include breakpoint('medium') {
+        margin-top: 3rem;
+      }
     }
   }
 }

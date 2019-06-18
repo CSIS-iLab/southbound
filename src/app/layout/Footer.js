@@ -79,17 +79,11 @@ export default class Footer extends React.Component {
 
           <section className="site-footer__report">
             <div className="site-footer__report-image">
-              <a
-                href="https://www.csis.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={FooterContent.southbound.cover}
-                  alt="The New Southbound Policy Report Cover"
-                  title="Download The New Southbound Policy Report"
-                />
-              </a>
+              <img
+                src={FooterContent.southbound.cover}
+                alt="The New Southbound Policy Report Cover"
+                title="Download The New Southbound Policy Report"
+              />
             </div>
             <div className="site-footer__report-details">
               <div className="site-footer__report-details-title">

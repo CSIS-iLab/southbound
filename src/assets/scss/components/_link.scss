@@ -1,11 +1,10 @@
 a {
   text-decoration: none;
 
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
   background-position: 0 100%;
 
   &:not(.download):focus {
-    padding: 0 0.125rem;
     @extend %link-focus;
   }
 
@@ -44,11 +43,11 @@ a {
       rgba($color__gray-medium-cool, 0.6) 0,
       rgba($color__gray-medium-cool, 0.6) 100%
     );
-    background-size: 1px 1px;
+    background-size: 100% 1px;
 
     &:hover {
       color: $color__orange;
-      background-size: 1px 0;
+      background-size: 100% 0;
     }
 
     &:visited {
@@ -63,49 +62,32 @@ a {
       }
     }
 
-    &[class] {
+    &[class]:not(.icon-external) {
       background-size: 1px 0;
-
-      &:not(.icon-external) {
-        @include font-size(15px);
-      }
 
       &:not(.icon) {
         color: rgba($color__gray-darkest, 0.65);
-      }
-
-      &.icon-external {
-        &:hover {
-          &,
-          &::after {
-            color: $color__orange;
-          }
-        }
       }
 
       section:not(#further-reading) & {
         text-transform: uppercase;
       }
     }
+
+    &.icon-external {
+      background-size: calc(100% - 20px) 1px;
+
+      &:hover {
+        &,
+        &::after {
+          color: $color__orange;
+        }
+      }
+    }
   }
 
   #page-header &:not([class]) {
-    background-repeat: no-repeat;
     background-size: 80% 1px;
-  }
-
-  &.menu-item__link {
-    width: 100%;
-    @extend %nav-link;
-
-    @include breakpoint('large', 'max-width') {
-      padding-left: 1.25rem;
-    }
-
-    ~ ul a {
-      @extend %nav-summary-link;
-      color: rgba($color__gray-darkest, 0.65);
-    }
   }
 }
 

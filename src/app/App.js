@@ -10,6 +10,7 @@ import SmoothScroll from 'smooth-scroll'
 import sheetData from './charts.json'
 import { withRouter } from 'react-router-dom'
 import scroll from '@threespot/freeze-scroll'
+import CloseMenu from './helpers/CloseMenu'
 
 class App extends Component {
   constructor(props) {
@@ -133,6 +134,12 @@ class App extends Component {
         const overlay = document.querySelector('.content-overlay')
         overlay.classList.remove('is-active')
         scroll.unfreeze()
+        const trigger = document.querySelector(
+          '.site-header__nav-trigger.is-active'
+        )
+        if (!trigger) return
+        const target = document.querySelector('.site-header__nav-menu')
+        CloseMenu(trigger, target)
       },
       false
     )

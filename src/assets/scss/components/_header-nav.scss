@@ -3,17 +3,20 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  padding: 0 0 0 20px;
 
   @include breakpoint('medium', 'max-width') {
+    padding-left: $size__padding-mobile;
     background-color: $color__gray-dark-cool;
+  }
+  @include breakpoint('medium') {
+    padding-left: $size__padding-desktop;
   }
 
   &-trigger {
     position: relative;
     display: block;
     height: 100%;
-    padding: 0 20px;
+    padding: 0 $size__padding-mobile;
     background-color: $color__gray-darkest;
 
     @include breakpoint('medium') {
@@ -102,6 +105,20 @@
       &--large {
         @include breakpoint('medium') {
           display: none;
+        }
+      }
+
+      &__link {
+        width: 100%;
+        @extend %nav-link;
+
+        @include breakpoint('medium', 'max-width') {
+          padding-left: 1.25rem;
+        }
+
+        ~ ul a {
+          @extend %nav-summary-link;
+          color: rgba($color__gray-darkest, 0.65);
         }
       }
     }

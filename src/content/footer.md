@@ -26,7 +26,7 @@ southbound:
            <div>with Matthew P. Funaiole</div>
   info:
     ISBN_paperback: |-
-           <div>ISBN# 978-1-4422-8053-3  (pb)
+           <div>978-1-4422-8053-3  (pb)
     ISBN_ebook: |-
            <div>978-1-4422-8054-0 (eBook)
     publisher: |-

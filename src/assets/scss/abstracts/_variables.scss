@@ -83,15 +83,8 @@ $sizes__two-column__image: (
   'xlarge': 375px
 );
 
-$size__header-height-minimal: 48px;
-
-$sizes__header-height: (
-  'xsmall': 48px,
-  'small': 48px,
-  'medium': 80px,
-  'large': 80px,
-  'xlarge': 80px
-);
+$size__header-height-mobile: 48px;
+$size__header-height-desktop: 80px;
 
 $size__footer-padding-top: (
   'small': 32px,

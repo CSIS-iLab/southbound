@@ -2,8 +2,6 @@ import React from 'react'
 
 export default class SocialShare extends React.Component {
   render() {
-    const { job, location } = this.props
-
     return (
       <ul className="share">
         <li>
@@ -22,7 +20,7 @@ export default class SocialShare extends React.Component {
         <li>
           <a
             className="icon icon-twitter"
-            href={`https://twitter.com/intent/tweet?text=Winning at the WTO&amp;url=${
+            href={`https://twitter.com/intent/tweet?url=${
               window.location.href
             }&amp;via=CSIS&amp;related=CSIS`}
             rel="noopener noreferrer"
@@ -37,7 +35,7 @@ export default class SocialShare extends React.Component {
             className="icon icon-linkedin"
             href={`https://www.linkedin.com/shareArticle?mini=true&amp;url=${
               window.location.href
-            }&amp;summary=${'x'}&amp;source=CSIS`}
+            }&amp;source=CSIS`}
             rel="noopener noreferrer"
             target="_blank"
             title="Share on Linkedin"
@@ -49,7 +47,9 @@ export default class SocialShare extends React.Component {
           <i
             tabIndex="0"
             className="icon icon-email"
-            href={`mailto:?subject=${'x'}&amp;body=${window.location.href}`}
+            href={`mailto:?subject=${document.title}&amp;body=${
+              window.location.href
+            }`}
             title="Email"
           >
             <span className="visually-hidden">Email</span>

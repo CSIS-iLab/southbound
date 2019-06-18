@@ -27,12 +27,12 @@ sections:
     title: Authors
     content:
       - |-
-        * <div><img src="https://res.cloudinary.com/csisideaslab/image/upload/v1560810489/southbound/Bonnie_Glaser.jpg" class="download__image" alt="Author Photo" title="Bonnie S. Glaser"></div>
+        * <div><img src="https://res.cloudinary.com/csisideaslab/image/upload/v1560810489/southbound/Bonnie_Glaser.jpg" class="download__image" alt="Author Photo"></div>
           <div><h4>Bonnie S. Glaser</h4>
           <p>Senior Adviser for Asia; Director, China Power Project</p>
           <p>Bonnie S. Glaser is a senior adviser for Asia and director of the China Power Project at CSIS. She is also a nonresident fellow with the Lowy Institute in Australia, and a senior associate with the Pacific Forum. From 2008 to 2015, she was a senior adviser with the Freeman Chair in China Studies at CSIS, and from 2003 to 2008, she was a senior associate in the CSIS International Security Program. Prior to joining CSIS, she was a consultant for U.S. government offices, including the Departments of Defense and State.</p></div>
 
-        * <div><img src="https://res.cloudinary.com/csisideaslab/image/upload/v1560810509/southbound/Scott_Kennedy.jpg" class="download__image" alt="Author Photo" title="Scott Kennedy"></div>
+        * <div><img src="https://res.cloudinary.com/csisideaslab/image/upload/v1560810509/southbound/Scott_Kennedy.jpg" class="download__image" alt="Author Photo"></div>
           <div><h4>Scott Kennedy</h4>
             <p>Senior Adviser, Freeman Chair in China Studies and Director, Project on Chinese Business and Political Economy</p>
             <p>Scott Kennedy is senior adviser of the Freeman Chair in China Studies and director of the Project on Chinese Business and Political Economy at CSIS. Prior to joining CSIS, he was a professor at Indiana University (IU) for over 14 years. From 2007-2014, he was the director of the Research Center for Chinese Politics & Business and founding academic director of IU’s China Office. Dr. Kennedy received his Ph.D. in political science from George Washington University.</p></div>
@@ -42,7 +42,7 @@ sections:
             <p>President, National Democratic Institute for International Affairs</p>
             <p>Derek Mitchell is president of the National Democratic Institute. From 2012 to 2016, he was U.S. ambassador to Myanmar, and from 2011 to 2012, he was the U.S. State Department’s first special representative and policy coordinator for Burma. Prior to that, he was principal deputy assistant secretary of defense, Asian and Pacific Security Affairs, and acting assistant secretary of defense. From 2001 to 2009, he was a senior fellow and director of the Asia Division of the CSIS International Security Program.</p></div>
 
-        * <div><img src="https://res.cloudinary.com/csisideaslab/image/upload/v1560810489/southbound/Matthew_Funaiole.jpg" class="download__image" alt="Author Photo" title="Matthew P. Funaiole"></div>
+        * <div><img src="https://res.cloudinary.com/csisideaslab/image/upload/v1560810489/southbound/Matthew_Funaiole.jpg" class="download__image" alt="Author Photo"></div>
           <div><h4>Matthew P. Funaiole</h4>
             <p>Fellow, China Power Project</p>
             <p>Matthew P. Funaiole is a fellow with the China Power Project at CSIS where he works on projects pertaining to Chinese foreign and security policy, cross-Strait relations, and the broader Asia-Pacific security architecture. He is the principal researcher for the ChinaPower website, which uses data visualization and written analysis to unpack the complexity of China’s rise. Prior to CSIS, Dr. Funaiole taught at the University of Saint Andrews in Scotland, where he also completed his doctoral research.</p></div>
