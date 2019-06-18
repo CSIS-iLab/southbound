@@ -121,6 +121,10 @@
         display: none;
       }
 
+      .errorpage & {
+        display: none;
+      }
+
       main:not(.data) & {
         margin-bottom: 4rem;
 
