@@ -102,6 +102,7 @@ export default function(options) {
       }
     },
     legend: {
+      align: 'left',
       verticalAlign: 'bottom',
       layout: 'horizontal',
       itemStyle: {
