@@ -45,8 +45,7 @@
   color: rgba($color__gray-darkest, 0.65);
   letter-spacing: 0.8px;
   text-transform: uppercase;
-  @include font-size(15px);
-  @extend %font-gibson;
+  @include font-size(14px);
 
   &:hover {
     color: $color__gray-darkest;
