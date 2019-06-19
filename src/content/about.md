@@ -17,9 +17,7 @@ sections:
     title: About this publication
     content:
         intro: |-
-          <aside><h4>About CSIS</h4><p>Established in Washington, D.C., over 50 years ago, the Center for Strategic and International Studies (CSIS) is a bipartisan, nonprofit policy research organization dedicated to providing strategic insights and policy solutions to help decisionmakers chart a course toward a better world. To learn more about CSIS, visit <a href="https://www.csis.org" class="icon-external" target="_blank" rel="nofollow noreferrer">www.CSIS.org.</a></p></aside>
-
-          <div><p>This website examines the core principles of Taiwan's New Southbound Policy, Taiwan's whole-of-government effort to enhance its regional integration and promote peaceful development across the Indo-Pacific. The website has been designed to serve as a digital companion to <a href="https://www.csis.org/analysis/new-southbound-policy" class="icon-external" target="_blank" rel="nofollow noreferrer">The New Southbound Policy: Deepening Taiwan's Regional Integration</a>, a comprehensive report published by CSIS in January 2018. Much has happened since the report was published. For this website, the authors have compiled new information regarding the policy and updated many of the graphics found in the original report. Further additions will be made as new information or data becomes available.</p></div>
+          This website examines the core principles of Taiwan's New Southbound Policy, Taiwan's whole-of-government effort to enhance its regional integration and promote peaceful development across the Indo-Pacific. The website has been designed to serve as a digital companion to <a href="https://www.csis.org/analysis/new-southbound-policy" class="icon-external" target="_blank" rel="nofollow noreferrer">The New Southbound Policy: Deepening Taiwan's Regional Integration</a>, a comprehensive report published by CSIS in January 2018. Much has happened since the report was published. For this website, the authors have compiled new information regarding themodified about policy and updated many of the graphics found in the original report. Further additions will be made as new information or data becomes available.
 
   authors:
     index: 3
@@ -54,7 +52,9 @@ sections:
       - |-
         The authors would like to thank all the institutions and individuals who provided assistance and support to this project. We are grateful to Taiwan’s Ministry of Foreign Affairs, the Taipei Economic and Cultural Representative Office in Washington, D.C., and the Taiwan-Asia Exchange Foundation (TAEF). A special thanks goes to Dr. Alan Hao Yang, executive director of TAEF, for his support during the development of this website.
 
-        #### CSIS iDeas Lab
         The printed and digital versions of this report are products of the  <a href="https://www.csis.org/programs/dracopoulos-ideas-lab" class="icon-external" target="_blank" rel="nofollow noreferrer">Andreas C. Dracopoulos iDeas Lab</a>, the in-house digital, multimedia, and design agency at the Center for Strategic and International Studies.
+
+        #### About CSIS
+        Established in Washington, D.C., over 50 years ago, the Center for Strategic and International Studies (CSIS) is a bipartisan, nonprofit policy research organization dedicated to providing strategic insights and policy solutions to help decisionmakers chart a course toward a better world. To learn more about CSIS, visit <a href="https://www.csis.org" class="icon-external" target="_blank" rel="nofollow noreferrer">www.CSIS.org.</a>
 
 ---
