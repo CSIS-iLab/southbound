@@ -10,7 +10,8 @@
     margin: 1.5rem 0 4.5rem;
   }
 
-  #intro::after {
+  #intro::after,
+  #pillar_four::after {
     content: '...';
     margin: 5rem 0 4.5rem;
   }
@@ -27,6 +28,7 @@
 
       p:not(:first-of-type) {
         @extend %p2;
+        margin-bottom: 0;
       }
     }
   }
@@ -58,9 +60,7 @@
       @extend %plain-list;
 
       @include breakpoint('medium') {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        display: block;
       }
     }
 
@@ -73,7 +73,7 @@
 
       &:nth-child(even) {
         @include breakpoint('medium') {
-          margin-left: 32px;
+          //margin-left: 32px;
         }
       }
       @include breakpoint('medium') {

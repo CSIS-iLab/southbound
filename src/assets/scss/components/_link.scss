@@ -80,7 +80,7 @@ a {
       &:hover {
         &,
         &::after {
-          color: $color__orange;
+          color: $color__orange !important;
         }
       }
     }
@@ -98,7 +98,7 @@ a {
   }
 
   #page-header &:not([class]) {
-    background-size: 80% 1px;
+    background-size: 100% 1px;
   }
 }
 
@@ -155,9 +155,13 @@ a {
     color: $color__gray-darkest;
 
     &::before {
-      color: rgba($color__gray-medium-cool, 0.5);
+      color: rgba($color__gray-medium-cool, 0.75);
     }
   }
+}
+
+.chart [class^='icon-'] {
+  padding: 4px 0;
 }
 
 .icon-external {

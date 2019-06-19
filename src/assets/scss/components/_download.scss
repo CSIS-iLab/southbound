@@ -101,7 +101,7 @@
     &:hover,
     &:focus {
       .icon-download {
-        color: $color__gray-darkest;
+        color: rgba($color__gray-darkest, 1) !important;
 
         &::after {
           color: $color__gray-darkest;

@@ -68,6 +68,7 @@
 
       &:not(.chart-figure__caption-title) {
         @extend %p4;
+        margin-bottom: 0.5rem;
       }
     }
   }
