@@ -50,13 +50,17 @@
         grid-template-rows: 1fr;
       }
 
+      h4 {
+        margin-bottom: 0.9rem;
+      }
+
       > div:first-of-type {
         padding-top: 0.25rem;
       }
 
       p:first-of-type {
-        margin: 0;
         @extend %p3;
+        margin: 0;
       }
 
       p:last-of-type {

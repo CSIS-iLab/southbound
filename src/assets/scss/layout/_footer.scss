@@ -115,12 +115,16 @@
         h4 {
           margin: 0;
           color: $color__white;
+          font-weight: 500;
+          line-height: 1.2;
+          @include fluid-type(20px, 24px);
         }
 
         p {
           @extend %p2;
           margin: 0 0 2rem;
           color: $color__white;
+          @include font-size(18px);
         }
       }
 

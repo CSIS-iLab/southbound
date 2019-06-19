@@ -67,6 +67,9 @@ button {
       }
 
       + p {
+        margin-bottom: 1.5rem !important;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #33333359;
         animation: detail 0.4s linear forwards;
       }
     }
