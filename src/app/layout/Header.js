@@ -45,7 +45,7 @@ export default class Header extends React.Component {
 
     document
       .querySelector('.site-header__nav-menu .menu-item:first-of-type')
-      .append(toc_container)
+      .appendChild(toc_container)
 
     const headings = [
       'The NSP’s Four Pillars',

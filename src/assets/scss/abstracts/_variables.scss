@@ -71,9 +71,9 @@ $sizes__one-column__image: (
 
 $sizes__two-column__paragraph: (
   'small': 100%,
-  'medium': calc(100% - 375px),
-  'large': calc(100% - 375px),
-  'xlarge': calc(100% - 375px)
+  'medium': calc(100% - 375px - #{$size__gap} / 2),
+  'large': calc(100% - 375px - #{$size__gap} / 2),
+  'xlarge': calc(100% - 375px - #{$size__gap} / 2)
 );
 
 $sizes__two-column__image: (
