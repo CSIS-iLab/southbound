@@ -1,21 +1,14 @@
 .site-header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
   height: $size__header-height-mobile;
   background-color: $color__gray-lighter;
   box-shadow: 0 2px 4px 0 rgba($color__black, 0.25);
   transition: all 0.2s ease-in-out;
 
-  // &--hidden {
-  //   opacity: 0;
-  // }
-
-  @include breakpoint('medium', 'max-width') {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 10;
-  }
   @include breakpoint('medium') {
     height: $size__header-height-desktop;
   }
@@ -129,11 +122,6 @@
 }
 
 .site-header--minimal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 10;
   height: $size__header-height-mobile;
 
   .site-logo {

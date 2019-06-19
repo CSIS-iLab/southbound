@@ -6,8 +6,6 @@ export default class HeaderNav extends React.Component {
   componentDidMount() {
     this.registerListeners()
 
-    if (!document.querySelector('main.homepage')) return
-
     this.addTableOfContents()
   }
 
@@ -36,7 +34,6 @@ export default class HeaderNav extends React.Component {
 
       counter++
     })
-
     toc_container.innerHTML += toc_items
   }
 
