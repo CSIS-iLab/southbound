@@ -32,6 +32,7 @@ class Data extends React.Component {
   }
 
   handleClear = e => {
+    this.setState({ param: false, searchTerm: '' })
     this.props.updateCharts('clear')
   }
 
