@@ -21,7 +21,7 @@ class About extends React.Component {
   }
 
   componentDidMount() {
-    document.title = `${this.state.title} | CSIS`
+    document.title = `${this.state.title} - The New Southbound Policy | CSIS`
   }
 
   componentWillUnmount() {

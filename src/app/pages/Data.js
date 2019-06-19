@@ -57,7 +57,7 @@ class Data extends React.Component {
   }
 
   componentDidMount() {
-    document.title = `${this.state.title} | CSIS`
+    document.title = `${this.state.title} - The New Southbound Policy | CSIS`
     Highcharts.setOptions(ChartOptions({ isDataRepo: true }))
 
     const { intialized } = this.state

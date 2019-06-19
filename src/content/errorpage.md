@@ -18,7 +18,7 @@ sections:
 download: |-
     <span class="icon-download">Download the Print Report</span>
 directory-links: |-
-    WHERE YOU LOOKING FOR…
+    Were you looking for...
     * <a href="/">Summary</a>: brief, digital outline of the printed material
     * <a href="/data">Data Repository</a>: interactive charts and graphs of data in the report
     * <a href="/about">About</a>
