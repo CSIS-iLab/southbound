@@ -63,12 +63,14 @@
         margin: 0;
       }
 
-      p:last-of-type {
-        margin: 0.25rem 0 3rem;
-      }
-
       img {
         max-width: 100px;
+      }
+
+      &:not(:last-child) {
+        p:last-of-type {
+          margin: 0.25rem 0 3rem;
+        }
       }
     }
   }

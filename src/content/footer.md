@@ -3,7 +3,7 @@ slug: footer
 
 description:
   - |-
-    In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel.
+    This site is a product of the Center for Strategic and International Studies (CSIS), a bipartisan, nonprofit policy research organization located in Washington, D.C. The site serves as a digital companion to The New Southbound Policy: Deepening Taiwan's Regional Integration, a comprehensive report published by CSIS in January 2018.
 follow:
   - |-
       <div>Follow Us</div>

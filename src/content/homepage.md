@@ -18,7 +18,7 @@ sections:
       abstract: |-
         In a concerted effort to expand Taiwan’s presence across the Indo-Pacific, President Tsai Ing-wen introduced the New Southbound Policy (NSP) in 2016. The NSP is designed to strengthen Taipei’s relationships with the ten countries of the Association of Southeast Asian Nations (ASEAN), six states in South Asia, Australia, and New Zealand. The policy aims to leverage Taiwan’s cultural, educational, technological, agricultural, and economic assets to enhance Taiwan’s regional integration and promote the broader development of the Indo-Pacific region.
 
-        ![Countries included in the Southbound Policy](https://res.cloudinary.com/csisideaslab/image/upload/v1560534745/southbound/sb_countries-map.jpg "Countries included in the Southbound Policy: the ten countries of ASEAN, Australia, Bangladesh, Bhutan, India, Nepal, New Zealand, Pakistan, and Sri Lanka")
+        ![Countries included in the Southbound Policy](https://res.cloudinary.com/csisideaslab/image/upload/v1560534745/southbound/sb_countries-map.jpg "Countries included in the Southbound Policy: the ten countries of ASEAN, six states in South Asia (Bangladesh, Bhutan, India, Nepal, Pakistan, and Sri Lanka), Australia, and New Zealand.")
 
         The plan hinges upon forging a “sense of economic community” and forming “a consensus for cooperation” with the 18 nations identified by Taipei as potential partners. Since Taiwan lacks formal diplomatic ties with the countries targeted by the NSP, Taipei must creatively foster bilateral collaboration. To this end, the Tsai administration has rallied local governments and civil society organizations to collaborate with the central government’s implementation efforts.
 
@@ -34,7 +34,7 @@ sections:
     component: two-column
     content:
       title: |-
-        <h3><span className="index">01</span> Promote economic collaboration: </h3>
+        <h3><span className="index">01</span> Promote economic collaboration </h3>
 
       description: Cooperate with the partner countries on supply chains, domestic demand markets and infrastructure projects.
       text: |-
@@ -61,7 +61,7 @@ sections:
     component: two-column
     content:
       title: |-
-        <h3><span className="index">02</span> Conduct People-to-People Exchanges: </h3>
+        <h3><span className="index">02</span> Conduct People-to-People Exchanges </h3>
 
       description: Deepen bilateral exchange through the cultivation of scholars, students, and industry professionals.
       text: |-
@@ -84,7 +84,7 @@ sections:
     component: two-column
     content:
       title: |-
-        <h3><span className="index">03</span> Enhance Resource Sharing: </h3>
+        <h3><span className="index">03</span> Enhance Resource Sharing </h3>
 
       description: Promote bilateral and multilateral cooperation in culture, tourism, medical care, technology, agriculture, and small and medium-sized enterprises.
       text: |-
@@ -115,7 +115,7 @@ sections:
     component: two-column
     content:
       title: |-
-        <h3><span className="index">04</span> Forge Regional Links: </h3>
+        <h3><span className="index">04</span> Forge Regional Links </h3>
 
       description: Systematize bilateral and multilateral cooperation with partner countries while strengthening negotiations and dialogues.
       text: |-
