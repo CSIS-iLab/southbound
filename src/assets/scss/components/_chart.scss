@@ -113,7 +113,6 @@
   @extend %font-hind;
   filter: none !important;
   fill: $color__gray-medium-cool;
-  @include font-size(18px);
 
   span span:first-of-type {
     font-weight: bold;
@@ -122,6 +121,14 @@
   p {
     margin-bottom: 0.5rem;
     line-height: 1;
+
+    main.homepage & {
+      @include font-size(14px);
+    }
+
+    main.data & {
+      @include font-size(18px);
+    }
   }
 }
 

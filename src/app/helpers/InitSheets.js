@@ -3,8 +3,6 @@ import Charts from './Charts'
 import { ChartColors } from './ChartOptions'
 
 export default function InitSheets(data, location) {
-  const { isDataRepo } = location
-
   let chart = Charts[data.key]
 
   chart.data = {
