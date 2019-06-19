@@ -21,6 +21,7 @@
     #page-header & {
       width: 2.5rem;
       height: 2.5rem;
+      margin-bottom: 1rem;
 
       &:not(:focus) {
         border: 1px solid $color__gray-medium-cool;
