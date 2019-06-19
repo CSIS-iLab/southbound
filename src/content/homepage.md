@@ -36,7 +36,7 @@ sections:
       title: |-
         <h3><span className="index">01</span> Promote economic collaboration </h3>
 
-      description:  |-
+      text:  |-
         Cooperate with the partner countries on supply chains, domestic demand markets and infrastructure projects.
 
         * <strong>Supply Chains:</strong> Integrate Taiwan’s competitive industries with the supply chains of other economies, including not only NSP partners but also Japan and the United States.
@@ -64,7 +64,7 @@ sections:
       title: |-
         <h3><span className="index">02</span> Conduct People-to-People Exchanges </h3>
 
-      description:  |-
+      text:  |-
         Deepen bilateral exchange through the cultivation of scholars, students, and industry professionals.
 
         * <strong>Education Ties:</strong> Deepen educational ties by offering scholarships to students from partner countries. Enhance domestic cooperation between academia and industry. Provide enhanced youth technical training.
@@ -88,7 +88,7 @@ sections:
       title: |-
         <h3><span className="index">03</span> Enhance Resource Sharing </h3>
 
-      description:  |-
+      text:  |-
         Promote bilateral and multilateral cooperation in culture, tourism, medical care, technology, agriculture, and small and medium-sized enterprises.
 
         * <strong>Health Care:</strong> Boost bilateral pharmaceutical certifications and new drug and medical equipment development. Support the development of medical care and training of public health workers overseas.
@@ -120,7 +120,7 @@ sections:
       title: |-
         <h3><span className="index">04</span> Forge Regional Links </h3>
 
-      description:  |-
+      text:  |-
         Systematize bilateral and multilateral cooperation with partner countries while strengthening negotiations and dialogues.
 
         * <strong>Regional Integration:</strong> Actively pursue economic cooperation agreements. Update and strengthen current bilateral investment and taxation treaties.

@@ -122,14 +122,7 @@
   p {
     margin-bottom: 0.5rem;
     line-height: 1;
-
-    main.homepage & {
-      @include font-size(14px);
-    }
-
-    main.data & {
-      @include font-size(18px);
-    }
+    @include font-size(14px);
   }
 }
 

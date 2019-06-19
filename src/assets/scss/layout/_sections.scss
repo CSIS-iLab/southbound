@@ -81,7 +81,7 @@ section::before {
       }
 
       .homepage & {
-        > .description {
+        > .text {
           max-width: $big;
         }
 
@@ -95,7 +95,7 @@ section::before {
           max-width: $big;
         }
 
-        > .description {
+        > .text {
           max-width: calc(#{$small} - #{$size__gap} / 2);
         }
       }
