@@ -4,6 +4,7 @@ import GetData from '../helpers/GetData'
 import CloseMenu from '../helpers/CloseMenu'
 import ValueToJSX from '../helpers/ValueToJSX'
 import PageHeader from '../layout/PageHeader'
+import Download from '../components/Download'
 
 class Errorpage extends React.Component {
   constructor(props) {
@@ -68,12 +69,7 @@ class Errorpage extends React.Component {
           : ''}
 
         <div id="error-directory">
-          <a
-            href="https://csis-prod.s3.amazonaws.com/s3fs-public/publication/180613_Glaser_NewSouthboundPolicy_Web.pdf?AcoayLFliB9_iAvbmYvP_jM27mEXw5xL"
-            className="download"
-          >
-            {ValueToJSX(GetData(page)['download'])}
-          </a>
+          <Download content={ValueToJSX(GetData(page)['download'])} />
           <div className="directory-links">
             {ValueToJSX(GetData(page)['directory-links'])}
           </div>

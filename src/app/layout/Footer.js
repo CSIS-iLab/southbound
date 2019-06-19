@@ -1,6 +1,7 @@
 import React from 'react'
 import GetData from '../helpers/GetData'
 import ValueToJSX from '../helpers/ValueToJSX'
+import Download from '../components/Download'
 import { ReactComponent as Logo } from '../../assets/images/csis_logo-long.svg'
 
 export default class Footer extends React.Component {
@@ -101,12 +102,10 @@ export default class Footer extends React.Component {
                   return ValueToJSX(FooterContent.southbound.info[key], key)
                 })}
               </div>
-              <a
-                href="https://csis-prod.s3.amazonaws.com/s3fs-public/publication/180613_Glaser_NewSouthboundPolicy_Web.pdf?AcoayLFliB9_iAvbmYvP_jM27mEXw5xL"
-                className="download"
-              >
-                {ValueToJSX(FooterContent.southbound.download)}
-              </a>
+
+              <Download
+                content={ValueToJSX(FooterContent.southbound.download)}
+              />
             </div>
           </section>
         </div>
