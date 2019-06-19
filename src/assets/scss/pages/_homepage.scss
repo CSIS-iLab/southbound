@@ -54,13 +54,42 @@
   }
 
   .five-flagship-programs {
+    max-width: $size__one-column__max-width;
+    margin: auto;
+
     ul {
       @extend %plain-list;
 
       @include breakpoint('medium') {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        float: left;
+        width: 47%;
+      }
+
+      &:first-of-type {
+        li {
+          @for $i from 1 through length($icons_left) {
+            &:nth-of-type(#{$i}) {
+              $icon: nth($icons_left, $i);
+
+              background-image: url('../images/program-#{$icon}.png');
+            }
+          }
+        }
+      }
+
+      &:last-of-type {
+        li {
+          @for $i from 1 through length($icons_right) {
+            &:nth-of-type(#{$i}) {
+              $icon: nth($icons_right, $i);
+
+              background-image: url('../images/program-#{$icon}.png');
+            }
+          }
+        }
+        @include breakpoint('medium') {
+          margin-left: 32px;
+        }
       }
     }
 
@@ -70,27 +99,12 @@
       background-position: left top;
       background-size: 48px;
       transition: all 0.2s ease-in-out;
-
-      &:nth-child(even) {
-        @include breakpoint('medium') {
-          margin-left: 32px;
-        }
-      }
-      @include breakpoint('medium') {
-        flex-basis: 47%;
-      }
-
-      @for $i from 1 through length($icons) {
-        &:nth-child(#{$i}) {
-          $icon: nth($icons, $i);
-
-          background-image: url('../images/program-#{$icon}.png');
-        }
-      }
     }
   }
 
   .three-innovative-fields {
+    clear: both;
+
     li > *:not(:last-child) {
       display: inline;
     }

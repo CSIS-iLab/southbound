@@ -52,7 +52,7 @@
   .share,
   .download,
   .ellipse,
-  [class^='icon'],
+  [class^='icon']:not(.icon-external),
   .jump-links,
   .site-footer .wrapper,
   .page-header__content-graphic {
@@ -89,7 +89,9 @@
     }
 
     .component-image {
+      float: right;
       max-width: return-map-value($sizes__one-column__image, 'large');
+      margin-left: 2rem;
     }
 
     aside {
@@ -111,24 +113,11 @@
 
     .five-flagship-programs {
       ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
+        float: left;
+        width: 47%;
 
-      li {
-        flex-basis: 47%;
-
-        &:nth-child(even) {
+        &:last-of-type {
           margin-left: 32px;
-        }
-
-        @for $i from 1 through length($icons) {
-          &:nth-child(#{$i}) {
-            $icon: nth($icons, $i);
-
-            background-image: url('../images/program-#{$icon}.png') !important;
-          }
         }
       }
     }
