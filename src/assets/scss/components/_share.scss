@@ -13,7 +13,6 @@
 
   .icon {
     display: block;
-    margin: 0 0 0 0.5rem;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.2s ease-in-out;
@@ -21,7 +20,11 @@
     #page-header & {
       width: 2.5rem;
       height: 2.5rem;
-      margin-bottom: 1rem;
+      margin: 0 0 0 0.5rem;
+
+      @include breakpoint('medium', 'max-width') {
+        margin-bottom: 1rem;
+      }
 
       &:not(:focus) {
         border: 1px solid $color__gray-medium-cool;
@@ -44,7 +47,7 @@
     .site-footer & {
       width: 3.1rem;
       height: 3.1rem;
-      margin: 0 0.5rem 0 0;
+      margin: 0 0.75rem 0 0;
       color: rgba($color__white, 0.8);
 
       @include breakpoint('medium') {

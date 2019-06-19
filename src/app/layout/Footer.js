@@ -72,9 +72,6 @@ export default class Footer extends React.Component {
                 </li>
               </ul>
             </div>
-            <section className="site-footer__description-copyright ">
-              {ValueToJSX(FooterContent.copyright[0])}
-            </section>
           </section>
 
           <section className="site-footer__report">
@@ -109,9 +106,12 @@ export default class Footer extends React.Component {
             </div>
           </section>
         </div>
-        <section className="site-footer__copyright">
-          {ValueToJSX(FooterContent.copyright[0])}
-        </section>
+        <div className="wrapper">
+          <section className="site-footer__copyright">
+            {ValueToJSX(FooterContent.copyright[0])}
+          </section>
+          <section className="site-footer__copyclear " />
+        </div>
       </footer>
     )
   }

@@ -60,7 +60,7 @@
       grid-column-gap: 1.25rem;
       grid-template-columns: repeat(3, auto);
       grid-template-rows: 1fr;
-      padding: 0 1rem 0 0;
+      padding: 0 $size__padding-desktop 0 0;
     }
 
     &.is-active {

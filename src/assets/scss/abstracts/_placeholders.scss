@@ -132,8 +132,6 @@
     @include font-size(14px);
     @extend %font-gibson;
   }
-
-  @include font-size(13px);
 }
 
 %nav-link {

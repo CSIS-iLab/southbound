@@ -15,27 +15,52 @@
 
   &__copyright {
     flex-basis: 100%;
+    background-color: $color__gray-darkest;
     @include breakpoint('medium') {
-      display: none;
+      // flex-basis: 425px;
+    }
+
+    @include breakpoint('large') {
+      flex-basis: 50%;
     }
 
     p {
       margin: 0;
-      padding: 0.75rem $size__padding-mobile 1.5rem;
-
-      @extend %p4;
+      padding: 0.75rem $size__padding-mobile 1.25rem;
       color: rgba($color__white, 0.5);
+      @extend %p4;
+
+      @include breakpoint('medium') {
+        margin: 0 $size__padding-desktop;
+      }
+    }
+  }
+
+  &__copyclear {
+    flex-basis: 100%;
+    background-color: $color__gray-dark-cool;
+    @include full-width-background($color__gray-dark-cool);
+
+    // @include breakpoint('medium') {
+    //   flex-basis: calc(100% - 425px);
+    // }
+
+    @include breakpoint('large') {
+      flex-basis: 50%;
     }
   }
 
   &__description {
-    @include breakpoint('medium', 'max-width') {
-      padding: 3rem $size__padding-mobile;
-    }
+    flex-basis: 100%;
+    padding: 3rem $size__padding-mobile;
 
     @include breakpoint('medium') {
-      flex-basis: 425px;
+      // flex-basis: 425px;
       padding: 3rem 3rem 1rem $size__padding-desktop;
+    }
+
+    @include breakpoint('large') {
+      flex-basis: 50%;
     }
 
     .csis-link {
@@ -44,21 +69,15 @@
       }
 
       svg {
-        max-width: 325px;
+        max-width: 290px;
+        max-height: 40px;
         transition: all 0.2s ease-in-out;
         fill-opacity: 0.77;
-      }
-    }
 
-    &-copyright {
-      @include breakpoint('medium', 'max-width') {
-        display: none;
-      }
-
-      p {
-        margin: 3rem 0 0;
-        @extend %p4;
-        color: rgba($color__white, 0.5);
+        @include breakpoint('medium') {
+          max-width: 325px;
+          max-height: 46px;
+        }
       }
     }
 
@@ -83,18 +102,19 @@
   }
 
   &__report {
+    flex-basis: 100%;
+    padding: 3rem $size__padding-mobile;
     background-color: $color__gray-dark-cool;
-
-    @include breakpoint('medium', 'max-width') {
-      flex-basis: 100%;
-      padding: 3rem $size__padding-mobile;
-    }
 
     @include breakpoint('medium') {
       display: flex;
-      flex-basis: calc(100% - 425px);
+      // flex-basis: calc(100% - 425px);
       padding: 3rem $size__padding-desktop 1rem;
       @include full-width-background($color__gray-dark-cool);
+    }
+
+    @include breakpoint('large') {
+      flex-basis: 50%;
     }
 
     &::before {
