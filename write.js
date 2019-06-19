@@ -1,5 +1,7 @@
 const { google } = require('googleapis')
 const fs = require('fs')
+require('dotenv').config()
+
 const SPREADSHEET_ID = '1X5WZaBcvkt_2e3L2gYvCjsMjAE2KHtinUK1Yl5jwYpA'
 
 async function getData() {
