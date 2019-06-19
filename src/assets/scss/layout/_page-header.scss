@@ -3,7 +3,7 @@
   transition: margin 0.2s ease-in-out;
 
   @include breakpoint('medium') {
-    margin: 0 0 3.5rem;
+    margin: $size__header-height-desktop 0 3.5rem;
 
     .site-header--minimal + main & {
       margin-top: $size__header-height-mobile;
@@ -11,7 +11,8 @@
   }
 
   @include breakpoint('large') {
-    margin: 0 calc((#{$size__header__max-width} - 100%) / -2) 3.5rem;
+    margin: $size__header-height-desktop
+      calc((#{$size__header__max-width} - 100%) / -2) 3.5rem;
 
     .site-header--minimal + main & {
       margin-top: $size__header-height-mobile;

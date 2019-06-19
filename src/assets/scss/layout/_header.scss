@@ -1,16 +1,13 @@
 .site-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
   height: $size__header-height-mobile;
   background-color: $color__gray-lighter;
   box-shadow: 0 2px 4px 0 rgba($color__black, 0.25);
-  transition: all 0.2s ease-in-out;
-
-  @include breakpoint('medium', 'max-width') {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 10;
-  }
+  transition: height 0.2s ease-in-out;
 
   @include breakpoint('medium') {
     height: $size__header-height-desktop;
@@ -128,12 +125,9 @@
 }
 
 .site-header--minimal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 10;
+  top: calc(#{$size__header-height-mobile} * -1.5);
   height: $size__header-height-mobile;
+  animation: swoop 0.8s linear forwards;
 
   .site-logo {
     &::before {
@@ -191,5 +185,15 @@
       display: flex;
       width: unset;
     }
+  }
+}
+
+@keyframes swoop {
+  0% {
+    top: calc(#{$size__header-height-mobile} * -1.5);
+  }
+
+  100% {
+    top: 0;
   }
 }

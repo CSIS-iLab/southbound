@@ -19,7 +19,7 @@ export default function HeaderScroll() {
   if (!offsetScroll) {
     scrollPos += header_height
   }
-  if (scrollPos > 250) {
+  if (scrollPos > 300) {
     header.classList.add(minimal_class)
   }
   if (scrollPos > header_height) {
@@ -33,7 +33,7 @@ export default function HeaderScroll() {
   } else {
     offsetScroll = true
     header.classList.remove(hidden_class)
-    if (scrollPos < 250) {
+    if (scrollPos < 300) {
       header.classList.remove(minimal_class)
     }
   }
