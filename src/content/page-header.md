@@ -7,7 +7,6 @@ hero:
   title: Southbound Policy
   subtitle: Deepening Taiwan’s Regional Integration
   published: Published June 2019
-  updated: last updated August 2019
 download: |-
     <span class="icon-download">Download the Full Report</span>
     PDF, 88 pages, 2.8MB
