@@ -92,6 +92,8 @@ section::before {
 
       .data & {
         > figure {
+          width: 100%;
+
           max-width: $big;
         }
 

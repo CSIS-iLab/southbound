@@ -1,6 +1,44 @@
 import Highcharts from 'Highcharts'
 import Charts from './Charts'
-import { ChartColors } from './ChartOptions'
+
+const ChartColors = {
+  '1': ['#fc9603'],
+  '2': ['#26a3a7', '#fc9603'],
+  '3': ['#26a3a7', '#fc9603', '#374961'],
+  '4': ['#26a3a7', '#fc9603', '#e13c2b', '#374961'],
+  '5': ['6cd0da', '#26a3a7', '#fc9603', '#e13c2b', '#374961'],
+  '6': ['6cd0da', '#26a3a7', '#fc9603', '#e13c2b', '#618096', '#374961'],
+  '7': [
+    '#6cd0da',
+    '#26a3a7',
+    '#fc9603',
+    '#ff7058',
+    '#e13c2b',
+    '#618096',
+    '#374961'
+  ],
+  '8': [
+    '#6cd0da',
+    '#26a3a7',
+    '#f6cd37',
+    '#fc9603',
+    '#ff7058',
+    '#e13c2b',
+    '#618096',
+    '#374961'
+  ],
+  '9': [
+    '#6cd0da',
+    '#26a3a7',
+    '#f6cd37',
+    '#fc9603',
+    '#ff7058',
+    '#e13c2b',
+    '#618096',
+    '#374961',
+    '#85bb32'
+  ]
+}
 
 export default function InitSheets(data, location) {
   let chart = Charts[data.key]
@@ -78,12 +116,13 @@ export default function InitSheets(data, location) {
           series = [otherSeries, ...series]
         }
       }
+      let seriesCount = series.length.toString()
 
       series.forEach((s, i) => {
         s.color =
           Charts[data.key].legend && Charts[data.key].legend.reversed
-            ? ChartColors[series.length - 1 - i]
-            : ChartColors[i]
+            ? ChartColors[seriesCount][series.length - 1 - i]
+            : ChartColors[seriesCount][i]
       })
 
       if (type === 'pie') {

@@ -1,15 +1,3 @@
-export const ChartColors = [
-  '#85d8e2',
-  '#39a4a3',
-  '#f0d02e',
-  '#f69500',
-  '#e8737b',
-  '#d63426',
-  '#647f96',
-  '#394863',
-  '#8bb860'
-]
-
 export default function(options) {
   const { isDataRepo } = options
 
@@ -19,7 +7,6 @@ export default function(options) {
         isDataRepo && window.innerWidth > 1080 ? 400 : isDataRepo ? 275 : 300,
       styledMode: false
     },
-    colors: ChartColors,
     title: {
       text: ''
     },
@@ -89,7 +76,7 @@ export default function(options) {
       labels: {
         x: -3,
         formatter: function() {
-          const { valuePrefix, valueSuffix } = this.chart.userOptions.tooltip
+          const { valueSuffix } = this.chart.userOptions.tooltip
 
           const value = getReduceSigFigs(this.value, valueSuffix)
 
@@ -121,7 +108,6 @@ export default function(options) {
         maxPointWidth: 150
       },
       pie: {
-        colors: ChartColors,
         dataLabels: {
           crop: false,
           distance: isDataRepo ? 10 : 2,
