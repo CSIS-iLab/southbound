@@ -73,11 +73,16 @@ class Data extends React.Component {
 
     const search = document.querySelector('input[type="search"]')
 
-    search.addEventListener('focus', event => {
+    search.addEventListener('focus', e => {
+      e.target.parentNode.classList.add('focus')
       window.scrollTo({
         top: search.getBoundingClientRect().top,
         behavior: 'smooth'
       })
+    })
+
+    search.addEventListener('blur', e => {
+      e.target.parentNode.classList.remove('focus')
     })
   }
 
@@ -224,14 +229,7 @@ class Data extends React.Component {
                         <p className="chart-text__subtitle">{data.subtitle}</p>
                         <ul className="chart-text__tags">
                           {data.tags.map(t => (
-                            <li
-                              key={t}
-                              className={
-                                filteredCategories.includes(t)
-                                  ? 'checked tag'
-                                  : 'tag'
-                              }
-                            >
+                            <li key={t} className="tag">
                               <span>{t}</span>
                             </li>
                           ))}
