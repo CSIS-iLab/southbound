@@ -12,10 +12,15 @@ Data is connected to a Google Sheet workbook in the China Power Google Drive fol
 * [Contributing](#contributing)
 
 ## Quick-start Instructions
+
 ```shell
 $ git clone https://github.com/CSIS-iLab/southbound.git
 $ cd southbound
 $ npm install
+```
+You will need to create a charts.json file, which uses Google Sheets API to pull in, and structure data. Create an .env file and fill in the Google API Key. See ``.env.example` The API Key is available in Slack
+```shell
+$ node write.js
 $ npm start
 ```
 
@@ -28,6 +33,8 @@ This will give you file watching, browser synchronization, auto-rebuild, CSS inj
 ```shell
 $ npm start
 ```
+
+
 
 ### production
 

@@ -91,6 +91,8 @@
   }
 
   .three-innovative-fields {
+    clear: both;
+
     li > *:not(:last-child) {
       display: inline;
     }

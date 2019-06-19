@@ -1,13 +1,15 @@
-const { google } = require("googleapis");
-const fs = require("fs");
-const SPREADSHEET_ID = "1X5WZaBcvkt_2e3L2gYvCjsMjAE2KHtinUK1Yl5jwYpA";
+const { google } = require('googleapis')
+const fs = require('fs')
+require('dotenv').config()
+
+const SPREADSHEET_ID = '1X5WZaBcvkt_2e3L2gYvCjsMjAE2KHtinUK1Yl5jwYpA'
 
 async function getData() {
   let sheets = google.sheets("v4");
 
   let spreadsheet = await sheets.spreadsheets.get({
     spreadsheetId: SPREADSHEET_ID,
-    auth: "AIzaSyA1ol27C1FVv-F6940xNXY-VImb5ZCE3JE"
+    auth: process.env.GAPI_KEY
   });
 
   let ranges = spreadsheet.data.sheets.map(sheet => sheet.properties.title);
@@ -16,7 +18,7 @@ async function getData() {
     let response = await sheets.spreadsheets.values.get({
       spreadsheetId: SPREADSHEET_ID,
       range: `'${sheet}'!A:Z`,
-      auth: "AIzaSyA1ol27C1FVv-F6940xNXY-VImb5ZCE3JE"
+      auth: process.env.GAPI_KEY
     });
 
     let values = response.data.values;
