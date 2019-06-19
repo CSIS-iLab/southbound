@@ -74,9 +74,12 @@ section::before {
         margin-left: $size__gap;
       }
 
+      .title {
+        flex-basis: 100%;
+      }
+
       .homepage & {
-        > .description p,
-        > .text {
+        > .description {
           max-width: $big;
         }
 
@@ -90,7 +93,7 @@ section::before {
           max-width: $big;
         }
 
-        > .text {
+        > .description {
           max-width: calc(#{$small} - #{$size__gap} / 2);
         }
       }
