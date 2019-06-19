@@ -1,4 +1,5 @@
 const StyleLintPlugin = require('stylelint-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = function override(config, env) {
   config.externals = {
@@ -7,6 +8,13 @@ module.exports = function override(config, env) {
   }
 
   config.devtool = 'inline-source-map'
+
+  config.optimization.minimizer.push(
+    new UglifyJsPlugin({
+      test: /\.(js|jsx)$/,
+      exclude: /node_modules/
+    })
+  )
 
   config.module.rules.push({
     test: /\.(scss|css)$/,
