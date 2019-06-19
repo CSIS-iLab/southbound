@@ -18,6 +18,7 @@
 
   .page-header {
     &__highlights {
+      margin-bottom: 0 !important;
       padding: 0 !important;
 
       &::after {
@@ -26,14 +27,17 @@
     }
 
     &__content {
-      min-height: unset !important;
       margin: 0 !important;
       background: transparent !important;
 
+      &-details {
+        grid-column-end: 3;
+        grid-column-start: 2;
+      }
+
       &-wrapper {
-        position: relative !important;
-        bottom: 0 !important;
         max-width: 100% !important;
+        overflow: visible !important;
       }
     }
   }
@@ -48,9 +52,10 @@
   .share,
   .download,
   .ellipse,
-  .icon-report,
+  [class^='icon'],
   .jump-links,
-  .site-footer .wrapper {
+  .site-footer .wrapper,
+  .page-header__content-graphic {
     display: none !important;
   }
 
@@ -147,7 +152,9 @@
       }
 
       > figure {
+        float: right;
         max-width: calc(#{$small} - #{$size__gap} / 2);
+        margin-left: 2rem;
       }
     }
 
