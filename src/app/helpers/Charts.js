@@ -315,7 +315,7 @@ export default {
     yAxis: {
       ceiling: 100,
       tickInterval: 10,
-      title: { text: '' }
+      title: { text: 'Students (Percent)' }
     },
     xAxis: {
       labels: {
@@ -360,7 +360,7 @@ export default {
     yAxis: {
       ceiling: 100,
       tickInterval: 10,
-      title: { text: '' }
+      title: { text: 'Students (Percent)' }
     },
     xAxis: {
       labels: {
