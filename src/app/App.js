@@ -6,7 +6,7 @@ import About from './pages/About'
 import Data from './pages/Data'
 import Errorpage from './pages/Errorpage'
 import SiteMap from './SiteMap'
-import { Route, Switch} from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import SmoothScroll from 'smooth-scroll'
 import sheetData from './charts.json'
 import { withRouter } from 'react-router-dom'
@@ -127,8 +127,8 @@ class App extends Component {
     )
 
     new SmoothScroll('a[href*="#"]', {
-      header: '.site-header',
-      speed: 500
+      speed: 500,
+      offset: -48
     })
 
     document.addEventListener(
@@ -199,7 +199,11 @@ class App extends Component {
           />
           <Route
             render={props => (
-              <Errorpage {...props} siteStructure={siteStructure} page="errorpage" />
+              <Errorpage
+                {...props}
+                siteStructure={siteStructure}
+                page="errorpage"
+              />
             )}
           />
         </Switch>
