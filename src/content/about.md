@@ -8,9 +8,9 @@ sections:
     content:
       text: |-
           On this page:
-          * <a href="#about">About this publication</a>
+          * <a href="#about_publication">About this publication</a>
           * <a href="#authors">Authors</a>
-          * <a href="#thanks">Special Thanks</a>
+          * <a href="#special_thanks">Special Thanks</a>
   about_publication:
     index: 2
     component: one-column
