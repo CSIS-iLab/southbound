@@ -39,7 +39,7 @@ export default function(options) {
         const color = this.color
 
         let units
-        if (yAxis) units = yAxis.title.text.toLowerCase()
+        if (yAxis) units = yAxis.title.text.toLowerCase().split('(')[0]
         if (units === 'usd') units = 'USD'
         if (valueSuffix === '%' && units !== 'change') {
           if (!units) units = 'Students' // bar charts
@@ -93,7 +93,7 @@ export default function(options) {
 
           const value = getReduceSigFigs(this.value, valueSuffix)
 
-          return `${valuePrefix || ''}${value}${valueSuffix}`
+          return `${value}`
         }
       },
       title: {
@@ -110,6 +110,12 @@ export default function(options) {
       }
     },
     plotOptions: {
+      area: {
+        marker: {
+          enabled: false,
+          symbol: 'circle'
+        }
+      },
       column: {
         stacking: 'normal',
         maxPointWidth: 150
@@ -118,9 +124,9 @@ export default function(options) {
         colors: ChartColors,
         dataLabels: {
           crop: false,
+          distance: isDataRepo ? 10 : 2,
           overflow: 'allow'
-        },
-        size: '90%'
+        }
       },
       bar: {
         stacking: 'normal',
@@ -140,13 +146,7 @@ export default function(options) {
             maxWidth: 480
           },
           chartOptions: {
-            plotOptions: {
-              pie: {
-                dataLabels: {
-                  distance: -20
-                }
-              }
-            }
+            plotOptions: {}
           }
         },
         {
@@ -160,13 +160,7 @@ export default function(options) {
             legend: {
               align: isDataRepo ? 'left' : 'center'
             },
-            plotOptions: {
-              pie: {
-                dataLabels: {
-                  distance: 50
-                }
-              }
-            },
+            plotOptions: {},
             credits: {
               position: { align: isDataRepo ? 'right' : 'center' }
             }

@@ -37,7 +37,7 @@ sections:
             <p>Senior Adviser, Freeman Chair in China Studies and Director, Project on Chinese Business and Political Economy</p>
             <p>Scott Kennedy is senior adviser of the Freeman Chair in China Studies and director of the Project on Chinese Business and Political Economy at CSIS. Prior to joining CSIS, he was a professor at Indiana University (IU) for over 14 years. From 2007-2014, he was the director of the Research Center for Chinese Politics & Business and founding academic director of IU’s China Office. Dr. Kennedy received his Ph.D. in political science from George Washington University.</p></div>
 
-        * <div></div>
+        * <div><img src="https://res.cloudinary.com/csisideaslab/image/upload/v1560960193/southbound/Derek_Mitchell.jpg" class="download__image" alt="Author Photo"></div>
           <div><h4>Ambassador Derek Mitchell</h4>
             <p>President, National Democratic Institute for International Affairs</p>
             <p>Derek Mitchell is president of the National Democratic Institute. From 2012 to 2016, he was U.S. ambassador to Myanmar, and from 2011 to 2012, he was the U.S. State Department’s first special representative and policy coordinator for Burma. Prior to that, he was principal deputy assistant secretary of defense, Asian and Pacific Security Affairs, and acting assistant secretary of defense. From 2001 to 2009, he was a senior fellow and director of the Asia Division of the CSIS International Security Program.</p></div>
@@ -52,7 +52,7 @@ sections:
     title: Special Thanks
     content:
       - |-
-        One sentence along the lines of: “We would like to thank those who helped bring this report to the web” list of people/organizations who made the website possible
+        The authors would like to thank all the institutions and individuals who provided assistance and support to this project. We are grateful to Taiwan’s Ministry of Foreign Affairs, the Taipei Economic and Cultural Representative Office in Washington, DC, and the Taiwan-Asia Exchange Foundation (TAEF). A special thanks goes to Dr. Alan Hao Yang, executive director of TAEF, for his support during the development of this website.
 
         #### CSIS iDeas Lab
         The printed and digital versions of this report are products of the  <a href="https://www.csis.org/programs/dracopoulos-ideas-lab" class="icon-external" target="_blank" rel="nofollow noreferrer">Andreas C. Dracopoulos iDeas Lab</a>, the in-house digital, multimedia, and design agency at the Center for Strategic and International Studies.

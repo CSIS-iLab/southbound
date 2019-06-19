@@ -6,7 +6,7 @@ export default {
     },
     yAxis: {
       title: {
-        text: 'USD'
+        text: 'USD (Billions)'
       }
     },
     tooltip: {
@@ -22,7 +22,7 @@ export default {
     },
     yAxis: {
       title: {
-        text: 'USD'
+        text: 'USD (Billions)'
       },
       tickInterval: 4
     },
@@ -43,11 +43,11 @@ export default {
     },
     yAxis: {
       title: {
-        text: 'Change'
+        text: 'Change (Percent)'
       },
       tickInterval: 2,
-      max: 14,
-      min: -14
+      max: 12,
+      min: -10
     },
     tooltip: {
       shared: true,
@@ -65,11 +65,11 @@ export default {
     },
     yAxis: {
       title: {
-        text: 'Change'
+        text: 'Change (Percent)'
       },
       tickInterval: 2,
       max: 14,
-      min: -14
+      min: -8
     },
     tooltip: {
       shared: true,
@@ -83,7 +83,7 @@ export default {
     },
     yAxis: {
       title: {
-        text: 'People'
+        text: 'Unemployed (Percent)'
       }
     },
     tooltip: {
@@ -94,11 +94,11 @@ export default {
   // exporttonsp
   '5.3': {
     chart: {
-      type: 'line'
+      type: 'area'
     },
     yAxis: {
       title: {
-        text: 'USD'
+        text: 'USD (Billions)'
       },
       tickInterval: 20
     },
@@ -111,11 +111,11 @@ export default {
   // outboundinvestment
   '5.4': {
     chart: {
-      type: 'line'
+      type: 'area'
     },
     yAxis: {
       title: {
-        text: 'USD'
+        text: 'USD (Billions)'
       }
     },
     tooltip: {
@@ -131,7 +131,7 @@ export default {
     },
     yAxis: {
       title: {
-        text: 'USD'
+        text: 'USD (Billions)'
       }
     },
     tooltip: {
@@ -147,7 +147,7 @@ export default {
     },
     yAxis: {
       title: {
-        text: 'USD'
+        text: 'USD (Billions)'
       },
       tickInterval: 20
     },
@@ -164,7 +164,7 @@ export default {
     },
     yAxis: {
       title: {
-        text: 'USD'
+        text: 'USD (Billions)'
       },
       tickInterval: 100
     },
@@ -181,7 +181,7 @@ export default {
     },
     yAxis: {
       title: {
-        text: 'USD'
+        text: 'USD (Billions)'
       }
     },
     tooltip: {
@@ -193,15 +193,15 @@ export default {
   // numberoftourists
   '7.1': {
     chart: {
-      type: 'line'
+      type: 'column'
     },
     yAxis: {
       title: {
-        text: 'Tourists'
+        text: 'Tourists (Millions)'
       }
     },
     tooltip: {
-      shared: true,
+      shared: false,
       valueSuffix: 'M'
     }
   },
@@ -212,7 +212,7 @@ export default {
     },
     yAxis: {
       title: {
-        text: 'Tourists'
+        text: 'Tourists (Millions)'
       },
       tickInterval: 1000000
     },
@@ -228,7 +228,7 @@ export default {
     },
     yAxis: {
       title: {
-        text: 'Millions'
+        text: 'Tourists (Millions)'
       },
       tickInterval: 1000000
     },
@@ -244,7 +244,7 @@ export default {
     },
     yAxis: {
       title: {
-        text: 'Tourists'
+        text: 'Tourists (Millions)'
       },
       tickInterval: 2000000
     },
@@ -262,7 +262,7 @@ export default {
     },
     yAxis: {
       title: {
-        text: 'Students'
+        text: 'Students (Thousands)'
       },
       tickInterval: 50000
     },
@@ -288,6 +288,11 @@ export default {
     tooltip: {
       headerFormat: '',
       valueSuffix: '%'
+    },
+    plotOptions: {
+      pie: {
+        size: '85%'
+      }
     }
   },
   // destinationnsp
@@ -328,7 +333,12 @@ export default {
         index: 0,
         innerSize: '70%'
       }
-    ]
+    ],
+    plotOptions: {
+      pie: {
+        size: '65%'
+      }
+    }
   },
   // shareofinbound
   '8.5': {

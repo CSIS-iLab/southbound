@@ -28,7 +28,7 @@ class Homepage extends React.Component {
     if (sheetData && sheetData.length) {
       Highcharts.setOptions(ChartOptions({ isDataRepo: false }))
 
-      const chartIDs = ['5.3', '8.4', '7.4', '3.1']
+      const chartIDs = ['5.3', '8.4', '7.4', '5.5']
       chartIDs.forEach(key => {
         const data = sheetData.find(d => d.key === key)
 
@@ -128,9 +128,9 @@ class Homepage extends React.Component {
                           </p>
                           <p>{chart.credits}</p>
                           <a
-                            href={`https://csis-prod.s3.amazonaws.com/s3fs-public/publication/180613_Glaser_NewSouthboundPolicy_Web.pdf#${
+                            href={`https://csis-prod.s3.amazonaws.com/s3fs-public/publication/180613_Glaser_NewSouthboundPolicy_Web.pdf?AcoayLFliB9_iAvbmYvP_jM27mEXw5xL#${
                               chart.pdf
-                            }?AcoayLFliB9_iAvbmYvP_jM27mEXw5xL`}
+                            }`}
                             className="icon-report"
                           >
                               Find in Report
