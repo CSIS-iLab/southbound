@@ -28,6 +28,12 @@
     transition: all 0.2s ease-in-out;
     @include full-width-background($color__gray-dark-cool, left, true);
 
+    @include breakpoint('medium') {
+      display: block;
+      width: 350px;
+      line-height: 1.1;
+    }
+
     &::before {
       z-index: 0;
       transition: all 0.2s ease-in-out;
@@ -95,9 +101,10 @@
 
       &.link-csis {
         @include breakpoint('medium') {
-          display: flex;
+          display: -ms-flex;
+          display: inline-flex;
           justify-content: flex-start;
-          margin-top: 1rem;
+          margin-top: 0.75rem;
           padding-right: $size__padding-desktop;
         }
       }
@@ -117,12 +124,6 @@
       @include breakpoint('medium') {
         width: 40px;
       }
-    }
-
-    @include breakpoint('medium') {
-      display: block;
-      width: 350px;
-      line-height: 1.2;
     }
   }
 }
