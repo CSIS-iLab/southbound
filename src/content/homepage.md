@@ -134,7 +134,7 @@ sections:
             Taiwan has established a $3.5 billion fund to assist partner countries with development projects.
 
           * Overseas Network: Connect with overseas ethnic Chinese and overseas Taiwan business networks and strengthen their links with corporations in Taiwan.
-        chart: "3.1"
+        chart: "5.5"
   flagship:
     index: 8
     component: one-column
