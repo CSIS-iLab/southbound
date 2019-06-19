@@ -40,24 +40,35 @@
   }
 
   .abstract {
-    @include breakpoint($break: 'small', $until: 'medium') {
-      display: flex;
-      flex-wrap: wrap;
+    @include order;
+    display: flex;
+    flex-wrap: wrap;
 
-      p {
-        flex-basis: 100%;
-        @include order;
+    @include breakpoint($break: 'medium') {
+      display: block;
+    }
+
+    .component-image {
+      order: 5;
+
+      @include breakpoint($break: 'small') {
+        order: 3;
+      }
+      @include breakpoint($break: 'medium') {
+        order: 2;
       }
 
-      .component-image {
-        order: 3;
-
-        + p {
+      + p {
+        @include breakpoint($break: 'small', $until: 'medium') {
           flex-grow: 1;
           flex-basis: calc(50% - 1rem);
           order: 2;
         }
       }
+    }
+
+    p {
+      flex-basis: 100%;
     }
   }
 
