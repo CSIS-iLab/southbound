@@ -89,7 +89,7 @@ export default function(options) {
       }
     },
     legend: {
-      align: 'left',
+      align: 'center',
       verticalAlign: 'bottom',
       layout: 'horizontal',
       itemStyle: {

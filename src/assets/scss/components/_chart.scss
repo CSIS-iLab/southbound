@@ -83,6 +83,14 @@
   }
 }
 
+.highcharts-legend-item tspan,
+.highcharts-label tspan {
+  @extend %font-hind;
+  font-weight: 100;
+  @include font-size(14px);
+  fill: $color__black;
+}
+
 .highcharts-xaxis-labels {
   @extend %font-hind;
   fill: $color__gray-medium-cool;
