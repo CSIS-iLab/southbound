@@ -162,6 +162,8 @@
 %nav-summary-link {
   @extend %font-gibson;
   @include font-size(16px);
+  display: block;
+  padding: 1rem 1.25rem;
 
   &:hover,
   &:focus {

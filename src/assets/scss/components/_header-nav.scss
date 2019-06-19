@@ -74,8 +74,9 @@
       align-items: center;
 
       @include breakpoint('medium', 'max-width') {
-        &:not(:first-child) {
-          margin-top: 1.25rem;
+        &:not(:first-child) a {
+          padding-top: 0.75rem;
+          padding-bottom: 0.5rem;
         }
 
         &:first-child {
@@ -93,8 +94,6 @@
         @extend %plain-list;
 
         li {
-          padding: 1rem 1.25rem;
-
           &:not(:last-child) {
             border-bottom: 1px solid rgba($color__gray-darkest, 0.2);
           }
