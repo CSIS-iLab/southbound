@@ -6,7 +6,7 @@
 
 @mixin button {
   padding: 0.5rem 0.75rem;
-  color: $color__gray-lightest;
+  color: rgba($color__white, 0.9);
   background-color: rgba($color__gray-medium-cool, 0.6);
   transition: all 0.2s ease-in-out;
   @include font-size(16px);

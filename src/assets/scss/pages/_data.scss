@@ -88,8 +88,8 @@
         color: rgba($color__gray-dark, 0.35);
         content: '\0041';
 
-        @include breakpoint('medium') {
-          top: 33%;
+        @include breakpoint('large') {
+          top: 25%;
         }
       }
 
@@ -128,15 +128,16 @@
 
   @include breakpoint('medium', 'max-width') {
     width: 100vw;
-    margin: 0 calc((100vw - 100%) / -2);
+    margin: 0 calc(#{$size__padding-mobile} * -1);
   }
 
   .chart {
-    padding: 1.5rem 2rem 2.5rem;
+    padding: 1.5rem $size__padding-desktop 2.5rem;
     background-color: $color__white;
     box-shadow: 0 2px 4px 0 rgba($color__black, 0.08);
     @include breakpoint('medium', 'max-width') {
       margin-bottom: 0;
+      padding: 3rem $size__padding-mobile 3rem;
       border-bottom: 1px solid rgba($color__gray-darkest, 0.2);
     }
 
