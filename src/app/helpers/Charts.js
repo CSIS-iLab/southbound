@@ -102,6 +102,12 @@ export default {
       },
       tickInterval: 20
     },
+    plotOptions: {
+      series: {
+        stacking: 'normal'
+      }
+    },
+
     tooltip: {
       shared: true,
       valuePrefix: '$',
@@ -122,6 +128,11 @@ export default {
       shared: true,
       valuePrefix: '$',
       valueSuffix: 'B'
+    },
+    plotOptions: {
+      series: {
+        stacking: 'normal'
+      }
     }
   },
   // outboundchina
