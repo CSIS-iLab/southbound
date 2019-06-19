@@ -158,7 +158,10 @@
 
     &.site-logo--home {
       &::before {
-        background-color: $color__gray-darkest;
+        background-color: $color__orange;
+        @include breakpoint('medium') {
+          background-color: $color__gray-darkest;
+        }
       }
 
       a.link-home {
