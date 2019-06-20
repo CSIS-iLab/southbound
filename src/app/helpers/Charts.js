@@ -323,7 +323,7 @@ export default {
       }
     },
     legend: {
-      reversed: true
+      reversed: false
     },
     tooltip: {
       headerFormat: '',
