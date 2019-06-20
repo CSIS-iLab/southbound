@@ -125,7 +125,7 @@
       justify-content: space-between;
       max-width: $size__container__max-width;
       margin: auto;
-      padding: 4rem 0;
+      padding: 3rem 0;
 
       @include breakpoint('large') {
         padding: 4rem $size__padding-desktop;
