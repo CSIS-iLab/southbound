@@ -96,7 +96,10 @@ p {
 
 ul {
   margin-top: 0;
-  padding-left: 1.5rem;
+  padding-left: 0.5rem;
+  @include breakpoint('medium') {
+    padding-left: 1.5rem;
+  }
 
   main & {
     @include fluid-type(18px, 20px);

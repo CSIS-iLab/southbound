@@ -188,10 +188,10 @@ sections:
 
           The Taiwan-Asia Exchange Foundation was established in August 2018 to strengthen ties with NSP partner countries. The Yushan Forum is a Taiwan-initiated annual forum designed to foster dialogue, cooperation, and cultural exchange throughout the region. Areas of focus include economic prosperity, technology, innovation, and public health.
       three-innovative-fields: |-
-        #### Three Innovative Fields
-        * <h5>E-commerce:</h5><p> Help local firms expand their business abroad and aid the development of e-commerce platforms in regional markets.</p>
-        * <h5>Infrastructure:</h5><p> Provide financial support to help Taiwan companies work on infrastructure development projects in partner countries.</p>
-        * <h5>Tourism:</h5><p> Expand domestic tourism services, promote Taiwan as a tourist destination overseas, and ease visa entry requirements.</p>
+        ### Three Innovative Fields
+        * <h5>E-commerce</h5><p> Help local firms expand their business abroad and aid the development of e-commerce platforms in regional markets.</p>
+        * <h5>Infrastructure</h5><p> Provide financial support to help Taiwan companies work on infrastructure development projects in partner countries.</p>
+        * <h5>Tourism</h5><p> Expand domestic tourism services, promote Taiwan as a tourist destination overseas, and ease visa entry requirements.</p>
 
           <button className="detail__trigger" aria-expanded="false" aria-label="Show More"><i className="icon-more"></i></button>
 
