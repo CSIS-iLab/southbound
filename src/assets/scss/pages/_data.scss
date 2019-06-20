@@ -45,7 +45,7 @@
 
   &-category {
     @include breakpoint('large') {
-      flex-basis: 60%;
+      flex-basis: calc(100% - 375px);
     }
 
     .filters-label {
@@ -63,8 +63,8 @@
 
   &-search {
     @include breakpoint('large') {
-      flex-basis: 40%;
-      margin-right: 2rem;
+      flex-basis: 375px;
+      margin-right: 4.5rem;
     }
 
     &-box {
