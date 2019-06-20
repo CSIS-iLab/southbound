@@ -26,10 +26,11 @@ export default function(options) {
         const color = this.color
 
         let units
-        if (yAxis) units = yAxis.title.text.toLowerCase().split('(')[0]
+        if (yAxis) units = yAxis.title.text.toLowerCase().split(' (')[0]
+        console.log(units);
         if (units === 'usd') units = 'USD'
         if (valueSuffix === '%' && units !== 'change') {
-          if (!units) units = 'Students' // bar charts
+          if (!units) units = 'students' // bar charts
 
           units = ' of ' + units
         }
