@@ -256,3 +256,8 @@
     }
   }
 }
+
+main:not(.homepage) .page-header__content-graphic {
+  height: 100%;
+  justify-self: flex-end;
+}
