@@ -25,13 +25,15 @@
     }
 
     p {
-      margin: 0;
-      padding: 0.75rem $size__padding-mobile 1.25rem;
+      margin: 0.75rem $size__padding-mobile 1.25rem;
       color: rgba($color__white, 0.5);
       @extend %p4;
 
-      @include breakpoint('medium') {
-        margin: 0 $size__padding-desktop;
+      @include breakpoint('medium', $until: 'large') {
+        margin: 1rem $size__padding-desktop 1.25rem;
+      }
+      @include breakpoint('large') {
+        margin: 0 $size__padding-desktop 1rem;
       }
     }
   }
