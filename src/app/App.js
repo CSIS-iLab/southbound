@@ -45,10 +45,11 @@ class App extends Component {
         .filter(data => !data.hide)
         .map(data => data.tags)
 
-      filteredCategories =
-          tags.length > 0
-            ? [...new Set(tags.reduce((a, b) => a.concat(b)))]
-            : []
+      filteredCategories = !value
+        ? []
+        : tags.length > 0
+          ? [...new Set(tags.reduce((a, b) => a.concat(b)))]
+          : []
 
       break
 
@@ -108,7 +109,7 @@ class App extends Component {
     }
 
     queried = filteredCategories.length !== this.state.categories.length
-    console.log(input)
+
     this.setState({ filteredSheetData, filteredCategories, queried })
   }
 
