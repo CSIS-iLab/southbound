@@ -127,7 +127,7 @@
 .site-header--minimal {
   top: calc(#{$size__header-height-mobile} * -1.5);
   height: $size__header-height-mobile;
-  animation: swoop 0.8s linear forwards;
+  animation: swoop 300ms linear forwards;
 
   .site-logo {
     &::before {
