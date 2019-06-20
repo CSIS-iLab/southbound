@@ -74,6 +74,10 @@
   }
 }
 
+.highcharts-container {
+  overflow: visible;
+}
+
 .highcharts-axis-title {
   @extend %font-hind;
   fill: $color__gray-medium-cool;
