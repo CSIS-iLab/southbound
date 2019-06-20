@@ -65,7 +65,9 @@
 
     &:hover,
     &:focus {
-      background-color: $color__gray-light;
+      background-color: #fff;
+      border: solid 1px $color__gray-lightest;
+      box-shadow: 0 2px 8px -1px rgba($color__black, 0.35);
     }
 
     .icon-download {
@@ -80,7 +82,9 @@
     }
 
     &:hover {
-      background-color: rgba($color__white, 0.9);
+      background-color: #fff;
+      border: solid 1px $color__gray-lightest;
+      box-shadow: 0 2px 8px -1px rgba($color__black, 0.35);
     }
 
     .icon-download {
