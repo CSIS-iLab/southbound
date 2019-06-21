@@ -35,11 +35,10 @@ export default {
   // percapitagrowth
   '5.1.1': {
     chart: {
-      height: 500,
       type: 'line'
     },
     xAxis: {
-      offset: -200
+      offset: -135
     },
     yAxis: {
       title: {
@@ -57,11 +56,10 @@ export default {
   // percapitagrowth
   '5.1.2': {
     chart: {
-      height: 500,
       type: 'line'
     },
     xAxis: {
-      offset: -200
+      offset: -110
     },
     yAxis: {
       title: {
