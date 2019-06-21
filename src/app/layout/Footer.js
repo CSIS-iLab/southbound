@@ -33,7 +33,7 @@ export default class Footer extends React.Component {
                 <li>
                   <a
                     href="https://www.facebook.com/CSIS.org/"
-                    className="icon icon-facebook"
+                    className="share-icon icon-facebook"
                   >
                     <span className="visually-hidden">Facebook</span>
                   </a>
@@ -41,7 +41,7 @@ export default class Footer extends React.Component {
                 <li>
                   <a
                     href="https://twitter.com/CSIS"
-                    className="icon icon-twitter"
+                    className="share-icon icon-twitter"
                   >
                     <span className="visually-hidden">Twitter</span>
                   </a>
@@ -49,7 +49,7 @@ export default class Footer extends React.Component {
                 <li>
                   <a
                     href="https://www.linkedin.com/company/csis"
-                    className="icon icon-linkedin"
+                    className="share-icon icon-linkedin"
                   >
                     <span className="visually-hidden">LinkedIn</span>
                   </a>
@@ -57,7 +57,7 @@ export default class Footer extends React.Component {
                 <li>
                   <a
                     href="https://www.youtube.com/channel/UCr5jq6MC_VCe1c5ciIZtk_w"
-                    className="icon icon-youtube"
+                    className="share-icon icon-youtube"
                   >
                     <span className="visually-hidden">Youtube</span>
                   </a>
@@ -65,7 +65,7 @@ export default class Footer extends React.Component {
                 <li>
                   <a
                     href="https://www.instagram.com/csis/?hl=en"
-                    className="icon icon-instagram"
+                    className="share-icon icon-instagram"
                   >
                     <span className="visually-hidden">Instagram</span>
                   </a>

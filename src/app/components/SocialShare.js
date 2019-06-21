@@ -6,7 +6,7 @@ export default class SocialShare extends React.Component {
       <ul className="share">
         <li>
           <a
-            className="icon icon-facebook"
+            className="share-icon icon-facebook"
             href={`https://www.facebook.com/sharer.php?u=${
               window.location.href
             }`}
@@ -19,7 +19,7 @@ export default class SocialShare extends React.Component {
         </li>
         <li>
           <a
-            className="icon icon-twitter"
+            className="share-icon icon-twitter"
             href={`https://twitter.com/intent/tweet?url=${
               window.location.href
             }&amp;via=CSIS&amp;related=CSIS`}
@@ -32,7 +32,7 @@ export default class SocialShare extends React.Component {
         </li>
         <li>
           <a
-            className="icon icon-linkedin"
+            className="share-icon icon-linkedin"
             href={`https://www.linkedin.com/shareArticle?mini=true&amp;url=${
               window.location.href
             }&amp;source=CSIS`}
@@ -46,7 +46,7 @@ export default class SocialShare extends React.Component {
         <li>
           <i
             tabIndex="0"
-            className="icon icon-email"
+            className="share-icon icon-email"
             href={`mailto:?subject=${document.title}&amp;body=${
               window.location.href
             }`}
@@ -58,7 +58,7 @@ export default class SocialShare extends React.Component {
         <li>
           <i
             tabIndex="0"
-            className="icon icon-print"
+            className="share-icon icon-print"
             onClick={() => window.print()}
           >
             <span className="visually-hidden">Share on Facebook</span>

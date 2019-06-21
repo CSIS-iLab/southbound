@@ -67,7 +67,8 @@ header {
 
 a,
 i,
-button {
+button,
+[class^='icon-'] {
   transition: all 0.2s ease-in-out;
 }
 

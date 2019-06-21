@@ -1,23 +1,12 @@
+[class^='icon-'],
 a {
-  text-decoration: none;
-
-  background-repeat: no-repeat;
-  background-position: 0 95%;
-
-  &:not(.download):focus {
-    @extend %link-focus;
-  }
-
   &::before,
   &::after {
     @extend %icon-pseudo-element;
-    transition: all 0.2s ease-in-out;
-
-    section:not(.page-header) &:not(.icon) {
-      color: rgba($color__gray-medium-cool, 0.5);
-    }
   }
+}
 
+[class^='icon-'] {
   &::after {
     margin-left: 0.25rem;
   }
@@ -25,35 +14,58 @@ a {
   &::before {
     margin-right: 0.25rem;
   }
+}
 
-  .site-footer & {
-    @extend %p4;
-    color: rgba($color__white, 0.5);
+a {
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-position: 0 95%;
 
-    &:hover,
-    &:focus {
-      color: $color__white;
+  .download &,
+  .chart & {
+    @extend %font-gibson;
+  }
+
+  &:not(.download):focus {
+    @extend %link-focus;
+  }
+}
+
+%main-link {
+  background-image: linear-gradient(
+    to bottom,
+    rgba($color__gray-medium-cool, 0.6) 0,
+    rgba($color__gray-medium-cool, 0.6) 100%
+  );
+  background-size: 100% 1px;
+
+  &:hover {
+    color: $color__orange;
+    background-size: 100% 0;
+  }
+}
+
+main > section {
+  a {
+    &:not([class]),
+    &.icon-external {
+      @extend %main-link;
     }
   }
 
-  main & {
-    color: $color__gray-darkest;
-    background-image: linear-gradient(
-      to bottom,
-      rgba($color__gray-medium-cool, 0.6) 0,
-      rgba($color__gray-medium-cool, 0.6) 100%
-    );
-    background-size: 100% 1px;
+  &#page-header a:visited {
+    @extend %main-link;
+  }
 
-    &:not(.download):hover {
-      color: $color__orange;
-      background-size: 100% 0;
-    }
+  &:not(#page-header):not(#further-reading) a {
+    &:not([class]),
+    &.icon-external {
+      &:not(:visited) {
+        color: $color__gray-darkest;
+      }
 
-    &:visited {
-      section:not(#page-header) & {
+      &:visited:not(:hover) {
         color: $color__gray-medium-cool;
-
         background-image: linear-gradient(
           to bottom,
           $color__gray-medium-cool 0,
@@ -61,113 +73,85 @@ a {
         );
       }
     }
+  }
 
-    &[class]:not(.icon-external) {
-      background-size: 1px 0;
-
-      &:not(.icon):not(.icon-report):not(.icon-graph):not(.download) {
-        color: rgba($color__gray-darkest, 0.65);
-      }
-
-      section:not(#further-reading) & {
-        text-transform: uppercase;
-      }
-    }
-
-    &.icon-external {
-      background-size: calc(100% - 20px) 1px;
-
-      &:hover {
-        &,
-        &::after {
-          color: $color__orange !important;
-        }
-      }
+  &:not(#page-header):not(#further-reading):not(.site-footer) [class^='icon-'] {
+    &::before,
+    &::after {
+      color: rgba($color__gray-medium-cool, 0.5);
     }
   }
 
-  .jump-links & {
-    @include font-size(18px);
+  &#further-reading [class^='icon-'] {
+    &::before,
+    &::after {
+      color: rgba($color__gray-medium-cool, 0.8);
+    }
   }
+}
 
-  aside &,
-  #further-reading &,
-  .jump-links &,
-  .directory-links & {
-    color: rgba($color__gray-darkest, 0.75);
-  }
+aside a,
+#further-reading a,
+.jump-links a,
+.directory-links a {
+  color: rgba($color__gray-darkest, 0.75);
+}
 
-  #page-header &:not([class]) {
-    background-size: 100% 1px;
-  }
+.jump-links a {
+  font-size: calculate-rem(18px);
+}
+
+.site-footer a {
+  color: rgba($color__white, 0.9);
+  @include font-size(14px);
 }
 
 [class^='icon-'] {
-  transition: all 0.2s ease-in-out;
-
-  &::before,
-  &::after {
-    @extend %icon-pseudo-element;
-
-    section:not(.page-header):not(.site-footer) {
-      color: rgba($color__gray-medium-cool, 0.5);
-      transition: all 0.2s ease-in-out;
-    }
-  }
-
-  &::after {
-    margin-left: 0.25rem;
-  }
-
-  &::before {
-    margin-right: 0.25rem;
-  }
-}
-
-.icon-download,
-.icon-external {
-  &::before {
-    content: none;
-  }
-}
-
-.chart [class^='icon-'] {
-  color: rgba($color__gray-darkest, 0.65);
-}
-
-#page-header [class^='icon-'],
-.chart [class^='icon-'] {
-  display: block;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  @extend %font-gibson;
-  @include font-size(15px);
-
-  &::before {
-    color: rgba($color__gray-medium-cool, 0.5);
-  }
-
-  &:hover {
-    color: $color__gray-darkest;
+  #page-header &,
+  .chart & {
+    display: block;
+    font-size: calculate-rem(15px);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 
     &::before {
-      color: rgba($color__gray-medium-cool, 0.75);
+      color: rgba($color__gray-medium-cool, 0.5);
+    }
+
+    &:hover {
+      color: $color__gray-darkest;
     }
   }
-}
 
-.chart [class^='icon-'] {
-  padding: 0.6rem 0;
-  @include breakpoint('medium') {
-    padding: 0.3rem 0;
+  .chart & {
+    padding: 0.6rem 0;
+    color: rgba($color__gray-darkest, 0.65);
+
+    @include breakpoint('medium') {
+      padding: 0.3rem 0;
+    }
+  }
+
+  &:not(.icon-external) {
+    text-transform: uppercase;
+    background-size: 1px 0;
   }
 }
 
-.icon-external {
+a.icon-external {
+  background-size: calc(100% - 20px) 1px;
+
+  &:hover {
+    color: $color__orange !important;
+
+    &::after {
+      color: $color__orange !important;
+    }
+  }
+
   &::after {
-    @include font-size(12px);
+    font-size: calculate-rem(12px);
     content: '\0043';
-    margin-right: 0.25rem;
   }
 }
 
@@ -179,4 +163,17 @@ a {
   &::after {
     content: '\004e';
   }
+
+  #page-header & {
+    color: $color__gray-darkest;
+
+    &::after {
+      color: rgba($color__gray-darkest, 0.65);
+    }
+  }
+}
+
+.icon-download::before,
+.icon-external::before {
+  content: none;
 }
