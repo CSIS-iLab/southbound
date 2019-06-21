@@ -25,10 +25,6 @@
   &-text__tags {
     @extend %btn-list;
 
-    @include breakpoint('medium', 'max-width') {
-      margin: 1.5rem 0 1rem;
-    }
-
     li {
       > * {
         @include button;

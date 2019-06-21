@@ -40,15 +40,16 @@ button {
 
     i {
       display: block;
-      padding: 0.25rem 0.4rem 0.25rem 0.2rem;
-      color: $color__white;
-      font-size: 20px;
-      line-height: 0.4;
-      background-color: rgba($color__gray-medium-cool, 0.6);
-      border-radius: 12px;
+      //padding: 0.25rem 0.4rem 0.25rem 0.2rem;
+      color: rgba($color__gray-medium-cool, 0.5);
+
+      &::before {
+        font-size: 24px;
+        vertical-align: sub;
+      }
 
       &:hover {
-        background-color: rgba($color__gray-medium-cool, 0.8);
+        color: rgba($color__gray-medium-cool, 0.8);
       }
     }
 
@@ -59,10 +60,10 @@ button {
 
     &.is-active {
       i {
-        background-color: $color__orange;
+        color: $color__orange;
 
         &:hover {
-          background-color: $color__orange-dark;
+          color: $color__orange-dark;
         }
       }
 

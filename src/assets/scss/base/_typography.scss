@@ -29,12 +29,16 @@ textarea {
 
 h1 {
   color: $color__gray-lightest;
-  line-height: 0.94;
+  line-height: 0.94 !important;
   @include fluid-type(54px, 80px);
 
   &.h1 {
     font-weight: 500;
   }
+}
+
+main:not(.homepage) h1 {
+  @include fluid-type(40px, 70px);
 }
 
 h2 {
@@ -96,7 +100,10 @@ p {
 
 ul {
   margin-top: 0;
-  padding-left: 1.5rem;
+  padding-left: 0.5rem;
+  @include breakpoint('medium') {
+    padding-left: 1.5rem;
+  }
 
   main & {
     @include fluid-type(18px, 20px);

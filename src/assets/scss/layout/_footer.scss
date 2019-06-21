@@ -56,7 +56,7 @@
     flex-basis: 100%;
     padding: 3rem $size__padding-mobile;
 
-    @include breakpoint('medium') {
+    @include breakpoint('large') {
       // flex-basis: 425px;
       padding: 3rem 3rem 1rem $size__padding-desktop;
     }
@@ -111,12 +111,13 @@
     @include breakpoint('medium') {
       display: flex;
       // flex-basis: calc(100% - 425px);
-      padding: 3rem $size__padding-desktop 1rem;
+      padding: 2rem $size__padding-desktop;
       @include full-width-background($color__gray-dark-cool);
     }
 
     @include breakpoint('large') {
       flex-basis: 50%;
+      padding: 3rem $size__padding-desktop 1rem;
     }
 
     &::before {
