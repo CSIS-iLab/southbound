@@ -6,7 +6,7 @@ hero:
   supertitle: Taiwan's new
   title: Southbound Policy
   subtitle: Deepening Taiwan’s Regional Integration
-  published: Published June 2019
+  published: Published June 2018
 download: |-
     <span class="icon-download">Download the Full Report</span>
     Published January 2019, 88 pages
