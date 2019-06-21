@@ -54,7 +54,7 @@
         display: grid;
         grid-column-gap: 1.5rem;
         grid-row-gap: 1rem;
-        grid-template-columns: 120px auto;
+        grid-template-columns: 120px minmax(auto, 360px);
         grid-template-rows: 1fr auto auto;
         max-width: 860px;
         height: 100%;
@@ -209,7 +209,9 @@
         }
 
         &:last-child {
-          max-width: 250px;
+          @include breakpoint('small', 'max-width') {
+            max-width: 250px;
+          }
           font-weight: 500;
           letter-spacing: 1.2px;
           @include fluid-type(31px, 42px);
@@ -221,9 +223,13 @@
       /* stylelint-disable */
       -ms-grid-column: 3;
       -ms-grid-row: 3;
+      align-self: start;
       /* stylelint-enable */
-      align-self: end;
       margin: 0;
+
+      @include breakpoint('medium') {
+        align-self: end;
+      }
 
       .homepage & {
         /* stylelint-disable */
