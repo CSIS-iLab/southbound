@@ -127,7 +127,7 @@
 .site-header--minimal {
   top: calc(#{$size__header-height-desktop} * -1);
   height: $size__header-height-mobile;
-  animation: drop 300ms linear forwards;
+  animation: drop 300ms linear forwards 100ms;
 
   .site-logo {
     &::before {
