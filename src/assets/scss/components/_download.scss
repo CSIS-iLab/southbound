@@ -56,6 +56,7 @@
   }
 
   .page-header & {
+    max-width: 280px;
     box-shadow: 0 2px 4px 0 rgba($color__black, 0.04);
 
     &:not(:focus) {
@@ -76,6 +77,8 @@
   }
 
   .site-header & {
+    max-width: 300px;
+
     &:not(:focus) {
       background-color: rgba($color__white, 0.5);
       border: solid 1px rgba($color__gray-light, 0.48);
@@ -99,7 +102,6 @@
   .site-header &,
   .page-header & {
     display: block;
-    max-width: 280px;
     margin: 0 auto 1.5rem;
 
     &:hover,
