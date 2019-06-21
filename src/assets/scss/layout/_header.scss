@@ -144,10 +144,11 @@
       height: 100%;
 
       &.link-home {
-        @include font-size(19px);
+        @include font-size(16px);
         background-color: $color__gray-dark-cool;
 
         @include breakpoint('medium') {
+          @include font-size(19px);
           padding: 0 $size__padding-desktop;
         }
       }
