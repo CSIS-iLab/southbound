@@ -40,7 +40,6 @@ button {
 
     i {
       display: block;
-      //padding: 0.25rem 0.4rem 0.25rem 0.2rem;
       color: rgba($color__gray-medium-cool, 0.5);
 
       &::before {
@@ -68,9 +67,6 @@ button {
       }
 
       + p {
-        margin-bottom: 1.5rem !important;
-        padding-bottom: 0.5rem;
-        border-bottom: 1px solid #33333359;
         animation: detail 0.4s linear forwards;
       }
     }

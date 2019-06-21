@@ -29,7 +29,6 @@ textarea {
 
 h1 {
   color: $color__gray-lightest;
-  line-height: 0.94 !important;
   @include fluid-type(54px, 80px);
 
   &.h1 {

@@ -183,19 +183,19 @@
     grid-column-end: span 1;
     grid-column-start: 2;
     margin-top: 0;
-    line-height: 1.1;
 
     span {
       display: block;
     }
 
     &.page-header__content-site {
+      align-self: end;
+      line-height: 1.1;
+
       @include breakpoint('medium', 'max-width') {
         grid-column-end: 3;
         grid-column-start: 1;
       }
-
-      align-self: end;
 
       .homepage & {
         display: none;
@@ -226,6 +226,7 @@
       align-self: start;
       /* stylelint-enable */
       margin: 0;
+      line-height: 0.94;
 
       @include breakpoint('medium') {
         align-self: end;
