@@ -32,6 +32,7 @@
 
       @include breakpoint('medium', 'max-width') {
         height: 500px;
+        padding-top: 4.5rem;
       }
 
       @include breakpoint('medium') {
