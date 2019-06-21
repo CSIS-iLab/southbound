@@ -130,6 +130,8 @@
   animation: drop 300ms linear forwards 100ms;
 
   .site-logo {
+    flex-shrink: 0;
+
     &::before {
       @include breakpoint('medium') {
         background-color: $color__gray-darkest;
