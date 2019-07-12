@@ -33,9 +33,9 @@ export default class SocialShare extends React.Component {
         <li>
           <a
             className="share-icon icon-linkedin"
-            href={`https://www.linkedin.com/shareArticle?mini=true&amp;url=${
+            href={`https://www.linkedin.com/shareArticle?mini=true&url=${
               window.location.href
-            }&amp;summary=${document.title}&amp;source=CSIS`}
+            }&summary=The New Southbound Policy&source=CSIS`}
             rel="noopener noreferrer"
             target="_blank"
             title="Share on Linkedin"
