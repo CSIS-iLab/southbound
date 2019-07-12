@@ -23,10 +23,6 @@
       display: none;
     }
 
-    // .site-header--hidden & {
-    //   display: none;
-    // }
-
     &::before {
       @extend %nav-trigger;
       content: 'menu';

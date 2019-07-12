@@ -25,11 +25,6 @@
   [id^='pillar'],
   .five-flagship-programs,
   .three-innovative-fields {
-    margin-bottom: 4rem;
-    @include breakpoint('medium') {
-      margin-bottom: 3rem;
-    }
-
     li {
       p:first-of-type {
         display: inline;
@@ -41,6 +36,14 @@
         padding-bottom: 0.5rem;
         border-bottom: 1px solid rgba($color__gray-darkest, 0.35);
       }
+    }
+  }
+
+  [id^='pillar'],
+  .five-flagship-programs {
+    margin-bottom: 4rem;
+    @include breakpoint('medium') {
+      margin-bottom: 3rem;
     }
   }
 

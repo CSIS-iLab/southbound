@@ -28,6 +28,9 @@
     }
 
     &::before {
+      @include breakpoint('medium', 'max-width') {
+        width: 20px;
+      }
       z-index: 0;
       transition: all 0.2s ease-in-out;
     }
@@ -59,8 +62,11 @@
     &.site-logo--home {
       @include breakpoint('medium') {
         background-color: $color__orange;
+      }
 
-        &::before {
+      &::before {
+        z-index: 0;
+        @include breakpoint('medium') {
           background-color: $color__orange;
         }
       }

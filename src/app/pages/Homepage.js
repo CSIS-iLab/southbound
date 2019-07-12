@@ -53,7 +53,7 @@ class Homepage extends React.Component {
   }
 
   componentDidMount() {
-    document.title = 'The New Southbond Policy | CSIS'
+    document.title = 'The New Southbound Policy | CSIS'
     this.loadCharts()
 
     this.addTableOfContents()

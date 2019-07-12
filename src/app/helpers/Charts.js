@@ -6,7 +6,7 @@ export default {
     },
     yAxis: {
       title: {
-        text: 'USD (Billions)'
+        text: 'US$ (Billions)'
       }
     },
     tooltip: {
@@ -22,7 +22,7 @@ export default {
     },
     yAxis: {
       title: {
-        text: 'USD (Billions)'
+        text: 'US$ (Billions)'
       },
       tickInterval: 4
     },
@@ -96,7 +96,7 @@ export default {
     },
     yAxis: {
       title: {
-        text: 'USD (Billions)'
+        text: 'US$ (Billions)'
       },
       tickInterval: 20
     },
@@ -119,7 +119,7 @@ export default {
     },
     yAxis: {
       title: {
-        text: 'USD (Billions)'
+        text: 'US$ (Billions)'
       }
     },
     tooltip: {
@@ -140,7 +140,7 @@ export default {
     },
     yAxis: {
       title: {
-        text: 'USD (Billions)'
+        text: 'US$ (Billions)'
       }
     },
     tooltip: {
@@ -156,7 +156,7 @@ export default {
     },
     yAxis: {
       title: {
-        text: 'USD (Billions)'
+        text: 'US$ (Billions)'
       },
       tickInterval: 20
     },
@@ -173,7 +173,7 @@ export default {
     },
     yAxis: {
       title: {
-        text: 'USD (Billions)'
+        text: 'US$ (Billions)'
       },
       tickInterval: 100
     },
@@ -190,7 +190,7 @@ export default {
     },
     yAxis: {
       title: {
-        text: 'USD (Billions)'
+        text: 'US$ (Billions)'
       }
     },
     tooltip: {

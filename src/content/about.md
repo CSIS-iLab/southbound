@@ -17,8 +17,7 @@ sections:
     title: About this publication
     content:
         intro: |-
-          This website examines the core principles of Taiwan's New Southbound Policy, Taiwan's whole-of-government effort to enhance its regional integration and promote peaceful development across the Indo-Pacific. The website has been designed to serve as a digital companion to <a href="https://www.csis.org/analysis/new-southbound-policy" class="icon-external" target="_blank" rel="nofollow noreferrer">The New Southbound Policy: Deepening Taiwan's Regional Integration</a>, a comprehensive report published by CSIS in January 2018. Much has happened since the report was published. For this website, the authors have compiled new information regarding themodified about policy and updated many of the graphics found in the original report. Further additions will be made as new information or data becomes available.
-
+          This website examines the core principles of Taiwan's New Southbound Policy, Taiwan's whole-of-government effort to enhance its regional integration and promote peaceful development across the Indo-Pacific. The website has been designed to serve as a digital companion to <a href="https://www.csis.org/analysis/new-southbound-policy" class="icon-external" target="_blank" rel="nofollow noreferrer">The New Southbound Policy: Deepening Taiwan's Regional Integration</a>, a comprehensive report published by CSIS in January 2018. Much has happened since the report was published. For this website, the authors have compiled new information regarding the modified policy and updated many of the graphics found in the original report. Further additions will be made as new information or data becomes available.
   authors:
     index: 3
     component: one-column

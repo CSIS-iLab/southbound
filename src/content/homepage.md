@@ -210,7 +210,7 @@ sections:
         #### Further Reading
         * Executive Yuan. "<a href="https://www.ey.gov.tw/otnen/" className="icon-external">New Southbound Policy."</a> Office of Trade Negotiations.
         * Bonnie S. Glaser, Scott Kennedy, Derek Mitchell, and Matthew P. Funaiole. "<a href="https://www.csis.org/analysis/new-southbound-policy" className="icon-external">The New Southbound Policy: Deepening Taiwan’s Regional Integration."</a> Center for Strategic and International Studies, 2018.
-        * Ministry of Economic Affairs, ROC (Taiwan). "<a href="https://www.moea.gov.tw/MNS/english/news/News.aspx?kind=6&menu_id=176&news_id=72912" className="icon-external">The New Soutbound Policy: A Practical Approach Moving Full Steam Ahead."</a> October 10, 2018.
+        * Ministry of Economic Affairs, ROC (Taiwan). "<a href="https://www.moea.gov.tw/MNS/english/news/News.aspx?kind=6&menu_id=176&news_id=72912" className="icon-external">The New Southbound Policy: A Practical Approach Moving Full Steam Ahead."</a> October 10, 2018.
         * Ministry of Foreign Affairs, ROC (Taiwan). "<a href="https://nspp.mofa.gov.tw/nsppe/" className="icon-external">New Southbound Policy Portal."</a> New Southbound Policy.
         * Tsai Ing-wen. "<a href="https://english.president.gov.tw/News/5552." className="icon-external">President Tsai Attends Opening of Yushan Forum."</a> Office of the President, ROC (Taiwan), October 11, 2017.
         * Tsai Ing-wen. "<a href="https://english.president.gov.tw/News/5232" className="icon-external">President Tsai's Remarks at Yushan Forum: Asian Dialogue for Innovation and Progress."</a> Office of the President, ROC (Taiwan), October 11, 2017.

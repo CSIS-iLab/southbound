@@ -129,7 +129,7 @@ class App extends Component {
 
     new SmoothScroll('a[href*="#"]', {
       speed: 500,
-      offset: -48
+      offset: 48
     })
 
     document.addEventListener(
