@@ -98,7 +98,7 @@ class Homepage extends React.Component {
     const { pageContent, page } = this.state
     const { sheetData } = this.props
     return (
-      <main className={page} itemscope itemtype="http://schema.org/Article">
+      <main className={page} itemScope itemType="http://schema.org/Article">
         {pageContent
           ? pageContent.map(section => {
             const chart = sheetData.find(d => d.key === section.content.chart)

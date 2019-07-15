@@ -91,9 +91,9 @@ export default class Footer extends React.Component {
 
               <div
                 className="site-footer__report-details-authors"
-                itemprop="author"
-                itemscope
-                itemtype="http://schema.org/Person"
+                itemProp="author"
+                itemScope
+                itemType="http://schema.org/Person"
               >
                 {Object.keys(FooterContent.southbound.authors).map(key => {
                   return ValueToJSX(FooterContent.southbound.authors[key], key)
@@ -114,9 +114,9 @@ export default class Footer extends React.Component {
         <div className="wrapper">
           <section
             className="site-footer__copyright"
-            itemprop="publisher"
-            itemscope
-            itemtype="http://schema.org/Organization"
+            itemProp="publisher"
+            itemScope
+            itemType="http://schema.org/Organization"
           >
             {ValueToJSX(FooterContent.copyright[0])}
           </section>
