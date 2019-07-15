@@ -160,7 +160,7 @@ class App extends Component {
     } = this.state
 
     return (
-      <div className="wrapper">
+      <div className="wrapper" itemprop="articleSection">
         <Header siteStructure={siteStructure} />
         <Switch>
           <Route

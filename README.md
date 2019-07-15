@@ -1,6 +1,6 @@
 # southbound
 The website for the China Power Southbound Report
-It is built using [Create React App Rewired](https://github.com/timarney/react-app-rewired)
+It is built using [Create React App Rewired](https://github.com/timarney/react-app-rewired) and [React Snapshot](https://github.com/geelen/react-snapshot)
 
 Data is connected to a Google Sheet workbook in the China Power Google Drive folder. Triggering a new deploy runs the Google API via node write.js and updates data in src/app/charts.json
 
@@ -57,6 +57,7 @@ $ serve -s build
   - spread operators
   - imports
   - and [more](https://github.com/facebook/create-react-app)
+- React Snapshot is a zero-configureation pre-renderer that creates static html. This is better SEO for crawlers like Google and Web Archive.
 - Polyfills for older browsers used by our global audience:
   - @babel/polyfill
   - react-app-polyfill

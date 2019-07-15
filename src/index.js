@@ -4,11 +4,11 @@ import '@babel/polyfill'
 import './assets/scss/main.scss'
 import * as serviceWorker from './serviceWorker'
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-snapshot'
 import { BrowserRouter as Router } from 'react-router-dom'
 import App from './app/App'
 
-ReactDOM.render(
+render(
   <Router>
     <App />
   </Router>,
