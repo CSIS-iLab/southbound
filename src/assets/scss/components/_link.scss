@@ -121,11 +121,10 @@ aside a,
 
     &:hover {
       color: $color__gray-darkest;
-    }
 
-    &:hover::before {
-      color: rgba($color__gray-medium-cool, 1) !important;
-      transition: all 0.2s ease-in-out;
+      &::before {
+        color: $color__gray-medium-cool !important;
+      }
     }
   }
 
