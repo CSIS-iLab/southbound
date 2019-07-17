@@ -53,6 +53,7 @@ class About extends React.Component {
                   {Object.entries(section.content).map(value => {
                     return section.key === 'page-header' ? (
                       <PageHeader
+                        key={value[0]}
                         source={value[1]}
                         title={this.state.title}
                       />
