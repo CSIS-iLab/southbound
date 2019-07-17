@@ -116,10 +116,16 @@ aside a,
 
     &::before {
       color: rgba($color__gray-medium-cool, 0.5);
+      transition: all 0.2s ease-in-out;
     }
 
     &:hover {
       color: $color__gray-darkest;
+    }
+
+    &:hover::before {
+      color: rgba($color__gray-medium-cool, 1) !important;
+      transition: all 0.2s ease-in-out;
     }
   }
 
