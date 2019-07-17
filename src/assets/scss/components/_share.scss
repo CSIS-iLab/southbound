@@ -75,7 +75,7 @@
       width: 100%;
       height: 100%;
       margin: 0;
-      @include font-size(24px);
+      @include font-size(20px);
       transition: 0.2s ease-in-out;
 
       #page-header & {
@@ -83,10 +83,10 @@
       }
 
       .site-footer & {
-        @include font-size(28px);
+        @include font-size(24px);
 
         @include breakpoint('medium') {
-          @include font-size(20px);
+          @include font-size(18px);
         }
 
         &,
