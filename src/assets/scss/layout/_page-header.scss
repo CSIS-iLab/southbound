@@ -52,44 +52,55 @@
       }
 
       &-wrapper {
+        position: absolute;
+        bottom: 0;
         display: grid;
-        grid-column-gap: 1.5rem;
+        grid-column-gap: 0.75rem;
         grid-row-gap: 1rem;
         grid-template-columns: 120px minmax(auto, 360px);
-        grid-template-rows: 1fr auto auto;
+        grid-template-rows: auto 1fr;
         max-width: 860px;
-        height: 100%;
+        height: 284px;
         margin: auto;
-        padding: 0 $size__padding-desktop;
+        padding: 0 calc(#{$size__padding-desktop}/ 2);
         overflow: hidden;
 
+        @include breakpoint('small') {
+          grid-column-gap: 1.5rem;
+          padding: 0 $size__padding-desktop;
+        }
+
         @include breakpoint('medium') {
-          left: calc((100% - 225px) / 2);
+          left: 50%;
           grid-column-gap: 3rem;
           grid-template-columns: 280px auto;
+          grid-template-rows: 1fr auto;
+          height: 100%;
+          transform: translateX(-50%);
         }
       }
 
       &-details {
-        margin-bottom: 4rem;
-        opacity: 0.9;
-
-        @include breakpoint('medium') {
-          margin-bottom: 3.5rem;
+        main:not(.homepage) & {
+          @include breakpoint('medium') {
+            margin-bottom: 4rem;
+          }
         }
 
         .homepage & {
-          margin-bottom: 1rem;
+          @include breakpoint('medium') {
+            margin-bottom: 3.5rem;
+          }
         }
       }
 
       &-graphic {
         grid-row-end: 4;
         grid-row-start: 1;
-        align-self: flex-end;
+        height: 100%;
+
         @include breakpoint('medium', 'max-width') {
           width: 120px;
-          height: auto;
         }
 
         @include breakpoint('medium') {
@@ -186,12 +197,15 @@
     grid-column-start: 2;
     margin-top: 0;
 
+    @include breakpoint('medium') {
+      align-self: end;
+    }
+
     span {
       display: block;
     }
 
     &.page-header__content-site {
-      align-self: end;
       line-height: 1.1;
 
       .homepage & {
@@ -202,7 +216,7 @@
         &:first-child {
           letter-spacing: 0.8px;
           text-transform: uppercase;
-          @include fluid-type(24px, 28px);
+          @include fluid-type(20px, 26px);
         }
 
         &:last-child {
@@ -220,9 +234,8 @@
       /* stylelint-disable */
       -ms-grid-column: 3;
       -ms-grid-row: 3;
-
-      align-self: end;
       /* stylelint-enable */
+
       margin: 0;
       line-height: 0.94;
 
@@ -240,7 +253,7 @@
           main:not(.homepage) & {
             display: none;
           }
-          @include fluid-type(34px, 28px);
+          @include fluid-type(22px, 26px);
         }
       }
     }

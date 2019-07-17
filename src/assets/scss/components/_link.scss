@@ -103,7 +103,7 @@ aside a,
 
 .site-footer a {
   color: rgba($color__white, 0.9);
-  @include font-size(14px);
+  @include fluid-type(12px, 14px);
 }
 
 [class^='icon-'] {

@@ -29,15 +29,15 @@ textarea {
 
 h1 {
   color: $color__gray-lightest;
-  @include fluid-type(54px, 80px);
+  @include fluid-type(30px, 80px);
+
+  main:not(.homepage) & {
+    @include fluid-type(40px, 70px);
+  }
 
   &.h1 {
     font-weight: 500;
   }
-}
-
-main:not(.homepage) h1 {
-  @include fluid-type(40px, 70px);
 }
 
 h2 {
