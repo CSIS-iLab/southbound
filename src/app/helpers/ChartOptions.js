@@ -135,7 +135,7 @@ export default function(options) {
           chartOptions: {
             plotOptions: {
               pie: {
-                size: '50%',
+                size: '40%',
                 dataLabels: {
                   crop: false,
                   overflow: 'allow'
