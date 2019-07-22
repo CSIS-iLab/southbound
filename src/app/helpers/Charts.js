@@ -300,7 +300,7 @@ export default {
     },
     plotOptions: {
       pie: {
-        size: '85%'
+        size: '75%'
       }
     }
   },
