@@ -22,7 +22,7 @@ sections:
 
         The plan hinges upon forging a “sense of economic community” and forming “a consensus for cooperation” with the 18 nations identified by Taipei as potential partners. Since Taiwan lacks formal diplomatic ties with the countries targeted by the NSP, Taipei must creatively foster bilateral collaboration. To this end, the Tsai administration has rallied local governments and civil society organizations to collaborate with the central government’s implementation efforts.
 
-        The NSP consists of the following four dimensions.
+        The NSP consists of four pillars, five flagship projects, and three innovative fields.
   four_pillars:
     index: 3
     component: one-column
@@ -34,7 +34,7 @@ sections:
     component: two-column
     content:
       title: |-
-        <h3><span className="index">01</span> Promote economic collaboration </h3>
+        <h3><span className="index">01</span> Promote Economic Collaboration </h3>
 
       text: |-
         Cooperate with the partner countries on supply chains, domestic demand markets and infrastructure projects.
@@ -208,12 +208,12 @@ sections:
     content:
       - |-
         #### Further Reading
-        * Executive Yuan. "<a href="https://www.ey.gov.tw/otnen/" className="icon-external">New Southbound Policy."</a> Office of Trade Negotiations.
-        * Bonnie S. Glaser, Scott Kennedy, Derek Mitchell, and Matthew P. Funaiole. "<a href="https://www.csis.org/analysis/new-southbound-policy" className="icon-external">The New Southbound Policy: Deepening Taiwan’s Regional Integration."</a> Center for Strategic and International Studies, 2018.
-        * Ministry of Economic Affairs, ROC (Taiwan). "<a href="https://www.moea.gov.tw/MNS/english/news/News.aspx?kind=6&menu_id=176&news_id=72912" className="icon-external">The New Southbound Policy: A Practical Approach Moving Full Steam Ahead."</a> October 10, 2018.
-        * Ministry of Foreign Affairs, ROC (Taiwan). "<a href="https://nspp.mofa.gov.tw/nsppe/" className="icon-external">New Southbound Policy Portal."</a> New Southbound Policy.
-        * Tsai Ing-wen. "<a href="https://english.president.gov.tw/News/5552." className="icon-external">President Tsai Attends Opening of Yushan Forum."</a> Office of the President, ROC (Taiwan), October 11, 2017.
-        * Tsai Ing-wen. "<a href="https://english.president.gov.tw/News/5232" className="icon-external">President Tsai's Remarks at Yushan Forum: Asian Dialogue for Innovation and Progress."</a> Office of the President, ROC (Taiwan), October 11, 2017.
-        * Alan H. Yang. "<a href="http://lawdata.com.tw/tw/detail.aspx?no=297532" className="icon-external">Revisiting Taiwan's New Southbound Policy: Agenda, Networks and Challenges."</a> Issues and Studies 56, no. 1 (2017): 123-143.
-        * Alan H. Yang. "<a href="https://www.worldscientific.com/doi/abs/10.1142/S1013251118400039" className="icon-external">Unpacking Taiwan’s Presence in Southeast Asia: The International Socialization of the New Southbound Policy."</a> Issues & Studies 54, no. 1 (2018): 1-30.
+        * Executive Yuan. "<a target="_blank" rel="noreferrer nofollow" href="https://www.ey.gov.tw/otnen/" className="icon-external">New Southbound Policy."</a> Office of Trade Negotiations.
+        * Bonnie S. Glaser, Scott Kennedy, Derek Mitchell, and Matthew P. Funaiole. "<a target="_blank" rel="noreferrer nofollow" href="https://www.csis.org/analysis/new-southbound-policy" className="icon-external">The New Southbound Policy: Deepening Taiwan’s Regional Integration."</a> Center for Strategic and International Studies, 2018.
+        * Ministry of Economic Affairs, ROC (Taiwan). "<a target="_blank" rel="noreferrer nofollow" href="https://www.moea.gov.tw/MNS/english/news/News.aspx?kind=6&menu_id=176&news_id=72912" className="icon-external">The New Southbound Policy: A Practical Approach Moving Full Steam Ahead."</a> October 10, 2018.
+        * Ministry of Foreign Affairs, ROC (Taiwan). "<a target="_blank" rel="noreferrer nofollow" href="https://nspp.mofa.gov.tw/nsppe/" className="icon-external">New Southbound Policy Portal."</a> New Southbound Policy.
+        * Tsai Ing-wen. "<a target="_blank" rel="noreferrer nofollow" href="https://english.president.gov.tw/News/5552" className="icon-external">President Tsai Attends Opening of Yushan Forum."</a> Office of the President, ROC (Taiwan), October 11, 2017.
+        * Tsai Ing-wen. "<a target="_blank" rel="noreferrer nofollow" href="https://english.president.gov.tw/News/5232" className="icon-external">President Tsai's Remarks at Yushan Forum: Asian Dialogue for Innovation and Progress."</a> Office of the President, ROC (Taiwan), October 11, 2017.
+        * Alan H. Yang. "<a target="_blank" rel="noreferrer nofollow" href="http://lawdata.com.tw/tw/detail.aspx?no=297532" className="icon-external">Revisiting Taiwan's New Southbound Policy: Agenda, Networks and Challenges."</a> Issues and Studies 56, no. 1 (2017): 123-143.
+        * Alan H. Yang. "<a target="_blank" rel="noreferrer nofollow" href="https://www.worldscientific.com/doi/abs/10.1142/S1013251118400039" className="icon-external">Unpacking Taiwan’s Presence in Southeast Asia: The International Socialization of the New Southbound Policy."</a> Issues & Studies 54, no. 1 (2018): 1-30.
 ---
