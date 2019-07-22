@@ -32,7 +32,7 @@ h1 {
   @include fluid-type(30px, 80px);
 
   main:not(.homepage) & {
-    @include fluid-type(40px, 70px);
+    @include fluid-type(36px, 70px);
   }
 
   &.h1 {
