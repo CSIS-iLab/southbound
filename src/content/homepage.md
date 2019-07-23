@@ -37,7 +37,7 @@ sections:
         <h3><span className="index">01</span> Promote Economic Collaboration </h3>
 
       text: |-
-        Cooperate with the partner countries on supply chains, market demand, and infrastructure projects.
+        Cooperate with partner countries on supply chains, market demand, and infrastructure projects.
 
         * <strong>Supply Chains:</strong> Integrate Taiwan’s competitive industries with the supply chains of other economies, including not only NSP partners but also Japan and the United States.
 
@@ -129,7 +129,7 @@ sections:
 
           In 2018, Taiwan and Indonesia signed an MOU that opened the possibility of creating special economic zones and cooperating on infrastructure development.
 
-        * <strong>Negotiations and Dialogue:</strong>Promote multilevel and all-encompassing negotiations and dialogues with partner countries, and other countries across the Indo-Pacific.
+        * <strong>Negotiations and Dialogues:</strong> Promote multilevel and all-encompassing negotiations and dialogues with partner countries, and other countries across the Indo-Pacific.
 
         * <strong>Strategic Alliances:</strong> Build a comprehensive foreign aid mechanism and encourage Taiwan businesses to participate in overseas development projects. Strengthen official and nonofficial cooperation between Taiwan and foreign partners.
 
@@ -201,7 +201,7 @@ sections:
     component: one-column
     content:
       - |-
-        Given the multidimensional nature of the NSP, its success should be evaluated incrementally. We encourage you to visit our <a href="/data">Data Repository</a>, which tracks several of the key performance benchmarks for the policy. More details regarding the NSP can be found in our longer publication.
+        Given the multidimensional nature of the NSP, its success should be evaluated incrementally. We encourage you to visit our <a href="/data">Data Repository</a>, which tracks several of the key performance benchmarks for the policy. More details regarding the NSP can be found in our <a href="https://csis-prod.s3.amazonaws.com/s3fs-public/publication/180613_Glaser_NewSouthboundPolicy_Web.pdf?AcoayLFliB9_iAvbmYvP_jM27mEXw5xL">longer publication</a>.
   further-reading:
     index: 10
     component: one-column
