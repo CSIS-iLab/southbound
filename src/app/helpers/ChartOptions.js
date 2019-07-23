@@ -38,9 +38,9 @@ export default function(options) {
 
         const valueSuffixes = {
           '%': '%',
-          K: ' Thousand',
-          M: ' Million',
-          B: ' Billion'
+          K: ' thousand',
+          M: ' million',
+          B: ' billion'
         }
         function formatTooltipText(value) {
           return units === 'US$'
