@@ -357,7 +357,7 @@ export default {
     series: [
       {
         index: 0,
-        innerSize: '50'
+        innerSize: '50%'
       }
     ],
     tooltip: {
