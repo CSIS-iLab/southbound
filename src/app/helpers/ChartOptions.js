@@ -116,10 +116,10 @@ export default function(options) {
         maxPointWidth: 150
       },
       pie: {
+        showInLegend: true,
+        size: '100%',
         dataLabels: {
-          crop: false,
-          distance: isDataRepo ? 35 : 45,
-          overflow: 'allow'
+          enabled: false
         }
       },
       bar: {
@@ -135,22 +135,6 @@ export default function(options) {
     },
     responsive: {
       rules: [
-        {
-          condition: {
-            maxWidth: 480
-          },
-          chartOptions: {
-            plotOptions: {
-              pie: {
-                size: isDataRepo ? '30%' : '40%',
-                dataLabels: {
-                  crop: false,
-                  overflow: 'allow'
-                }
-              }
-            }
-          }
-        },
         {
           condition: {
             minWidth: 1080
