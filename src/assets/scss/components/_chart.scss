@@ -1,3 +1,12 @@
+[id='8.4'].chart {
+  &,
+  .chart-figure__graph,
+  .highcharts-container,
+  .highcharts-root {
+    overflow: visible !important;
+  }
+}
+
 .chart {
   &-text {
     @include breakpoint('large', 'max-width') {

@@ -357,7 +357,7 @@ export default {
     series: [
       {
         index: 0,
-        innerSize: '70%'
+        innerSize: '50'
       }
     ],
     tooltip: {
@@ -366,8 +366,27 @@ export default {
     },
     plotOptions: {
       pie: {
-        size: '75%'
+        size: '25%'
       }
+    },
+    responsive: {
+      rules: [
+        {
+          condition: {
+            minWidth: 480
+          },
+          chartOptions: {
+            plotOptions: {
+              pie: {
+                dataLabels: {
+                  crop: false,
+                  overflow: 'allow'
+                }
+              }
+            }
+          }
+        }
+      ]
     }
   },
   // destinationnsp
@@ -406,13 +425,33 @@ export default {
     series: [
       {
         index: 0,
-        innerSize: '70%'
+        innerSize: '50%'
       }
     ],
     plotOptions: {
       pie: {
-        size: '50%'
+        size: '20%'
       }
+    },
+    responsive: {
+      rules: [
+        {
+          condition: {
+            minWidth: 480
+          },
+          chartOptions: {
+            plotOptions: {
+              pie: {
+                size: '50%',
+                dataLabels: {
+                  crop: false,
+                  overflow: 'allow'
+                }
+              }
+            }
+          }
+        }
+      ]
     }
   },
   // shareofinbound

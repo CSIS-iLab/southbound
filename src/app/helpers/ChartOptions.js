@@ -118,7 +118,7 @@ export default function(options) {
       pie: {
         dataLabels: {
           crop: false,
-          distance: isDataRepo ? 10 : 2,
+          distance: isDataRepo ? 35 : 45,
           overflow: 'allow'
         }
       },
@@ -142,7 +142,7 @@ export default function(options) {
           chartOptions: {
             plotOptions: {
               pie: {
-                size: '40%',
+                size: isDataRepo ? '30%' : '40%',
                 dataLabels: {
                   crop: false,
                   overflow: 'allow'
