@@ -28,11 +28,18 @@ export default function(options) {
         let units
         if (yAxis) units = yAxis.title.text.toLowerCase().split(' (')[0]
 
-        if (units === 'US$') units = 'US$'
+        if (units === 'us$') units = 'US$'
         if (valueSuffix === '%' && units !== 'change') {
           if (!units) units = 'students' // bar charts
 
           units = ' of ' + units
+        }
+        if (units === ' of unemployed') units = ''
+
+        function formatTooltipText(value) {
+          return units === 'US$'
+            ? `${units}${value}${valueSuffix}`
+            : `${valuePrefix || ''}${value}${valueSuffix} ${units}`
         }
 
         if (subData && subData.length) {
@@ -49,8 +56,9 @@ export default function(options) {
               const value = getReduceSigFigs(dataItem.data, valueSuffix)
               const name = dataItem.name
 
-              return `<p><span style="color:${color}"> \u25CF </span>${name}<br/>&nbsp;&nbsp;&nbsp;${valuePrefix ||
-                ''}${value}${valueSuffix} ${units}</p>`
+              return `<p><span style="color:${color}"> \u25CF </span>${name}<br/>&nbsp;&nbsp;&nbsp;${formatTooltipText(
+                value
+              )}</p>`
             })
             .join('')
         } else {
@@ -59,8 +67,7 @@ export default function(options) {
           const name = chart.type === 'pie' ? this.name : this.series.name
 
           return `<p><span style="color:${color}">\u25CF </span>
-          ${name}<br/>&nbsp;&nbsp;&nbsp;${valuePrefix ||
-            ''}${value}${valueSuffix} ${units}</p>`
+          ${name}<br/>&nbsp;&nbsp;&nbsp;${formatTooltipText(value)}</p>`
         }
       }
     },
