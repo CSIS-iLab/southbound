@@ -27,7 +27,7 @@ export default function(options) {
 
         let units
         if (yAxis) units = yAxis.title.text.toLowerCase().split(' (')[0]
-        console.log(units)
+
         if (units === 'US$') units = 'US$'
         if (valueSuffix === '%' && units !== 'change') {
           if (!units) units = 'students' // bar charts

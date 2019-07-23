@@ -37,9 +37,7 @@ export default {
     chart: {
       type: 'line'
     },
-    xAxis: {
-      offset: -135
-    },
+
     yAxis: {
       title: {
         text: 'Change (Percent)'
@@ -51,6 +49,41 @@ export default {
     tooltip: {
       shared: true,
       valueSuffix: '%'
+    },
+    responsive: {
+      rules: [
+        {
+          condition: {
+            minWidth: 480
+          },
+          chartOptions: {
+            xAxis: {
+              offset: -68
+            }
+          }
+        },
+        {
+          condition: {
+            maxWidth: 480,
+            minWidth: 1080
+          },
+          chartOptions: {
+            xAxis: {
+              offset: -77
+            }
+          }
+        },
+        {
+          condition: {
+            maxWidth: 1080
+          },
+          chartOptions: {
+            xAxis: {
+              offset: -138
+            }
+          }
+        }
+      ]
     }
   },
   // percapitagrowth
@@ -58,9 +91,7 @@ export default {
     chart: {
       type: 'line'
     },
-    xAxis: {
-      offset: -110
-    },
+
     yAxis: {
       title: {
         text: 'Change (Percent)'
@@ -72,6 +103,41 @@ export default {
     tooltip: {
       shared: true,
       valueSuffix: '%'
+    },
+    responsive: {
+      rules: [
+        {
+          condition: {
+            minWidth: 480
+          },
+          chartOptions: {
+            xAxis: {
+              offset: -45
+            }
+          }
+        },
+        {
+          condition: {
+            maxWidth: 480,
+            minWidth: 1080
+          },
+          chartOptions: {
+            xAxis: {
+              offset: -64
+            }
+          }
+        },
+        {
+          condition: {
+            maxWidth: 1080
+          },
+          chartOptions: {
+            xAxis: {
+              offset: -113
+            }
+          }
+        }
+      ]
     }
   },
   // unemployment

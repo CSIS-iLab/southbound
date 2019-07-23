@@ -7,6 +7,7 @@ import Highcharts from 'Highcharts'
 import InitSheets from '../helpers/InitSheets'
 import PageHeader from '../layout/PageHeader'
 import ValueToJSX from '../helpers/ValueToJSX'
+import FindInReport from '../components/FindInReport'
 
 class Homepage extends React.Component {
   constructor(props) {
@@ -127,14 +128,8 @@ class Homepage extends React.Component {
                             {chart.title}
                           </p>
                           <p>{chart.credits}</p>
-                          <a
-                            href={`https://csis-prod.s3.amazonaws.com/s3fs-public/publication/180613_Glaser_NewSouthboundPolicy_Web.pdf?AcoayLFliB9_iAvbmYvP_jM27mEXw5xL#${
-                              chart.pdf
-                            }`}
-                            className="icon-report"
-                          >
-                              Find in Report
-                          </a>
+
+                          <FindInReport page={chart.pdf} />
                           <a
                             href={`data/id/${value[1]}`}
                             className="icon-graph"

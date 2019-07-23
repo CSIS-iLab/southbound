@@ -7,6 +7,7 @@ import InitSheets from '../helpers/InitSheets'
 import ChartOptions from '../helpers/ChartOptions'
 import PageHeader from '../layout/PageHeader'
 import Highcharts from 'Highcharts'
+import FindInReport from '../components/FindInReport'
 
 class Data extends React.Component {
   constructor(props) {
@@ -234,14 +235,7 @@ class Data extends React.Component {
                             </li>
                           ))}
                         </ul>
-                        <a
-                          href={`https://csis-prod.s3.amazonaws.com/s3fs-public/publication/180613_Glaser_NewSouthboundPolicy_Web.pdf?AcoayLFliB9_iAvbmYvP_jM27mEXw5xL#${
-                            data.pdf
-                          }`}
-                          className="icon-report"
-                        >
-                          Find in Report
-                        </a>
+                        <FindInReport page={data.pdf} />
                       </section>
                       <figure className="chart-figure">
                         <div className="chart-figure__graph" />
