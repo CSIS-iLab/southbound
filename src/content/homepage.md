@@ -37,7 +37,7 @@ sections:
         <h3><span className="index">01</span> Promote Economic Collaboration </h3>
 
       text: |-
-        Cooperate with the partner countries on supply chains, domestic demand markets and infrastructure projects.
+        Cooperate with the partner countries on supply chains, market demand, and infrastructure projects.
 
         * <strong>Supply Chains:</strong> Integrate Taiwan’s competitive industries with the supply chains of other economies, including not only NSP partners but also Japan and the United States.
 
@@ -45,7 +45,7 @@ sections:
 
           The Asia Silicon Valley Development Plan is designed to strengthen industrial links between Taiwan and its economic partners.
 
-        * <strong>Domestic Demand Markets:</strong> Promote Taiwan’s industrial brand abroad by increasing exports.
+        * <strong>Market Demand:</strong> Promote Taiwan’s industrial brand abroad by increasing exports.
 
           <button className="detail__trigger" aria-expanded="false" aria-label="Show More"><i className="icon-more"></i></button>
 
@@ -65,13 +65,13 @@ sections:
         <h3><span className="index">02</span> Conduct People-to-People Exchanges </h3>
 
       text: |-
-        Deepen bilateral exchange through the cultivation of scholars, students, and industry professionals.
+        Deepen bilateral exchanges through the cultivation of scholars, students, and industry professionals.
 
         * <strong>Education Ties:</strong> Deepen educational ties by offering scholarships to students from partner countries. Enhance domestic cooperation between academia and industry. Provide enhanced youth technical training.
 
           <button className="detail__trigger" aria-expanded="false" aria-label="Show More"><i className="icon-more"></i></button>
 
-          The Center for Southeast Asian Studies at National Chengchi University leads a consortium of 13 leading institutions for Southeast Asian studies from across the region.
+          The Center for Southeast Asian Studies at National Chengchi University leads a consortium of 13 institutions for Southeast Asian studies from across the region.
 
         * <strong>Industry Talent:</strong> Promote a two-way flow of professionals and help match foreign workers with local companies.
 
@@ -111,7 +111,7 @@ sections:
 
           <button className="detail__trigger" aria-expanded="false" aria-label="Show More"><i className="icon-more"></i></button>
 
-          The total value of Taiwan’s agricultural exports hit $5.47 billion in 2018, marking a 20-year high.
+          The total value of Taiwan’s agricultural exports hit US$5.47 billion in 2018, marking a 20-year high.
       chart: "7.4"
   pillar_four:
     index: 7
@@ -129,13 +129,13 @@ sections:
 
           In 2018, Taiwan and Indonesia signed an MOU that opened the possibility of creating special economic zones and cooperating on infrastructure development.
 
-        * <strong>Negotiations and Dialogue:</strong> Promote multilevel and all-encompassing negotiations and dialogue with partner countries. Open dialogue and negotiations with China.
+        * <strong>Negotiations and Dialogue:</strong>Promote multilevel and all-encompassing negotiations and dialogues with partner countries, and other countries across the Indo-Pacific.
 
         * <strong>Strategic Alliances:</strong> Build a comprehensive foreign aid mechanism and encourage Taiwan businesses to participate in overseas development projects. Strengthen official and nonofficial cooperation between Taiwan and foreign partners.
 
           <button className="detail__trigger" aria-expanded="false" aria-label="Show More"><i className="icon-more"></i></button>
 
-          Taiwan has established a $3.5 billion fund to assist partner countries with development projects.
+          Taiwan has established a US$3.5 billion fund to assist partner countries with development projects.
 
         * <strong>Overseas Network:</strong> Connect with overseas ethnic Chinese and overseas Taiwan business networks and strengthen their links with corporations in Taiwan.
       chart: "5.5"
@@ -145,7 +145,7 @@ sections:
     title: Flagship Projects and Innovative Fields
     content:
       intro: |-
-        Taiwan’s Office of Trade Negotiations has laid out five flagship projects and three potential-laden fields for collaboration. These programs are designed to capitalize on the pillars of the NSP and enhance mutually beneficial ties with targeted countries across the Indo-Pacific.
+        Taiwan’s Office of Trade Negotiations has laid out five flagship projects and three potential fields for collaboration. These programs are designed to capitalize on the pillars of the NSP and enhance mutually beneficial ties with countries across the Indo-Pacific.
       five-flagship-programs: |-
         ### Five Flagship Programs
         * <h5>Agricultural development</h5>
@@ -162,7 +162,7 @@ sections:
 
           <button className="detail__trigger" aria-expanded="false" aria-label="Show More"><i className="icon-more"></i></button>
 
-          Under the “One Country, One Center” framework, the Ministry of Health and Welfare is partnering with hospitals in partner countries to bolster health care and medical cooperation. Projects have been launched in India, Indonesia, Malaysia, the Philippines, Thailand, and Vietnam.  
+          Under the “One Country, One Center” framework, the Ministry of Health and Welfare is working with hospitals in partner countries to bolster health care and medical cooperation. Projects have been launched in India, Indonesia, Malaysia, the Philippines, Thailand, and Vietnam.  
 
         * <h5>Talent Cultivation</h5>
 
@@ -178,7 +178,7 @@ sections:
 
           <button className="detail__trigger" aria-expanded="false" aria-label="Show More"><i className="icon-more"></i></button>
 
-          Collaboration in areas such as green energy, smart machinery, and biotechnology provides Taiwan with an opportunity to not only assist targeted developing countries but also enhance its ties with R&D leaders such as Japan and the United States.
+          Collaboration in areas such as green energy, smart machinery, and biotechnology provides Taiwan with an opportunity to not only assist developing countries, but also enhance its ties with R&D leaders such as Japan and the United States.
 
         * <h5>Youth Exchanges and Policy Forums</h5>
 
@@ -210,9 +210,9 @@ sections:
         #### Further Reading
         * Executive Yuan. "<a target="_blank" rel="noreferrer nofollow" href="https://www.ey.gov.tw/otnen/" className="icon-external">New Southbound Policy."</a> Office of Trade Negotiations.
         * Bonnie S. Glaser, Scott Kennedy, Derek Mitchell, and Matthew P. Funaiole. "<a target="_blank" rel="noreferrer nofollow" href="https://www.csis.org/analysis/new-southbound-policy" className="icon-external">The New Southbound Policy: Deepening Taiwan’s Regional Integration."</a> Center for Strategic and International Studies, 2018.
-        * Ministry of Economic Affairs, ROC (Taiwan). "<a target="_blank" rel="noreferrer nofollow" href="https://www.moea.gov.tw/MNS/english/news/News.aspx?kind=6&menu_id=176&news_id=72912" className="icon-external">The New Southbound Policy: A Practical Approach Moving Full Steam Ahead."</a> October 10, 2018.
+        * Ministry of Economic Affairs, ROC (Taiwan). "<a target="_blank" rel="noreferrer nofollow" href="https://www.moea.gov.tw/MNS/english/news/News.aspx?kind=6&menu_id=176&news_id=72912" className="icon-external">The New Southbound Policy: A Practical Approach Moving Full Steam Ahead."</a> October 6, 2017.
         * Ministry of Foreign Affairs, ROC (Taiwan). "<a target="_blank" rel="noreferrer nofollow" href="https://nspp.mofa.gov.tw/nsppe/" className="icon-external">New Southbound Policy Portal."</a> New Southbound Policy.
-        * Tsai Ing-wen. "<a target="_blank" rel="noreferrer nofollow" href="https://english.president.gov.tw/News/5552" className="icon-external">President Tsai Attends Opening of Yushan Forum."</a> Office of the President, ROC (Taiwan), October 11, 2017.
+        * Tsai Ing-wen. "<a target="_blank" rel="noreferrer nofollow" href="https://english.president.gov.tw/News/5552" className="icon-external">President Tsai Attends Opening of Yushan Forum."</a> Office of the President, ROC (Taiwan), October 11, 2018.
         * Tsai Ing-wen. "<a target="_blank" rel="noreferrer nofollow" href="https://english.president.gov.tw/News/5232" className="icon-external">President Tsai's Remarks at Yushan Forum: Asian Dialogue for Innovation and Progress."</a> Office of the President, ROC (Taiwan), October 11, 2017.
         * Alan H. Yang. "<a target="_blank" rel="noreferrer nofollow" href="http://lawdata.com.tw/tw/detail.aspx?no=297532" className="icon-external">Revisiting Taiwan's New Southbound Policy: Agenda, Networks and Challenges."</a> Issues and Studies 56, no. 1 (2017): 123-143.
         * Alan H. Yang. "<a target="_blank" rel="noreferrer nofollow" href="https://www.worldscientific.com/doi/abs/10.1142/S1013251118400039" className="icon-external">Unpacking Taiwan’s Presence in Southeast Asia: The International Socialization of the New Southbound Policy."</a> Issues & Studies 54, no. 1 (2018): 1-30.
