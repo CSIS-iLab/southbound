@@ -36,10 +36,18 @@ export default function(options) {
         }
         if (units === ' of unemployed') units = ''
 
+        const valueSuffixes = {
+          '%': '%',
+          K: ' Thousand',
+          M: ' Million',
+          B: ' Billion'
+        }
         function formatTooltipText(value) {
           return units === 'US$'
-            ? `${units}${value}${valueSuffix}`
-            : `${valuePrefix || ''}${value}${valueSuffix} ${units}`
+            ? `${units}${value}${valueSuffixes[valueSuffix]}`
+            : `${valuePrefix || ''}${value}${
+              valueSuffixes[valueSuffix]
+            } ${units}`
         }
 
         if (subData && subData.length) {
