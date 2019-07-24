@@ -145,7 +145,7 @@ sections:
     title: Flagship Projects and Innovative Fields
     content:
       intro: |-
-        Taiwan’s Office of Trade Negotiations has laid out five flagship projects and three potential fields for collaboration. These programs are designed to capitalize on the pillars of the NSP and enhance mutually beneficial ties with countries across the Indo-Pacific.
+        Taiwan’s Office of Trade Negotiations has laid out five flagship projects and three innovative fields for collaboration. These programs are designed to capitalize on the pillars of the NSP and enhance mutually beneficial ties with countries across the Indo-Pacific.
       five-flagship-programs: |-
         ### Five Flagship Programs
         * <h5>Agricultural development</h5>
