@@ -27,27 +27,12 @@ export default function(options) {
 
         let units
         if (yAxis) units = yAxis.title.text.toLowerCase().split(' (')[0]
-
-        if (units === 'us$') units = 'US$'
+        console.log(units)
+        if (units === 'US$') units = 'US$'
         if (valueSuffix === '%' && units !== 'change') {
           if (!units) units = 'students' // bar charts
 
           units = ' of ' + units
-        }
-        if (units === ' of unemployed') units = ''
-
-        const valueSuffixes = {
-          '%': '%',
-          K: ' thousand',
-          M: ' million',
-          B: ' billion'
-        }
-        function formatTooltipText(value) {
-          return units === 'US$'
-            ? `${units}${value}${valueSuffixes[valueSuffix]}`
-            : `${valuePrefix || ''}${value}${
-              valueSuffixes[valueSuffix]
-            } ${units}`
         }
 
         if (subData && subData.length) {
@@ -64,9 +49,8 @@ export default function(options) {
               const value = getReduceSigFigs(dataItem.data, valueSuffix)
               const name = dataItem.name
 
-              return `<p><span style="color:${color}"> \u25CF </span>${name}<br/>&nbsp;&nbsp;&nbsp;${formatTooltipText(
-                value
-              )}</p>`
+              return `<p><span style="color:${color}"> \u25CF </span>${name}<br/>&nbsp;&nbsp;&nbsp;${valuePrefix ||
+                ''}${value}${valueSuffix} ${units}</p>`
             })
             .join('')
         } else {
@@ -75,7 +59,8 @@ export default function(options) {
           const name = chart.type === 'pie' ? this.name : this.series.name
 
           return `<p><span style="color:${color}">\u25CF </span>
-          ${name}<br/>&nbsp;&nbsp;&nbsp;${formatTooltipText(value)}</p>`
+          ${name}<br/>&nbsp;&nbsp;&nbsp;${valuePrefix ||
+            ''}${value}${valueSuffix} ${units}</p>`
         }
       }
     },
@@ -108,8 +93,12 @@ export default function(options) {
       align: 'center',
       verticalAlign: 'bottom',
       layout: 'horizontal',
+      itemDistance: 12,
+      itemMarginBottom: 1,
+      padding: 4,
       itemStyle: {
-        textOverflow: null
+        textOverflow: null,
+        fontSize: '14px'
       }
     },
     plotOptions: {
@@ -124,10 +113,10 @@ export default function(options) {
         maxPointWidth: 150
       },
       pie: {
-        showInLegend: true,
-        size: '100%',
         dataLabels: {
-          enabled: false
+          crop: false,
+          distance: isDataRepo ? 10 : 2,
+          overflow: 'allow'
         }
       },
       bar: {
@@ -143,6 +132,22 @@ export default function(options) {
     },
     responsive: {
       rules: [
+        {
+          condition: {
+            maxWidth: 480
+          },
+          chartOptions: {
+            plotOptions: {
+              pie: {
+                size: '50%',
+                dataLabels: {
+                  crop: false,
+                  overflow: 'allow'
+                }
+              }
+            }
+          }
+        },
         {
           condition: {
             minWidth: 1080

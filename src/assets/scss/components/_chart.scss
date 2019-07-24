@@ -1,12 +1,3 @@
-[id='8.4'].chart {
-  &,
-  .chart-figure__graph,
-  .highcharts-container,
-  .highcharts-root {
-    overflow: visible !important;
-  }
-}
-
 .chart {
   &-text {
     @include breakpoint('large', 'max-width') {
@@ -100,12 +91,6 @@
   fill: $color__black;
 }
 
-.highcharts-legend-item tspan {
-  main.homepage & {
-    @include font-size(12px);
-  }
-}
-
 .highcharts-xaxis-labels {
   @extend %font-hind;
   fill: $color__gray-medium-cool;
@@ -128,9 +113,6 @@
   @extend %font-hind;
   fill: $color__gray-medium-cool;
 
-  main.data & {
-    @include font-size(12px);
-  }
 }
 
 .highcharts-tooltip {
@@ -144,7 +126,7 @@
 
   p {
     margin-bottom: 0.5rem;
-    line-height: 1;
+    line-height: 1.3;
     @include font-size(14px);
   }
 }
