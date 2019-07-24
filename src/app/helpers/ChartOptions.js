@@ -107,6 +107,9 @@ export default function(options) {
     legend: {
       align: 'center',
       verticalAlign: 'bottom',
+      itemDistance: 12,
+      itemMarginBottom: 1,
+      padding: 4,
       layout: 'horizontal',
       itemStyle: {
         textOverflow: null
