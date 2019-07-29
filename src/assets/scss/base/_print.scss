@@ -36,15 +36,30 @@
       }
 
       &-wrapper {
-        max-width: 100% !important;
-        overflow: visible !important;
+        position: static !important;
+        display: block !important;
+        max-width: unset !important;
+        height: unset !important;
+        text-align: center;
       }
     }
+  }
+
+  h1 {
+    font-size: 4rem !important;
   }
 
   h2,
   h3 {
     break-after: avoid;
+  }
+
+  main p {
+    font-size: 1rem !important;
+  }
+
+  figure figcaption {
+    font-size: 0.75rem;
   }
 
   .site-header,
@@ -82,6 +97,11 @@
     }
   }
 
+  .two-column {
+    max-width: $size__one-column__max-width;
+    margin: auto;
+  }
+
   .one-column {
     aside {
       float: right;
@@ -90,12 +110,12 @@
 
     .component-image {
       float: right;
-      max-width: return-map-value($sizes__one-column__image, 'large');
+      max-width: 200px;
       margin-left: 2rem;
     }
 
     aside {
-      max-width: return-map-value($sizes__one-column__image, 'large');
+      max-width: 200px;
     }
   }
 
@@ -111,49 +131,12 @@
       opacity: 1 !important;
     }
 
-    .five-flagship-programs {
-      ul {
-        float: left;
-        width: 47%;
+    .abstract {
+      display: block;
 
-        &:last-of-type {
-          margin-left: 32px;
-        }
-      }
-    }
-  }
-
-  .two-column {
-    $big: return-map-value($sizes__two-column__paragraph, 'large');
-    $small: return-map-value($sizes__two-column__image, 'large');
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    > *:last-child {
-      margin-left: $size__gap;
-    }
-
-    .homepage & {
-      > .description p,
-      > .text {
-        max-width: calc(#{$big} - #{$size__gap} / 2);
-      }
-
-      > figure {
+      .one-column .component-image {
         float: right;
-        max-width: calc(#{$small} - #{$size__gap} / 2);
         margin-left: 2rem;
-      }
-    }
-
-    .data & {
-      > figure {
-        max-width: calc(#{$big} - #{$size__gap} / 2);
-      }
-
-      > .text {
-        max-width: calc(#{$small} - #{$size__gap} / 2);
       }
     }
   }
