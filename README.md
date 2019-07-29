@@ -6,7 +6,6 @@ Data is connected to a Google Sheet workbook in the China Power Google Drive fol
 
 ## Table of Contents
 * [Quick-Start Instructions](#quick-start-instructions)
-* [Usage](#usage)
 * [What's Included](#whats-included)
 * [Project Organization](#project-organization)
 * [Contributing](#contributing)
@@ -23,8 +22,6 @@ You will need to create a charts.json file, which uses Google Sheets API to pull
 $ node write.js
 $ npm start
 ```
-
-## Usage
 
 ### development
 
