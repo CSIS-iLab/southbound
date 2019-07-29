@@ -2,7 +2,7 @@
 The website for the China Power Southbound Report
 It is built using [Create React App Rewired](https://github.com/timarney/react-app-rewired) and [React Snapshot](https://github.com/geelen/react-snapshot)
 
-Data is connected to a Google Sheet workbook in the China Power Google Drive folder. Triggering a new deploy runs the Google API via node write.js and updates data in src/app/charts.json
+Data is connected to a Google Sheet workbook in the China Power Google Drive folder. Triggering a new deploy runs the Google API via `write.js` and updates data in `src/app/charts.json`. To update the live site with edits from the Google Sheet, log into netlify and trigger a new deploy. The build script will first run `node write.js` which uses the Google API to fetch data from sheets in the workbook and creates a json array with objects describing each chart. Then it will run `react-app-rewired build` including (via import) this updated json in the compiled code.
 
 ## Table of Contents
 * [Quick-Start Instructions](#quick-start-instructions)
