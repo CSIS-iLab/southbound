@@ -12,6 +12,10 @@
     filter: none !important;
   }
 
+  html {
+    font-size: 12px;
+  }
+
   body {
     margin: 25mm;
   }
@@ -50,16 +54,13 @@
   }
 
   h2,
-  h3 {
+  h3,
+  li {
     break-after: avoid;
   }
 
   main p {
     font-size: 1rem !important;
-  }
-
-  figure figcaption {
-    font-size: 0.75rem;
   }
 
   .site-header,
