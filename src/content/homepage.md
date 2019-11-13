@@ -69,10 +69,6 @@ sections:
 
         * <strong>Education Ties:</strong> Deepen educational ties by offering scholarships to students from partner countries. Enhance domestic cooperation between academia and industry. Provide enhanced youth technical training.
 
-          <button className="detail__trigger" aria-expanded="false" aria-label="Show More"><i className="icon-more"></i></button>
-
-          The Center for Southeast Asian Studies at National Chengchi University leads a consortium of 13 institutions for Southeast Asian studies from across the region.
-
         * <strong>Industry Talent:</strong> Promote a two-way flow of professionals and help match foreign workers with local companies.
 
           <button className="detail__trigger" aria-expanded="false" aria-label="Show More"><i className="icon-more"></i></button>
