@@ -54,6 +54,5 @@ sections:
         The printed and digital versions of this report are products of the  <a href="https://www.csis.org/programs/dracopoulos-ideas-lab" class="icon-external" target="_blank" rel="nofollow noreferrer">Andreas C. Dracopoulos iDeas Lab</a>, the in-house digital, multimedia, and design agency at the Center for Strategic and International Studies.
 
         #### About CSIS
-        Established in Washington, D.C., over 50 years ago, the Center for Strategic and International Studies (CSIS) is a bipartisan, nonprofit policy research organization dedicated to providing strategic insights and policy solutions to help decisionmakers chart a course toward a better world. To learn more about CSIS, visit <a href="https://www.csis.org" class="icon-external" target="_blank" rel="nofollow noreferrer">www.CSIS.org.</a>
-
+        Established in Washington, D.C. nearly 60 years ago, the Center for Strategic and International Studies (CSIS) is a bipartisan, nonprofit policy research organization dedicated to advancing practical ideas that address the world’s greatest challenges. To learn more about CSIS, visit <a href="https://www.csis.org" class="icon-external" target="_blank" rel="nofollow noreferrer">www.CSIS.org.</a>
 ---
